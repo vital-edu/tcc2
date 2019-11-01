@@ -1,60 +1,76 @@
-# Introdução
+# Holochain
 
-## Motivação
+# Projeto
 
-## Objetivos
+## Oportunidade de Negócio
 
-### Objetivo geral
+O crescente endividamento do governo americando \ref{fig:usdebt} em conjunto com a diminuição do poder de compra do dólar \ref{fig:usprice} serve como um indicativo de preocupação sobre uma das principais características necessárias a uma moeda: a reserva de valor \textcolor{red}{[citar Mises]}.
 
-Apresentação do objetivo geral.
+\begin{figure}[htbp]
+    \caption{\label{fig:usdebt}Dívida do governo dos EUA entre 1942 e 2019.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/usdebt.png}
+    \end{center}
+    \legend{Fonte: \citeauthoronline{usdebt}.}
+\end{figure}
 
-### Objetivos específicos
+\begin{figure}[htbp]
+    \caption{\label{fig:usprice}Poder de compra do dólar entre 1913 e 2019.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/usprice.png}
+    \end{center}
+    \legend{Fonte: \citeauthoronline{usprice}.}
+\end{figure}
 
-- objetivo 1
-- objetivo 2
-- objetivo 3
+Hayek \textcolor{red}{[citar apropriadamente essa afirmação]} atribui o constante endividamento do governo e a alteração artificial da taxa de juros pelo governo como fatores precursores para grandes crises e depressões mundiais como as que ocorreram em 2007-2008. 
 
-<!-- 
-Isto é um comentário, mesma sintaxe do HTML. Para conhecer a sintaxe 
-do limarka consulte: https://github.com/abntex/limarka/wiki/Sintaxe 
--->
+O Bitcoin foi criado com a intenção de prover uma moeda decentraalizada que não pudesse ser inflacionada \textcolor{red}{ [definir o conceito de inflação segundo a escola austríaca de economia][citar Satoshi Nakamoto e o seu White Paper] } de forma descontrolada, tendo um limite de 21 milhões de unidades, as quais não podem ser superadas. 
 
-# Como utilizar recursos do limarka
+Essa característica provê ao Bitcoin uma vantagem sobre o dólar e outras moedas fiduciárias \textcolor{red}{[definir o que é uma moeda fiduciária]}, principalmente em crises e em momentos de grande depreciação das moedas. 
 
-**Consulte o wiki do projeto**: https://github.com/abntex/limarka/wiki
+Aliado a isso, o crescente aumento do uso de comércio eletrônico para a compra de produtos e serviços \textcolor{red}{[citar dados sobre o crescimento do comércio eletrônico]} cria um ambiete propício para a criação de uma plataforma que una o comércio eletrônico com um meio de pagamento que não sofra interferência de nenhum governo ou entidade central.
 
-Cada capítulo inicia automaticamente em página ímpar (em conformidade com as Normas). Por isso que existem várias páginas em branco nesse documento.
+Além da desvalorização das moedas fiduciárias, os govenos também coletam impostos sobre os produtos comercializados e impedem que determinadas transações sejam realizadas, por considerá-las ilegais ou legais apenas após serem fiscalizadas por orgãos regulatórios.
 
-## Como citar e referenciar
+O caráter lícito ou ilícito de uma transação pode ser inspecionado sobre a ótica da lei vigente de um país (juspositivismo \textcolor{red}{[definir o que é juspositivismo]}), ou através de meios éticos \textcolor{red}{[definir que a ética é a busca pelo certo e errado]}, derivando a lei através do jusnaturalismo)\textcolor{red}{[explicar]} ou jusracionalismo)\textcolor{red}{[citar a ética argumentativa de Hans-Hermann Hoppe]}.
 
-O arquivo de referências é configurado em "configuracao.pdf", utilize-o
-para gerenciar suas referências.
+Olhando pela ótica jusnaturalista, pode-se chegar a conclusões de que tanto o imposto como a proibição e interferência do governo ou qualquer outro agente central em uma transação é inválida, e caracteriza-se como uma violação da liberdade individual dos indivíduos.
 
-Veja um exemplo de citação direta e referenciação a seguir:
+Partindo do princípio que não estamos discutindo a licitude dos atos pela ótica da lei do estado e sim pela ótica da lei natural )\textcolor{red}{[citar Frederic Bastiat (a lei foi corrompida)]}, podemos focar em como criar esse ambiente de livre mercado em que a liberdade dos indivíduos é soberana.
 
-> A ‘norma’ 6023:2000 (2) é complicada e cheia de inconsistências. Jamais será
-possível gerar um estilo bibtex totalmente consistente com a ‘norma’, até porque
-nem a ‘norma’ é compatível com ela mesma. Um bom estilo bibliográfico deve
-ter uma linha lógica para formatação de referências. Assim, com alguns poucos
-exemplos, qualquer pessoa poderia deduzir os casos omissos. Nesse sentido, a
-‘norma’ 6023 trafega pela contra-mão. É quase impossível deduzir sua linha lógica.
-O problema mais grave, no entanto, fica pela maneira de organizar nomes. A ABNT
-quebrou o sobrenome em duas partes. Normalmente se fala apenas em “*last name*”,
-mas agora temos o “*last last name*” graças à ABNT. \cite[p. 5]{abntex2cite}.
+Embora existam plataformas de comércio eletrônico na chamada *deep web* )\textcolor{red}{[explicar o que é deep web]} que passam despercebidas das ações governamentais, há uma carência de uma plataforma de comércio eletrônico amplamente acessível e que utilize de moedas não controladas por governos e que sejam resistentes a agentes centrais.
 
-Consulte o documento \citeonline{abntex2cite} para conhecer como referenciar os
-conteúdos.
+Até pouco tempo atrás, tais plataformas eram inconcebíveis de serem criadas, porém, com o advento do Bitcoin, da *blockchain* e dos chamados *smart contracts* )\textcolor{red}{[definir o que é blockchain e smart contracts]}, passou a ser viável tais plataformas.
 
-## Como inserir imagens
+Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal constatação pode ser explicada, embora sem rigor técnico, pelo modelo de negócio de tais plataformas, que no geral, criam novos *tokens* \textcolor{red}{[explicar o que são tokens]} ao invés de se basearem nas criptomoedas já consolidadas do mercado, além de utilizarem da mesma *blockchain* do Bitcoin, que conforme mostrado na \textcolor{red}{figura X [citar dados de performance da blockchain]} não consegue escalar.
 
-Por exemplo, a Figura \ref{passaro} mostra um pássaro que possui as cores da bandeira do Brasil. 
+O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
 
-<!--
-Para referenciar essa figura no texto utilize: Figura \ref{passaro} ou \autoref{passaro}
--->
+A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnologia *DHT*
+\textcolor{red}{[explicar]}. Assim ao invés dos dados serem idênticos para todos os nós da rede, eles são distribuídos de forma randômica entre os nós com um número de cópias suficientemente grande para garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
-![Pássaro com as cores da bandeira do Brasil](imagens/passaro.jpg){#passaro escala=0.4}
+\begin{figure}[htbp]
+    \caption{\label{fig:diff}Diferença entre client/server, Blockchain e Holochain.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/diff.png}
+    \end{center}
+    \legend{Fonte: \citeauthoronline{coreconcept}.}
+\end{figure}
 
-Fonte: \citeonline{limarka}
+\begin{figure}[htbp]
+    \caption{\label{fig:holoarchitecture}Arquitetura de uma aplicação Holochain (hApp).}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/holoarchitecture.png}
+    \end{center}
+    \legend{Fonte: \citeauthoronline{thebasics}.}
+\end{figure}
 
-As imagens são inseridas o mais próximo possível do texto que as referenciam.
+\begin{figure}[htbp]
+    \caption{\label{fig:communicationholo}Interação entre hApps.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/communicationholo.png}
+    \end{center}
+    \legend{Fonte: \citeauthoronline{holoarchitecture}.}
+\end{figure}
+
+# Requísitos de Software
