@@ -54,16 +54,20 @@ A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnolog
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/diff.png}
     \end{center}
-    \legend{Fonte: \citeauthoronline{coreconcept}.}
+    \legend{Fonte: \citeauthoronline{thebasics}.}
 \end{figure}
+
+Cada aplicação Holochain (hApp) possui um DNA, que representa a regra de negócio da aplicação, ou o contrato inteligente da aplicação (comparando com aplicação descentralizadas - dApps). O DNA é a composição de vários Zomes (originário de chromossome), que seriam equivalentes a módulos da aplicação ou micro-serviços. Por fim, existe uma camada de comunicação externa onde pode ser criada interfaces de aplicação e interfaces gráficas e uma camada de comunicação entre as diferentes instâncias do hApp, denominada condutor \ref{fig:holoarchitecture}.
 
 \begin{figure}[htbp]
     \caption{\label{fig:holoarchitecture}Arquitetura de uma aplicação Holochain (hApp).}
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/holoarchitecture.png}
     \end{center}
-    \legend{Fonte: \citeauthoronline{thebasics}.}
+    \legend{Fonte: \citeauthoronline{holoarchitecture}.}
 \end{figure}
+
+Cada nó possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede \ref{fig:communicationholo}. Os dados de cada nó, são responsabilidade do nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA.
 
 \begin{figure}[htbp]
     \caption{\label{fig:communicationholo}Interação entre hApps.}
@@ -73,4 +77,22 @@ A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnolog
     \legend{Fonte: \citeauthoronline{holoarchitecture}.}
 \end{figure}
 
-# Requísitos de Software
+Caso seja identificado uma fraude na rede, o nó fraudulento é inserido numa lista de nó não confiável, tendo essa informação espalhada pela rede até o ponto em que ninguém na rede confia mais no nó fraudulento.
+
+## Escopo da Aplicação
+
+A aplicação conterá 3 Zomes:
+
+- Zome de Usuário: responsável pelo registro do usuário, autenticação, perfil do usuário
+- Zome de Produto: responsável pelo registro de produtos a serem anunciados, pesquisa e filtro de produtos
+- Zome de Transação: responsável pelo sistema de carrinho de compras, pagamento e histórico de transações
+
+### Funcionalidades do Sistema
+
+- Cadastrar usuário
+- Entrar com usuário
+- Cadastrar produto
+- Exibir produto
+- Adicionar produto ao carrinho
+- Comprar produto
+- Ver histórico de compras
