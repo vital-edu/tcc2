@@ -1,4 +1,54 @@
-# Holochain
+# Introdução
+
+## Justificativa
+
+## Objetivos
+
+### Objetivo Geral
+
+### Objetivos Específicos
+
+## Organização do Trabalho
+
+# Aplicações Descentralizadas
+
+## Características das Aplicações Descentralizadas
+
+## Tipos de Aplicações Descentralizadas
+
+### DHT
+
+### Sharded
+
+## Limitações das Aplicações Descentralizadas
+
+## Principais Plataformas de Desenvolvimento de Aplicações Descentralizadas
+
+### Ethereum
+
+### Holochain
+
+### Near
+
+
+# Aplicação a um Problema Real
+
+## Mercado Livre
+
+# Implementação
+
+## Processo de Desenvolvimento de Aplicações Descentralizadas
+
+### Ethereum
+
+### Holochain
+
+### Near
+
+## Resultados e Discussões
+
+# Conclusão
+
 
 # Projeto
 
@@ -22,11 +72,11 @@ O crescente endividamento do governo americando \ref{fig:usdebt} em conjunto com
     \legend{Fonte: \citeauthoronline{usprice}.}
 \end{figure}
 
-Hayek \textcolor{red}{[citar apropriadamente essa afirmação]} atribui o constante endividamento do governo e a alteração artificial da taxa de juros pelo governo como fatores precursores para grandes crises e depressões mundiais como as que ocorreram em 2007-2008. 
+Hayek \textcolor{red}{[citar apropriadamente essa afirmação]} atribui o constante endividamento do governo e a alteração artificial da taxa de juros pelo governo como fatores precursores para grandes crises e depressões mundiais como as que ocorreram em 2007-2008.
 
-O Bitcoin foi criado com a intenção de prover uma moeda decentraalizada que não pudesse ser inflacionada \textcolor{red}{ [definir o conceito de inflação segundo a escola austríaca de economia][citar Satoshi Nakamoto e o seu White Paper] } de forma descontrolada, tendo um limite de 21 milhões de unidades, as quais não podem ser superadas. 
+O Bitcoin foi criado com a intenção de prover uma moeda decentraalizada que não pudesse ser inflacionada \textcolor{red}{ [definir o conceito de inflação segundo a escola austríaca de economia][citar Satoshi Nakamoto e o seu White Paper] } de forma descontrolada, tendo um limite de 21 milhões de unidades, as quais não podem ser superadas.
 
-Essa característica provê ao Bitcoin uma vantagem sobre o dólar e outras moedas fiduciárias \textcolor{red}{[definir o que é uma moeda fiduciária]}, principalmente em crises e em momentos de grande depreciação das moedas. 
+Essa característica provê ao Bitcoin uma vantagem sobre o dólar e outras moedas fiduciárias \textcolor{red}{[definir o que é uma moeda fiduciária]}, principalmente em crises e em momentos de grande depreciação das moedas.
 
 Aliado a isso, o crescente aumento do uso de comércio eletrônico para a compra de produtos e serviços \textcolor{red}{[citar dados sobre o crescimento do comércio eletrônico]} cria um ambiete propício para a criação de uma plataforma que una o comércio eletrônico com um meio de pagamento que não sofra interferência de nenhum governo ou entidade central.
 
