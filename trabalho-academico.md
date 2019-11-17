@@ -1,14 +1,43 @@
 # Introdução
 
-## Justificativa
+A tecnologia é definida como o uso do conhecimento técnico e científico aplicado na transformação de ferramentas, processos e materiais [referência]. A utilização e aperfeiçoamento da tecnologia costuma resultar em uma facilidade maior em realizar tarefas, o que culmina em um maior grau de satisfação humana [referênciaLudwigVonMises]. Uma dessas tecnologias que revolucionou o mundo foi a *prensa de tipos móveis*, inventada pelo alemão Johannes Gutenberg por volta do ano 1450.
+
+A prensa de tipos móveis tornou o processo de impressão mais rápido e barato, o que propiciou a disseminação da informação escrita [referencia] levando a produção de livros em massa, servindo como base para a criação de uma sociedade mais dinâmica, comunicativa, colaborativa e com menos obstáculos ao acesso a informação.
+
+A prensa de tipos móveis tornou a comunicação atemporal, através do registro de conhecimento e histórias em meios que pudessem ser consumidos posteriormente e sem a necessidade de um interlocutor, e o advento da *internet* conseguiu quebrar uma outra grande barreira, a distância. Agora, a informação não apenas é registrada para a posterioridade, mas também é transportada em questão de segundos para qualquer lugar do globo.
+
+Embora a *internet* tenha tornado o acesso a informações mais fácil, amplo e dinâmico, ainda há um controle muito grande de agentes centrais, principalmente do governo, sobre o que um usuário pode fazer. A *internet* no seu estágio inicial representava a liberdade de acesso a informação de forma livre e irrestrita, porém a cada ano novas leis e regulações governamentais ameaçam essa característica fundamental da *internet* como o GDPR (*General Data Protection Regulation* - Regulação de Proteção de Dados Gerais), a ECPA (*Eletric Communications Privacy Act* - Lei de Privacidade das Comunicações Elétricas), a CFAA (*Computer Fraud And Abuse Act* - Lei de Abuso e Fraude de Computador), as leis antitruste, e várias outras regulações mais específicas.
+
+O presente trabalho não tem como objetivo esclarecer ou defender uma visão de livre mercado, porém, parte da premissa de que as liberdades individuais são naturais e absolutas, não necessitando de lei positivada para serem consideradas "certas". A discussão sobre o certo e o errado, quanto a criação e aplicação de leis, faz parte tanto do campo filosófico, no estudo sobre a ética (o estudo sobre o comportamento humano, refletindo sobre o que é o certo e o que é o errado), bem como do campo do direito, em que há um antagonismo entre o *jusnaturalismo* (visão jurídica de que a lei precede o homem, é universal, imutável e inviolável, devendo ser descoberta) e o *juspositivismo* (a visão de que a lei emana das autoridades que possuem o poder político de impô-las, modificá-las e re-interpretá-las a bel-prazer).
+
+Se nos atermos ao *juspositivismo*, não poderemos questionar se as leis são certas ou não, e assim, nenhuma discussão será frutífera, porém, se entendermos que existe um ideal de certo, podemos buscá-lo e questionar se a lei escrita (positivada) é de fato correta.
+
+E partindo do pressuposto de que a liberdade individual bem como a propriedade privada são invioláveis, independente da lei positivada, e também partindo do pressuposto de que a propriedade privada só existe para bens escassos, podemos então chegar a conclusão de que qualquer interferência estatal é prejudicial ao indivíduo. E que a tecnologia deve usar dos seus meios para garantir que agentes centrais, que podem ser nomeados muitas vezes como agentes autoritários, não consigam interferir nas liberdades individuais.
+
+Nesse sentido, assim como a igreja detinha o poder sobre a produção textual e cultural devido a centralização da produção de livros em monastérios, o governo hoje, detém uma forte influência sobre o que pode ou não pode ser feito e de que forma pode ser feito na *internet*. O *WikiLeaks* já revelou dezenas de atrocidades feitas por agências governamentais, e Edward Snowden já revelou como os governos mantém uma forte vigilância sobre os dados tráfados na internet.
+
+Por conta dessa constante preocupação com os dados que estão nas mãos de agentes centrais, tem aumentado o interesse na adoção de criptografia cada vez mais sofisticadas e de código aberto, sendo praticamente mandatório que grandes aplicações tenham o mínimo de preocupação com os dados que trafegam na rede mundial de computadores.
+
+Mas a preocupação crescente com o poder de agentes centrais não se limita apenas ao acesso às informações que trafegam pela rede, também está começando a surgir preocupações quanto a capacidade de uma plataforma sobreviver a coerção de agentes centrais e também como sistemas complexos como o sistema financeiro pode existir no mundo digital sem perder suas características fundamentais, como o problema do duplo gasto, resolvido pelo *Bitcoin*.
+
+Assim, a tecnologia tem evoluído para prover uma *internet* cada vez mais resistente e livre, competindo com governos e empresas que não desejam que o usuário tenha total liberdade e responsabilidade sobre os seus atos digitais.
+
+Neste contexto, surgiu o novo paradigma na computação, o desenvolvimento de aplicações descentralizadas, que tentam resolver problemas de ponto único de falha, de consenso de informação e principalmente, tenta proteger uma rede de nós interligados de ataques vindo de agentes mal intencionados que tentam atrapalhar ou destruir uma rede de informação ou plataforma de serviço.
 
 ## Objetivos
 
 ### Objetivo Geral
 
-### Objetivos Específicos
+O presente trabalho tem como objetivo verificar a viabilidade da utilização de tecnologias descentralizadas no desenvolvimento de soluções para problemas reais.
 
-## Organização do Trabalho
+### Objetivos específicos
+
+Para alcançar o objetivo geral, os seguintes objetivos específicos foram definidos:
+
+1. Estudar a maturidade das tecnologias descentralizadas atuais;
+2. Verificar as particularidades do desenvolvimento em tecnologias descentralizadas;
+3. Criar uma prova de conceitos utilizando tecnologias descentralizadas.
+
 
 # Aplicações Descentralizadas
 
