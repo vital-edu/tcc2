@@ -40,6 +40,115 @@ Este capítulo aborda os conceitos fundamentais das aplicações descentralizada
 
 ## Características das Aplicações Descentralizadas
 
+Aplicações de *software* podem ser classificadas baseado no seu nível de centralização (fig. \ref{fig:apptypes}). Aplicações centralizadas (a), são as mais comuns e são caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização. Aplicações distribuídas (b) são aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}. Atualmente aplicações distribuídas se popularizaram com os serviços de nuvem, em que empresas provêm servidores de aplicações espalhadas pelo mundo que podem ser alugados por outras empresas.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:apptypes}Tipos de aplicações de \emph{software}.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/apptypes.png}
+  \end{center}
+  \legend{Fonte: \citeauthoronline{raval} \cite[pp. 3 e 32]{raval}.}
+\end{figure}
+
+Aplicações descentralizadas (c) são aplicações em que cada nó opera de forma independente. autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas. Uma aplicação centralizada e distribuída resolve problemas de disponibilidade, latência de rede, problemas de corrupção de dados através da redundância de dados, porém não resolvem problemas de ordem institucional.
+
+No contexto de uma plataforma de mercado livre, é importante que haja mecanismos que garantam a desregulação do mercado, e portanto, uma plataforma centralizada poderia sucumbir por diversos motivos tais como: aquisição da plataforma por outra empresa, que pode culminar numa mudança nas políticas e regras da plataforma; mudança na diretoria da empresa por manobra de acionistas ou conflitos entre acionistas; ação política externa causado por grupos de interesse contrários; ações judiciais ou inconformidade com regras regulatórias de determinadas nações; morte ou incapacitação dos mantenedores.
+
+Para se proteger dessa centralização de poder, \citeauthor{raval} propôs que aplicações descentralizadas, para serem consideradas como tal, devem possuir as seguintes características:
+
+1. Ter código aberto: é inviável criar uma plataforma descentralizada em que apenas um grupo de indivíduos tenha acesso ao código fonte da mesma.
+2. Possuir moeda interna: como não existe a propriedade definitiva da plataforma por ninguém, é preciso encontrar uma maneira de incentivar o desenvolvimento da plataforma por desenvolvedores e custear a infraestrutura da aplicação, para isso normalmente são criados *tokens*\footnote{\emph{tokens}, segundo \citeauthor{token}, são meios de trocas não-autorizados por lei e emitidos por indivíduos privados ou empresa, que é reconhecido como dinheiro e que serve de forma pratica a esse propósito.} específicos para a plataforma que funcionam de forma similar a ações de empresas (títulos emitidos por sociedades anônimas), garantindo tanto poder de decisão sobre o rumo da empresa, bem como uma forma de captar investimento externo e premiar os fundadores quando há a valorização do valor da organização.
+3. Usar um algoritmo de consenso descentralizado: é o algoritmo de consenso descentralizado (que resolva o *Problemas dos Generais Bizantinos*) que permitirá que nós independentes com resultados conflitantes consigam convergir para um único resultado e assim possa-se garantir que a rede funcione sem chegar nunca a um estado permanente de impasse (*deadlock*).
+4. Não possuir ponto central de falha: aplicações descentralizadas, em teoria, não podem ser removidas ou derrubadas, pois não possuem um único ponto de falha. Por funcionar em um sistema *peer-to-peer*, todos os participantes da rede teriam que ser desligados simultaneamente para que a aplicação parasse de funcionar. E ainda assim, é facilmente possível que novos nós entrem na rede em uma situação dessa, evitando o seu desligamento. Na prática, porém, isso só é possível quando há o interesse constante de vários e diversos agentes em manter a rede funcionando.
+
+A própria *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
+
+Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
+
+Para \citeauthoronline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de madeira a criar contratos:
+
+a. robustos contra vandalismo ingênuo;
+b. robustos contra violações sofisticadas\footnote{É importante salientar, que um contrato inteligente não se propõe a lidar com um terceiro tipo de ataque, o vandalismo sofisticado, caracterizado como sendo o uso extensivo e desproporcional de força ou poder, tais como ataques militares efetuados por terceiros\cite{smartcontract}. Esse tipo de ataque é raramente utilizado nas relações de livre mercado, e quase invariavelmente são oriundos de uma alocação de recursos obtidos de forma coercitiva por governos ou entidades autoritárias.}.
+
+\citeauthoronline{smartcontract} classifica a forma de seguração contratual em:
+
+- reativa: ação tomada após a quebra de um contrato, como medidas físicas tomadas por agências de segurança, tais quais, prisão e confiscação de propriedade;
+- proativa: ação tomada de forma a coibir a quebra de um contrato, como caixas fortes com mecanismos de autenticação que impeçam o acesso não autorizado a um bem de valor.
+
+Nessas classificações, um sistema judicial estatal, bem como a polícia e empresas de seguros, são considerados uma segurança contratual reativa, que embora sejam efetivas, são onerosas e burocráticas, aumentando o custo de transação, o que produz produtos ou serviços mais caros. E por esse motivo, contratos inteligentes, que incorporam em si mecanismos proativos de segurança, oferecem um menor custo de transação e uma segurança suficiente para coibir a violação de contratos.
+
+Com o surgimento do *Bitcoin*, criou-se a possibilidade de incorporar contratos inteligentes em *blockchain*, sendo a moeda *Bitcoin*, uma forma de contrato inteligente incorporado em *software*, já que a moeda em si não possui nenhum componente de segurança reativa, confiando completamente no poder da criptografia e do algoritmo de consenso para garantir que as regras, ou cláusulas, que definem o que é uma transação válida não sejam quebradas, e que qualquer tentativa de fraude da *blockchain* seja punida com a perda de tempo e recursos computacionais, e consequentemente recursos energéticos.
+
+E foi o surgimento da *Ethereum* que culminou na adoção e propagação de contratos inteligentes em diferentes contextos. A *Ethereum*, uma criptomoeda que implementa uma *blockchain* que suporta o uso de uma linguagem *Turing-completa*\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.} foi concebida para permitir a criação de aplicações descentralizadas que fosse além do contexto financeiro \cite{ethereum}.
+
+O desenvolvimento de aplicações descentralizadas permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralized Autonomous Organization* - Organização Autônoma descentralizada), em que todas as regras de funcionamento da empresa, inclusive divisão de lucros e como é feito decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
+
+Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeauthor{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
+
+De forma simplista, um código de contrato inteligente é invocado sempre que recebe uma mensagem, podendo haver vários pontos de entrada, sendo cada ponto de entrada uma função do código a ser executada. Ou seja, uma mensagem recebida é como a chamada de uma função, que deve retornar um resultado para quem enviou a mensagem após a mensagem ser processada pela função do contrato.
+
+A figura \ref{fig:ethcode} mostra um exemplo simplório de contrato inteligente feito para um jogo  de pedra, papel e tesoura. Nesse exemplo, o contrato inicia com nenhum jogador e espera que jogadores iniciem o contrato informando a jogada que desejam fazer. Assim que os jogadores informam suas jogadas, o contrato verifica o ganhador e envia a recompensa para ele.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:ethcode}Exemplo de contrato inteligente implementado na linguagem \emph{Serpent}.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/ethcode.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{safesmart}.}
+\end{figure}
+
+Em última análise, criar um contrato inteligente é um processo meticuloso e que envolve codificar máquinas de estado muitas vezes complexas, em que qualquer omissão de um estado de transição ou negligência em checar o estado atual, pode causar problemas drásticos \cite{safesmart}, principalmente por serem, a princípio, imutáveis e envolverem contextos atrelados a manipulação de recursos financeiros.
+
+O desenvolvimento de contratos inteligentes, assemelha-se então, muito mais ao desenvolvimento de *software* embarcado (em que o *recall*\footnote{\emph{recall} (devolução) é o termo usado para quando um lote inteiro de uma linha de produto já vendida apresenta defeitos de fabricação e a fabricante convida seus clientes a devolverem o produto seja para reparação do problema ou para troca, sem gerar custos para o cliente por esse serviço.} é indesejado e oneroso financeiramente), do que *software* evolutivo e incremental (em que a atualização do *software* é facilmente realizada e incentivada).
+
+Outra preocupação recorrente em relação ao desenvolvimento de aplicações descentralizadas, é a utilização da tecnologia *blockchain*, que exige que um nó completamente engajado no processo de criação de novos blocos, deve processar cada transação e manter uma cópia completa do estado atual da *blockchain*. Embora isso garanta questões de segurança, neutralidade política e tolerância a falhas, isso tem um alto custo de escalabilidade. Inclusive, cada novo nó que entra na rede, em vez de deixá-la mais performática, acaba por tornar a rede mais fraca, pelo fato de a latência entre nós crescer de forma logarítmica a cada nó adicionado \cite{scale}.
+
+Devido ao aumento do número de transações, e do tamanho total da *blockchain*, a *Prova de Trabalho* acaba por obrigar que os nós tenham cada vez mais capacidade de processamento e de armazenamento, o que pode culminar em um processo de centralização, em que apenas nós com maior infraestrutura conseguem participar da rede. Para exemplificar, \citeauthoronline{scale} relatou que em \citeyear{scale}, a *blockchain* do *Bitcoin* transacionou 7 transações por segundo, tendo na época, um limite teórico de 4000 transações por segundo; e a *blockchain* da *Ethereum* chegou a transacionar 15 transações por segundo.
+
+Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço.
+
+Para tentar solucionar o problema de construção de aplicações descentralizadas que sejam escaláveis, \citeauthoronline{holo} propuseram uma arquitetura denomina *Holochain* que possui como principais características:
+
+1. Permitir aplicações descentralizadas completamente funcionais (muito mais sofisticas que meros contratos inteligentes), e capaz de servir usuários tradicionais da *internet*;
+2. Prover infraestrutura criptográfica massivamente escalável necessária para hospedar e gerenciar aplicações com enorme volume de uso.
+
+A *Holochain* provê a garantia de integridade de dados para aplicações *peer-to-peer* sem utilizar algoritmos de consenso, o que economiza poder de processamento, sem abandonar a característica de imutabilidade. \citeauthor{holo} denomina essa abordagem como *centrada no agente* e destaca que o custo computacional de gerenciamento de consenso requer uma quantidade desnecessária de processamento de dados que carrega limitações de escalabilidade inerentes a abordagem.
+
+A *Holochain* foi pensada para ter um modo de operação similar ao *git*, em que cada nó não precisa estar sincronizado com outros nós, e que cada nó pode ter sua própria *blockchain* interna, independente das demais. Apenas quando os nós se comunicam, deve haver a validação das informações trocadas e a resolução de conflitos entre os nós \cite{holo2}. Nesse sentido, para \citeauthoronline{holo2} a *blockchain* possui uma estrutura *centrada no dado*, em contraste com a abordagem *centrada no agente*, adotada pela *Holochain*.
+
+A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer que cada nó tem uma perspectiva, interesse e tempo de interação diferente de outro nó da rede, não havendo uma memória única e idêntica compartilhada por todos os nós. Isso permite que haja o paralelismo no tratamento dos dados por cada nó, o que em última instância permite a escalabilidade da rede.
+
+De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes mantendo uma única *blockchain* que serve como fonte de suas transações, pareada com um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
+
+Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuidar daquele registro, que ao receber o dado do estado de transição, informa aos seus nós vizinhos. Cada um dos nós vizinhos ao receber essa informação do nó responsável pelo dado, deve validá-lo utilizando a lógica da aplicação. Assim, há diversas cópias, igualmente validadas e como a rede é criada para ter os dados uniformemente distribuídos, há a garantia de que o dado seja rapidamente encontrado\footnote{A \meph{DHT} utilizada pela \emph{Holochain} é baseada na \emph{Kademlia}\cite{kademlia}, e o processo de encontrar um nó vizinho é exemplificado pela figura \ref{fig:kademlia}, em que cada nó armazena um subconjunto limitado de nós, chamados de nós vizinhos, e quando precisam encontrar um nó que não seja seu vizinho, é feito uma busca de vizinhos de vizinhos. A parte superior da figura mostra a quantidade de vizinhos que foram perguntados antes de se encontrar o nó desejado.}, mesmo quando o nó original do dado estiver indisponível \cite{holo2}.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:kademlia}Processo de procura de um nó na \emph{DHT Kademlia}.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/kademlia.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{kademlia}.}
+\end{figure}
+
+Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta disso, enquanto a rede *Ethereum* necessita de melhorias para resolver problemas de escalabilidade, a Holochain já está pronta para o desenvolvimento de aplicações descentralizadas, o que a torna uma excelente opção para uma plataforma de comércio eletrônico que pretende ser utilizada de forma extensiva.
+
+\begin{table}[htbp]
+\caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
+\begin{tabular}{m{0.2\linewidth} | m{0.4\linewidth} | m{0.4\linewidth}}
+\toprule
+                                  & \textbf{Blockchain}                                                                                                                                            & \textbf{Holochain}                                                                                                                                                                                                   \\ \hline
+\textbf{Abordagem}                & Centrado em dado, um único conjunto de dados global e uma realidade compartilhada por todos os nós                                                             & Centrado em agente, permite os nós atuarem independentemente ou em estreita colaboração, e então compartilhar realidades independentes e evolutivas sobre os dados e que chegam a um acordo ao longo do tempo       \\ \hline
+\textbf{Consumo Energético}       & Bitcoin consome mais que 0,1\% de toda energia elétrica para prover menos de 0,0001\% do processamento financeiro mundial                                      & Como nenhuma mineração é necessária, não é necessário possuir uma CPU ou GPU especializada, tornando factível rodar os nós da rede em computadores com baixo poder de processamento, ou mesmo em celulares       \\ \hline
+\textbf{Volume de Transações}     & Neo, uma *blockchain* bastante performática, processa mais de 1000 transações por segundo. Bitcoin e Ethereum processam menos de uma centena por segundo         & Expectativa de ultrapasse o número de transações suportado pela rede VISA, que tem um máximo de 56000 transações por segundo}                                                                                      \\ \hline
+\textbf{Escalabilidade}           & Mesmo desconsiderando a Prova de Trabalho, há sérios problemas de limite de escalabilidade pelo fato de requerer a sincronia entre muitos nós da rede        & Utilizando uma DHT compartilhada, o volume de transação carregada por nó se torna menor a medida que a rede cresce                                                                                                  \\ \hline
+\textbf{Plataforma}               & Atualmente só pode funcionar de forma efetiva em computadores especializados para mineração                                                                    & Pode ser executado em Raspberry Pi ou em um smartphone                                                                                                                                                               \\ \hline
+\textbf{Eficiência Computacional} & O(\(n \times m\)) para validar transações                                                                                                                      & \(O(\frac{n}{m \times log m})\) para validar transações                                                                                                                                                              \\ \hline
+\textbf{Efeito de consenso}       & Algoritmos de consenso centralizam o poder e a Prova de Trabalho resulta em um crescimento computacional exorbitante para um conjunto de dados finito        & Não possui mineração nem consenso. Não possui vulnerabilidade ao ataque da maioria. Apenas é necessário confiar no código que roda em seu nó e validar o histórico dos nós com que se comunica
+\end{tabular}
+\legend{Fonte: \citeauthor{holo3}}
+\end{table}
+
+
 ## Tipos de Aplicações Descentralizadas
 
 ### DHT
