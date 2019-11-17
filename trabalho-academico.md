@@ -14,15 +14,11 @@ Se nos atermos ao *juspositivismo*, não poderemos questionar se as leis são ce
 
 E partindo do pressuposto de que a liberdade individual bem como a propriedade privada são invioláveis, independente da lei positivada, e também partindo do pressuposto de que a propriedade privada só existe para bens escassos, podemos então chegar a conclusão de que qualquer interferência estatal é prejudicial ao indivíduo. E que a tecnologia deve usar dos seus meios para garantir que agentes centrais, que podem ser nomeados muitas vezes como agentes autoritários, não consigam interferir nas liberdades individuais.
 
-Nesse sentido, assim como a igreja detinha o poder sobre a produção textual e cultural devido a centralização da produção de livros em monastérios, o governo hoje, detém uma forte influência sobre o que pode ou não pode ser feito e de que forma pode ser feito na *internet*. O *WikiLeaks* já revelou dezenas de atrocidades feitas por agências governamentais, e Edward Snowden já revelou como os governos mantém uma forte vigilância sobre os dados tráfados na internet.
+Nesse sentido, assim como a igreja detinha o poder sobre a produção textual e cultural devido a centralização da produção de livros em monastérios, o governo, hoje, detém uma forte influência sobre o que pode ou não pode ser feito e de que forma pode ser feito na *internet*, como as atrocidades que o governo fez e que foram reveladas pelo *WikiLeaks*, e a espionagem e quebra de privacidade que o governo faz constantemente, algumas das quais reveladas por Edward Snowden, sendo tanto ele quanto Julian Assange (fundador do *WikiLeaks*) considerados inimigos do estado e acusados de traição, e, devido ao monopólio da justiça pelo estado, e pelo próprio conflito de interesse do governo, ambos jamais terão um julgamento justo, e o governo, jamais será responsabilizado por nenhuma de suas ações autoritárias e sem limites.
 
-Por conta dessa constante preocupação com os dados que estão nas mãos de agentes centrais, tem aumentado o interesse na adoção de criptografia cada vez mais sofisticadas e de código aberto, sendo praticamente mandatório que grandes aplicações tenham o mínimo de preocupação com os dados que trafegam na rede mundial de computadores.
+Por conta dessa constante preocupação com o poder que agentes centrais detêm, e os dados que estão sob seu controle, tem aumentado o interesse na adoção de criptografias cada vez mais sofisticadas e de código aberto, e da adoção de outras tecnologias que tentem conter ou tornar nulo o poder estatal, ao menos no mundo digital, e tenta-se aumentar a capacidade das plataformas digitais de sobreviver à coerção de agentes centrais, e também criar alternativas para sistemas controlados atualmente pelo governo, como o sistema jurídico e financeiro, no mundo digital.
 
-Mas a preocupação crescente com o poder de agentes centrais não se limita apenas ao acesso às informações que trafegam pela rede, também está começando a surgir preocupações quanto a capacidade de uma plataforma sobreviver a coerção de agentes centrais e também como sistemas complexos como o sistema financeiro pode existir no mundo digital sem perder suas características fundamentais, como o problema do duplo gasto, resolvido pelo *Bitcoin*.
-
-Assim, a tecnologia tem evoluído para prover uma *internet* cada vez mais resistente e livre, competindo com governos e empresas que não desejam que o usuário tenha total liberdade e responsabilidade sobre os seus atos digitais.
-
-Neste contexto, surgiu o novo paradigma na computação, o desenvolvimento de aplicações descentralizadas, que tentam resolver problemas de ponto único de falha, de consenso de informação e principalmente, tenta proteger uma rede de nós interligados de ataques vindo de agentes mal intencionados que tentam atrapalhar ou destruir uma rede de informação ou plataforma de serviço.
+Assim, a tecnologia tem evoluído para prover uma *internet* cada vez mais resistente e livre, competindo com governos e empresas que não desejam que o usuário tenha total liberdade e responsabilidade sobre os seus atos digitais. E é neste contexto que está surgindo um novo paradigma na computação, o desenvolvimento de aplicações descentralizadas, que tentam solucionar problemas e preocupações como segurança da informação, garantia de confiabilidade no canal de comunicação, garantia de autenticidade dos dados, ponto único de falha, consenso de informação e, principalmente, tentam proteger uma rede de nós interligados de ataques vindos de agentes mal intencionados que tentem corromper, alterar, deturpar, atrapalhar ou destruir dados de uma rede de informação ou plataforma de serviços.
 
 ## Objetivos
 
@@ -38,8 +34,9 @@ Para alcançar o objetivo geral, os seguintes objetivos específicos foram defin
 2. Verificar as particularidades do desenvolvimento em tecnologias descentralizadas;
 3. Criar uma prova de conceitos utilizando tecnologias descentralizadas.
 
-
 # Aplicações Descentralizadas
+
+Este capítulo aborda os conceitos fundamentais das aplicações descentralizadas, suas características, tipos, os fundamentos teóricos por traz dessas tecnologias, suas limitações e por fim um breve estudo sobre as principais opções tecnológicas atuais no desenvolvimento de aplicações descentralizadas.
 
 ## Características das Aplicações Descentralizadas
 
