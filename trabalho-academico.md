@@ -24,17 +24,27 @@ Este trabalho apresenta um estudo sobre o estado atual das tecnologias descentra
 
 ## Objetivos
 
-### Objetivo Geral
+### Objetivo geral
 
-O presente trabalho tem como objetivo verificar a viabilidade da utilização de tecnologias descentralizadas no desenvolvimento de soluções para problemas reais.
+O presente trabalho tem como objetivo verificar a viabilidade da utilização de tecnologias descentralizadas no desenvolvimento de soluções de sistemas virtuais que possam resolver problemas reais de usuários finais.
 
 ### Objetivos específicos
 
 Para alcançar o objetivo geral, os seguintes objetivos específicos foram definidos:
 
 1. Estudar a maturidade das tecnologias descentralizadas atuais;
-2. Verificar as particularidades do desenvolvimento em tecnologias descentralizadas;
-3. Criar uma prova de conceitos utilizando tecnologias descentralizadas.
+2. Criar uma prova de conceitos utilizando tecnologias descentralizadas.
+3. Verificar as particularidades do desenvolvimento em tecnologias descentralizadas;
+
+## Estrutura do trabalho
+
+O trabalho está estruturado em três capítulos principais, o primeiro cumpre com o objetivo específico 1 ao descrever o conceito de aplicações descentralizadas, quais tecnologias descentralizadas estão eminentes atualmente e quais suas vantagens e desvantagens.
+
+O segundo capítulo descreve o problema escolhido para a prova de contexto e como as tecnologias descentralizadas são aderentes à ele, cumprindo parcialmente o objetivo específico 2.
+
+O terceiro capítulo conclui o objetivo específico 2 ao mostrar o processo de engenharia de software utilizando tecnologias descentralizadas aplicado ao problema escolhido, e também cumpre com o objetivo específico 3 ao mostrar como problemas tradicionalmente resolvidos na engenharia de software podem ser abordados ao utilizar tecnologias descentralizadas e quais são as diferenças e desafios envolvidos no processo.
+
+Por fim, há um capítulo com as discussões finais em que está condensado as aprendizagens empíricas descobertas durante o desenvolvimento do trabalho, a conclusão chegada sobre o objetivo do trabalho e quais problemas e desafios permanecem abertos para serem abordados em trabalhos futuros.
 
 # Aplicações Descentralizadas
 
