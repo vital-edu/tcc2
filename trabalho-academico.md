@@ -90,6 +90,10 @@ Além dessas três características principais, \citeauthoronline{blockstack} ci
 2. Dependência em *tokens* e/ou ativos infungíveis (que possui valor único, não podendo ser trocado por dinheiro): para incentivar desenvolvedores a utilizarem a aplicação e/ou para desincentivar o uso indiscriminado de recursos por usuários.
 
 A própria *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
+<!--
+As aplicações descentralizadas, sejam elas quais forem, são construídas utilizando tecnologias criptográficas como forma de garantir que o dado, ao ser distribuído, não seja adulterado e que os donos dos dados não possam ter seus dados gerenciados por outros.
+
+Chaves públicas e privadas são a maneira como as  -->
 
 Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
@@ -135,7 +139,9 @@ Devido ao aumento do número de transações, e do tamanho total da *blockchain*
 
 Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço.
 
-Para tentar solucionar o problema de construção de aplicações descentralizadas que sejam escaláveis, \citeauthoronline{holo} propuseram uma arquitetura denomina *Holochain* que possui como principais características:
+## Holochain
+
+Para tentar solucionar problemas de escalabilidade em aplicações descentralizadas, \citeauthoronline{holo} propuseram uma arquitetura denominada *Holochain* que possui como principais características:
 
 1. Permitir aplicações descentralizadas completamente funcionais (muito mais sofisticas que meros contratos inteligentes), e capaz de servir usuários tradicionais da *internet*;
 2. Prover infraestrutura criptográfica massivamente escalável necessária para hospedar e gerenciar aplicações com enorme volume de uso.
@@ -146,7 +152,23 @@ A *Holochain* foi pensada para ter um modo de operação similar ao *git*, em qu
 
 A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer que cada nó tem uma perspectiva, interesse e tempo de interação diferente de outro nó da rede, não havendo uma memória única e idêntica compartilhada por todos os nós. Isso permite que haja o paralelismo no tratamento dos dados por cada nó, o que em última instância permite a escalabilidade da rede.
 
+\begin{figure}[htbp]
+  \caption{\label{fig:holoblock}Diferença entre arquitetura cliente/servidor, \emph{blockchain} e \emph{holochain}}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/holoblock.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{holobasics}.}
+\end{figure}
+
 De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes mantendo uma única *blockchain* que serve como fonte de suas transações, pareada com um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:holochainexplanned}\emph{Holochain}: rede centrada no agente.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/holochainexplanned.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{holobasics}.}
+\end{figure}
 
 Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuidar daquele registro, que ao receber o dado do estado de transição, informa aos seus nós vizinhos. Cada um dos nós vizinhos ao receber essa informação do nó responsável pelo dado, deve validá-lo utilizando a lógica da aplicação. Assim, há diversas cópias, igualmente validadas e como a rede é criada para ter os dados uniformemente distribuídos, há a garantia de que o dado seja rapidamente encontrado\footnote{A \meph{DHT} utilizada pela \emph{Holochain} é baseada na \emph{Kademlia}\cite{kademlia}, e o processo de encontrar um nó vizinho é exemplificado pela figura \ref{fig:kademlia}, em que cada nó armazena um subconjunto limitado de nós, chamados de nós vizinhos, e quando precisam encontrar um nó que não seja seu vizinho, é feito uma busca de vizinhos de vizinhos. A parte superior da figura mostra a quantidade de vizinhos que foram perguntados antes de se encontrar o nó desejado.}, mesmo quando o nó original do dado estiver indisponível \cite{holo2}.
 
