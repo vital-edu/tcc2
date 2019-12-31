@@ -4,6 +4,5 @@
 FROM limarka/limarka:latest
 
 # Adicione os pacotes que precisa instalar nessa imagem customizada:
-RUN tlmgr update --self
-RUN tlmgr install subfig
-
+RUN tlmgr update --self \
+  && tlmgr install subfig csquotes
