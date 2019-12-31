@@ -54,17 +54,15 @@ Este capítulo aborda os conceitos fundamentais das aplicações descentralizada
 
 ## Características das Aplicações Descentralizadas
 
-\citeauthor{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}). Aplicações centralizadas (a), são as mais comuns e são caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização. Aplicações distribuídas (b) são aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}. Atualmente aplicações distribuídas se popularizaram com os serviços de nuvem, em que empresas provêm servidores de aplicações espalhadas pelo mundo que podem ser alugados por outras empresas.
+\citeauthor{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
 
 \begin{figure}[htbp]
   \caption{\label{fig:apptypes}Tipos de aplicações de \emph{software} utilizando o diagrama de Paul Baran.}
   \begin{center}
-  \includegraphics[width=1.0\textwidth]{imagens/apptypes.png}
+  \includegraphics[width=0.9\textwidth]{imagens/apptypes.png}
   \end{center}
   \legend{Fonte: \citeauthoronline{baran} \cite[p. 2]{baran}.}
 \end{figure}
-
-Aplicações descentralizadas (c) são aplicações em que cada nó opera de forma independente. autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
 
 Uma aplicação centralizada e distribuída resolve problemas de disponibilidade, latência de rede, problemas de corrupção de dados através da redundância de dados, porém não resolve problemas de ordens políticas, sejam elas internas ou externas. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades.
 
