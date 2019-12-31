@@ -54,26 +54,26 @@ Este capítulo aborda os conceitos fundamentais das aplicações descentralizada
 
 ## Características das Aplicações Descentralizadas
 
-\citeauthor{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
+\citeauthoronline{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
 
 \begin{figure}[htbp]
   \caption{\label{fig:apptypes}Tipos de aplicações de \emph{software} utilizando o diagrama de Paul Baran.}
   \begin{center}
   \includegraphics[width=0.9\textwidth]{imagens/apptypes.png}
   \end{center}
-  \legend{Fonte: \citeauthoronline{baran} \cite[p. 2]{baran}.}
+  \legend{Fonte: \citeonline[p. 2]{baran}.}
 \end{figure}
 
 Essas classificações não são excludentes, sendo possível que uma aplicação seja ao mesmo tempo centralizada e distribuída, o que resolve problemas de disponibilidade, latência de rede, corrupção de dados, porém, não resolve problemas de ordens políticas, sejam eles internos ou externos. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades. Os problemas políticos têm potencial de afetarem o usuário final da aplicação ao alterarem o comportamento da aplicação, sua disponibilidade, ou mesmo o nível de segurança e privacidade dos dados dos usuários.
 
-\citeauthor{raval} propôs que para que uma aplicação seja considerada descentralizada, e portanto, imune a centralização de poder, ela deva possuir as seguintes características:
+\citeonline{raval} propôs que para que uma aplicação seja considerada descentralizada, e portanto, imune a centralização de poder, ela deva possuir as seguintes características:
 
 1. Ter código aberto: para uma plataforma ser descentralizada, o código fonte da aplicação não pode estar a mercer de apenas um índivíduo ou grupo, e portanto deve estar públicamente disponível para qualquer usuário realizar a auditoria do código, impedindo que haja comportamentos maliciosos na aplicação ou que se desviem do seu propósito inicial. A disponibilização do código também permite que haja inúmeras cópias de segurança da aplicação e que qualquer um possa compilar e/ou executar a apliação diretamente do código fonte, eliminando preocupações quanto a adulteração dos binários, que poderiam ser produzidos a partir de um outro código fonte (pemitindo a inclusão de brechas de segurança ou comportamentos maliciosos);
-2. Possuir moeda interna: como não existe a propriedade definitiva da plataforma por ninguém, é preciso encontrar uma maneira de incentivar o desenvolvimento da plataforma por desenvolvedores e custear a infraestrutura da aplicação, e, para essa finalidade, normalmente são criados *tokens*\footnote{\emph{tokens}, segundo \citeauthor{token}, são meios de trocas não reconhecidos por lei, emitidos por indivíduos privados ou empresas, e que são utilizados como se fossem dinheiro.} específicos para a plataforma que funcionam de forma similar a ações de empresas (títulos emitidos por sociedades anônimas), garantindo tanto poder de decisão sobre o rumo da empresa, bem como uma forma de captar investimento externo e premiar os fundadores quando há a valorização do valor da organização.
+2. Possuir moeda interna: como não existe a propriedade definitiva da plataforma por ninguém, é preciso encontrar uma maneira de incentivar o desenvolvimento da plataforma por desenvolvedores e custear a infraestrutura da aplicação, e, para essa finalidade, normalmente são criados *tokens*\footnote{\emph{tokens}, segundo \citeonline{token}, são meios de trocas não reconhecidos por lei, emitidos por indivíduos privados ou empresas, e que são utilizados como se fossem dinheiro.} específicos para a plataforma que funcionam de forma similar a ações de empresas (títulos emitidos por sociedades anônimas), garantindo tanto poder de decisão sobre o rumo da empresa, bem como uma forma de captar investimento externo e premiar os fundadores quando há a valorização do valor da organização.
 3. Usar um algoritmo de consenso descentralizado: é o algoritmo de consenso descentralizado (que resolva o *Problemas dos Generais Bizantinos*\footnote{\emph{problema dos generais bizantinos}, \citeauthoronline{byzantine} formalizaram em \citeyear{byzantine} uma história fictícia de um exército bizantino acampado ao redor de uma cidade inimiga em que o exército é composto por diversas divisões, cada uma comandada por um general, e em que a comunicação entre os generais só pode ocorrer por meio de troca de mensagens entre si. Nesse problema os generais leais do exército devem utilizar um algorítmo que garanta que (i) todos os generais leais irão adotar o mesmo plano de ação, e (ii) um grupo pequeno de traidores e conspiradores não pode conseguir que os generais leais adotem um plano de ação ruim.}) que permitirá que nós independentes com resultados conflitantes consigam convergir para um único resultado e assim possa-se garantir que a rede funcione sem chegar nunca a um estado permanente de impasse (*deadlock*).
 4. Não possuir ponto central de falha: aplicações descentralizadas, em teoria, não podem ser removidas ou derrubadas pois não possuem um único ponto de falha. Por funcionar em um sistema *peer-to-peer*\footnote{\emph{peer-to-peer} (p2p - ponto-a-ponto) é o nome que se dá a uma arquitetura de rede distribuída em que os participantes compartilham parte de seus recursos de \emph{hardware} (poder de processamento, capacidade de armazenamento, etc) para outros \emph{peers} (pontos) diretamente, sem passar por entidades intermediárias. Esses recursos compartilhados são necessários para prover o serviço e/ou conteúdo oferecido pela rede, e cada participante dessa rede é ao mesmo tempo provedor e consumidor de recursos \apud{kellerer}{p2p}.}, todos os participantes da rede teriam que ser desligados simultaneamente para que a aplicação parasse de funcionar. E ainda assim, é facilmente possível que novos nós entrem na rede em uma situação dessa, evitando o seu desligamento permanente. Na prática, porém, isso só é possível quando há o interesse constante de diversos agentes em manter a rede funcionando.
 
-Já para a \citeauthor{blockstack}, as aplicações descentralizadas precisam possuir as características abaixo:
+Já para a \citeonline{blockstack}, as aplicações descentralizadas precisam possuir as características abaixo:
 
 1. Usuários possuem a propriedade sobre seus dados: usuários detêm seus dados e escolhem quais aplicações podem ter acesso a eles. Os dados ficam criptografados com uma chave privada de propriedade dos usuário, que decripta os dados para a aplicação sempre que ela precisar consultar ou alterar seus dados.
 
@@ -81,7 +81,7 @@ Já para a \citeauthor{blockstack}, as aplicações descentralizadas precisam po
 
 3. Usuários têm liberdade de trocar de aplicação: os dados e identidades do usuário são independentes da aplicação, sendo assim, o usuário pode escolher a qualquer momento revogar acesso de uma aplicação aos seus dados e conceder o acesso a outra aplicação. Assim, o usuário será sempre livre para trocar de aplicação mantendo a propriedade sobre suas identidades e dados, inclusive tendo a possibilidade de gerenciar seus dados por conta própria sem a necessidade de utilizar aplicações de terceiros.
 
-Além dessas três características principais, \citeauthoronline{blockstack} cita outros dois componentes opcionais que uma aplicação descentralizada pode ter:
+Além dessas três características principais, \citeonline{blockstack} cita outros dois componentes opcionais que uma aplicação descentralizada pode ter:
 
 1. Contratos inteligentes: caracterizado como um estado de máquina replicável, algumas aplicações descentralizadas precisam garantir que cada nó da rede execute a mesma sequência de operações para que uma regra de negócio seja cumprida.
 
@@ -89,11 +89,25 @@ Além dessas três características principais, \citeauthoronline{blockstack} ci
 
 Além das caracterísiticas acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
 
-## A necessidade de Aplicações Descentralizadas
+## A Necessidade de Existência das Aplicações Descentralizadas
 
 A *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
 
+Porém, a *internet* comumente acessada pelos usuários, tornou-se cada vez mais centralizada, tendo empresas como Facebook, Google, Amazon, e Microsoft um gigante volume de dados sobre seus usuários, comercializando e disponibilizando os mesmos de forma indiscriminada ou sem o conhecimento de seus usuários. Casos de brechas de segurança ou roubo de informações também têm se tornado constantes e cada vez mais preocupantes, havendo apenas na década de 2010 quase 4 bilhões de registros de usuários roubados \cite{hacks}.
 
+Não só questões de segurança das informações preocupam, mas também questões de privacidade, como o que aconteceu no caso da Cambridge Analytica, que coletou cerca de 87 milhões de dados de usuários do Facebook sem consentimento dos usuários \cite{cambridge}, mostrando que mesmo companias grandes como o Facebook, não podem ser imunes de preocupação.
+
+Outro notório problema relacionado com aplicações centralizadas, é a facilidade com que governos conseguem obter dados dos seus cidadãos, sendo algo
+
+   Questões de privacidade de dados, segurança das informações armazenadas,
+privacy and security
+who these services share their user data with. ( giving away user information to government agencies without acquiring their consent, or selling them to third parties.)
+users don’t own their own data and they surrender it to the applications and services they use.
+ They’re effectively locked into these services and have no choice but to stick with them or else risk losing access to their data and profiles
+
+ benefits:
+ -It would prove resilience against cyberattacks by removing single points of failure.
+ -would improve competition by preventing lock-ins and giving users control and ownership of their data, thus giving them the power to choose and change services at will.
 
 <!-- Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
