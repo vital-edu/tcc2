@@ -64,7 +64,7 @@ Este capítulo aborda os conceitos fundamentais das aplicações descentralizada
   \legend{Fonte: \citeauthoronline{baran} \cite[p. 2]{baran}.}
 \end{figure}
 
-Uma aplicação centralizada e distribuída resolve problemas de disponibilidade, latência de rede, problemas de corrupção de dados através da redundância de dados, porém não resolve problemas de ordens políticas, sejam elas internas ou externas. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades.
+Essas classificações não são excludentes, sendo possível que uma aplicação seja ao mesmo tempo centralizada e distribuída, o que resolve problemas de disponibilidade, latência de rede, corrupção de dados, porém, não resolve problemas de ordens políticas, sejam eles internos ou externos. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades. Os problemas políticos têm potencial de afetarem o usuário final da aplicação ao alterarem o comportamento da aplicação, sua disponibilidade, ou mesmo o nível de segurança e privacidade dos dados dos usuários.
 
 \citeauthor{raval} propôs que para que uma aplicação seja considerada descentralizada, e portanto, imune a centralização de poder, ela deva possuir as seguintes características:
 
