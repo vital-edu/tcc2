@@ -77,9 +77,9 @@ Já para a \citeauthor{blockstack}, as aplicações descentralizadas precisam po
 
 1. Usuários possuem a propriedade sobre seus dados: usuários detêm seus dados e escolhem quais aplicações podem ter acesso a eles. Os dados ficam criptografados com uma chave privada de propriedade dos usuário, que decripta os dados para a aplicação sempre que ela precisar consultar ou alterar seus dados.
 
-2. Usuários possuem a propriedade sobre suas identidades: usuários são os únicos administradores de suas identidades, e, dentro de uma aplicação, eles devem ser distinguidos através de um identificador único sem que a aplicação tenha poder de revogar ou alterar a identidade do usuário. Além disso, o usuário deve pode ser ser capaz de criar quantas identidades ele achar necessário.
+2. Usuários possuem a propriedade sobre suas identidades: usuários são os únicos administradores de suas identidades, e, dentro de uma aplicação, eles devem ser distinguidos através de um identificador único sem que a aplicação tenha poder de revogar ou alterar a identidade do usuário. Além disso, o usuário deve ser capaz de criar quantas identidades ele achar necessário.
 
-3. Usuários tem liberdade de trocar de aplicação: os dados e identidades do usuário são independentes da aplicação, sendo assim, o usuário pode escolher a qualquer momento revogar acesso de uma aplicação aos seus dados e conceder o acesso a outra aplicação. Assim, o usuário será sempre livre para trocar de aplicação mantendo a propriedade sobre suas identidades e dados, inclusive tendo a possibilidade de gerenciar seus dados conta própria sem a necessidade de utilizar uma aplicação de terceiros.
+3. Usuários têm liberdade de trocar de aplicação: os dados e identidades do usuário são independentes da aplicação, sendo assim, o usuário pode escolher a qualquer momento revogar acesso de uma aplicação aos seus dados e conceder o acesso a outra aplicação. Assim, o usuário será sempre livre para trocar de aplicação mantendo a propriedade sobre suas identidades e dados, inclusive tendo a possibilidade de gerenciar seus dados por conta própria sem a necessidade de utilizar aplicações de terceiros.
 
 Além dessas três características principais, \citeauthoronline{blockstack} cita outros dois componentes opcionais que uma aplicação descentralizada pode ter:
 
