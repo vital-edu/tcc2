@@ -149,7 +149,13 @@ Devido ao aumento do número de transações, e do tamanho total da *blockchain*
 
 Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço. -->
 
-## Holochain
+## As Tecnologias Descentralizadas da Atualidade
+
+Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin*\footnote{veja o apêndice \ref{appendix:a} para uma explicação detalhada sobre a tecnologia do \emph{Bitcoin}} que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
+
+Embora a lista de tecnologias descentralizadas seja muito extensa e carente de estudos acadêmicos aprofundados sobre as mesmas, este capítulo mostra algumas das tecnologias mais proeminentes da atualidade para a contrução de aplicações descentralizadas, que foram estudadas pelo autor.
+
+### Holochain
 
 Para tentar solucionar problemas de escalabilidade em aplicações descentralizadas, \citeauthoronline{holo} propuseram uma arquitetura denominada *Holochain* que possui como principais características:
 
@@ -208,23 +214,14 @@ Diferentemente da aplicações descentralizadas construídas utilizando tecnolog
 \legend{Fonte: \citeauthor{holo3}}
 \end{table}
 
+### Ethereum
+### Near
 
 ## Tipos de Aplicações Descentralizadas
 
 ### DHT
 
 ### Sharded
-
-## Limitações das Aplicações Descentralizadas
-
-## Principais Plataformas de Desenvolvimento de Aplicações Descentralizadas
-
-### Ethereum
-
-### Holochain
-
-### Near
-
 
 # Aplicação a um Problema Real
 
@@ -292,7 +289,7 @@ Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal consta
 O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
 
 A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnologia *DHT*
-\textcolor{red}{[explicar]}. Assim ao invés dos dados serem idênticos para todos os nós da rede, eles são distribuídos de forma randômica entre os nós com um número de cópias suficientemente grande para garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
+\textcolor{red}{[explicar]}. Assim ao invés dos dados serem idênticos para todos os nós da rede, eles são distribuídos de forma aleatória entre os nós com um número de cópias suficientemente grande para garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
 \begin{figure}[htbp]
     \caption{\label{fig:diff}Diferença entre client/server, Blockchain e Holochain.}

@@ -1,4 +1,5 @@
 # A criptomoeda Bitcoin
+\label{appendix:a}
 
 As criptomoedas, um dinheiro virtual que utiliza conceitos e algoritmos oriundos da criptografia, teve sua história moldada por pequenos e progressivos avanços na área da criptografia. Portanto, é importante entender a contribuição de diferentes autores que culminaram no advento do *Bitcoin*, a principal criptomoeda em circulação atualmente.
 
