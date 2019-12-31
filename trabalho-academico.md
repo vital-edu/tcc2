@@ -87,13 +87,15 @@ Além dessas três características principais, \citeauthoronline{blockstack} ci
 
 2. Dependência em *tokens* e/ou ativos infungíveis (que possui valor único, não podendo ser trocado por dinheiro): para incentivar desenvolvedores a utilizarem a aplicação e/ou para desincentivar o uso indiscriminado de recursos por usuários.
 
-A própria *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
-<!--
-As aplicações descentralizadas, sejam elas quais forem, são construídas utilizando tecnologias criptográficas como forma de garantir que o dado, ao ser distribuído, não seja adulterado e que os donos dos dados não possam ter seus dados gerenciados por outros.
+Além das caracterísiticas acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
 
-Chaves públicas e privadas são a maneira como as  -->
+## A necessidade de Aplicações Descentralizadas
 
-Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
+A *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
+
+
+
+<!-- Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
 Para \citeauthoronline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de madeira a criar contratos:
 
@@ -135,7 +137,7 @@ Outra preocupação recorrente em relação ao desenvolvimento de aplicações d
 
 Devido ao aumento do número de transações, e do tamanho total da *blockchain*, a *Prova de Trabalho* acaba por obrigar que os nós tenham cada vez mais capacidade de processamento e de armazenamento, o que pode culminar em um processo de centralização, em que apenas nós com maior infraestrutura conseguem participar da rede. Para exemplificar, \citeauthoronline{scale} relatou que em \citeyear{scale}, a *blockchain* do *Bitcoin* transacionou 7 transações por segundo, tendo na época, um limite teórico de 4000 transações por segundo; e a *blockchain* da *Ethereum* chegou a transacionar 15 transações por segundo.
 
-Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço.
+Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço. -->
 
 ## Holochain
 
