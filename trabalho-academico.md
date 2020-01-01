@@ -189,25 +189,41 @@ Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuid
 
 Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta dessas caracterísitcas, a *Holochain* se mostra uma excelente opção para aplicações descentralizadas que são utilizadas em grande escala e que não precisam estar com seus dados o tempo todo sincronizados.
 
-### Arquitetura da Holochain
+#### Arquitetura da Holochain
 
-*Holochain* possui uma arquitetura orientada a agentes, o que significa que é um sistema distribuído que dá ao agente (nó participante da rede) o controle sobre sua identidade e os dados criados por ele, utilizando um sistema de reconhecimento de agentes baseado em criptogragia de chaves públicas e privadas, o que pode ser comparado ao que ocoree com o sistema de controle de versionamento Git.
+A *Holochain* possui conceitos que se relacionam as células dos seres vivos, em que cada aplicação *Holochain* (hApp) possui um DNA, que representa a regra de negócio da aplicação. O DNA é composto de vários *Zomes*, originário de *chromossome* (cromossomo), que seriam equivalentes a módulos da aplicação ou micro-serviços. Esses *Zomes* se comunicam entre si através de uma camada de comunicação externa onde pode ser criada interfaces de aplicação e interfaces gráficas e uma camada de comunicação entre as diferentes instâncias do *hApp*, denominada condutor (fig. \ref{fig:holoarchitecture}).
 
+\begin{figure}[htbp]
+    \caption{\label{fig:holoarchitecture}Arquitetura de uma aplicação Holochain (hApp).}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/holoarchitecture.png}
+    \end{center}
+    \legend{Fonte: \citeonline{holoarchitecture}.}
+\end{figure}
+
+O condutor possui a lógica responsável por fazer com que a instância da aplicação comporte-se como um nó da rede *Holochain* (fig. \ref{fig:happnet}) e se comunique com outras instâncias (nós) daquela mesma aplicação, sendo que cada *hApp* possui uma rede privada própria que possibilita que uma instância de um *hApp* se comunique com outra instância sem precisar interagir com nós da rede que não possuam aquela aplicação. Dessa forma, a *Holochain* é uma coleção de redes privadas, sendo cada rede responsável por coordenar as instâncias de um *hApp*.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:happnet}Aplicação Holochain (\emph{hApp}) comunicando-se na rede \emph{Holochain}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/happnet.png}
+    \end{center}
+    \legend{Fonte: \citeonline{holoarchitecture}.}
+\end{figure}
+
+Essa arquitetura da *Holochain* é denominada arquitetura orientada a agentes, o que significa que é um sistema distribuído que dá ao agente (nó participante da rede) o controle sobre sua identidade e os dados criados por ele, utilizando um sistema de reconhecimento de agentes baseado em criptogragia de chaves públicas e privadas, o que pode ser comparado ao que ocorre com o sistema de controle de versionamento Git.
 
 Para exemplificar a *Holochain*, podemos utilizar a metáfora de uma rosquinha, em que a massa da rosquinha representa a infraestrutura da *Holochain*, a cobertura representa a aplicação, podendo haver diversas aplicações implementadas com a *Holochain*, e em que o *agente* da rede que utiliza a aplicação está contido no interior da rosquinha, se comunicando com o resto da rede através das aplicações *Holochain*, como mostrado na  figura \ref{fig:holochainexplanned}. Cada outra rosquinha na imagem representa uma outra instância de uma mesma aplicação, que se comunicam uma com a outra.
 
-O espaço de comunicação externa a rosquinha, representa a rede *Holochain* que implementa uma DHT, porém, o espaço interno a cada rosquinha representa o agente que possui informações e dados distintos sob seu controle e que são manipulados internamente através das regras implmenetadas na aplicação.
+O espaço de comunicação externa a rosquinha, representa a rede *Holochain* que implementa uma DHT, porém, o espaço interno a cada rosquinha representa o agente que possui informações e dados distintos sob seu controle e que são manipulados internamente através das regras implemenetadas na aplicação.
 
 \begin{figure}[htbp]
   \caption{\label{fig:holochainexplanned}\emph{Holochain}: rede centrada no agente.}
   \begin{center}
   \includegraphics[width=1.0\textwidth]{imagens/holochainexplanned.png}
   \end{center}
-  \legend{Fonte: \citeauthor{holobasics}.}
+  \legend{Fonte: \citeonline{holobasics}.}
 \end{figure}
-
-Cada outra rosquinha
- como Cada aplicação da *Holochain* é na verdade
 
 \begin{table}[htbp]
 \caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
@@ -285,27 +301,6 @@ Até pouco tempo atrás, tais plataformas eram inconcebíveis de serem criadas, 
 Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal constatação pode ser explicada, embora sem rigor técnico, pelo modelo de negócio de tais plataformas, que no geral, criam novos *tokens* \textcolor{red}{[explicar o que são tokens]} ao invés de se basearem nas criptomoedas já consolidadas do mercado, além de utilizarem da mesma *blockchain* do Bitcoin, que conforme mostrado na \textcolor{red}{figura X [citar dados de performance da blockchain]} não consegue escalar.
 
 O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
-
-A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnologia *DHT*
-\textcolor{red}{[explicar]}. Assim ao invés dos dados serem idênticos para todos os nós da rede, eles são distribuídos de forma aleatória entre os nós com um número de cópias suficientemente grande para garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
-
-\begin{figure}[htbp]
-    \caption{\label{fig:diff}Diferença entre client/server, blockchain e Holochain.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/diff.png}
-    \end{center}
-    \legend{Fonte: \citeauthoronline{thebasics}.}
-\end{figure}
-
-Cada aplicação Holochain (hApp) possui um DNA, que representa a regra de negócio da aplicação, ou o contrato inteligente da aplicação (comparando com aplicação descentralizadas - dApps). O DNA é a composição de vários Zomes (originário de chromossome), que seriam equivalentes a módulos da aplicação ou micro-serviços. Por fim, existe uma camada de comunicação externa onde pode ser criada interfaces de aplicação e interfaces gráficas e uma camada de comunicação entre as diferentes instâncias do hApp, denominada condutor \ref{fig:holoarchitecture}.
-
-\begin{figure}[htbp]
-    \caption{\label{fig:holoarchitecture}Arquitetura de uma aplicação Holochain (hApp).}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/holoarchitecture.png}
-    \end{center}
-    \legend{Fonte: \citeauthoronline{holoarchitecture}.}
-\end{figure}
 
 Cada nó possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede \ref{fig:communicationholo}. Os dados de cada nó, são responsabilidade do nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA.
 
