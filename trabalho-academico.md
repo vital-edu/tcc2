@@ -157,12 +157,11 @@ Embora a lista de tecnologias descentralizadas seja muito extensa e carente de e
 
 ### Holochain
 
-Para tentar solucionar problemas de escalabilidade em aplicações descentralizadas, \citeauthoronline{holo} propuseram uma arquitetura denominada *Holochain* que possui como principais características:
+A *Holochain* é uma alternativa a *blockchain* que ao invés de compartilhar todos os dados de forma idêntica para todos os nós da rede, distribui os dados de uma aplicação de forma aleatória entre os nós criando um número de cópias suficientemente grande de forma a garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
-1. Permitir aplicações descentralizadas completamente funcionais (muito mais sofisticas que meros contratos inteligentes), e capaz de servir usuários tradicionais da *internet*;
-2. Prover infraestrutura criptográfica massivamente escalável necessária para hospedar e gerenciar aplicações com enorme volume de uso.
+Por não ter que replicar os dados para todos os nós da rede, a *Holochain* possui uma maior escalabilidade em comparação a aplicações descentralizadas que se utilizam da *blockchain* \citeauthoronline{holo}.
 
-A *Holochain* provê a garantia de integridade de dados para aplicações *peer-to-peer* sem utilizar algoritmos de consenso, o que economiza poder de processamento, sem abandonar a característica de imutabilidade. \citeauthor{holo} denomina essa abordagem como *centrada no agente* e destaca que o custo computacional de gerenciamento de consenso requer uma quantidade desnecessária de processamento de dados que carrega limitações de escalabilidade inerentes a abordagem.
+A *Holochain* provê a garantia de integridade de dados para aplicações *peer-to-peer* sem utilizar algoritmos de consenso, o que economiza poder de processamento, sem abandonar a característica de imutabilidade, pois valida as transações sempre que um agente se comunica com outro. \citeonline{holo} denomina essa abordagem como *centrada no agente* e destaca que o custo computacional de gerenciamento de consenso requer uma quantidade desnecessária de processamento de dados que carrega limitações de escalabilidade inerentes a abordagem.
 
 A *Holochain* foi pensada para ter um modo de operação similar ao *git*, em que cada nó não precisa estar sincronizado com outros nós, e que cada nó pode ter sua própria *blockchain* interna, independente das demais. Apenas quando os nós se comunicam, deve haver a validação das informações trocadas e a resolução de conflitos entre os nós \cite{holo2}. Nesse sentido, para \citeauthoronline{holo2} a *blockchain* possui uma estrutura *centrada no dado*, em contraste com a abordagem *centrada no agente*, adotada pela *Holochain*.
 
@@ -176,15 +175,7 @@ A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer 
   \legend{Fonte: \citeauthor{holobasics}.}
 \end{figure}
 
-De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes mantendo uma única *blockchain* que serve como fonte de suas transações, pareada com um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
-
-\begin{figure}[htbp]
-  \caption{\label{fig:holochainexplanned}\emph{Holochain}: rede centrada no agente.}
-  \begin{center}
-  \includegraphics[width=1.0\textwidth]{imagens/holochainexplanned.png}
-  \end{center}
-  \legend{Fonte: \citeauthor{holobasics}.}
-\end{figure}
+De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes que mantém uma *blockchain* própria que serve como fonte primária de suas transações, e que são pareadas e verificadas em um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
 
 Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuidar daquele registro, que ao receber o dado do estado de transição, informa aos seus nós vizinhos. Cada um dos nós vizinhos ao receber essa informação do nó responsável pelo dado, deve validá-lo utilizando a lógica da aplicação. Assim, há diversas cópias, igualmente validadas e como a rede é criada para ter os dados uniformemente distribuídos, há a garantia de que o dado seja rapidamente encontrado\footnote{A \meph{DHT} utilizada pela \emph{Holochain} é baseada na \emph{Kademlia}\cite{kademlia}, e o processo de encontrar um nó vizinho é exemplificado pela figura \ref{fig:kademlia}, em que cada nó armazena um subconjunto limitado de nós, chamados de nós vizinhos, e quando precisam encontrar um nó que não seja seu vizinho, é feito uma busca de vizinhos de vizinhos. A parte superior da figura mostra a quantidade de vizinhos que foram perguntados antes de se encontrar o nó desejado.}, mesmo quando o nó original do dado estiver indisponível \cite{holo2}.
 
@@ -196,7 +187,27 @@ Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuid
   \legend{Fonte: \citeauthor{kademlia}.}
 \end{figure}
 
-Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta disso, enquanto a rede *Ethereum* necessita de melhorias para resolver problemas de escalabilidade, a Holochain já está pronta para o desenvolvimento de aplicações descentralizadas, o que a torna uma excelente opção para uma plataforma de comércio eletrônico que pretende ser utilizada de forma extensiva.
+Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta dessas caracterísitcas, a *Holochain* se mostra uma excelente opção para aplicações descentralizadas que são utilizadas em grande escala e que não precisam estar com seus dados o tempo todo sincronizados.
+
+### Arquitetura da Holochain
+
+*Holochain* possui uma arquitetura orientada a agentes, o que significa que é um sistema distribuído que dá ao agente (nó participante da rede) o controle sobre sua identidade e os dados criados por ele, utilizando um sistema de reconhecimento de agentes baseado em criptogragia de chaves públicas e privadas, o que pode ser comparado ao que ocoree com o sistema de controle de versionamento Git.
+
+
+Para exemplificar a *Holochain*, podemos utilizar a metáfora de uma rosquinha, em que a massa da rosquinha representa a infraestrutura da *Holochain*, a cobertura representa a aplicação, podendo haver diversas aplicações implementadas com a *Holochain*, e em que o *agente* da rede que utiliza a aplicação está contido no interior da rosquinha, se comunicando com o resto da rede através das aplicações *Holochain*, como mostrado na  figura \ref{fig:holochainexplanned}. Cada outra rosquinha na imagem representa uma outra instância de uma mesma aplicação, que se comunicam uma com a outra.
+
+O espaço de comunicação externa a rosquinha, representa a rede *Holochain* que implementa uma DHT, porém, o espaço interno a cada rosquinha representa o agente que possui informações e dados distintos sob seu controle e que são manipulados internamente através das regras implmenetadas na aplicação.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:holochainexplanned}\emph{Holochain}: rede centrada no agente.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/holochainexplanned.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{holobasics}.}
+\end{figure}
+
+Cada outra rosquinha
+ como Cada aplicação da *Holochain* é na verdade
 
 \begin{table}[htbp]
 \caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
@@ -205,7 +216,7 @@ Diferentemente da aplicações descentralizadas construídas utilizando tecnolog
                                   & \textbf{Blockchain}                                                                                                                                            & \textbf{Holochain}                                                                                                                                                                                                   \\ \hline
 \textbf{Abordagem}                & Centrado em dado, um único conjunto de dados global e uma realidade compartilhada por todos os nós                                                             & Centrado em agente, permite os nós atuarem independentemente ou em estreita colaboração, e então compartilhar realidades independentes e evolutivas sobre os dados e que chegam a um acordo ao longo do tempo       \\ \hline
 \textbf{Consumo Energético}       & Bitcoin consome mais que 0,1\% de toda energia elétrica para prover menos de 0,0001\% do processamento financeiro mundial                                      & Como nenhuma mineração é necessária, não é necessário possuir uma CPU ou GPU especializada, tornando factível rodar os nós da rede em computadores com baixo poder de processamento, ou mesmo em celulares       \\ \hline
-\textbf{Volume de Transações}     & Neo, uma *blockchain* bastante performática, processa mais de 1000 transações por segundo. Bitcoin e Ethereum processam menos de uma centena por segundo         & Expectativa de ultrapasse o número de transações suportado pela rede VISA, que tem um máximo de 56000 transações por segundo}                                                                                      \\ \hline
+\textbf{Volume de Transações}     & Neo, uma \emph{blockchain} bastante performática, processa mais de 1000 transações por segundo. Bitcoin e Ethereum processam menos de uma centena por segundo         & Expectativa de ultrapasse o número de transações suportado pela rede VISA, que tem um máximo de 56000 transações por segundo}                                                                                      \\ \hline
 \textbf{Escalabilidade}           & Mesmo desconsiderando a Prova de Trabalho, há sérios problemas de limite de escalabilidade pelo fato de requerer a sincronia entre muitos nós da rede        & Utilizando uma DHT compartilhada, o volume de transação carregada por nó se torna menor a medida que a rede cresce                                                                                                  \\ \hline
 \textbf{Plataforma}               & Atualmente só pode funcionar de forma efetiva em computadores especializados para mineração                                                                    & Pode ser executado em Raspberry Pi ou em um smartphone                                                                                                                                                               \\ \hline
 \textbf{Eficiência Computacional} & O(\(n \times m\)) para validar transações                                                                                                                      & \(O(\frac{n}{m \times log m})\) para validar transações                                                                                                                                                              \\ \hline
@@ -217,12 +228,6 @@ Diferentemente da aplicações descentralizadas construídas utilizando tecnolog
 ### Ethereum
 ### Near
 
-## Tipos de Aplicações Descentralizadas
-
-### DHT
-
-### Sharded
-
 # Aplicação a um Problema Real
 
 ## Mercado Livre
@@ -231,16 +236,9 @@ Diferentemente da aplicações descentralizadas construídas utilizando tecnolog
 
 ## Processo de Desenvolvimento de Aplicações Descentralizadas
 
-### Ethereum
-
-### Holochain
-
-### Near
-
 ## Resultados e Discussões
 
 # Conclusão
-
 
 # Projeto
 
@@ -292,7 +290,7 @@ A *Holochain* surgiu como uma alternativa a *blockchain* baseando-se na tecnolog
 \textcolor{red}{[explicar]}. Assim ao invés dos dados serem idênticos para todos os nós da rede, eles são distribuídos de forma aleatória entre os nós com um número de cópias suficientemente grande para garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
 \begin{figure}[htbp]
-    \caption{\label{fig:diff}Diferença entre client/server, Blockchain e Holochain.}
+    \caption{\label{fig:diff}Diferença entre client/server, blockchain e Holochain.}
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/diff.png}
     \end{center}
