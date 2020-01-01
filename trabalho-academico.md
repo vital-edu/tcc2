@@ -196,15 +196,17 @@ A *Holochain* possui conceitos que se relacionam as células dos seres vivos, em
 \begin{figure}[htbp]
     \caption{\label{fig:holoarchitecture}Arquitetura de uma aplicação Holochain (hApp).}
     \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/holoarchitecture.png}
+    \includegraphics[width=1.0\textwidth]{imagens/holodna.png}
     \end{center}
     \legend{Fonte: \citeonline{holoarchitecture}.}
 \end{figure}
 
-O condutor possui a lógica responsável por fazer com que a instância da aplicação comporte-se como um nó da rede *Holochain* (fig. \ref{fig:happnet}) e se comunique com outras instâncias (nós) daquela mesma aplicação, sendo que cada *hApp* possui uma rede privada própria que possibilita que uma instância de um *hApp* se comunique com outra instância sem precisar interagir com nós da rede que não possuam aquela aplicação. Dessa forma, a *Holochain* é uma coleção de redes privadas, sendo cada rede responsável por coordenar as instâncias de um *hApp*.
+O condutor possui a lógica responsável por fazer com que a instância da aplicação comporte-se como um nó da rede *Holochain* e se comunique com outras instâncias (nós) daquela mesma aplicação, sendo que cada *hApp* possui uma rede privada própria que possibilita que uma instância de um *hApp* se comunique com outra instância sem precisar interagir com nós da rede que não possuam aquela aplicação. Dessa forma, a *Holochain* é uma coleção de redes privadas, sendo cada rede responsável por coordenar as instâncias de um *hApp*.
+
+Cada nó da rede possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede (fig. \ref{fig:happnet}). Os dados de cada nó são responsabilidade do próprio nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA.
 
 \begin{figure}[htbp]
-    \caption{\label{fig:happnet}Aplicação Holochain (\emph{hApp}) comunicando-se na rede \emph{Holochain}.}
+    \caption{\label{fig:happnet}Aplicação \emph{Holochain} (\emph{hApp}) comunicando-se na rede \emph{Holochain}.}
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/happnet.png}
     \end{center}
@@ -215,14 +217,44 @@ Essa arquitetura da *Holochain* é denominada arquitetura orientada a agentes, o
 
 Para exemplificar a *Holochain*, podemos utilizar a metáfora de uma rosquinha, em que a massa da rosquinha representa a infraestrutura da *Holochain*, a cobertura representa a aplicação, podendo haver diversas aplicações implementadas com a *Holochain*, e em que o *agente* da rede que utiliza a aplicação está contido no interior da rosquinha, se comunicando com o resto da rede através das aplicações *Holochain*, como mostrado na  figura \ref{fig:holochainexplanned}. Cada outra rosquinha na imagem representa uma outra instância de uma mesma aplicação, que se comunicam uma com a outra.
 
-O espaço de comunicação externa a rosquinha, representa a rede *Holochain* que implementa uma DHT, porém, o espaço interno a cada rosquinha representa o agente que possui informações e dados distintos sob seu controle e que são manipulados internamente através das regras implemenetadas na aplicação.
-
 \begin{figure}[htbp]
   \caption{\label{fig:holochainexplanned}\emph{Holochain}: rede centrada no agente.}
   \begin{center}
   \includegraphics[width=1.0\textwidth]{imagens/holochainexplanned.png}
   \end{center}
   \legend{Fonte: \citeonline{holobasics}.}
+\end{figure}
+
+O espaço de comunicação externa a rosquinha, representa a rede *Holochain* que implementa uma DHT, porém, o espaço interno a cada rosquinha representa o agente que possui informações e dados distintos sob seu controle e que são manipulados internamente através das regras implemenetadas na aplicação.
+
+Para que a comunicação entre os nós seja possível, a *Holochain* utiliza uma rede DHT em que cada nó conhece um conjunto limitado e definido de outros nós vizinhos, e em que um nó pergunta ao outro e através do *hash* único do arquivo é possível determinar se o nó perguntado possui aquela informação, e caso não a tenha, consiga-se determinar qual nó possui a maior probabilidade de ter aquela informação ou conhecer o nó que possua aquela informação \ref{fig:dht}. Sendo assim, a *Holochain* possui uma rede de descoberta que se comporta de maneira logarítma, ou seja, a adição de novos dados não impacta de forma significativa o tempo que demora para um nó qualquer encontrar um dado qualquer.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:dht}Exemplificação da descoberta de nós na rede DHT da \emph{Holochain}.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/dht.png}
+  \end{center}
+  \legend{Fonte: \citeonline{holobasics}.}
+\end{figure}
+
+Para garantir que o dado pertence ao nó correspondente e também para garantir que o dado não foi adulterado, sempre que uma instância do *hApp* cria um registro, ele assina eletrônicamente o registro público com sua chave privada, ele armazena-o internamente e também o compartilha com a rede, conforme mostrado na figura \ref{fig:regholo}.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:regholo}Processo de registro de dados públicos na \emph{Holochain}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/regholo.png}
+    \end{center}
+    \legend{Fonte: \citeonline{holodht}.}
+\end{figure}
+
+Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, mas ao invés de compartilhar todo o registro, ele apenas compartilha o cabeçalho do mesmo, guardando o registro internamente apenas, conforme a figura \ref{fig:regholopriv}. Esse processo permite que o dado fique indisponível para os outros nós, mas também permite que sempre que o nó precise compartilhar esse dado com um nó específico, esse nó consiga verificar que o dado compartilhado realmente existe, pertence ao nó que o compartilhou, e que não foi adulterado \cite{holodht}.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:regholopriv}Processo de registro de dados privados na \emph{Holochain}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/regholopriv.png}
+    \end{center}
+    \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
 
 \begin{table}[htbp]
@@ -301,16 +333,6 @@ Até pouco tempo atrás, tais plataformas eram inconcebíveis de serem criadas, 
 Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal constatação pode ser explicada, embora sem rigor técnico, pelo modelo de negócio de tais plataformas, que no geral, criam novos *tokens* \textcolor{red}{[explicar o que são tokens]} ao invés de se basearem nas criptomoedas já consolidadas do mercado, além de utilizarem da mesma *blockchain* do Bitcoin, que conforme mostrado na \textcolor{red}{figura X [citar dados de performance da blockchain]} não consegue escalar.
 
 O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
-
-Cada nó possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede \ref{fig:communicationholo}. Os dados de cada nó, são responsabilidade do nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA.
-
-\begin{figure}[htbp]
-    \caption{\label{fig:communicationholo}Interação entre hApps.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/communicationholo.png}
-    \end{center}
-    \legend{Fonte: \citeauthoronline{holoarchitecture}.}
-\end{figure}
 
 Caso seja identificado uma fraude na rede, o nó fraudulento é inserido numa lista de nó não confiável, tendo essa informação espalhada pela rede até o ponto em que ninguém na rede confia mais no nó fraudulento.
 
