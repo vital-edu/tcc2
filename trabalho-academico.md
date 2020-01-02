@@ -221,12 +221,12 @@ A *Holochain* possui conceitos que se relacionam as células dos seres vivos, em
 
 O condutor possui a lógica responsável por fazer com que a instância da aplicação comporte-se como um nó da rede *Holochain* e se comunique com outras instâncias (nós) daquela mesma aplicação, sendo que cada *hApp* possui uma rede privada própria que possibilita que uma instância de um *hApp* se comunique com outra instância sem precisar interagir com nós da rede que não possuam aquela aplicação. Dessa forma, a *Holochain* é uma coleção de redes privadas, sendo cada rede responsável por coordenar as instâncias de um *hApp*.
 
-Cada nó da rede possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede (fig. \ref{fig:happnet}). Os dados de cada nó são responsabilidade do próprio nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA.
+Cada nó da rede possui uma instância da aplicação com seus próprios dados, e essa instância se comunica com as demais intâncias na rede (fig. \ref{fig:happnet}). Os dados de cada nó são responsabilidade do próprio nó, porém, são validados segundo o DNA da aplicação por outros nós, sempre verificando se os dados condizem com as regras especificadas no DNA. Caso seja identificado uma fraude na rede, o nó fraudulento é inserido numa lista de nó não confiável, tendo essa informação espalhada pela rede até o ponto em que ninguém na rede confia mais no nó fraudulento.
 
 \begin{figure}[htbp]
     \caption{\label{fig:happnet}Aplicação \emph{Holochain} (\emph{hApp}) comunicando-se na rede \emph{Holochain}.}
     \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/happnet.png}
+    \includegraphics[width=0.5\textwidth]{imagens/happnet.png}
     \end{center}
     \legend{Fonte: \citeonline{holoarchitecture}.}
 \end{figure}
@@ -250,24 +250,24 @@ Para que a comunicação entre os nós seja possível, a *Holochain* utiliza uma
 \begin{figure}[htbp]
   \caption{\label{fig:dht}Exemplificação da descoberta de nós na rede DHT da \emph{Holochain}.}
   \begin{center}
-  \includegraphics[width=1.0\textwidth]{imagens/dht.png}
+  \includegraphics[width=0.5\textwidth]{imagens/dht.png}
   \end{center}
   \legend{Fonte: \citeonline{holobasics}.}
 \end{figure}
 
 Para garantir que o dado pertence ao nó correspondente e também para garantir que o dado não foi adulterado, sempre que uma instância do *hApp* cria um registro, ele assina eletrônicamente o registro público com sua chave privada, ele armazena-o internamente e também o compartilha com a rede, conforme mostrado na figura \ref{fig:regholo}.
 
-\begin{figure}[htbp]
+\begin{figure}[!ht]
     \caption{\label{fig:regholo}Processo de registro de dados públicos na \emph{Holochain}.}
     \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/regholo.png}
+    \includegraphics[width=0.8\textwidth]{imagens/regholo.png}
     \end{center}
     \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
 
 Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, mas ao invés de compartilhar todo o registro, ele apenas compartilha o cabeçalho do mesmo, guardando o registro internamente apenas, conforme a figura \ref{fig:regholopriv}. Esse processo permite que o dado fique indisponível para os outros nós, mas também permite que sempre que o nó precise compartilhar esse dado com um nó específico, esse nó consiga verificar que o dado compartilhado realmente existe, pertence ao nó que o compartilhou, e que não foi adulterado \cite{holodht}.
 
-\begin{figure}[htbp]
+\begin{figure}[!ht]
     \caption{\label{fig:regholopriv}Processo de registro de dados privados na \emph{Holochain}.}
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/regholopriv.png}
@@ -275,8 +275,11 @@ Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, 
     \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
 
-### Ethereum
-### Near
+### Blockstack
+
+*Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais \cite{blockstack}.
+
+
 
 # Aplicação a um Problema Real
 
@@ -335,8 +338,6 @@ Até pouco tempo atrás, tais plataformas eram inconcebíveis de serem criadas, 
 Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal constatação pode ser explicada, embora sem rigor técnico, pelo modelo de negócio de tais plataformas, que no geral, criam novos *tokens* \textcolor{red}{[explicar o que são tokens]} ao invés de se basearem nas criptomoedas já consolidadas do mercado, além de utilizarem da mesma *blockchain* do Bitcoin, que conforme mostrado na \textcolor{red}{figura X [citar dados de performance da blockchain]} não consegue escalar.
 
 O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
-
-Caso seja identificado uma fraude na rede, o nó fraudulento é inserido numa lista de nó não confiável, tendo essa informação espalhada pela rede até o ponto em que ninguém na rede confia mais no nó fraudulento.
 
 ## Escopo da Aplicação
 
