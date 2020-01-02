@@ -189,6 +189,24 @@ Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuid
 
 Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta dessas caracterísitcas, a *Holochain* se mostra uma excelente opção para aplicações descentralizadas que são utilizadas em grande escala e que não precisam estar com seus dados o tempo todo sincronizados.
 
+A tabela \ref{tab:holo} traz uma breve comparação sobre algumas características da *Holochain* em relação a tecnologias *blockchain*.
+
+\begin{table}[htbp]
+\caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
+\begin{tabular}{m{0.2\linewidth} | m{0.4\linewidth} | m{0.4\linewidth}}
+\toprule
+                                  & \textbf{Blockchain}                                                                                                                                            & \textbf{Holochain}                                                                                                                                                                                                   \\ \hline
+\textbf{Abordagem}                & Centrado em dado, um único conjunto de dados global e uma realidade compartilhada por todos os nós                                                             & Centrado em agente, permite os nós atuarem independentemente ou em estreita colaboração, e então compartilhar realidades independentes e evolutivas sobre os dados e que chegam a um acordo ao longo do tempo       \\ \hline
+\textbf{Consumo Energético}       & Bitcoin consome mais que 0,1\% de toda energia elétrica para prover menos de 0,0001\% do processamento financeiro mundial                                      & Como nenhuma mineração é necessária, não é necessário possuir uma CPU ou GPU especializada, tornando factível rodar os nós da rede em computadores com baixo poder de processamento, ou mesmo em celulares       \\ \hline
+\textbf{Volume de Transações}     & Neo, uma \emph{blockchain} bastante performática, processa mais de 1000 transações por segundo. Bitcoin e Ethereum processam menos de uma centena por segundo         & Expectativa de ultrapasse o número de transações suportado pela rede VISA, que tem um máximo de 56000 transações por segundo}                                                                                      \\ \hline
+\textbf{Escalabilidade}           & Mesmo desconsiderando a Prova de Trabalho, há sérios problemas de limite de escalabilidade pelo fato de requerer a sincronia entre muitos nós da rede        & Utilizando uma DHT compartilhada, o volume de transação carregada por nó se torna menor a medida que a rede cresce                                                                                                  \\ \hline
+\textbf{Plataforma}               & Atualmente só pode funcionar de forma efetiva em computadores especializados para mineração                                                                    & Pode ser executado em Raspberry Pi ou em um smartphone                                                                                                                                                               \\ \hline
+\textbf{Eficiência Computacional} & O(\(n \times m\)) para validar transações                                                                                                                      & \(O(\frac{n}{m \times log m})\) para validar transações                                                                                                                                                              \\ \hline
+\textbf{Efeito de consenso}       & Algoritmos de consenso centralizam o poder e a Prova de Trabalho resulta em um crescimento computacional exorbitante para um conjunto de dados finito        & Não possui mineração nem consenso. Não possui vulnerabilidade ao ataque da maioria. Apenas é necessário confiar no código que roda em seu nó e validar o histórico dos nós com que se comunica
+\end{tabular}
+\legend{Fonte: \citeauthor{holo3}}
+\end{table}
+
 #### Arquitetura da Holochain
 
 A *Holochain* possui conceitos que se relacionam as células dos seres vivos, em que cada aplicação *Holochain* (hApp) possui um DNA, que representa a regra de negócio da aplicação. O DNA é composto de vários *Zomes*, originário de *chromossome* (cromossomo), que seriam equivalentes a módulos da aplicação ou micro-serviços. Esses *Zomes* se comunicam entre si através de uma camada de comunicação externa onde pode ser criada interfaces de aplicação e interfaces gráficas e uma camada de comunicação entre as diferentes instâncias do *hApp*, denominada condutor (fig. \ref{fig:holoarchitecture}).
@@ -256,22 +274,6 @@ Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, 
     \end{center}
     \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
-
-\begin{table}[htbp]
-\caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
-\begin{tabular}{m{0.2\linewidth} | m{0.4\linewidth} | m{0.4\linewidth}}
-\toprule
-                                  & \textbf{Blockchain}                                                                                                                                            & \textbf{Holochain}                                                                                                                                                                                                   \\ \hline
-\textbf{Abordagem}                & Centrado em dado, um único conjunto de dados global e uma realidade compartilhada por todos os nós                                                             & Centrado em agente, permite os nós atuarem independentemente ou em estreita colaboração, e então compartilhar realidades independentes e evolutivas sobre os dados e que chegam a um acordo ao longo do tempo       \\ \hline
-\textbf{Consumo Energético}       & Bitcoin consome mais que 0,1\% de toda energia elétrica para prover menos de 0,0001\% do processamento financeiro mundial                                      & Como nenhuma mineração é necessária, não é necessário possuir uma CPU ou GPU especializada, tornando factível rodar os nós da rede em computadores com baixo poder de processamento, ou mesmo em celulares       \\ \hline
-\textbf{Volume de Transações}     & Neo, uma \emph{blockchain} bastante performática, processa mais de 1000 transações por segundo. Bitcoin e Ethereum processam menos de uma centena por segundo         & Expectativa de ultrapasse o número de transações suportado pela rede VISA, que tem um máximo de 56000 transações por segundo}                                                                                      \\ \hline
-\textbf{Escalabilidade}           & Mesmo desconsiderando a Prova de Trabalho, há sérios problemas de limite de escalabilidade pelo fato de requerer a sincronia entre muitos nós da rede        & Utilizando uma DHT compartilhada, o volume de transação carregada por nó se torna menor a medida que a rede cresce                                                                                                  \\ \hline
-\textbf{Plataforma}               & Atualmente só pode funcionar de forma efetiva em computadores especializados para mineração                                                                    & Pode ser executado em Raspberry Pi ou em um smartphone                                                                                                                                                               \\ \hline
-\textbf{Eficiência Computacional} & O(\(n \times m\)) para validar transações                                                                                                                      & \(O(\frac{n}{m \times log m})\) para validar transações                                                                                                                                                              \\ \hline
-\textbf{Efeito de consenso}       & Algoritmos de consenso centralizam o poder e a Prova de Trabalho resulta em um crescimento computacional exorbitante para um conjunto de dados finito        & Não possui mineração nem consenso. Não possui vulnerabilidade ao ataque da maioria. Apenas é necessário confiar no código que roda em seu nó e validar o histórico dos nós com que se comunica
-\end{tabular}
-\legend{Fonte: \citeauthor{holo3}}
-\end{table}
 
 ### Ethereum
 ### Near
