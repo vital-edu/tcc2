@@ -277,9 +277,15 @@ Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, 
 
 ### Blockstack
 
-*Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais \cite{blockstack}.
+*Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais.
 
+A *Blockstack* tem como objetivos: \cite[p. 3]{blockstack}
 
+- Facilidade de uso: prover um sistema que seja fácil de utilizar por usuários finais de aplicações tradicionais e prover um ambiente de desenvolvimento tão fácil de desenvolver como são as aplicações da *web* atualmente;
+- Escalabilidade: prover uma infraestrutura que suporte de centenas de milhares a bilhões de usuários, escalando a rede bem como a *blockchain* conforme o aumento no número de aplicações e usuários;
+- Controle do usuário: prover ao usuário final o poder sobre seus dados por padrão, permitindo ao usuário decidir se deseja prover seus próprios recursos computacionais e de armazenamento.
+
+Para alcançar esses objetivos, a *Blockstack* utiliza uma camada de *blockchain* que lida com uma quantidade mínima de lógica de negócio e controle de estado da aplicação, sendo que os dados das aplicações são sempre que possível atualizados apenas localmente ao invés de serem armazenados inteiramente na *blockchain*.
 
 # Aplicação a um Problema Real
 
