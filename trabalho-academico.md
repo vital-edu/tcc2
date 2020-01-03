@@ -287,6 +287,28 @@ A *Blockstack* tem como objetivos: \cite[p. 3]{blockstack}
 
 Para alcançar esses objetivos, a *Blockstack* utiliza uma camada de *blockchain* que lida com uma quantidade mínima de lógica de negócio e controle de estado da aplicação, sendo que os dados das aplicações são sempre que possível atualizados apenas localmente ao invés de serem armazenados inteiramente na *blockchain*.
 
+#### Arquitetura da Blockstack
+
+A arquitetura da *Blockstack* é composta por três camadas principais (fig. \ref{fig:archblockstack}) e enquanto continua a utilizar os protocolos de comunicação tradicional da *internet* como o TCP/IP, substitui outros protocolos de mais alto nível, (por exemplo, o protocolo DNS\footnote{DNS (\emph{Domain Name System} - Sistema de Nomes de Domínio) é o protocolo de comunicação de redes utilizado para converter e localizar endereços de máquinas legíveis para humanos (www.nomedomeusite.com.br) para os endereços IPs das máquinas (216.58.194.164) utilizados na rede mundial de computadores}), e foi elaborado para garantir o controle e privacidade dos dados do usuário, integrar-se facilmente a arquiteturas atuais e prover segurança no gerenciamento dos dados.
+
+\begin{figure}[!ht]
+    \caption{\label{fig:archblockstack}Arquitetura da \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/archblockstack.png}
+    \end{center}
+    \legend{Fonte: \citeonline{archblockstack}.}
+\end{figure}
+
+A primeira camada da *Blockstack* é construída em cima da *blockchain* do *Bitcoin*, garantindo segurança e robustez contra ataques que tentem fraudar os dados da *Blockstack*. Isso é feito através da utilização de uma *blockchain* virtual que tem seus metadados transformados em *hash* e registrados na *blockchain* do *Bitcoin*. Dessa forma, qualquer adição ou atualização na *Blockstack* deve ser validada por um bloco da *blockchain* do *Bitcoin*, enquanto que operações somente-leitura podem ser feitas diretamente da *blockchain* virtual da *Blockstack*, garantindo ao mesmo tempo rapidez e robustez.
+
+Os blocos da *blockchain* virtual da *Blockstack* armazenam apenas o nome do domínio da aplicação\footnote{A \emph{Blockstack} implementa seu próprio sistema DNS denominado \emph{BNS}(\emph{Blockchain Naming Service} - Serviço de Nomes da \emph{Blockchain}) que serve para criar domínios de aplicação de forma similar aos domínios tradicionais (www.meudominio.com.br), tornando \emph{hashes} em nomes legíveis}, a sua respectiva chave pública e o *hash* do arquivo Zone\footnote{{\emph{Arquivos Zone} são arquivos utilizados por sistemas DNS para armazenarem os IPs das máquinas conectadas a rede de computadores que estão associados a determinado nome de domínio}}.
+
+A segunda camada chamadda de *Atlas*, é reponsável por gerenciar o mapeamento dos *hashes* de arquivos Zone com os arquivos Zone de fato, gerenciando a comunicação entre os domínios do BNS (presentes na camada inferior) e o local físico onde os arquivos estão localizados (responsabilidade da camada superior). Tanto a camada inferior como a segunda camada, são gerenciadas pelos nós da rede *Blockstack* e ao gerenciar apenas *hashes* de arquivos, a rede se torna especialmente leve, podendo mapear a *internet* inteira em menos de 100GB \cite{archblockstack}.
+
+A camada superior da *Blockstack*, chamada de *Gaia* é reponsável por armazenar os arquivos de fato, porém, diferente de outras tecnologias *blockchain*, a *Blockstack* não armazena os arquivos de fato na sua rede *blockchain*, optando por, em vez disso, utilizar a infraestrutura tradicional da *internet*, ou seja, os arquivos de fato são armazenados em servidores da Amazon AWS, Dropbox, Microsoft Azure, FreeNAS Server, Google Drive. Porém, a
+
+Por fim, a
+
 # Aplicação a um Problema Real
 
 ## Mercado Livre
