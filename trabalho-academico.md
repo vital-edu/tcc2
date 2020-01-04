@@ -341,7 +341,43 @@ Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
 
 Por conta das características do sistema de armazenamento do Gaia (tab. \ref{tab:gaia}), ele se apresenta como sendo uma solução muito mais próxima das necessidades que uma aplicação *web* tradicional possui atualmente, sendo mais atrativo e familiar para desenvolvedores *web*.
 
-A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
+A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ) para as plataformas *iOS*, *Android*, *Web* e para *React Native* (aplicações híbridas), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
+
+Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo lema com os dizers: *Can't be evil* (Não consegue ser mau) (fig: \ref{fig:dontevil}), que serve como crítica a grandes corporações como a Google (que possuia o lema *Dont be evil* - Não seja mau) que embora tenham sido concebidas com filosofias que tinham como propósito criar um mundo melhor, acabaram tomando um rumo duvidoso em que é difícil negar que estão explorando de forma indevida os dados coletados de seus usuários.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:dontevil}Placa publicitária da Blockstack com seu lema.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/dontevil.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackreview}.}
+\end{figure}
+
+As aplicações *Blockstack* precisam seguir um fluxo de autenticação semelhante ao ilustrado na figura \ref{fig:dontevil}, em que o usuário clica em um botão de *sign in* que o redireciona para o *Blockstack Browser*\footnote{O \emph{Blockstack Browser} é um cliente \emph{web} que serve para usuários conseguirem utilizar os serviços providos pela infraestrutura da \emph{Blockstack} sem precisar executar um nó da rede. Ele é \emph{open source} e é usado principalmente para que usuários realizem o registro e \emph{sign in} na rede \emph{blockchain} da \emph{Blockstack}.} (fig. \ref{fig:blockstacksignin} - passos 1 e 2).
+
+\begin{figure}[htbp]
+    \caption{\label{fig:blockstacksignin}Processo de \emph{sign in} utilizando o SDK da \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/blockstacksignin.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackauth}.}
+\end{figure}
+
+No \emph{Blockstack Browser} o usuário pode realizar o cadastro na *blockchain* da *Blockstack* ou então realizar o *sign in* caso já tenha cadastro, fornecendo seu nome de usuário e chave privada (a figura \ref{fig:blockstacksigninex} exemplifica como um usuário interage com uma aplicação que utiliza a \emph{Blockstack}). Após realizar o *sign in* na plataforma, o usuário precisa conceder permissão à aplicação (permissão de apenas leitura ou permissão de leitura e escrita).
+
+\begin{figure}[htbp]
+    \caption{\label{fig:blockstacksigninex}Exemplo do processo de \emph{sign in} dos aplicativos que usam \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/blockstackauth.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackauth}.}
+\end{figure}
+
+Apenas após o usuário realizar o *sign in* e conceder as permissões que a aplicação requisitou, é que o *Blockstack Browser* retorna um *token JWT* para a aplicação (fig. \ref{fig:blockstacksignin} - passo 3), que então é verificado e tratado pela aplicação (fig. \ref{fig:blockstacksignin} - passo 4) e  pode então ser utilizado para recuperar as informações do usuário diretamente da *blockchain* da *Blockstack* (fig. \ref{fig:blockstacksignin} - passo 5).
+
+A partir de então, a aplicação detém um *token* temporário que pode ser utilizado para realizar operações no Gaia em nome do usuário. Esse *token* pode ser revogado a qualquer momento pelo usuário e é justamente por conta desse processo que a *Blockstack* se propõe a ser uma infraestrutura que não permite que as aplicações "sejam más".
+
+O usuário detém a propriedade das suas informações e pode a qualquer momento revogar o acesso da mesma aos seus dados e também migrar para outra aplicação que ele considere melhor (ou mesmo utilizar várias aplicações simultâneamente que façam a mesma coisa).
 
 # Aplicação a um Problema Real
 
@@ -366,7 +402,7 @@ O crescente endividamento do governo americando \ref{fig:usdebt} em conjunto com
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/usdebt.png}
     \end{center}
-    \legend{Fonte: \citeauthoronline{usdebt}.}
+    \legend{Fonte: \citeonline{usdebt}.}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -374,7 +410,7 @@ O crescente endividamento do governo americando \ref{fig:usdebt} em conjunto com
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/usprice.png}
     \end{center}
-    \legend{Fonte: \citeauthoronline{usprice}.}
+    \legend{Fonte: \citeonline{usprice}.}
 \end{figure}
 
 Hayek \textcolor{red}{[citar apropriadamente essa afirmação]} atribui o constante endividamento do governo e a alteração artificial da taxa de juros pelo governo como fatores precursores para grandes crises e depressões mundiais como as que ocorreram em 2007-2008.
