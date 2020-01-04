@@ -549,6 +549,109 @@ O *Bitcoin* foi criado para se tornar uma moeda descentralizada e livre do poder
 
 O livre mercado só é plenamente possível em um ambiente livre de coerção, em que os indivíduos se sintam livres para realizar trocas voluntárias e que não possam ser ameaçados ou inibidos por forças centralizadoras. O uso de moedas fiduciárias em espécie permite que transações livre de interferências estatais ocorram, porém, na era da conectividade em tempo real é necessário que haja uma moeda digital que garanta ou ao menos melhore a privacidade dos indivíduos que desejem realizar trocas voluntárias.
 
+### Blockstack
+
+*Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais.
+
+A *Blockstack* tem como objetivos: \cite[p. 3]{blockstack}
+
+- Facilidade de uso: prover um sistema que seja fácil de utilizar por usuários finais de aplicações tradicionais e prover um ambiente de desenvolvimento tão fácil de desenvolver como são as aplicações da *web* atualmente;
+- Escalabilidade: prover uma infraestrutura que suporte de centenas de milhares a bilhões de usuários, escalando a rede bem como a *blockchain* conforme o aumento no número de aplicações e usuários;
+- Controle do usuário: prover ao usuário final o poder sobre seus dados por padrão, permitindo ao usuário decidir se deseja prover seus próprios recursos computacionais e de armazenamento.
+
+Para alcançar esses objetivos, a *Blockstack* utiliza uma camada de *blockchain* que lida com uma quantidade mínima de lógica de negócio e controle de estado da aplicação, sendo que os dados das aplicações são sempre que possível atualizados apenas localmente ao invés de serem armazenados inteiramente na *blockchain*.
+
+#### Arquitetura da Blockstack
+
+A arquitetura da *Blockstack* é composta por três camadas principais (fig. \ref{fig:archblockstack}) e enquanto continua a utilizar os protocolos de comunicação tradicional da *internet* como o TCP/IP, substitui outros protocolos de mais alto nível, (por exemplo, o protocolo DNS\footnote{DNS (\emph{Domain Name System} - Sistema de Nomes de Domínio) é o protocolo de comunicação de redes utilizado para converter e localizar endereços de máquinas legíveis para humanos (www.nomedomeusite.com.br) para os endereços IPs das máquinas (216.58.194.164) utilizados na rede mundial de computadores}), e foi elaborado para garantir o controle e privacidade dos dados do usuário, integrar-se facilmente a arquiteturas atuais e prover segurança no gerenciamento dos dados.
+
+\begin{figure}[!ht]
+    \caption{\label{fig:archblockstack}Arquitetura da \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/archblockstack.png}
+    \end{center}
+    \legend{Fonte: \citeonline{archblockstack}.}
+\end{figure}
+
+A primeira camada da *Blockstack* é construída em cima da *blockchain* do *Bitcoin*, garantindo segurança e robustez contra ataques que tentem fraudar os dados da *Blockstack*. Isso é feito através da utilização de uma *blockchain* virtual que tem seus metadados transformados em *hash* e registrados na *blockchain* do *Bitcoin*. Dessa forma, qualquer adição ou atualização na *Blockstack* deve ser validada por um bloco da *blockchain* do *Bitcoin*, enquanto que operações somente-leitura podem ser feitas diretamente da *blockchain* virtual da *Blockstack*, garantindo ao mesmo tempo rapidez e robustez.
+
+Os blocos da *blockchain* virtual da *Blockstack* armazenam apenas o nome do domínio da aplicação\footnote{A \emph{Blockstack} implementa seu próprio sistema DNS denominado \emph{BNS}(\emph{Blockchain Naming Service} - Serviço de Nomes da \emph{Blockchain}) que serve para criar domínios de aplicação de forma similar aos domínios tradicionais (www.meudominio.com.br), tornando \emph{hashes} em nomes legíveis}, a sua respectiva chave pública e o *hash* do arquivo Zone\footnote{{\emph{Arquivos Zone} são arquivos utilizados por sistemas DNS para armazenarem os IPs das máquinas conectadas a rede de computadores que estão associados a determinado nome de domínio}}.
+
+A segunda camada chamada de *Atlas*, é reponsável por gerenciar o mapeamento dos *hashes* de arquivos Zone com os arquivos Zone de fato, gerenciando a comunicação entre os domínios do BNS (presentes na camada inferior) e o local físico onde os arquivos estão localizados (responsabilidade da camada superior). Tanto a camada inferior como a segunda camada, são gerenciadas pelos nós da rede *Blockstack* e ao gerenciar apenas *hashes* de arquivos, a rede se torna especialmente leve, podendo mapear a *internet* inteira em menos de 100GB \cite{archblockstack}.
+
+A camada superior da *Blockstack*, chamada de *Gaia* é reponsável por armazenar os arquivos de fato, porém, diferente de outras tecnologias *blockchain*, a *Blockstack* não armazena os arquivos na sua rede *blockchain*, optando por, em vez disso, utilizar a infraestrutura tradicional da *internet*, ou seja, os arquivos são armazenados em servidores da Amazon AWS, Dropbox, Microsoft Azure, FreeNAS Server, Google Drive, dentre outros. Porém, antes de serem armazenados, os arquivos são criptografados com a chave privada do dono do arquivo, é criado o *hash* desse arquivo, que é armazenado na *blockchain* da *Blockstack*, e só então ele é armazenado.
+
+Esse sistema híbrido de armazenamento, que combina a infraestrutura atual da *internet* com o uso da criptografia e registro do *hash* do arquivo na *blockchain*, garante que o arquivo não possa ser acessado de forma indevida e tenha um custo de armazenagem similar ao que já existe. Ou seja, é um sistema que garante segurança, praticidade e conveniência.
+
+É possível também que o usuário forneça a lista de provedores de armazenamento, podendo criar uma rede mais distribuída dos dados, já que o armazenamento de um arquivo em apenas um lugar não configura um sistema distribuído e portanto não possui os benefícios de tolerância a falha, múltiplas cópias de segurança, etc. Com isso, a responsabilidade de definir o nível de distribuição do arquivo fica a cargo da aplicação construída em cima da *Blockstack* \cite{blockstackgaia}.
+
+A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistemas de armazenamento descentralizados da atualidade.
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:gaia}Comparativo entre provedores de armazenamento descentralizados.}
+\begin{tabular}{m{0.42\linewidth}|c|c|c|c|c|c}
+\hline
+
+\centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{Sia} & \textbf{STORJ} & \textbf{IPFS} & \textbf{DAT} & \textbf{SSB} \\ \hline
+Usuário controla onde o dado é armazenado & X &  &  &  &  &  \\ \hline
+Dado pode ser visualizado em um navagador tradicional & X &  &  & X &  &  \\ \hline
+Dado é lido/escrito & X &  &  &  & X & X \\ \hline
+Dado pode ser deletado & X &  &  &  & X & X \\ \hline
+Dado pode ser listado & X & X & X &  & X & X \\ \hline
+O espaço do dado excluído é recuperado & X & X & X & X &  &  \\ \hline
+As pesquisas de dados têm desempenho previsível & X &  & X &  &  &  \\ \hline
+A permissão de gravação pode ser delegada & X &  &  &  &  &  \\ \hline
+A permissão de listagem pode ser delegada & X &  &  &  &  &  \\ \hline
+Suporta vários backends nativamente & X &  & X &  &  &  \\ \hline
+Os dados são endereçáveis globalmente & X & X & X & X & X &  \\ \hline
+Precisa de uma criptomoeda para funcionar &  & X & X &  &  &  \\ \hline
+Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
+
+\end{tabular}
+\legend{Fonte: \citeonline{blockstackgaia}}
+\end{table}
+
+Por conta das características do sistema de armazenamento do Gaia (tab. \ref{tab:gaia}), ele se apresenta como sendo uma solução muito mais próxima das necessidades que uma aplicação *web* tradicional possui atualmente, sendo mais atrativo e familiar para desenvolvedores *web*.
+
+A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ) para as plataformas *iOS*, *Android*, *Web* e para *React Native* (aplicações híbridas), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
+
+Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo lema com os dizers: *Can't be evil* (Não consegue ser mau) (fig: \ref{fig:dontevil}), que serve como crítica a grandes corporações como a Google (que possuia o lema *Dont be evil* - Não seja mau) que embora tenham sido concebidas com filosofias que tinham como propósito criar um mundo melhor, acabaram tomando um rumo duvidoso em que é difícil negar que estão explorando de forma indevida os dados coletados de seus usuários.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:dontevil}Placa publicitária da Blockstack com seu lema.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/dontevil.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackreview}.}
+\end{figure}
+
+As aplicações *Blockstack* precisam seguir um fluxo de autenticação semelhante ao ilustrado na figura \ref{fig:dontevil}, em que o usuário clica em um botão de *sign in* que o redireciona para o *Blockstack Browser*\footnote{O \emph{Blockstack Browser} é um cliente \emph{web} que serve para usuários conseguirem utilizar os serviços providos pela infraestrutura da \emph{Blockstack} sem precisar executar um nó da rede. Ele é \emph{open source} e é usado principalmente para que usuários realizem o registro e \emph{sign in} na rede \emph{blockchain} da \emph{Blockstack}.} (fig. \ref{fig:blockstacksignin} - passos 1 e 2).
+
+\begin{figure}[htbp]
+    \caption{\label{fig:blockstacksignin}Processo de \emph{sign in} utilizando o SDK da \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/blockstacksignin.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackauth}.}
+\end{figure}
+
+No \emph{Blockstack Browser} o usuário pode realizar o cadastro na *blockchain* da *Blockstack* ou então realizar o *sign in* caso já tenha cadastro, fornecendo seu nome de usuário e chave privada (a figura \ref{fig:blockstacksigninex} exemplifica como um usuário interage com uma aplicação que utiliza a \emph{Blockstack}). Após realizar o *sign in* na plataforma, o usuário precisa conceder permissão à aplicação (permissão de apenas leitura ou permissão de leitura e escrita).
+
+\begin{figure}[htbp]
+    \caption{\label{fig:blockstacksigninex}Exemplo do processo de \emph{sign in} dos aplicativos que usam \emph{Blockstack}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/blockstackauth.png}
+    \end{center}
+    \legend{Fonte: \citeonline{blockstackauth}.}
+\end{figure}
+
+Apenas após o usuário realizar o *sign in* e conceder as permissões que a aplicação requisitou, é que o *Blockstack Browser* retorna um *token JWT* para a aplicação (fig. \ref{fig:blockstacksignin} - passo 3), que então é verificado e tratado pela aplicação (fig. \ref{fig:blockstacksignin} - passo 4) e  pode então ser utilizado para recuperar as informações do usuário diretamente da *blockchain* da *Blockstack* (fig. \ref{fig:blockstacksignin} - passo 5).
+
+A partir de então, a aplicação detém um *token* temporário que pode ser utilizado para realizar operações no Gaia em nome do usuário. Esse *token* pode ser revogado a qualquer momento pelo usuário e é justamente por conta desse processo que a *Blockstack* se propõe a ser uma infraestrutura que não permite que as aplicações "sejam más".
+
+O usuário detém a propriedade das suas informações e pode a qualquer momento revogar o acesso da mesma aos seus dados e também migrar para outra aplicação que ele considere melhor (ou mesmo utilizar várias aplicações simultâneamente que façam a mesma coisa).
+
 ### Holochain
 
 A *Holochain* é uma alternativa a *blockchain* que ao invés de compartilhar todos os dados de forma idêntica para todos os nós da rede, distribui os dados de uma aplicação de forma aleatória entre os nós criando um número de cópias suficientemente grande de forma a garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
@@ -669,109 +772,6 @@ Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, 
     \end{center}
     \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
-
-### Blockstack
-
-*Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais.
-
-A *Blockstack* tem como objetivos: \cite[p. 3]{blockstack}
-
-- Facilidade de uso: prover um sistema que seja fácil de utilizar por usuários finais de aplicações tradicionais e prover um ambiente de desenvolvimento tão fácil de desenvolver como são as aplicações da *web* atualmente;
-- Escalabilidade: prover uma infraestrutura que suporte de centenas de milhares a bilhões de usuários, escalando a rede bem como a *blockchain* conforme o aumento no número de aplicações e usuários;
-- Controle do usuário: prover ao usuário final o poder sobre seus dados por padrão, permitindo ao usuário decidir se deseja prover seus próprios recursos computacionais e de armazenamento.
-
-Para alcançar esses objetivos, a *Blockstack* utiliza uma camada de *blockchain* que lida com uma quantidade mínima de lógica de negócio e controle de estado da aplicação, sendo que os dados das aplicações são sempre que possível atualizados apenas localmente ao invés de serem armazenados inteiramente na *blockchain*.
-
-#### Arquitetura da Blockstack
-
-A arquitetura da *Blockstack* é composta por três camadas principais (fig. \ref{fig:archblockstack}) e enquanto continua a utilizar os protocolos de comunicação tradicional da *internet* como o TCP/IP, substitui outros protocolos de mais alto nível, (por exemplo, o protocolo DNS\footnote{DNS (\emph{Domain Name System} - Sistema de Nomes de Domínio) é o protocolo de comunicação de redes utilizado para converter e localizar endereços de máquinas legíveis para humanos (www.nomedomeusite.com.br) para os endereços IPs das máquinas (216.58.194.164) utilizados na rede mundial de computadores}), e foi elaborado para garantir o controle e privacidade dos dados do usuário, integrar-se facilmente a arquiteturas atuais e prover segurança no gerenciamento dos dados.
-
-\begin{figure}[!ht]
-    \caption{\label{fig:archblockstack}Arquitetura da \emph{Blockstack}.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/archblockstack.png}
-    \end{center}
-    \legend{Fonte: \citeonline{archblockstack}.}
-\end{figure}
-
-A primeira camada da *Blockstack* é construída em cima da *blockchain* do *Bitcoin*, garantindo segurança e robustez contra ataques que tentem fraudar os dados da *Blockstack*. Isso é feito através da utilização de uma *blockchain* virtual que tem seus metadados transformados em *hash* e registrados na *blockchain* do *Bitcoin*. Dessa forma, qualquer adição ou atualização na *Blockstack* deve ser validada por um bloco da *blockchain* do *Bitcoin*, enquanto que operações somente-leitura podem ser feitas diretamente da *blockchain* virtual da *Blockstack*, garantindo ao mesmo tempo rapidez e robustez.
-
-Os blocos da *blockchain* virtual da *Blockstack* armazenam apenas o nome do domínio da aplicação\footnote{A \emph{Blockstack} implementa seu próprio sistema DNS denominado \emph{BNS}(\emph{Blockchain Naming Service} - Serviço de Nomes da \emph{Blockchain}) que serve para criar domínios de aplicação de forma similar aos domínios tradicionais (www.meudominio.com.br), tornando \emph{hashes} em nomes legíveis}, a sua respectiva chave pública e o *hash* do arquivo Zone\footnote{{\emph{Arquivos Zone} são arquivos utilizados por sistemas DNS para armazenarem os IPs das máquinas conectadas a rede de computadores que estão associados a determinado nome de domínio}}.
-
-A segunda camada chamada de *Atlas*, é reponsável por gerenciar o mapeamento dos *hashes* de arquivos Zone com os arquivos Zone de fato, gerenciando a comunicação entre os domínios do BNS (presentes na camada inferior) e o local físico onde os arquivos estão localizados (responsabilidade da camada superior). Tanto a camada inferior como a segunda camada, são gerenciadas pelos nós da rede *Blockstack* e ao gerenciar apenas *hashes* de arquivos, a rede se torna especialmente leve, podendo mapear a *internet* inteira em menos de 100GB \cite{archblockstack}.
-
-A camada superior da *Blockstack*, chamada de *Gaia* é reponsável por armazenar os arquivos de fato, porém, diferente de outras tecnologias *blockchain*, a *Blockstack* não armazena os arquivos na sua rede *blockchain*, optando por, em vez disso, utilizar a infraestrutura tradicional da *internet*, ou seja, os arquivos são armazenados em servidores da Amazon AWS, Dropbox, Microsoft Azure, FreeNAS Server, Google Drive, dentre outros. Porém, antes de serem armazenados, os arquivos são criptografados com a chave privada do dono do arquivo, é criado o *hash* desse arquivo, que é armazenado na *blockchain* da *Blockstack*, e só então ele é armazenado.
-
-Esse sistema híbrido de armazenamento, que combina a infraestrutura atual da *internet* com o uso da criptografia e registro do *hash* do arquivo na *blockchain*, garante que o arquivo não possa ser acessado de forma indevida e tenha um custo de armazenagem similar ao que já existe. Ou seja, é um sistema que garante segurança, praticidade e conveniência.
-
-É possível também que o usuário forneça a lista de provedores de armazenamento, podendo criar uma rede mais distribuída dos dados, já que o armazenamento de um arquivo em apenas um lugar não configura um sistema distribuído e portanto não possui os benefícios de tolerância a falha, múltiplas cópias de segurança, etc. Com isso, a responsabilidade de definir o nível de distribuição do arquivo fica a cargo da aplicação construída em cima da *Blockstack* \cite{blockstackgaia}.
-
-A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistemas de armazenamento descentralizados da atualidade.
-
-\begin{table}[htbp]
-\centering
-\caption{\label{tab:gaia}Comparativo entre provedores de armazenamento descentralizados.}
-\begin{tabular}{m{0.42\linewidth}|c|c|c|c|c|c}
-\hline
-
-\centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{Sia} & \textbf{STORJ} & \textbf{IPFS} & \textbf{DAT} & \textbf{SSB} \\ \hline
-Usuário controla onde o dado é armazenado & X &  &  &  &  &  \\ \hline
-Dado pode ser visualizado em um navagador tradicional & X &  &  & X &  &  \\ \hline
-Dado é lido/escrito & X &  &  &  & X & X \\ \hline
-Dado pode ser deletado & X &  &  &  & X & X \\ \hline
-Dado pode ser listado & X & X & X &  & X & X \\ \hline
-O espaço do dado excluído é recuperado & X & X & X & X &  &  \\ \hline
-As pesquisas de dados têm desempenho previsível & X &  & X &  &  &  \\ \hline
-A permissão de gravação pode ser delegada & X &  &  &  &  &  \\ \hline
-A permissão de listagem pode ser delegada & X &  &  &  &  &  \\ \hline
-Suporta vários backends nativamente & X &  & X &  &  &  \\ \hline
-Os dados são endereçáveis globalmente & X & X & X & X & X &  \\ \hline
-Precisa de uma criptomoeda para funcionar &  & X & X &  &  &  \\ \hline
-Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
-
-\end{tabular}
-\legend{Fonte: \citeonline{blockstackgaia}}
-\end{table}
-
-Por conta das características do sistema de armazenamento do Gaia (tab. \ref{tab:gaia}), ele se apresenta como sendo uma solução muito mais próxima das necessidades que uma aplicação *web* tradicional possui atualmente, sendo mais atrativo e familiar para desenvolvedores *web*.
-
-A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ) para as plataformas *iOS*, *Android*, *Web* e para *React Native* (aplicações híbridas), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
-
-Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo lema com os dizers: *Can't be evil* (Não consegue ser mau) (fig: \ref{fig:dontevil}), que serve como crítica a grandes corporações como a Google (que possuia o lema *Dont be evil* - Não seja mau) que embora tenham sido concebidas com filosofias que tinham como propósito criar um mundo melhor, acabaram tomando um rumo duvidoso em que é difícil negar que estão explorando de forma indevida os dados coletados de seus usuários.
-
-\begin{figure}[htbp]
-    \caption{\label{fig:dontevil}Placa publicitária da Blockstack com seu lema.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/dontevil.png}
-    \end{center}
-    \legend{Fonte: \citeonline{blockstackreview}.}
-\end{figure}
-
-As aplicações *Blockstack* precisam seguir um fluxo de autenticação semelhante ao ilustrado na figura \ref{fig:dontevil}, em que o usuário clica em um botão de *sign in* que o redireciona para o *Blockstack Browser*\footnote{O \emph{Blockstack Browser} é um cliente \emph{web} que serve para usuários conseguirem utilizar os serviços providos pela infraestrutura da \emph{Blockstack} sem precisar executar um nó da rede. Ele é \emph{open source} e é usado principalmente para que usuários realizem o registro e \emph{sign in} na rede \emph{blockchain} da \emph{Blockstack}.} (fig. \ref{fig:blockstacksignin} - passos 1 e 2).
-
-\begin{figure}[htbp]
-    \caption{\label{fig:blockstacksignin}Processo de \emph{sign in} utilizando o SDK da \emph{Blockstack}.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/blockstacksignin.png}
-    \end{center}
-    \legend{Fonte: \citeonline{blockstackauth}.}
-\end{figure}
-
-No \emph{Blockstack Browser} o usuário pode realizar o cadastro na *blockchain* da *Blockstack* ou então realizar o *sign in* caso já tenha cadastro, fornecendo seu nome de usuário e chave privada (a figura \ref{fig:blockstacksigninex} exemplifica como um usuário interage com uma aplicação que utiliza a \emph{Blockstack}). Após realizar o *sign in* na plataforma, o usuário precisa conceder permissão à aplicação (permissão de apenas leitura ou permissão de leitura e escrita).
-
-\begin{figure}[htbp]
-    \caption{\label{fig:blockstacksigninex}Exemplo do processo de \emph{sign in} dos aplicativos que usam \emph{Blockstack}.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/blockstackauth.png}
-    \end{center}
-    \legend{Fonte: \citeonline{blockstackauth}.}
-\end{figure}
-
-Apenas após o usuário realizar o *sign in* e conceder as permissões que a aplicação requisitou, é que o *Blockstack Browser* retorna um *token JWT* para a aplicação (fig. \ref{fig:blockstacksignin} - passo 3), que então é verificado e tratado pela aplicação (fig. \ref{fig:blockstacksignin} - passo 4) e  pode então ser utilizado para recuperar as informações do usuário diretamente da *blockchain* da *Blockstack* (fig. \ref{fig:blockstacksignin} - passo 5).
-
-A partir de então, a aplicação detém um *token* temporário que pode ser utilizado para realizar operações no Gaia em nome do usuário. Esse *token* pode ser revogado a qualquer momento pelo usuário e é justamente por conta desse processo que a *Blockstack* se propõe a ser uma infraestrutura que não permite que as aplicações "sejam más".
-
-O usuário detém a propriedade das suas informações e pode a qualquer momento revogar o acesso da mesma aos seus dados e também migrar para outra aplicação que ele considere melhor (ou mesmo utilizar várias aplicações simultâneamente que façam a mesma coisa).
 
 # Aplicação a um Problema Real
 
