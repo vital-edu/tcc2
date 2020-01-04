@@ -339,6 +339,10 @@ Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
 \legend{Fonte: \citeonline{blockstackgaia}}
 \end{table}
 
+Por conta das características do sistema de armazenamento do Gaia (tab. \ref{tab:gaia}), ele se apresenta como sendo uma solução muito mais próxima das necessidades que uma aplicação *web* tradicional possui atualmente, sendo mais atrativo e familiar para desenvolvedores *web*.
+
+A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
+
 # Aplicação a um Problema Real
 
 ## Mercado Livre
