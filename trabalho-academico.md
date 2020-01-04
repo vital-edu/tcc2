@@ -203,8 +203,9 @@ A tabela \ref{tab:holo} traz uma breve comparação sobre algumas característic
 \textbf{Plataforma}               & Atualmente só pode funcionar de forma efetiva em computadores especializados para mineração                                                                    & Pode ser executado em Raspberry Pi ou em um smartphone                                                                                                                                                               \\ \hline
 \textbf{Eficiência Computacional} & O(\(n \times m\)) para validar transações                                                                                                                      & \(O(\frac{n}{m \times log m})\) para validar transações                                                                                                                                                              \\ \hline
 \textbf{Efeito de consenso}       & Algoritmos de consenso centralizam o poder e a Prova de Trabalho resulta em um crescimento computacional exorbitante para um conjunto de dados finito        & Não possui mineração nem consenso. Não possui vulnerabilidade ao ataque da maioria. Apenas é necessário confiar no código que roda em seu nó e validar o histórico dos nós com que se comunica
+\\ \hline
 \end{tabular}
-\legend{Fonte: \citeauthor{holo3}}
+\legend{Fonte: \citeonline{holo3}}
 \end{table}
 
 #### Arquitetura da Holochain
@@ -309,7 +310,34 @@ A camada superior da *Blockstack*, chamada de *Gaia* é reponsável por armazena
 
 Esse sistema híbrido de armazenamento, que combina a infraestrutura atual da *internet* com o uso da criptografia e registro do *hash* do arquivo na *blockchain*, garante que o arquivo não possa ser acessado de forma indevida e tenha um custo de armazenagem similar ao que já existe. Ou seja, é um sistema que garante segurança, praticidade e conveniência.
 
+É possível também que o usuário forneça a lista de provedores de armazenamento, podendo criar uma rede mais distribuída dos dados, já que o armazenamento de um arquivo em apenas um lugar não configura um sistema distribuído e portanto não possui os benefícios de tolerância a falha, múltiplas cópias de segurança, etc. Com isso, a responsabilidade de definir o nível de distribuição do arquivo fica a cargo da aplicação construída em cima da *Blockstack* \cite{blockstackgaia}.
 
+A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistemas de armazenamento descentralizados da atualidade.
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:gaia}Comparativo entre provedores de armazenamento descentralizados.}
+\begin{tabular}{m{0.42\linewidth}|c|c|c|c|c|c}
+\hline
+
+\centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{Sia} & \textbf{STORJ} & \textbf{IPFS} & \textbf{DAT} & \textbf{SSB} \\ \hline
+Usuário controla onde o dado é armazenado & X &  &  &  &  &  \\ \hline
+Dado pode ser visualizado em um navagador tradicional & X &  &  & X &  &  \\ \hline
+Dado é lido/escrito & X &  &  &  & X & X \\ \hline
+Dado pode ser deletado & X &  &  &  & X & X \\ \hline
+Dado pode ser listado & X & X & X &  & X & X \\ \hline
+O espaço do dado excluído é recuperado & X & X & X & X &  &  \\ \hline
+As pesquisas de dados têm desempenho previsível & X &  & X &  &  &  \\ \hline
+A permissão de gravação pode ser delegada & X &  &  &  &  &  \\ \hline
+A permissão de listagem pode ser delegada & X &  &  &  &  &  \\ \hline
+Suporta vários backends nativamente & X &  & X &  &  &  \\ \hline
+Os dados são endereçáveis globalmente & X & X & X & X & X &  \\ \hline
+Precisa de uma criptomoeda para funcionar &  & X & X &  &  &  \\ \hline
+Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
+
+\end{tabular}
+\legend{Fonte: \citeonline{blockstackgaia}}
+\end{table}
 
 # Aplicação a um Problema Real
 
