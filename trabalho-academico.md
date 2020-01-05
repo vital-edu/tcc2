@@ -944,6 +944,14 @@ O livre mercado é quase impraticável, pelo menos em proporções significativa
 
 ## O OpenBazaar
 
+Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
+
+O *OpenBazaar* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
+
+Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como mediador, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
+
+Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
+
 ## Definição da aplicação a ser desenvolvida
 
 # Implementação
