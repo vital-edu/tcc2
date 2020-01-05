@@ -967,8 +967,14 @@ O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
 
 Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
 
-### A arquitetura do OpenBazaar
+O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
 
+- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*,
+- Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
+- Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
+- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
+
+O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
 
 ## Definição da aplicação a ser desenvolvida
 
