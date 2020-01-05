@@ -922,6 +922,20 @@ por Hobbes. Eles acusaram o grande lógico de efetuar uma contradição em termo
 
 \end{displayquote}
 
+Embora eu pudesse aqui discorrer outros pensadores, como Jean-Jacques Rousseau e Ayn Rand, que tratam de outras maneiras a legitimidade do governo, como o governo sendo aceito ou demandado por sua população, é possível resumir todos esses argumentos em uma busca por justificar que o estado, não importando a forma como veio a existir, tem o direito de ser como é, simplesmente por não ser contestado pela maioria.
+
+Essa inclusive é a premissa da democracia, que define políticos de acordo com a proporcionalidade de sua população. Porém, não importando por qual ótica se olhe, é irrefutável que todas as explicações que legitimem o contrato social, e por consequência o governo e suas leis, colocam o direito da maioria acima do direito individual, sendo que a maioria não é senão, a junção das partes.
+
+Parte-se do príncipio que o governo é condição \emph{sine qua non} (indispensável, essencial) para a existência da sociedade, e que o direito coletivo sobrepõe o individual, sendo todas essas visões incompatíveis com a teoria liberal dos direitos naturias a qual deriva os direitos das premissas factuais da inalienabilidade da vontade e, portanto, exclui desde o princípio a legítima auto-escravização \cite{critique}.
+
+E como a teoria do livre mercado parte da premissa da vontade individual e consensual de seus participantes, não faz sentido analisá-lo sob a perspectiva de uma corrente de pensamento anti-liberal e que desligetima o direito natural do indivíduo.
+
+Não obstante, o livre mercado, mesmo impedido de ocorrer em sua plenitude pelos governos, ainda assim prevalece em contextos onde os olhos do leviatã (como assim nomeou Hobbes, a organização social do estado) não conseguem alcançar, sendo denominado pelo governo como comércio informal. Ou seja, as leis naturais operam mesmo em ambientes altamente controláveis, justamente por ser natural aos indivíduos.
+
+Porém, o comércio informal acontece em proporção pequenas, embora ao ser aglomerado atinge proporcões enormes, como o estudo encomendada pela CNI (Confederação Nacional da Indústria) em 2015 que apontou que 75% dos participantes da pesquisa encomendada ao IBOPE responderam que compram de ambulantes ou lojas informais \cite{informal}.
+
+Em ambientes virtuais ele existe na chamada \emph{deep web} (internet profunda), porém está indisponível para cidadãos comuns e é frequentemente combatido pelos governos sempre que cresce em tamanho, como aconteceu com o \emph{e-commerce} mais famoso da \emph{deep web}, o \emph{Silk Road}, que embora usasse diversos sistemas de segurança, como a rede anônima TOR (\emph{The Onion Route}) e criptomoedas como \emph{Bitcoin}, teve sua operação encerrada em 2011 depois que o FBI (\emph{Federal Bureau of Investigation} - Departamento Federal de Investigação) utilizou de meios ilegais e extensivo poder estatal para encontrar seu criador e condená-lo a uma pena equivalente a duas vidas e 40 anos de prisão por crimes não violentos \cite{silk, ross}.
+
 ## O OpenBazaar
 
 ## Definição da aplicação a ser desenvolvida
