@@ -887,7 +887,7 @@ A intervenção usa da força para provocar uma ação que não ocorreria de out
 
 Qualquer intervenção no livre mercado, portanto, é uma tirania e causa um estado de menor conforto aos indivíduos que sofrem a coerção, caso contrário, não seria necessária o emprego da força. Portanto, é importante garantir meios que impeçam a intervenção de terceiros e garantam que trocas comerciais ocorram somente através da livre associação e de forma voluntária. e que consequentemente beneficie os participantes.
 
-### A impossibilidade de um livre mercado
+### A dificuldade de se criar um livre mercado
 
 Partindo da conclusão de que qualquer intervenção de terceiros em uma troca comercial desqualifica o mercado onde ocorre aquela troca como sendo um livre mercado, fica fácil entender que a mera obrigatoriedade de comunicação fiscal ou pagamento de imposto sem a anuência dos participantes também configura uma violação ao livre mercado.
 
@@ -905,7 +905,7 @@ E que ao se aceitar um governo, não se pode dele abidicar, como \citeauthoronli
 
 \begin{displayquote}
 
-E, conseqüentemente, aqueles que já instituíram uma \emph{Common-wealth} [conceito que na modernidade pode ser entendido como república], estando assim vinculados por aliança, a possuir as ações e os julgamentos de um, não podem legalmente fazer uma nova aliança, entre si, para serem obedientes a qualquer outra, em qualquer coisa, sem a permissão dele [i.e. o governo]
+E, conseqüentemente, aqueles que já instituíram uma \emph{Common-wealth} [conceito que na modernidade pode ser entendido como república], estando assim vinculados por aliança, a possuir as ações e os julgamentos de um, não podem legalmente fazer uma nova aliança, entre si, para serem obedientes a qualquer outra, em qualquer coisa, sem a permissão dele [i.e., o governo]
 
 [...]
 
@@ -932,9 +932,15 @@ E como a teoria do livre mercado parte da premissa da vontade individual e conse
 
 Não obstante, o livre mercado, mesmo impedido de ocorrer em sua plenitude pelos governos, ainda assim prevalece em contextos onde os olhos do leviatã (como assim nomeou Hobbes, a organização social do estado) não conseguem alcançar, sendo denominado pelo governo como comércio informal. Ou seja, as leis naturais operam mesmo em ambientes altamente controláveis, justamente por ser natural aos indivíduos.
 
-Porém, o comércio informal acontece em proporção pequenas, embora ao ser aglomerado atinge proporcões enormes, como o estudo encomendada pela CNI (Confederação Nacional da Indústria) em 2015 que apontou que 75% dos participantes da pesquisa encomendada ao IBOPE responderam que compram de ambulantes ou lojas informais \cite{informal}.
+Porém, o comércio informal acontece em proporção pequenas, embora ao ser aglomerado atinge proporcões enormes, como apontou a pesquisa do IBOPE encomendada pela CNI (Confederação Nacional da Indústria) em 2015, em que 75% dos participantes respondentes afirmaram que compram de ambulantes ou lojas informais \cite{informal}.
 
-Em ambientes virtuais ele existe na chamada \emph{deep web} (internet profunda), porém está indisponível para cidadãos comuns e é frequentemente combatido pelos governos sempre que cresce em tamanho, como aconteceu com o \emph{e-commerce} mais famoso da \emph{deep web}, o \emph{Silk Road}, que embora usasse diversos sistemas de segurança, como a rede anônima TOR (\emph{The Onion Route}) e criptomoedas como \emph{Bitcoin}, teve sua operação encerrada em 2011 depois que o FBI (\emph{Federal Bureau of Investigation} - Departamento Federal de Investigação) utilizou de meios ilegais e extensivo poder estatal para encontrar seu criador e condená-lo a uma pena equivalente a duas vidas e 40 anos de prisão por crimes não violentos \cite{silk, ross}.
+Em ambientes virtuais ele existe principalmente na chamada \emph{deep web} (internet profunda), porém está indisponível para cidadãos comuns e é frequentemente combatido pelos governos sempre que cresce em tamanho, como aconteceu com o \emph{e-commerce} mais famoso da \emph{deep web}, o \emph{Silk Road}, que embora usasse diversos sistemas de segurança, como a rede anônima TOR (\emph{The Onion Route}) e criptomoedas como \emph{Bitcoin}, teve sua operação encerrada em 2011 depois que o FBI (\emph{Federal Bureau of Investigation} - Departamento Federal de Investigação) utilizou de meios questionáveis e extensivo poder estatal para encontrar seu criador e condená-lo a uma pena equivalente a duas vidas e 40 anos de prisão por crimes não violentos \cite{silk, ross}.
+
+Porém, cidadãos comuns que desejem apenas realizar trocas comerciais comuns, sem ter de reportá-las ao governo ou sem ter que pagar os impostos relacionados, não possuem alternativas seguras ou convenientes de realizarem o comércio informal eletrônico, com exceção de fóruns específicos e aplicações que se limitam a produtos usados, e que mesmo assim, podem ser rastreados facilmente através de transações bancárias e pagamantos realizados através de operadoras de cartão de crédito.
+
+Soluções como o \emph{Bitcoin} surgiram para prover alternativas que não passem pelo controle governamental ou qualquer outro controle central. Embora existam argumentos que tentem criminalizar o uso fim dessas tecnologias, todos esses argumentos se baseiam na ideia de que o provável criminoso deve ser condenado antes de cometer um crime, um claro desrespeito ao direito individual e um exercício de futorologia mesclado com ideias utilitarias.
+
+O livre mercado é quase impraticável, pelo menos em proporções significativas, no ambiente virtual, mas com o advento de tecnologias descentralizadas, tornou-se possível conceber tais ambientes e independente das motivações e do juízo de valor sobre o emprego da tecnologia, o uso da criptogragia aliado a descentralização é uma resposta contra qualquer controle central. As ferramentas estão sendo criadas, principalmente por existir demanda e justificativas éticas, e o livre mercado, sendo uma atividade tão importante na sociedade, é um excelente caso a ser estudado e aplicado em conjunto com as tecnologias descentralizadas e, portanto, é o candidato ideal para o presente estudo.
 
 ## O OpenBazaar
 
