@@ -275,9 +275,9 @@ Em 1992, Timothy May, um físico aposentado, temendo as ameaças e restrições 
 
 Este grupo se auto nomeou *Cypherpunks* e em \citeyear{cyphermanifesto} lançou seu manifesto em que declara sua preocupação com a regulação da criptografia e cita sua intenção em criar uma moeda digital:
 
-\begin{displayquote}[\citeonline{cyphermanifesto} - tradução do autor]
+\begin{displayquote}[]
 
-Nós, os \emph{Cypherpunks}, estamos dedicados a construir sistemas anônimos. Nós estamos defendendo nossa privacidade através da criptografia, com sistemas de encaminhamento de e-mails anônimos, com assinaturas digitais, e com dinheiro digital.
+Nós, os \emph{Cypherpunks}, estamos dedicados a construir sistemas anônimos. Nós estamos defendendo nossa privacidade através da criptografia, com sistemas de encaminhamento de e-mails anônimos, com assinaturas digitais, e com dinheiro digital. \cite[tradução do autor]{cyphermanifesto}
 
 \end{displayquote}
 
@@ -887,9 +887,42 @@ A intervenção usa da força para provocar uma ação que não ocorreria de out
 
 Qualquer intervenção no livre mercado, portanto, é uma tirania e causa um estado de menor conforto aos indivíduos que sofrem a coerção, caso contrário, não seria necessária o emprego da força. Portanto, é importante garantir meios que impeçam a intervenção de terceiros e garantam que trocas comerciais ocorram somente através da livre associação e de forma voluntária. e que consequentemente beneficie os participantes.
 
+### A impossibilidade de um livre mercado
+
+Partindo da conclusão de que qualquer intervenção de terceiros em uma troca comercial desqualifica o mercado onde ocorre aquela troca como sendo um livre mercado, fica fácil entender que a mera obrigatoriedade de comunicação fiscal ou pagamento de imposto sem a anuência dos participantes também configura uma violação ao livre mercado.
+
+Pode-se argumentar que os cidadãos, por estarem sobre território governado, aceitaram as leis naquele território vigente de forma tácita, como Locke escreve em sua obra \emph{Two Treatises on
+Government} (Dois Tratados sobre o Governo):
+
+
+\begin{displayquote}
+
+A dificuldade é saber em que caso é preciso admitir a existência de um consentimento tácito e até que ponto ele obriga – i.e., em que medida se pode considerar que um indivíduo consentiu com um governo qualquer e assim está a ele submetido, se ele não prestou qualquer declaração nesse sentido. A isso eu respondo que qualquer homem que tenha alguma posse ou desfrute de qualquer parte dos domínios de qualquer governo manifesta assim o seu consentimento tácito; ele, enquanto permanecer nessa situação, está obrigado a obedecer às leis daquele governo como todos os outros que lhe estão submetidos; pouco importa se ele possui terras em plena propriedade, transmissíveis para sempre aos seus herdeiros; ou se ele ocupa somente um alojamento por uma semana; ou se ele desfruta simplesmente da liberdade de ir e vir nas estradas; e, na verdade, isso acontece ainda que ele seja apenas qualquer um dentro dos territórios daquele governo. \cite[seção 119, pp. 291--292]{locke}
+
+\end{displayquote}
+
+E que ao se aceitar um governo, não se pode dele abidicar, como \citeauthoronline{leviathan} escreveu em sua obra \emph{Leviathan} (Leviatã):
+
+\begin{displayquote}
+
+E, conseqüentemente, aqueles que já instituíram uma \emph{Common-wealth} [conceito que na modernidade pode ser entendido como república], estando assim vinculados por aliança, a possuir as ações e os julgamentos de um, não podem legalmente fazer uma nova aliança, entre si, para serem obedientes a qualquer outra, em qualquer coisa, sem a permissão dele [i.e. o governo]
+
+[...]
+
+não pode haver violação da aliança por parte do soberano; e, conseqüentemente, nenhum de seus súditos, por qualquer pretexto de confisco, pode ser libertado de sua subordinação. \cite[cap. 18, pp. 133--134 - tradução  do autor]{leviathan}
+
+\end{displayquote}
+
+Porém, essa noção de que a república ou qualquer outro governo é aceito tacitamente e que não se pode dele abdicar contradiz a lógica, como \citeauthoronline{mythstate} colocou em sua obra \emph{The Myth of the State} (O Mito do Estado):
+
+\begin{displayquote}
+
+Os mais influentes escritores políticos do século XVII rejeitaram as conclusões elaboradas
+por Hobbes. Eles acusaram o grande lógico de efetuar uma contradição em termos. Se um homem pudesse renunciar à sua personalidade [i.e., ao seu direito de autopropriedade], ele deixaria de ser um ente moral. Ele se tornaria uma coisa morta {}--{} então, como uma coisa dessas poderia obrigar-se, fazer uma promessa ou assinar um contrato social? Esse direito fundamental, o direito de personalidade, inclui, nesse sentido, todos os outros. Manter e desenvolver a sua personalidade é um direito universal do homem. Tal direito não pode ser submetido às loucuras e às fantasias de determinados indivíduos e, portanto, não pode ser transferido de uma pessoa para outra. O contrato do governo {}--{} o qual é a base jurídica de todos os poderes civis {}--{}, assim, possui os seus inerentes limites. Não há nenhum \emph{pactum subjectionis} [do latim, acordo de submissão], nenhum ato de submissão pelo qual o homem pode renunciar à sua condição de agente livre e escravizar-se, pois através desse ato de renúncia ele abriria mão da própria característica que constitui a sua natureza e a sua essência: ele perderia a sua humanidade. \cite[p. 175 - tradução  do autor]{mythstate}
+
+\end{displayquote}
+
 ## O OpenBazaar
-
-
 
 ## Definição da aplicação a ser desenvolvida
 
