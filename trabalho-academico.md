@@ -978,6 +978,33 @@ O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamen
 
 ## Definição da aplicação a ser desenvolvida
 
+O projeto a ser desenvolvido, com o nome inicial de *Free the Market* (Liberte o Mercado) é uma aplicação *web* de comércio eletrônico construído utilizando tecnologias descentralizadas com o objetivo de verificar a viabilidade de utilização de tecnologias descentralizadas que consigam substituir de forma satisfatória tecnologias convencionais, removendo o problema de ponto único de falha, aumentando a privacidade dos usuários e a segurança dos dados manipulados pela aplicação.
+
+É importante lembrar que o projeto é um protótipo e que embora pudesse ter uma extensa lista de funcionalidades, será abordado as funcionalidades básicas que consigam simular as dificuldades e particularidades do desenvolvimento de aplicações descentralizadas.
+
+Portanto, os requísitos de alto nível do projeto *Free the Market* são:
+
+- ser uma aplicação que possa ser acessada por qualquer navegador moderno, não sendo necessária a instalação de nenhum *software* adicional pelo usuário
+- ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
+- ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de mediação de uma terceira pessoa, denominado intermediador
+
+Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados os seguintes riscos técnicos na realização do projeto:
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:riscos}Riscos técnicos do projeto.}
+\begin{tabular}{c|m{0.2\linewidth}|c|c|m{0.3\linewidth}}
+\hline
+\centering
+\textbf{Risco} & \centering\textbf{Descrição} & \textbf{Probabilidade} & \textbf{Impacto} & \begin{center}\textbf{Ação}\end{center} \\ \hline
+
+RN1 & tecnologias escolhidas possuem \emph{bugs} que impeçam a implementação & Alta & Muito alto & buscar suporte dos mantenedores; encontrar alternativas; corrigir ou contornar \emph{bug}. \\ \hline
+RN2 & tecnologias escolhidas possuem pouca documentação  & Média & Médio & procurar aplicações de código aberto que utilizam a mesma tecnologia e estudá-las; buscar auxílio da comunidade; estudar código fonte da tecnologia. \\ \hline
+RN3 & tecnologias escolhidas possuem comunidade pequena ou pouco ativa & Alta & Médio & buscar tecnologias alternativas; estudar código fonte da tecnologia. \\ \hline
+RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação & Baixa & Muito Alto & buscar tecnologias alternativas. \\ \hline
+\end{tabular}
+\end{table}
+
 # Implementação
 
 ## Processo de Desenvolvimento de Aplicações Descentralizadas
