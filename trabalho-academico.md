@@ -151,7 +151,7 @@ Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bi
 
 ## As Tecnologias Descentralizadas da Atualidade
 
-Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin*\footnote{veja o apêndice \ref{appendix:a} para uma explicação detalhada sobre a tecnologia do \emph{Bitcoin}} que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
+Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin* que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
 
 Embora a lista de tecnologias descentralizadas seja muito extensa e carente de estudos acadêmicos aprofundados sobre as mesmas, este capítulo mostra algumas das tecnologias mais proeminentes da atualidade para a contrução de aplicações descentralizadas, que foram estudadas pelo autor.
 
@@ -988,7 +988,7 @@ Portanto, os requísitos de alto nível do projeto *Free the Market* são:
 - ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
 - ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de mediação de uma terceira pessoa, denominado intermediador
 
-Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados os seguintes riscos técnicos na realização do projeto:
+Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados riscos técnicos na realização do projeto expressos na tabela \ref{tab:riscos}.
 
 \begin{table}[htbp]
 \centering
@@ -1005,6 +1005,30 @@ RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação &
 \end{tabular}
 \end{table}
 
+## Arquitetura do projeto
+
+A figura \ref{fig:arch} mostra a arquitetura de comunicação da aplicação.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:arch}Arquitetura de comunicação da aplicação.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/arch.png}
+    \end{center}
+\end{figure}
+
+No passo 1, o cliente, que pode ser acessado por qualquer navegador, se comunica com o *Blockstack Browser* para que o usuário consiga realizar o *sign in* utilizando sua chave privada. Depois de ter fornecido suas credenciais, o *Blockstack Broser* valida as credenciais na *Blockchain* (passo 2), e a *blockchain* recupera os endereços dos ambientes de armazenamento do usuário através do *Gaia* (passo 3). Essas informações são retornadas para o *Blockstack Browser* (que também é apenas um cliente acessível pelo navegador), e é informado que a aplicação deseja ter permissão de leitura/escrita do usuário.
+
+Após o usuário conceder as permissões da aplicação, é gerado um *token* único para a aplicação e uma chave privada gerada a partir da chave inicial do usuário. Esse *token* junto com a *chave privada da aplicação* são retornados para o cliente que os armazena no banco de dados local do navegador do usuário\footnote{\emph{local storage} (armazenamento local) é o nome do banco de dados \emph{offline} que vem embutido nos navegadores modernos e que permite que informações sejam armazenas de forma desestruturada no navegador, sendo usado principalmente para armazenar pequenas informações que podem ser acessadas quando não há conexão com a \emph{internet} esse banco de dados é padrão dos navegadores e funciona de forma \emph{offline}}(passo 4).
+
+Após esse processo o cliente está preparado para realizar operações e armazená-las na *blockchain da blockstack* e no gerenciador de armazenamento *Gaia* em nome do usuário. Isso já seria suficiente para que a aplicação funcionasse, no entanto, para permitir que nós (diferentes clientes) se comuniquem entre si é necessário que os nós se conheçam, o que requer a criação de um meio de indexação dos clientes da aplicação.
+
+Isso é feito através do indexador *Radiks* que apresenta as seguintes características que o define como sendo um servidor de indexação descentralizado: \cite{radiks}
+
+- Sem bloqueio de dados: o *Radiks* é apenas um indexador dos *hashes* dos documentos guardados através do *Gaia*. Mesmo que o indexador saia do ar, o usuário continua podendo ter o acesso aos seus dados, podendo copiá-lo ou movê-lo quando houver necessidade;
+- Resistente a censura: como todo o dado é armazenado no *Gaia* e tem seus *hashes* registrados na *blockchain*, nenhum agente pode revogar o acesso ao dado de um usuário;
+- Privacidade máxima: como os dados são ciptografados antes de serem enviados e armazenados tanto pelo *Radiks* quanto pelo *Gaia*, todas as informações privadas do usuário estão seguras.
+- Criado utilizando autenticação descentralizada: o *Radiks* é fortemente atreleado ao sistema de autenticação da *Blockstack*, que utiliza *blockchain* e o sistema Gaia de forma a prover ao usuário controle total sobre a propriedade do dado e quem tem acesso a ele.
+
 # Implementação
 
 ## Processo de Desenvolvimento de Aplicações Descentralizadas
@@ -1012,67 +1036,3 @@ RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação &
 ## Resultados e Discussões
 
 # Conclusão
-
-# Projeto
-
-## Oportunidade de Negócio
-
-O crescente endividamento do governo americando \ref{fig:usdebt} em conjunto com a diminuição do poder de compra do dólar \ref{fig:usprice} serve como um indicativo de preocupação sobre uma das principais características necessárias a uma moeda: a reserva de valor \textcolor{red}{[citar Mises]}.
-
-\begin{figure}[htbp]
-    \caption{\label{fig:usdebt}Dívida do governo dos EUA entre 1942 e 2019.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/usdebt.png}
-    \end{center}
-    \legend{Fonte: \citeonline{usdebt}.}
-\end{figure}
-
-\begin{figure}[htbp]
-    \caption{\label{fig:usprice}Poder de compra do dólar entre 1913 e 2019.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/usprice.png}
-    \end{center}
-    \legend{Fonte: \citeonline{usprice}.}
-\end{figure}
-
-Hayek \textcolor{red}{[citar apropriadamente essa afirmação]} atribui o constante endividamento do governo e a alteração artificial da taxa de juros pelo governo como fatores precursores para grandes crises e depressões mundiais como as que ocorreram em 2007-2008.
-
-O Bitcoin foi criado com a intenção de prover uma moeda decentraalizada que não pudesse ser inflacionada \textcolor{red}{ [definir o conceito de inflação segundo a escola austríaca de economia][citar Satoshi Nakamoto e o seu White Paper] } de forma descontrolada, tendo um limite de 21 milhões de unidades, as quais não podem ser superadas.
-
-Essa característica provê ao Bitcoin uma vantagem sobre o dólar e outras moedas fiduciárias \textcolor{red}{[definir o que é uma moeda fiduciária]}, principalmente em crises e em momentos de grande depreciação das moedas.
-
-Aliado a isso, o crescente aumento do uso de comércio eletrônico para a compra de produtos e serviços \textcolor{red}{[citar dados sobre o crescimento do comércio eletrônico]} cria um ambiete propício para a criação de uma plataforma que una o comércio eletrônico com um meio de pagamento que não sofra interferência de nenhum governo ou entidade central.
-
-Além da desvalorização das moedas fiduciárias, os govenos também coletam impostos sobre os produtos comercializados e impedem que determinadas transações sejam realizadas, por considerá-las ilegais ou legais apenas após serem fiscalizadas por orgãos regulatórios.
-
-O caráter lícito ou ilícito de uma transação pode ser inspecionado sobre a ótica da lei vigente de um país (juspositivismo \textcolor{red}{[definir o que é juspositivismo]}), ou através de meios éticos \textcolor{red}{[definir que a ética é a busca pelo certo e errado]}, derivando a lei através do jusnaturalismo)\textcolor{red}{[explicar]} ou jusracionalismo)\textcolor{red}{[citar a ética argumentativa de Hans-Hermann Hoppe]}.
-
-Olhando pela ótica jusnaturalista, pode-se chegar a conclusões de que tanto o imposto como a proibição e interferência do governo ou qualquer outro agente central em uma transação é inválida, e caracteriza-se como uma violação da liberdade individual dos indivíduos.
-
-Partindo do princípio que não estamos discutindo a licitude dos atos pela ótica da lei do estado e sim pela ótica da lei natural )\textcolor{red}{[citar Frederic Bastiat (a lei foi corrompida)]}, podemos focar em como criar esse ambiente de livre mercado em que a liberdade dos indivíduos é soberana.
-
-Embora existam plataformas de comércio eletrônico na chamada *deep web* )\textcolor{red}{[explicar o que é deep web]} que passam despercebidas das ações governamentais, há uma carência de uma plataforma de comércio eletrônico amplamente acessível e que utilize de moedas não controladas por governos e que sejam resistentes a agentes centrais.
-
-Até pouco tempo atrás, tais plataformas eram inconcebíveis de serem criadas, porém, com o advento do Bitcoin, da *blockchain* e dos chamados *smart contracts* )\textcolor{red}{[definir o que é blockchain e smart contracts]}, passou a ser viável tais plataformas.
-
-Porém, as plataformas existentes são desconhecidas ou inexistentes. Tal constatação pode ser explicada, embora sem rigor técnico, pelo modelo de negócio de tais plataformas, que no geral, criam novos *tokens* \textcolor{red}{[explicar o que são tokens]} ao invés de se basearem nas criptomoedas já consolidadas do mercado, além de utilizarem da mesma *blockchain* do Bitcoin, que conforme mostrado na \textcolor{red}{figura X [citar dados de performance da blockchain]} não consegue escalar.
-
-O problema de performance da *blockchain* é devido a necessidade de todos os agentes da rede terem que possuir o mesmo dado \textcolor{red}{[explicar melhor]}, assim, a adição de mais um nó na rede, não aumenta sua performance.
-
-## Escopo da Aplicação
-
-A aplicação conterá 3 Zomes:
-
-- Zome de Usuário: responsável pelo registro do usuário, autenticação, perfil do usuário
-- Zome de Produto: responsável pelo registro de produtos a serem anunciados, pesquisa e filtro de produtos
-- Zome de Transação: responsável pelo sistema de carrinho de compras, pagamento e histórico de transações
-
-### Funcionalidades do Sistema
-
-- Cadastrar usuário
-- Entrar com usuário
-- Cadastrar produto
-- Exibir produto
-- Adicionar produto ao carrinho
-- Comprar produto
-- Ver histórico de compras
