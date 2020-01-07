@@ -1,8 +1,8 @@
 # Introdução
 
-A tecnologia é definida como o uso do conhecimento técnico e científico aplicado na transformação de ferramentas, processos e materiais [referência]. A utilização e aperfeiçoamento da tecnologia costuma resultar em uma facilidade maior em realizar tarefas, o que culmina em um maior grau de satisfação humana [referênciaLudwigVonMises]. Uma dessas tecnologias que revolucionou o mundo foi a *prensa de tipos móveis*, inventada pelo alemão Johannes Gutenberg por volta do ano 1450.
+A tecnologia é definida como o uso do conhecimento técnico e científico aplicado na transformação de ferramentas, processos e materiais. A utilização e aperfeiçoamento da tecnologia costuma resultar em uma facilidade maior em realizar tarefas, o que culmina em um maior grau de satisfação humana. Uma dessas tecnologias que revolucionou o mundo foi a *prensa de tipos móveis*, inventada pelo alemão Johannes Gutenberg por volta do ano 1450.
 
-A prensa de tipos móveis tornou o processo de impressão mais rápido e barato, o que propiciou a disseminação da informação escrita [referencia] levando a produção de livros em massa, servindo como base para a criação de uma sociedade mais dinâmica, comunicativa, colaborativa e com menos obstáculos ao acesso a informação.
+A prensa de tipos móveis tornou o processo de impressão mais rápido e barato, o que propiciou a disseminação da informação escrita levando a produção de livros em massa, servindo como base para a criação de uma sociedade mais dinâmica, comunicativa, colaborativa e com menos obstáculos ao acesso a informação.
 
 A prensa de tipos móveis tornou a comunicação atemporal, através do registro de conhecimento e histórias em meios que pudessem ser consumidos posteriormente e sem a necessidade de um interlocutor, e o advento da *internet* conseguiu quebrar uma outra grande barreira, a distância. Agora, a informação não apenas é registrada para a posterioridade, mas também é transportada em questão de segundos para qualquer lugar do globo.
 
