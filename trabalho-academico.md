@@ -1005,12 +1005,12 @@ RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação &
 \end{tabular}
 \end{table}
 
-## Arquitetura do projeto
+### Arquitetura do projeto
 
-A figura \ref{fig:arch} mostra a arquitetura de comunicação da aplicação.
+A figura \ref{fig:arch} mostra a arquitetura da aplicação.
 
 \begin{figure}[htbp]
-    \caption{\label{fig:arch}Arquitetura de comunicação da aplicação.}
+    \caption{\label{fig:arch}Arquitetura da aplicação.}
     \begin{center}
     \includegraphics[width=1.0\textwidth]{imagens/arch.png}
     \end{center}
@@ -1028,6 +1028,12 @@ Isso é feito através do indexador *Radiks* que apresenta as seguintes caracter
 - Resistente a censura: como todo o dado é armazenado no *Gaia* e tem seus *hashes* registrados na *blockchain*, nenhum agente pode revogar o acesso ao dado de um usuário;
 - Privacidade máxima: como os dados são ciptografados antes de serem enviados e armazenados tanto pelo *Radiks* quanto pelo *Gaia*, todas as informações privadas do usuário estão seguras.
 - Criado utilizando autenticação descentralizada: o *Radiks* é fortemente atreleado ao sistema de autenticação da *Blockstack*, que utiliza *blockchain* e o sistema Gaia de forma a prover ao usuário controle total sobre a propriedade do dado e quem tem acesso a ele.
+
+O sistema *Radiks* apenas armazena o *hashes* e *metadados* importantes das informações que necessitam ser armazenas pelo cliente na *blockchain* e permite que haja o armazenamento de dados que podem ser lidos e escritos em conjunto, o que permite que dois ou mais usuários possam, por exemplo, colaborativamente gerenciar um mesmo dado, uma característica importante em determinados contextos, como quando dois clientes precisam ser capazed de atualizar o *status* de uma compra.
+
+Assim, o cliente se comunica com o *Radiks* (passo 5), que repassa os dados para a *blockchain* (passo 6), responsável por armazenar os dados no Gaia. Após a confirmação de que os dados foram armazenados, o *Radiks* indexa os dados e retorna a confirmação de sucesso para o cliente.
+
+Um cliente pode utilizar diversos indexadores diferentes, o que permitira a criação de diversos servidores que poderiam servir como redes privadas ou secretas de clientes ou para que, por exemplo, um indexador Radiks fosse usado apenas por uma comunidade pequena no interior de São Paulo.
 
 # Implementação
 
