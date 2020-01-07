@@ -40,11 +40,9 @@ Para alcançar o objetivo geral, os seguintes objetivos específicos foram defin
 
 ## Estrutura do trabalho
 
-O trabalho está estruturado em três capítulos principais, o primeiro cumpre com o objetivo específico 1 ao descrever o conceito de aplicações descentralizadas, quais tecnologias descentralizadas estão eminentes atualmente e quais suas vantagens e desvantagens.
+O trabalho está estruturado em dois capítulos principais, o primeiro cumpre com o objetivo específico 1 ao descrever o conceito de aplicações descentralizadas, quais tecnologias descentralizadas estão iminentes atualmente e quais suas vantagens e desvantagens.
 
-O segundo capítulo descreve o problema escolhido para a prova de contexto e como as tecnologias descentralizadas são aderentes à ele, cumprindo parcialmente o objetivo específico 2.
-
-O terceiro capítulo conclui o objetivo específico 2 ao mostrar o processo de engenharia de software utilizando tecnologias descentralizadas aplicado ao problema escolhido, e também cumpre com o objetivo específico 3 ao mostrar como problemas tradicionalmente resolvidos na engenharia de software podem ser abordados ao utilizar tecnologias descentralizadas e quais são as diferenças e desafios envolvidos no processo.
+O segundo capítulo em sua primeira parte descreve o problema escolhido para a prova de contexto e como as tecnologias descentralizadas são aderentes à ele, cumprindo com o objetivo específico 2. Já a parte final do segundo capítulo conclui o objetivo específico 3 ao mostrar como problemas tradicionalmente resolvidos na engenharia de software podem ser abordados ao utilizar tecnologias descentralizadas e quais são os desafios envolvidos no processo.
 
 Por fim, há um capítulo com as discussões finais em que está condensado as aprendizagens empíricas descobertas durante o desenvolvimento do trabalho, a conclusão chegada sobre o objetivo do trabalho e quais problemas e desafios permanecem abertos para serem abordados em trabalhos futuros.
 
@@ -1115,6 +1113,14 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
     \end{center}
 \end{figure}
 
-## Resultados e Discussões
+# Discussões finais
 
-# Conclusão
+O presente trabalho apresentou um estudo teórico sobre algumas tecnologias descentralizadas iminentes em conjunto com a aplicação de uma dessas tecnologias, a *Blockstack*, na resolução de um problema real, a criação de um livre mercado.
+
+Durante o desenvolvimento do projeto, muitos problemas foram encontrados, havendo a necessidade de realizar a troca da tecnologia inicialmente escolhida (*Holochain*) pela tecnologia utilizada no protótipo final.
+
+Todo o processo de aprendizado e experimentação nessas tecnologias descentralizadas mostrou-se desafiador, havendo pouquíssimo conteúdo disponível e pouco suporte da comunidade, justamente por serem tecnologias inovadoras e que se mostraram ainda em estado inicial de desenvolvimento.
+
+Devido ao caráter experimental dessa pesquisa e o risco envolvido, não foi atingido o nível de maturidade de projeto esperado, nem mesmo foi possível realizar um comparativo detalhado sobre as diferentes tecnologias descentralizadas ou a diferença de performance e usabilidade de tais tecnologias em relação a tecnologias convencionais, sendo recomendações de pesquisas futuras neste campo do conhecimento.
+
+Ainda assim, o potencial que tais tecnologias possuem em entregar segurança, privacidade e controle aos usuários é notavel e espera-se que esse novo paradigma da computação descentralizada alcance a grande masse de usuários e provoque mudanças significativas, e, que muitos dos conceitos apresentados neste trabalho, sejam de alguma forma absorvidos pelas aplicações atuais ou aprimorados para a criação de novos produtos e serviços digitais. Afinal, nota-se uma crescente preocupação na sociedade com questões de privacidade e abuso de poder, e tais ameaças a liberdade fazem valer os esforços despendidos no avanço da pesquisa e uso de tais tecnologias.
