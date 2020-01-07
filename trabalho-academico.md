@@ -1039,13 +1039,81 @@ Um cliente pode utilizar diversos indexadores diferentes, o que permitira a cria
 
 Durante o processo de desenvolvimento, diversos obstáculos foram encontrados. Inicialmente, a aplicação a ser desenvolvida foi elaborada para utilizar a tecnologia *Holochain*, devido a suas características promissoras de se apresentar como uma alternativa mais eficiente em relação a aplicações descentralizadas que utilizam-se de *Blockchain* para funcionarem.
 
-Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}}para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
+Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}} (\emph{listing} \ref{lst:holochain}) para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
 
 Além desse problema, um nó da aplicação *Holochain* só poderia ser inicializado através de um computador, o que removeria a praticidade de uso e penalizaria o usuário final, se tornando uma solução incoveniente. De acordo com o que foi elaborado para esses riscos, foi decidido que a melhor alternativa seria migrar para uma outra tecnologia.
 
 Foi nesse processo que o *Blockstack* foi escolhido como sucessor, após uma nova pesquisa sobre uma tecnologia que conseguisse prover um ambiente similar de desenvolvimento a uma aplicação *web* tradicional.
 
 Após a criação de uma aplicação de teste\footnote{Código fonte: \url{https://github.com/blockstack/animal-kingdom.git}}, foi constatado que a solução atendia os requisitos mínimos necessários.
+
+A partir de então, foi elaborada a aplicação com o escopo mínimo definido. Houve vários problemas principalmente em relação a utilização dos algorítmos de criptografia necessários para permitir que fosse criado uma carteira de criptomoeda que precisasse da assinatura de dois dos três envolvidos para ser movimentada (\emph{listing}: \ref{lst:multisig}).
+
+\begin{lstlisting}[caption={Parte do código responsável por criar carteira \emph{multisig}}\label{lst:multisig},language=Java]
+
+// decrypt redeem script
+const encodedPSBT = decryptECIES(
+  User.currentUser().encryptionPrivateKey(),
+  transaction!!.attrs.seller_redeem_script
+)
+
+// sign inputs
+const psbt = bitcoin.Psbt.fromBase64(encodedPSBT as string)
+psbt.signAllInputs(bitcoin.ECPair.fromPrivateKey(
+  Buffer.from(User.currentUser().encryptionPrivateKey(), 'hex')
+))
+psbt.signAllInputs(transactionUtils.privateKeyFromId(transaction!!._id))
+
+const transactionIsValid = psbt.validateSignaturesOfAllInputs()
+
+// transfer money to withdraw wallet
+psbt.finalizeAllInputs()
+const tx = psbt.extractTransaction().toHex()
+
+const response = await api.propagateTransaction(tx)
+
+// update transaction status
+transaction!!.update({
+  seller_status: SellerStatus.withdrawn,
+  status: TransactionStatus.inactive
+})
+await transaction!!.save()
+
+\end{lstlisting}
+
+Houve um outro problema ao se utilizar o indexador \emph{Radiks}, que apresentou problemas relacionados a utilização das chaves públicas e privadas, havendo a perca dessas chaves ou a impossibilidade de descriptografar arquivos. Para contornar esse problema foi necessário um amplo estudo do código fonte da biblioteca, e a alteração da mesma, sendo utilizado na versão final do projeto a versão modificada do Radiks, que pode ser acessada em: \url{https://github.com/vital-edu/radiks}.
+
+A a estrutura de documentos do projeto pode ser visualizada na figura \ref{fig:structure}.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:structure}Estrutura de código da aplicação.}
+    \begin{center}
+    \includegraphics[width=0.3\textwidth]{imagens/structure.png}
+    \end{center}
+\end{figure}
+
+As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} mostram algumas das telas da aplicação desenvolvida. O código completo pode ser visto em \url{https://github.com/vital-edu/serve-the-market}.
+
+\begin{figure}[htbp]
+    \caption{\label{fig:newproduct}Tela de criação de produto.}
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{imagens/newproduct.png}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+    \caption{\label{fig:listproducts}Tela de listagem de produto.}
+    \begin{center}
+    \includegraphics[width=0.6\textwidth]{imagens/listproducts.png}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+    \caption{\label{fig:payment}Tela de pagamento.}
+    \begin{center}
+    \includegraphics[width=0.75\textwidth]{imagens/payment.png}
+    \end{center}
+\end{figure}
 
 ## Resultados e Discussões
 

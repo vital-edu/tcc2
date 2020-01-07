@@ -1,5 +1,4 @@
 # Holochain: código de experimentação
+\label{lst:holochain}
 
-## Código exemplo de aplicação Holochain
-
-\lstinputlisting[language=rust]{code/lib.rs}
+\lstinputlisting[language=C, caption={Código exemplo em \emph{Holochain}}]{code/lib.rs}
