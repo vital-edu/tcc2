@@ -1035,9 +1035,17 @@ Assim, o cliente se comunica com o *Radiks* (passo 5), que repassa os dados para
 
 Um cliente pode utilizar diversos indexadores diferentes, o que permitira a criação de diversos servidores que poderiam servir como redes privadas ou secretas de clientes ou para que, por exemplo, um indexador Radiks fosse usado apenas por uma comunidade pequena no interior de São Paulo.
 
-# Implementação
+### Experiência de desenvolvimento
 
-## Processo de Desenvolvimento de Aplicações Descentralizadas
+Durante o processo de desenvolvimento, diversos obstáculos foram encontrados. Inicialmente, a aplicação a ser desenvolvida foi elaborada para utilizar a tecnologia *Holochain*, devido a suas características promissoras de se apresentar como uma alternativa mais eficiente em relação a aplicações descentralizadas que utilizam-se de *Blockchain* para funcionarem.
+
+Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}}para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
+
+Além desse problema, um nó da aplicação *Holochain* só poderia ser inicializado através de um computador, o que removeria a praticidade de uso e penalizaria o usuário final, se tornando uma solução incoveniente. De acordo com o que foi elaborado para esses riscos, foi decidido que a melhor alternativa seria migrar para uma outra tecnologia.
+
+Foi nesse processo que o *Blockstack* foi escolhido como sucessor, após uma nova pesquisa sobre uma tecnologia que conseguisse prover um ambiente similar de desenvolvimento a uma aplicação *web* tradicional.
+
+Após a criação de uma aplicação de teste\footnote{Código fonte: \url{https://github.com/blockstack/animal-kingdom.git}}, foi constatado que a solução atendia os requisitos mínimos necessários.
 
 ## Resultados e Discussões
 

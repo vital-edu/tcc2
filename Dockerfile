@@ -5,4 +5,4 @@ FROM limarka/limarka:latest
 
 # Adicione os pacotes que precisa instalar nessa imagem customizada:
 RUN tlmgr update --self \
-  && tlmgr install subfig csquotes
+  && tlmgr install subfig csquotes minted fvextra lineno ifplatform xstring listings
