@@ -90,6 +90,52 @@ Além dessas três características principais, \citeonline{blockstack} cita out
 
 Além das caracterísiticas acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
 
+### Contratos Inteligentes
+
+Algumas das tecnologias descentralizadas, por serem utilizadas na contrução de diferentes escopos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse sistema de regras de negócio, imutáveis, e distríbuidas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
+
+Para \citeonline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de madeira a criar contratos:
+
+a. robustos contra vandalismo ingênuo;
+b. robustos contra violações sofisticadas\footnote{É importante salientar, que um contrato inteligente não se propõe a lidar com um terceiro tipo de ataque, o vandalismo sofisticado, caracterizado como sendo o uso extensivo e desproporcional de força ou poder, tais como ataques militares efetuados por terceiros \cite{smartcontract}. Esse tipo de ataque é raramente utilizado nas relações de livre mercado, e quase invariavelmente são oriundos de uma alocação de recursos obtidos de forma coercitiva por governos ou entidades autoritárias.}.
+
+\citeauthoronline{smartcontract} classifica a forma de seguração contratual em:
+
+- reativa: ação tomada após a quebra de um contrato, como medidas físicas tomadas por agências de segurança, tais quais, prisão e confiscação de propriedade;
+- proativa: ação tomada de forma a coibir a quebra de um contrato, como caixas fortes com mecanismos de autenticação que impeçam o acesso não autorizado a um bem de valor.
+
+Nessas classificações, um sistema judicial estatal, bem como a polícia e empresas de seguros, são considerados uma segurança contratual reativa, que embora sejam efetivas, são onerosas e burocráticas, aumentando o custo de transação, o que produz produtos ou serviços mais caros. E por esse motivo, contratos inteligentes, que incorporam em si mecanismos proativos de segurança, oferecem um menor custo de transação e uma segurança suficiente para coibir a violação de contratos.
+
+<!-- Com o surgimento do *Bitcoin*, criou-se a possibilidade de incorporar contratos inteligentes em *blockchain*, sendo a moeda *Bitcoin*, uma forma de contrato inteligente incorporado em *software*, já que a moeda em si não possui nenhum componente de segurança reativa, confiando completamente no poder da criptografia e do algoritmo de consenso para garantir que as regras, ou cláusulas, que definem o que é uma transação válida não sejam quebradas, e que qualquer tentativa de fraude da *blockchain* seja punida com a perda de tempo e recursos computacionais, e consequentemente recursos energéticos. -->
+
+<!-- E foi o surgimento da *Ethereum* que culminou na adoção e propagação de contratos inteligentes em diferentes contextos. A *Ethereum*, uma criptomoeda que implementa uma *blockchain* que suporta o uso de uma linguagem *Turing-completa*\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.} foi concebida para permitir a criação de aplicações descentralizadas que fosse além do contexto financeiro \cite{ethereum}. -->
+
+O desenvolvimento de aplicações descentralizadas que utilizam contratos inteligentes permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralized Autonomous Organization* - Organização Autônoma descentralizada), em que todas as regras de funcionamento da empresa, inclusive divisão de lucros e como é feito decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
+
+Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeauthor{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
+
+De forma simplista, um código de contrato inteligente é invocado sempre que recebe uma mensagem, podendo haver vários pontos de entrada, sendo cada ponto de entrada uma função do código a ser executada. Ou seja, uma mensagem recebida é como a chamada de uma função, que deve retornar um resultado para quem enviou a mensagem após a mensagem ser processada pela função do contrato.
+
+A figura \ref{fig:ethcode} mostra um exemplo simplório de contrato inteligente feito para um jogo  de pedra, papel e tesoura. Nesse exemplo, o contrato inicia com nenhum jogador e espera que jogadores iniciem o contrato informando a jogada que desejam fazer. Assim que os jogadores informam suas jogadas, o contrato verifica o ganhador e envia a recompensa para ele.
+
+\begin{figure}[htbp]
+  \caption{\label{fig:ethcode}Exemplo de contrato inteligente implementado na linguagem \emph{Serpent}.}
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{imagens/ethcode.png}
+  \end{center}
+  \legend{Fonte: \citeauthor{safesmart}.}
+\end{figure}
+
+Em última análise, criar um contrato inteligente é um processo meticuloso e que envolve codificar máquinas de estado muitas vezes complexas, em que qualquer omissão de um estado de transição ou negligência em conferir o estado atual, pode causar problemas drásticos \cite{safesmart}, principalmente por serem, a princípio, imutáveis e envolverem contextos atrelados a manipulação de recursos financeiros.
+
+O desenvolvimento de contratos inteligentes, assemelha-se então, muito mais ao desenvolvimento de *software* embarcado (em que o *recall*\footnote{\emph{recall} (devolução) é o termo usado para quando um lote inteiro de uma linha de produto já vendida apresenta defeitos de fabricação e a fabricante convida seus clientes a devolverem o produto seja para reparação do problema ou para troca, sem gerar custos para o cliente por esse serviço.} é indesejado e oneroso financeiramente), do que *software* evolutivo e incremental (em que a atualização do *software* é facilmente realizada e incentivada).
+
+<!-- Outra preocupação recorrente em relação ao desenvolvimento de aplicações descentralizadas, é a utilização da tecnologia *blockchain*, que exige que um nó completamente engajado no processo de criação de novos blocos, deve processar cada transação e manter uma cópia completa do estado atual da *blockchain*. Embora isso garanta questões de segurança, neutralidade política e tolerância a falhas, isso tem um alto custo de escalabilidade. Inclusive, cada novo nó que entra na rede, em vez de deixá-la mais performática, acaba por tornar a rede mais fraca, pelo fato de a latência entre nós crescer de forma logarítmica a cada nó adicionado \cite{scale}.
+
+Devido ao aumento do número de transações, e do tamanho total da *blockchain*, a *Prova de Trabalho* acaba por obrigar que os nós tenham cada vez mais capacidade de processamento e de armazenamento, o que pode culminar em um processo de centralização, em que apenas nós com maior infraestrutura conseguem participar da rede. Para exemplificar, \citeauthoronline{scale} relatou que em \citeyear{scale}, a *blockchain* do *Bitcoin* transacionou 7 transações por segundo, tendo na época, um limite teórico de 4000 transações por segundo; e a *blockchain* da *Ethereum* chegou a transacionar 15 transações por segundo.
+
+Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço. -->
+
 ## A Necessidade de Existência das Aplicações Descentralizadas
 
 A *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
@@ -106,50 +152,6 @@ Ross Ulbricht, mesmo sem ter cometido nenhum crime violento, recebeu uma pena ma
 
 Embora o poder do estado não possa ser contestado ou combatido, principalmente por índividuos que são fortemente desconstruídos pela mídia e que portanto são ignorados pela grande população, as tecnologias fortemente embasadas em criptografia, tem o poder de impedir ou ao menos dificultar que agentes centrais tenham controle sobre os usuários, e com a evolução dessas tecnologias, talvez possamos alcançar uma *internet* verdadeiramente livre, segura, e com máxima privacidade, o que, como o caso de Ross Ulbricht exemplifica, não será facilmente aceito pelos governos estatais ou por empresas privadas que exploram os dados privados de seus usuários. As aplicações descentralizadas são mais um passo nessa direção.
 
-<!-- Para que uma aplicação descentralizada seja possível, é necessário que haja regras, ou contratos, que formalizem a operação da aplicação. \citeauthor{smartcontract} criou a definição de *smart contract* (contrato inteligente), que, segundo ele, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
-
-Para \citeauthoronline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de madeira a criar contratos:
-
-a. robustos contra vandalismo ingênuo;
-b. robustos contra violações sofisticadas\footnote{É importante salientar, que um contrato inteligente não se propõe a lidar com um terceiro tipo de ataque, o vandalismo sofisticado, caracterizado como sendo o uso extensivo e desproporcional de força ou poder, tais como ataques militares efetuados por terceiros\cite{smartcontract}. Esse tipo de ataque é raramente utilizado nas relações de livre mercado, e quase invariavelmente são oriundos de uma alocação de recursos obtidos de forma coercitiva por governos ou entidades autoritárias.}.
-
-\citeauthoronline{smartcontract} classifica a forma de seguração contratual em:
-
-- reativa: ação tomada após a quebra de um contrato, como medidas físicas tomadas por agências de segurança, tais quais, prisão e confiscação de propriedade;
-- proativa: ação tomada de forma a coibir a quebra de um contrato, como caixas fortes com mecanismos de autenticação que impeçam o acesso não autorizado a um bem de valor.
-
-Nessas classificações, um sistema judicial estatal, bem como a polícia e empresas de seguros, são considerados uma segurança contratual reativa, que embora sejam efetivas, são onerosas e burocráticas, aumentando o custo de transação, o que produz produtos ou serviços mais caros. E por esse motivo, contratos inteligentes, que incorporam em si mecanismos proativos de segurança, oferecem um menor custo de transação e uma segurança suficiente para coibir a violação de contratos.
-
-Com o surgimento do *Bitcoin*, criou-se a possibilidade de incorporar contratos inteligentes em *blockchain*, sendo a moeda *Bitcoin*, uma forma de contrato inteligente incorporado em *software*, já que a moeda em si não possui nenhum componente de segurança reativa, confiando completamente no poder da criptografia e do algoritmo de consenso para garantir que as regras, ou cláusulas, que definem o que é uma transação válida não sejam quebradas, e que qualquer tentativa de fraude da *blockchain* seja punida com a perda de tempo e recursos computacionais, e consequentemente recursos energéticos.
-
-E foi o surgimento da *Ethereum* que culminou na adoção e propagação de contratos inteligentes em diferentes contextos. A *Ethereum*, uma criptomoeda que implementa uma *blockchain* que suporta o uso de uma linguagem *Turing-completa*\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.} foi concebida para permitir a criação de aplicações descentralizadas que fosse além do contexto financeiro \cite{ethereum}.
-
-O desenvolvimento de aplicações descentralizadas permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralized Autonomous Organization* - Organização Autônoma descentralizada), em que todas as regras de funcionamento da empresa, inclusive divisão de lucros e como é feito decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
-
-Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeauthor{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
-
-De forma simplista, um código de contrato inteligente é invocado sempre que recebe uma mensagem, podendo haver vários pontos de entrada, sendo cada ponto de entrada uma função do código a ser executada. Ou seja, uma mensagem recebida é como a chamada de uma função, que deve retornar um resultado para quem enviou a mensagem após a mensagem ser processada pela função do contrato.
-
-A figura \ref{fig:ethcode} mostra um exemplo simplório de contrato inteligente feito para um jogo  de pedra, papel e tesoura. Nesse exemplo, o contrato inicia com nenhum jogador e espera que jogadores iniciem o contrato informando a jogada que desejam fazer. Assim que os jogadores informam suas jogadas, o contrato verifica o ganhador e envia a recompensa para ele.
-
-\begin{figure}[htbp]
-  \caption{\label{fig:ethcode}Exemplo de contrato inteligente implementado na linguagem \emph{Serpent}.}
-  \begin{center}
-  \includegraphics[width=1.0\textwidth]{imagens/ethcode.png}
-  \end{center}
-  \legend{Fonte: \citeauthor{safesmart}.}
-\end{figure}
-
-Em última análise, criar um contrato inteligente é um processo meticuloso e que envolve codificar máquinas de estado muitas vezes complexas, em que qualquer omissão de um estado de transição ou negligência em checar o estado atual, pode causar problemas drásticos \cite{safesmart}, principalmente por serem, a princípio, imutáveis e envolverem contextos atrelados a manipulação de recursos financeiros.
-
-O desenvolvimento de contratos inteligentes, assemelha-se então, muito mais ao desenvolvimento de *software* embarcado (em que o *recall*\footnote{\emph{recall} (devolução) é o termo usado para quando um lote inteiro de uma linha de produto já vendida apresenta defeitos de fabricação e a fabricante convida seus clientes a devolverem o produto seja para reparação do problema ou para troca, sem gerar custos para o cliente por esse serviço.} é indesejado e oneroso financeiramente), do que *software* evolutivo e incremental (em que a atualização do *software* é facilmente realizada e incentivada).
-
-Outra preocupação recorrente em relação ao desenvolvimento de aplicações descentralizadas, é a utilização da tecnologia *blockchain*, que exige que um nó completamente engajado no processo de criação de novos blocos, deve processar cada transação e manter uma cópia completa do estado atual da *blockchain*. Embora isso garanta questões de segurança, neutralidade política e tolerância a falhas, isso tem um alto custo de escalabilidade. Inclusive, cada novo nó que entra na rede, em vez de deixá-la mais performática, acaba por tornar a rede mais fraca, pelo fato de a latência entre nós crescer de forma logarítmica a cada nó adicionado \cite{scale}.
-
-Devido ao aumento do número de transações, e do tamanho total da *blockchain*, a *Prova de Trabalho* acaba por obrigar que os nós tenham cada vez mais capacidade de processamento e de armazenamento, o que pode culminar em um processo de centralização, em que apenas nós com maior infraestrutura conseguem participar da rede. Para exemplificar, \citeauthoronline{scale} relatou que em \citeyear{scale}, a *blockchain* do *Bitcoin* transacionou 7 transações por segundo, tendo na época, um limite teórico de 4000 transações por segundo; e a *blockchain* da *Ethereum* chegou a transacionar 15 transações por segundo.
-
-Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço. -->
-
 ## As Tecnologias Descentralizadas da Atualidade
 
 Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin* que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
@@ -160,7 +162,7 @@ Embora a lista de tecnologias descentralizadas seja muito extensa e carente de e
 
 O \emph{Bitcoin} pode ser considerada a primeira tecnologia e produto descentralizado que se utiliza de conceitos de criptografia, algorítmos de consenso, imutabilidade dos dados, e que foi amplamente utilizada.
 
-Embora não possa ser utilizado diretamente para a construção de aplicativos descentralizados (já que ele é por si só uma aplicação descentralizada e que lida apenas com o escopo de moeda digital), serviu como base para outras tecnologias descentralizadas que podem ser utilizadas na construção de aplicações de contextos diversos e generalistas e que se utilizam de uma arquitetura similar ou baseada no *Bitcoin*.
+Embora não possa ser utilizado diretamente para a construção de aplicativos descentralizados (já que ele é por si só uma aplicação descentralizada e que lida apenas com o escopo de moeda digital), serviu como base para outras tecnologias descentralizadas que podem ser utilizadas na construção de aplicações de contextos diversos, generalistas e que se utilizam de uma arquitetura similar ou baseada no *Bitcoin*.
 
 Portanto, é fundamental estudar a sua história e seu funcionamento para conseguir entender como outras tecnologias descentralizadas baseadas nele funcionam.
 
@@ -307,8 +309,8 @@ O *Bit Gold* funcionaria da seguinte forma:
 3. A *prova de trabalho* contém uma *marcação temporal* de quando foi produzida. Essa *marcação temporal* seria registrada por qualquer ou mesmo vários serviços de *marcação temporal* que comprovariam a confiabilidade da data de criação da *prova de trabalho*.
 4. Alice registraria a *prova de trabalho* junto com a *marcação temporal* em um serviço computacionalmente distribuído compatível com o *Bit Gold*. A partir de então, esse seria oficialmente um registro *Bit Gold*;
 5. O último registro de *Bit Gold* provê o *desafio criptográfico* que servirá como insumo para a próxima *prova de trabalho*, que gerará o próximo registro de *Bit Gold*;
-6. Para verificar que Alice é a proprietária de um registro de *Bit Gold*, Bob checaria a cadeia de registros de *Bit Gold* em qualquer serviço de registro de *Bit Gold*;
-7. Para averiguar o valor do registro de *Bit Gold*, Bob checaria e verificaria o *desafio criptográfico*, a *prova de trabalho* e a *marcação temporal* do registro.
+6. Para verificar que Alice é a proprietária de um registro de *Bit Gold*, Bob verificaria a cadeia de registros de *Bit Gold* em qualquer serviço de registro de *Bit Gold*;
+7. Para averiguar o valor do registro de *Bit Gold*, Bob verificaria e verificaria o *desafio criptográfico*, a *prova de trabalho* e a *marcação temporal* do registro.
 
 Como cada registro de *Bit Gold* está ligado ao próximo registro de *Bit Gold*, e esses registros estão registrados em diversos serviços distribuídos e independentes, entende-se que essa cadeia de registros, a *blockchain*, é inalterável.
 
