@@ -152,23 +152,19 @@ Ross Ulbricht, mesmo sem ter cometido nenhum crime violento, recebeu uma pena ma
 
 Embora o poder do estado não possa ser contestado ou combatido, principalmente por índividuos que são fortemente desconstruídos pela mídia e que portanto são ignorados pela grande população, as tecnologias fortemente embasadas em criptografia, tem o poder de impedir ou ao menos dificultar que agentes centrais tenham controle sobre os usuários, e com a evolução dessas tecnologias, talvez possamos alcançar uma *internet* verdadeiramente livre, segura, e com máxima privacidade, o que, como o caso de Ross Ulbricht exemplifica, não será facilmente aceito pelos governos estatais ou por empresas privadas que exploram os dados privados de seus usuários. As aplicações descentralizadas são mais um passo nessa direção.
 
-## As Tecnologias Descentralizadas da Atualidade
+## Bitcoin
 
 Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin* que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
-
-Embora a lista de tecnologias descentralizadas seja muito extensa e carente de estudos acadêmicos aprofundados sobre as mesmas, este capítulo mostra algumas das tecnologias mais proeminentes da atualidade para a contrução de aplicações descentralizadas, que foram estudadas pelo autor.
-
-### Bitcoin
-
-O \emph{Bitcoin} pode ser considerada a primeira tecnologia e produto descentralizado que se utiliza de conceitos de criptografia, algorítmos de consenso, imutabilidade dos dados, e que foi amplamente utilizada.
 
 Embora não possa ser utilizado diretamente para a construção de aplicativos descentralizados (já que ele é por si só uma aplicação descentralizada e que lida apenas com o escopo de moeda digital), serviu como base para outras tecnologias descentralizadas que podem ser utilizadas na construção de aplicações de contextos diversos, generalistas e que se utilizam de uma arquitetura similar ou baseada no *Bitcoin*.
 
 Portanto, é fundamental estudar a sua história e seu funcionamento para conseguir entender como outras tecnologias descentralizadas baseadas nele funcionam.
 
-#### A história por trás do Bitcoin
+### A história por trás do Bitcoin
 
-As criptomoedas, um dinheiro virtual que utiliza conceitos e algoritmos oriundos da criptografia, teve sua história moldada por pequenos e progressivos avanços na área da criptografia. Portanto, é importante entender a contribuição de diferentes autores que culminaram no advento do *Bitcoin*, a principal criptomoeda em circulação atualmente.
+O *Bitcoin* teve sua história moldada por pequenos e progressivos avanços na área da criptografia. Portanto, é importante entender a contribuição de diferentes autores que culminaram no seu advento.
+
+#### O problema da privacidade nas transações virtuais
 
 Embora já houvessem soluções de pagamento envolvendo dinheiro virtual em \citeyear{blindsignature}, \citeauthoronline{blindsignature} preocupou-se com uma importante característica das transações no mundo real que não estava presente nas transações virtuais: a privacidade.
 
@@ -209,7 +205,9 @@ A figura \ref{fig:blind-signature} ilustra o processo de assinatura do documento
   \legend{Fonte: \citeonline{blindsignaturewiki}.}
 \end{figure}
 
-Embora o processo descrito garanta que Bob não conheça o conteúdo do documento e por isso não consiga saber quem emitiu originalmente o documento, ele ainda requer que um agente central (Bob) registre as operações de entrada e saída de valor e garanta o valor monetário do documento, e por isso pode apenas ser considerado como uma camada de privacidade que complementa o sistema bancário vigente, trazendo o anonimato das operações transacionadas através de dinheiro em espécie para o mundo das transações virtuais.
+#### O problema da dependência de um agente central
+
+Embora o processo descrito por \citeonline{blindsignature} garanta que Bob não conheça o conteúdo do documento e por isso não consiga saber quem emitiu originalmente o documento, ele ainda requer que um agente central (Bob) registre as operações de entrada e saída de valor e garanta o valor monetário do documento, e por isso pode apenas ser considerado como uma camada de privacidade que complementa o sistema bancário vigente, trazendo o anonimato das operações transacionadas através de dinheiro em espécie para o mundo das transações virtuais.
 
 Foi apenas em \citeyear{timestamp} que surgiu uma solução com potencial de resolver o problema da dependência de um agente central para registro de informações importantes. \citeonline{timestamp} pensando na facilidade em modificar e copiar documentos digitais, e no problema que isso causa ao tentar determinar quando um documento digital é criado ou modificado, criaram uma maneira de registrar documentos eletrônicos de forma a garantir a autenticidade, a data de registro, bem como a imutabilidade de seu conteúdo, e impossibilitando a adulteração dessas informações por quem os armazenassem.
 
@@ -272,9 +270,11 @@ O único requisito para essa arquitetura funcionar é haver uma lista pública d
 
 Para resolver o possível problema de indisponibilidade de clientes \citeauthoronline{timestamp} afirmaram que bastaria a função *G* gerar um número suficientemente grande de *k* clientes de forma a garantir que haverá a disponibilidade de $k' < k$ clientes, sendo *k'* um número suficientemente grande de forma a garantir que seja improvável que a maioria dos clientes estejam ávidos por falsificar o *timestamp* do documento.
 
-Com essa solução, \citeauthoronline{timestamp} elaboraram uma solução que embora tenha sido concebida para o registro de documentos digitais, poderia ser utilizada para criar um sistema de transações financeiras digitais que não estivesse livre de agentes centrais.
+Com essa solução, \citeauthoronline{timestamp} elaboraram uma solução que embora tenha sido concebida para o registro de documentos digitais, poderia ser utilizada para criar um sistema de transações financeiras digitais livre de agentes centrais.
 
-Em 1992, Timothy May, um físico aposentado, temendo as ameaças e restrições que os governos ao redor do mundo poderiam impor sobre o acesso as informações convidou um grupo de amigos à sua casa para discutir sobre privacidade e *internet* \cite{answertocash}.
+#### O ínicio do movimento dos Cypherpunks e das moedas digitais
+
+Em 1992, Timothy May, um físico aposentado, temendo as ameaças e restrições que os governos ao redor do mundo poderiam impor sobre o acesso as informações, convidou um grupo de amigos à sua casa para discutir sobre privacidade e *internet* \cite{answertocash}.
 
 Este grupo se auto nomeou *Cypherpunks* e em \citeyear{cyphermanifesto} lançou seu manifesto em que declara sua preocupação com a regulação da criptografia e cita sua intenção em criar uma moeda digital:
 
@@ -300,6 +300,8 @@ O algoritmo de \citeauthoronline{rpow}, o RPOW (*Reusable Proof-of-Work* - Prova
 
 Como o *RPOW* garante o conceito de gasto único, é sempre criado inicialmente a partir de uma prova de trabalho, e dá origem a um novo *token* que pode ser novamente trocado, pode-se considerá-lo como o primeiro bem digital que utiliza algoritmos criptográficos com capacidade de servir como meio de troca, um grande passo para a criação de uma moeda digital.
 
+\phantomsection
+\label{bitgold}
 Em \citeyear{bitgold}, \citeauthoronline{bitgold} expressou sua preocupação com o fato de o valor do dinheiro atualmente utilizado pela sociedade depender exclusivamente na confiança depositada em um agente centralizador e propôs a moeda *Bit Gold* que teria como características: uma dependência mínima em agentes centralizadores, armazenada de forma segura, transferível, e que pudessem ter sua autenticidade verificada \cite{bitgold}. \citeauthoronline{bitgold} se inspirou nas propriedades dos metais preciosos, principalmente o ouro para conceber a ideia do *Bit Gold*.
 
 O *Bit Gold* funcionaria da seguinte forma:
@@ -320,7 +322,7 @@ E em \citeyear{bitcoin}, \citeauthoronline{bitcoin}, um pseudônimo pertencente 
 
 Embora tenha sido inspirado na ideia de *blockchain* concebida por \citeauthoronline{timestamp} e nas moedas *b-cash*, *Hascash* e provavelmente na moeda *Bit Gold*, o *Bitcoin* apresentou com mais detalhes como uma *blockchain* poderia ser utilizada para criar um sistema eletrônico de registro de transações que nâo dependesse de nenhum agente central e que conseguisse garantir as características necessárias para tornar-se uma moeda *de facto*.
 
-#### Arquitetura do Bitcoin
+### Arquitetura do Bitcoin
 
 \citeauthoronline{bitcoin} definiu o termo *moeda eletrônica* como sendo uma cadeia de assinaturas digitais \cite{bitcoin}, em que Alice transferiria uma quantia de dinheiro para Carlos assinando digitalmente o *hash* da última transação registrada junto com a chave pública de Carlos (fig. \ref{fig:transaction}).
 
@@ -337,6 +339,8 @@ Além do simples registro da transação, informando valor, pagador e recebedor,
 Mas a partir do momento que se dá a uma entidade ou indivíduo o poder de manipular transações, problemas de confiança surgem: será que o agente central não está usando esse poder para benefício próprio? Será que o agente central é capaz de garantir a segurança das informações que ele detém?
 
 A criação de um livro-razão público resolveria o problema de gasto duplo sem a necessidade de um agente central, já que qualquer um poderia verificar se uma transação já foi feita antes de aceitar uma nova, porém a capacidade de qualquer agente poder registrar uma transação no livro-razão cria o *Problema dos Generais Bizantinos*.
+
+#### O problema dos generais bizantinos
 
 \citeauthoronline{byzantine} formalizaram em \citeyear{byzantine} o *Problema dos Generais Bizantinos*. Esse problema é apresentado por uma história fictícia de um exército bizantino acampado ao redor de uma cidade inimiga. O exército é composto por diversas divisões, cada uma comandada por um general, e a comunicação entre os generais só pode ocorrer por meio de troca de mensagens entre si.
 
@@ -404,7 +408,9 @@ Como já discutido no *Problema dos Generais Bizantinos*, mesmo que um grupo de 
 
 Para que esse sistema seja viável é necessário que haja diversos nós, sendo que quanto maior for a quantidade de nós na rede, maior será a impossibilidade de fraudar a *blockchain*, por isso, \citeauthoronline{bitcoin} especificou que a primeira transação de cada bloco seria uma transação que cria unidades de *Bitcoin*\footnote{A primeira transação de cada bloco da \emph{blockchain} do \emph{Bitcoin} serve como uma recompensa para quem criou o bloco. Inicialmente a recompensa era de 50 unidades de \emph{Bitcoin} (BTC 50,00), e a cada 210 mil blocos gerados (o que leva aproximadamente 4 anos) a recompensa é reduzida pela metade. Até junho de 2019 essa recompensa era de 12.5 BTC \cite{dev-ref}.}, que passa a ser de propriedade do criador do bloco, sendo a única forma de criar unidades de *Bitcoin*. Isso remove completamente a figura de bancos centrais, que em moedas fiduciárias são responsáveis por emitir novas unidades de dinheiro.
 
-O *Bitcoin*, assim como o *Bit Gold* foi concebido com a ideia de imitar o padrão ouro, e por isso foi estipulado em seu protocolo que deverá ser emitido um máximo de 21 milhões de unidades de *Bitcoin*. E para que haja um incentivo para que participantes continuem adicionando blocos na *blockchain* mesmo quando o limite de 21 milhões de unidade for alcançado, também foi concebido em seu protocolo que cada transação processada paga uma taxa para o nó que registrou o novo bloco de transações na *blockchain* \cite{better}.
+#### Transações no protocolo Bitcoin
+
+O *Bitcoin*, assim como o *Bit Gold* (ver p. \pageref{bitgold}) foi concebido com a ideia de imitar o padrão ouro, e por isso foi estipulado em seu protocolo que deverá ser emitido um máximo de 21 milhões de unidades de *Bitcoin*. E para que haja um incentivo para que participantes continuem adicionando blocos na *blockchain* mesmo quando o limite de 21 milhões de unidade for alcançado, também foi concebido em seu protocolo que cada transação processada paga uma taxa para o nó que registrou o novo bloco de transações na *blockchain* \cite{better}.
 
 Para que seja permitido o registro de transações com frações de *Bitcoin*, cada transação (fig. \ref{fig:transaction-fraction}) é composta por entradas e saídas. Deve haver em cada transação uma ou mais entradas (isso permite que haja a junção de várias pequenas quantidades de *Bitcoins* para totalizar o valor a ser transferido para o recebedor) e uma ou duas saídas (uma para pagar o recebedor e outra para o troco, caso exista) \cite{transaction-guide}.
 
@@ -538,6 +544,8 @@ Sempre que 2016 blocos são adicionados à *blockchain*, a rede de nós calcula 
 
 Essa característica de alterar o *nBits* para garantir que a quantidade de blocos gerados em duas semanas seja, em média, sempre igual, permite que o protocolo possa ser utilizado mesmo com o aumento da capacidade de processamento da rede. Quanto mais poder computacional for inserido na rede, mais difícil se tornará de calcular a prova de trabalho, sendo o inverso também verdade.
 
+### O bloco gênesis
+
 O primeiro bloco de *Bitcoin*, o Bloco Gênesis, foi minerado em 2009 pelo próprio \citeauthoronline{bitcoin}, sendo incorporado na *transação coinbase*\footnote{\emph{transação coinbase} é o nome dado a primeira transação de cada bloco que, como já discutido no texto, serve como recompensa para quem minerou o bloco. A \emph{transação coinbase} possui um campo de 100 bytes denominado \emph{coinbase script} que pode ser utilizados arbitrariamente pelo minerador sem que o protocolo \emph{Bitcoin} seja violado.} do bloco, o texto **The Times 03/Jan/2009 Chancellor on brink of second bailout for banks** \cite{genesis} em referência a uma manchete do jornal londrino Times sobre a falha do governo britânico de estimular a economia. A figura \ref{fig:times} mostra uma foto da edição do jornal da qual a frase foi retirada.
 
 \begin{figure}[htbp]
@@ -546,11 +554,19 @@ O primeiro bloco de *Bitcoin*, o Bloco Gênesis, foi minerado em 2009 pelo próp
   \includegraphics[width=1.0\textwidth]{imagens/times.png}
   \end{center}
   \legend{Fonte: \citeonline{timesimg}.}
-\end{figure}.
+\end{figure}
 
 O *Bitcoin* foi criado para se tornar uma moeda descentralizada e livre do poder estatal, e o texto publicado no *Bloco Gênesis*, bem como o fato do *Bitcoin* ter sido lançado em meio a crise financeira que começou em 2008, demonstra o seu objetivo de ser uma moeda concorrente a todas as moedas fiduciárias atualmente em circulação.
 
 O livre mercado só é plenamente possível em um ambiente livre de coerção, em que os indivíduos se sintam livres para realizar trocas voluntárias e que não possam ser ameaçados ou inibidos por forças centralizadoras. O uso de moedas fiduciárias em espécie permite que transações livre de interferências estatais ocorram, porém, na era da conectividade em tempo real é necessário que haja uma moeda digital que garanta ou ao menos melhore a privacidade dos indivíduos que desejem realizar trocas voluntárias.
+
+\clearpage
+
+## As Tecnologias Descentralizadas da Atualidade
+
+Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin* que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
+
+Embora a lista de tecnologias descentralizadas seja muito extensa e carente de estudos acadêmicos aprofundados sobre as mesmas, este capítulo mostra algumas das tecnologias mais proeminentes da atualidade para a contrução de aplicações descentralizadas, que foram estudadas pelo autor.
 
 ### Blockstack
 
