@@ -108,7 +108,6 @@ Nessas classificações, um sistema judicial estatal, bem como a polícia e empr
 
 <!-- Com o surgimento do *Bitcoin*, criou-se a possibilidade de incorporar contratos inteligentes em *blockchain*, sendo a moeda *Bitcoin*, uma forma de contrato inteligente incorporado em *software*, já que a moeda em si não possui nenhum componente de segurança reativa, confiando completamente no poder da criptografia e do algoritmo de consenso para garantir que as regras, ou cláusulas, que definem o que é uma transação válida não sejam quebradas, e que qualquer tentativa de fraude da *blockchain* seja punida com a perda de tempo e recursos computacionais, e consequentemente recursos energéticos. -->
 
-<!-- E foi o surgimento da *Ethereum* que culminou na adoção e propagação de contratos inteligentes em diferentes contextos. A *Ethereum*, uma criptomoeda que implementa uma *blockchain* que suporta o uso de uma linguagem *Turing-completa*\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.} foi concebida para permitir a criação de aplicações descentralizadas que fosse além do contexto financeiro \cite{ethereum}. -->
 
 O desenvolvimento de aplicações descentralizadas que utilizam contratos inteligentes permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralized Autonomous Organization* - Organização Autônoma descentralizada), em que todas as regras de funcionamento da empresa, inclusive divisão de lucros e como é feito decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
 
@@ -684,6 +683,21 @@ Com isso, foi definido o estudo e teste das seguintes tecnologias neste trabalho
 1. *Ethereum*;
 2. *Blockstack*;
 3. *Holochain*.
+
+### Ethereum
+
+A *Ethereum* é uma tecnologia *blockchain* lançada em 2015 que ao ser idealizada teve como objetivo eliminar quatro fraquezas do *Bitcoin* \cite{ethereum}:
+
+1. Não ser *turing*-completo\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.}: a impossibilidade de criação de *loops* é uma considerável limitação para a criação de contratos que envolvem repetições e que precisam ser eficientes;
+2. Valor-cego: não é possível criar uma transação que possa ser gasta de forma esporádica e com valores variados até a totalização do valor disponível ser exaurido. Em outras palabras, ou todo o valor da transação é gasto ou nada é gasto. Isso impede que haja formas sofisticadas de pagamento, como pagamento por prestação, ou envio fracionário do valor da transação para diferentes destinatários.
+3. Falta de estado: uma transação não gasta (*UTXO*) só possui dois estados: gasto e não gasto. Não existe a possibilidade de haver estados internos dentro da transação *UTXO*, o que implica na criação de contratos simples e pontuais, ao invés de contratos com estado (e portanto, mais complexos), que permitiriam organizações descentralizadas, a implementação de metaprotocolos e o suporte a limites de retirada.
+4. *Blockchain*-cego: a *UTXO* não tem visibilidade sobre os dados da *blockchain*, o que limita, por exemplo, a criação de jogos de azar, e perdendo características potencialmente valiosas de aleatoriedade.
+
+Para eliminar essas fraquezas, a *Ethereum* implementou uma *blockchain* *turing complete* o que permite a criação de contratos inteligentes capazes de suportar sistemas de arquivos descentralizados, implementação de limites de saque, contratos financeiros, mercados de apostas, criação de *tokens*, etc.
+
+E foi justamente o surgimento da *Ethereum* que culminou na adoção e propagação de aplicações descentralizadas e inspirou outras *blockchains* a implementarem soluções concorrentes com o mesmo propósito.
+
+#### Arquitetura da Ethereum
 
 ### Blockstack
 
