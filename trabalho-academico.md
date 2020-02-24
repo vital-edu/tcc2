@@ -699,6 +699,23 @@ E foi justamente o surgimento da *Ethereum* que culminou na adoção e propagaç
 
 #### Arquitetura da Ethereum
 
+Para que a rede *Ethereum* consiga executar contratos inteligentes (o que permite a criação de *dApps*), é utilizado o conceito de contas. Há dois tipos de contas:
+
+1. Contas de propriedade externa: são contas controladas a partir de chaves privadas e não possuem nenhum código associado a elas. Comparando com o *Bitcoin*, as carteiras de *Bitcoin* seriam consideradas contas de propriedade externa na rede *Ethereum*.
+2. Contas de contrato: são contas controladas somente por um código de contrato associado a ela, sendo o que permite que o dinheiro fique retido para ser controlado de acordo com as regras do contrato.
+
+Uma característica importante das contas de propriedade externa é que elas podem enviar mensagens tanto para outras contas de propriedade externa como para contas de contrato, sendo necessário para isso, a utilização da chave privada da conta, assim como ocorre com o *Bitcoin*. Quando uma mensagem é enviada para uma conta de contrato externo, isso caracteriza uma transferência de valor monetário, enquanto que uma mensagem para uma conta de contrato é caracterizada como um comando de execução do contrato ou de parte do contrato (fig. \ref{fig:ethcontract}).
+
+\begin{figure}[!ht]
+    \caption{\label{fig:ethcontract}Execução de contratos na rede \emph{Ethereum}.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/ethcontract.png}
+    \end{center}
+    \legend{Fonte: \citeonline{ethwork}.}
+\end{figure}
+
+Desta forma, um contrato só pode ser inicializado por uma conta de propriedade externa, porém, após o ínicio de execução do contrato, a conta de execução do contrato pode começar a enviar comandos de transação interna, tendo vida própria de acordo com as regras do contrato a qual obedece.
+
 ### Blockstack
 
 *Blockstack* é uma tecnologia com o foco em prover uma infraestrutura para o desenvolvimento de aplicações descentralizadas seguras e privadas em que a camada de *blockchain* lida com o gerencimaneto de estado e lógica de negócio mínimos, provendo ao usuário final dessas aplicações o controle total sobre suas identidades e dados digitais.
