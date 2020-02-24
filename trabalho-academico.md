@@ -697,9 +697,27 @@ Para eliminar essas fraquezas, a *Ethereum* implementou uma *blockchain* *turing
 
 E foi justamente o surgimento da *Ethereum* que culminou na adoção e propagação de aplicações descentralizadas e inspirou outras *blockchains* a implementarem soluções concorrentes com o mesmo propósito.
 
+Além das propriedades já citadas, a *Ethereum* também possui uma moeda embutida em sua *blockchain* chamada de *ether* e que possui um sistema próprio de denominações que pode ser visto na tabela \ref{tab:ethgentle}.
+
+\begin{table}[htbp]
+\caption{\label{tab:ethgentle}Denominações da moeda \emph{Ether}.}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Unidade}} & \multicolumn{1}{c}{\textbf{Número por ETH}} & \multicolumn{1}{c}{\textbf{Uso mais apropriado (atualmente)}} \\ \midrule
+Ether (ETH)                          & 1                                           & transações  e recompensas de mineração                        \\
+finney                               & 1.000                                       & NA                                                             \\
+szabo                                & 1.000.000                                   & cuusto de trasação                                            \\
+Gwei                                 & 1.000.000.000                               & \textit{preço de Gas}                                         \\
+Mwei                                 & 1.000.000.000.000                           & NA                                                             \\
+Kwei                                 & 1.000.000.000.000.000                       &  NA                                                             \\
+wei                                  & 1.000.000.000.000.000.000                   & unidade base indivisível                                      \\ \bottomrule
+\end{tabular}
+\legend{Fonte: \citeonline{ethgentle}}
+\end{table}
+
 #### Arquitetura da Ethereum
 
-Para que a rede *Ethereum* consiga executar contratos inteligentes (o que permite a criação de *dApps*), é utilizado o conceito de contas. Há dois tipos de contas:
+Para que a rede *Ethereum* consiga executar contratos inteligentes (o que permite a criação de *dApps*), é utilizado o conceito de contas. Há dois tipos de contas \cite{ethwork}:
 
 1. Contas de propriedade externa: são contas controladas a partir de chaves privadas e não possuem nenhum código associado a elas. Comparando com o *Bitcoin*, as carteiras de *Bitcoin* seriam consideradas contas de propriedade externa na rede *Ethereum*.
 2. Contas de contrato: são contas controladas somente por um código de contrato associado a ela, sendo o que permite que o dinheiro fique retido para ser controlado de acordo com as regras do contrato.
@@ -715,6 +733,8 @@ Uma característica importante das contas de propriedade externa é que elas pod
 \end{figure}
 
 Desta forma, um contrato só pode ser inicializado por uma conta de propriedade externa, porém, após o ínicio de execução do contrato, a conta de execução do contrato pode começar a enviar comandos de transação interna, tendo vida própria de acordo com as regras do contrato a qual obedece.
+
+Um outro importante conceito dentro da rede *Ethereum* é a utilização de *gas*, que é o termo utilizado para as taxas de operação da rede. Toda computação realizada na rede *Ethereum* exige o pagamento dessa taxa de *gas* para ser executada. A taxa de gas é Cada unidade de *gas* representa
 
 ### Blockstack
 
