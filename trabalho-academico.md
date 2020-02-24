@@ -564,7 +564,29 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 ## As Tecnologias Descentralizadas da Atualidade
 
-Embora as tecnologias descentralizadas remetam a décadas passadas com o advento das redes *peer-to-peer* (ponto-a-ponto), foi apenas a partir do surgimento do *Bitcoin* que as aplicações descentralizadas ganharam força e começaram a incorporar conceitos de segurança baseados em criptografia, algorítmos de consenso e resolução de disputas, imutabilidade dos dados, e recompensas para participantes da rede a partir da geração de *tokens* de pagamento.
+O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, não foi possível encontrar um número confiável de criptomoedas que suportem a criação de aplicações descentralizadas.
+
+Segundo o \citeonline{dapp} há 1129 *dApps* (*decentralized applications* - aplicações descentralizadas) ativas ao final do ano de 2019, sendo que 690 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 1,43 milhão de usuários ativos e transacionaram um volume de 2,37 bilhões de dólares, o que mostra a forte demanda por tais aplicações.
+
+Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:dapps}Aplicativos Descentralizados por \emph{Blockchain} - Resumo de 2019.}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Categoria}       & \textbf{Total} & \textbf{Ethereum} & \textbf{EOS} & \textbf{Steem} & \textbf{Tron} & \textbf{IOST} & \textbf{NEO}   \\ \midrule
+Número de DApps          & 2989           & 1822              & 493          & 92             & 520           & 38            & 24             \\
+DApps ativos             & 2217           & 1129              & 479          & 80             & 482           & 32            & 15             \\
+Novos DApps              & 1445           & 690               & 260          & 34             & 411           & 38            & 12             \\
+Usuários ativos          & 3,11M          & 1,42M             & 518 mil      & 120 mil        & 967 mil       & 27 mil        & 55 mil         \\
+Novos usuários           & 2,76M          & 1,28M             & 399 mil      & 60 mil         & 947 mil       & 27 mil        & 44 mil         \\
+Transações               & 3,26B          & 24,52M            & 2,81B        & 85,72M         & 290,28M       & 47,10M        & 2,27M          \\
+Volume (em token)        & --             & 12,64M            & 1,40B        & 84,83M         & 142,44B       & 12,53B        & 410 mil        \\
+Volume (USD)             & 10,90B         & 2,37B             & 4,98B        & 29,02M         & 3,41B         & 114,34M       & 1,01M          \\ \bottomrule
+\end{tabular}
+\legend{Fonte: \citeonline{dapp}.}
+\end{table}
 
 Embora a lista de tecnologias descentralizadas seja muito extensa e carente de estudos acadêmicos aprofundados sobre as mesmas, este capítulo mostra algumas das tecnologias mais proeminentes da atualidade para a contrução de aplicações descentralizadas, que foram estudadas pelo autor.
 
