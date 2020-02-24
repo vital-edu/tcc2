@@ -566,19 +566,17 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralized applications* - aplicações descentralizadas).
 
-Ao analisar a plataforma de indexação de aplicações descentralizadas \citeauthoronline{dapp}, coletou-se informações importantes para entender o mundo das *dApps*. Segundo o \citeonline{dapp} há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações. Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
-
-Ao analizar a plataforma de indexação de aplicações descentralizadas \citeauthoronline{appco}, chegou-se a um número de aplicações descentralizadas por tecnologia bem diferente, como pode ser visto comparando a tabela \ref{tab:dapps}, que mostra os números totais de *dApps*(ativas e inativas) por *Blockchain* no ano de 2019, segundo a \citeauthoronline{dapp}, e na tabela \ref{tab:appco}, que mostra o número de apllicações atuais registradas na plataforma \citeauthoronline{appco}.
+A plataforma de indexação de aplicações descentralizadas \citeauthoronline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:dapps}Aplicativos Descentralizados por \emph{Blockchain} - Resumo de 2019 por \citeauthoronline{dapp}.}
+\caption{\label{tab:dapps-report}Aplicativos Descentralizados por tecnologia \emph{Blockchain} - Resumo de 2019 por \citeauthoronline{dapp}.}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 \textbf{Categoria}       & \textbf{Total} & \textbf{Ethereum} & \textbf{EOS} & \textbf{Steem} & \textbf{Tron} & \textbf{IOST} & \textbf{NEO}   \\ \midrule
-Número de DApps          & 2989           & 1822              & 493          & 92             & 520           & 38            & 24             \\
-DApps ativos             & 2217           & 1129              & 479          & 80             & 482           & 32            & 15             \\
-Novos DApps              & 1445           & 690               & 260          & 34             & 411           & 38            & 12             \\
+Número de dApps          & 2989           & 1822              & 493          & 92             & 520           & 38            & 24             \\
+dApps ativos             & 2217           & 1129              & 479          & 80             & 482           & 32            & 15             \\
+Novos dApps              & 1445           & 690               & 260          & 34             & 411           & 38            & 12             \\
 Usuários ativos          & 3,11M          & 1,42M             & 518 mil      & 120 mil        & 967 mil       & 27 mil        & 55 mil         \\
 Novos usuários           & 2,76M          & 1,28M             & 399 mil      & 60 mil         & 947 mil       & 27 mil        & 44 mil         \\
 Transações               & 3,26B          & 24,52M            & 2,81B        & 85,72M         & 290,28M       & 47,10M        & 2,27M          \\
@@ -588,12 +586,45 @@ Volume (USD)             & 10,9B          & 2,37B             & 4,98B        & 2
 \legend{Fonte: \citeonline{dapp}.}
 \end{table}
 
+E ao analisar os dados atuais da plataforma \citeauthoronline{dapp}, foi elaborado a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeauthoronline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
+
+Diante dos números apresentados, podemos notar que tanto o número de criptomoedas existentes quanto o número de *dApps* existentes, possuem divergências consideráveis de acordo com a fonte consultada, o que reduz a confiabilidade dos dados e prejudica uma análise mais metodológica.
+
+Segundo a fonte \citeauthoronline{dapp}, a *Ethereum* é a tecnologia mais relevante para *dApps*, a EOS ainda se mantém relevante porém é uma tecnologia em declínio tendo perdido 30% em número de usuários ativos em comparação com o ano de 2019, e a Tron passou a ser a segunda plataforma mais relevante em 2019 \cite{dapp}.
+
+Separando apenas essas três tecnologias, temos 1129 aplicações ativas feitas em *Ethereum*, 482 feitas em *Tron*, e 479 em 478 em *EOS*, sendo as únicas que ultrapassam o valor de 100 *dApps* ativas (tab. \ref{tab:dapp}).
+
+Analisando essas mesmas tecnologias na \citeauthoronline{appco}, temos 421 aplicações ativas na *Blockstack*, 360 na *Ethereum*, 42 na *EOS* e 16 na *Tron* (tab. \ref{tab:appco}).
+
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:appco}Aplicativos Descentralizados por \emph{Blockchain} - \citeauthoronline{appco}.}
+\caption{\label{tab:dapp}\emph{dApps} registradas na plataforma \citeauthoronline{appco} por tecnologia \emph{blockchain}.}
 \begin{tabular}{cc}
 \hline
-\textbf{Blockchain}\footnotemark & \textbf{Número de DApps} \\ \hline
+\textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
+Ethereum            & 1580                      \\
+Tron                & 492                       \\
+EOS                 & 379                       \\
+Blockstack          & 153                      \\
+Steem               & 93                       \\
+Klaytn              & 41                       \\
+IOST                & 39                       \\
+TomoChain           & 25                       \\ \hline
+\end{tabular}
+\legend{Fonte: \citeonline{appco}.}
+\end{table}
+
+<!--
+View more: $('.view-more').click()
+Pegar quantidade de items: document.getElementsByClassName('main-sec')[0].getElementsByClassName('item item').length
+ -->
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:appco}\emph{dApps} registradas na plataforma \citeauthoronline{dapp} por tecnologia \emph{blockchain}.}
+\begin{tabular}{cc}
+\hline
+\textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
 Blockstack          & 421                      \\
 Ethereum            & 360                      \\
 EOS                 & 42                       \\
@@ -605,17 +636,54 @@ Mobius              & 12                       \\ \hline
 \legend{Fonte: \citeonline{appco}.}
 \end{table}
 
-\footnotetext{foram consideradas apenas \emph{blockchains} com mais de 10 aplicações registradas na plataforma \citeauthoronline{appco}.}
+É importante salientar que ambas plataformas indexadoras usam um processo manual de cadastro de *dApps*, que possui os seguintes problemas:
 
-Diante dos números apresentados, podemos notar que tanto o número de criptomoedas existentes quanto o número de *dApps* existentes, possuem divergências consideráveis de acordo com a fonte consultada, o que reduz a confiabilidade dos dados e prejudica uma análise mais científica sobre as mesmas.
+1. \label{prob:1}falta de conhecimento dos criadores dos *dApps* sobre a existência de tais plataformas;
+2. \label{prob:2}falta de avaliação qualitativa das aplicações enviadas;
 
-Segundo a fonte \citeauthoronline{dapp}, que não contém dados estatísticos sobre aplicações que utilizam a tecnologia *Blockstack* (mas que a recomenda como uma das 9 tecnologias *blockchain* a serem observadas no ano de 2020), a *Ethereum* é a tecnologia mais relevante para *dApps*, a EOS ainda se mantém relevante porém é uma plataforma em declínio tendo perdido 30% em número de usuários ativos em comparação com o ano de 2019, e a Tron passou a ser a segunda plataforma mais relevante em 2019.
+O problema \ref{prob:1} pode resultar em uma subestimativa sobre a quantidade real de *dApps* existentes enquanto que o problema \ref{prob:2} pode resultar em uma superestimativa da quantidade de *dApps* que sejam minimamente usáveis, ou que de fato agregem valor ao usuário final, além de possibilitar duplicação de registros, submissão de aplicações que não estão prontas para uso, dentre outros casos possíveis.
 
-Separando apenas essas três tecnologias, temos 1129 aplicações ativas feitas em *Ethereum*, 482 feitas em *Tron*, e 479 em 478 em *EOS*, sendo as únicas que ultrapassam o valor de 100 *dApps* ativas.
+Para a realização do estudo sobre tecnologias descentralizadas, foi determinado que seriam estudadas ao todo 3 tecnologias, sendo 2 delas proeminentes e 1 promissora que traga um diferencial tecnológico.
 
-Analisando essas mesmas tecnologias na \citeauthoronline{appco}, temos 421 aplicações ativas na *Blockstack*, 360 na *Ethereum*, 42 na *EOS* e 16 na *Tron*.
+Para selecionar as 2 tecnologias proeminentes foram utilizados os dados extraídos das duas plataformas indexadoras (as únicas encontradas pelo autor), seguindo os seguintes critérios:
 
-Essas mesmas três plataformas
+1. \label{criterio:1}Obter a média da quantidade de *dApps* registradas;
+2. \label{criterio:2}Selecionar as duas tecnologias com maior valor médio de *dApps* registradas.
+
+Seguindo o critério \ref{criterio:1}, foi obtido os resultados presentes na tabela \ref{tab:resultados-dapps}:
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:resultados-dapps}Média de \emph{dApps} registradas por tecnologia \emph{blockchain}.}
+\begin{tabular}{lr}
+\hline
+\textbf{Tecnologia Blockchain} & \textbf{Média de dApps registrados} \\ \hline
+Ethereum            & 985,5                      \\
+Blockstack          & 287,0                      \\
+Tron                & 254,0                       \\
+EOS                 & 210,5                       \\
+Steem               & 61,5                       \\
+Klaytn              & 20,5                       \\
+IOST                & 19,5                       \\
+TomoChain           & 12,5                       \\
+0x relays           & 7,5                       \\
+Mobius              & 6,0                       \\ \hline
+\end{tabular}
+\legend{Fonte: \citeonline{appco} e \citeonline{dapp}.}
+\end{table}
+
+Seguindo os critérios estabelecidos, foram selecionadas as seguintes tecnolgias *blockchain* proeminentes com suporte a criação de *dApps*:
+
+1. *Ethereum*;
+2. *Blockstack*.
+
+Por pesquisa e seleção informal, foi selecionada como terceira tecnologia a ser estudada, a *Holochain*, que apresenta características de plataforma para desenvolvimento de aplicações descentralizadas e que propõe uma tecnologia própria de mesmo nome que contrapõe as tecnologias baseadas em *blockchain*.
+
+Com isso, foi definido o estudo e teste das seguintes tecnologias neste trabalho:
+
+1. *Ethereum*;
+2. *Blockstack*;
+3. *Holochain*.
 
 ### Blockstack
 
