@@ -1159,6 +1159,21 @@ Soluções como o \emph{Bitcoin} surgiram para prover alternativas que não pass
 
 O livre mercado é quase impraticável, pelo menos em proporções significativas, no ambiente virtual, mas com o advento de tecnologias descentralizadas, tornou-se possível conceber tais ambientes e independente das motivações e do juízo de valor sobre o emprego da tecnologia, o uso da criptogragia aliado a descentralização é uma resposta contra qualquer controle central. As ferramentas estão sendo criadas, principalmente por existir demanda e justificativas éticas, e o livre mercado, sendo uma atividade tão importante na sociedade, é um excelente caso a ser estudado e aplicado em conjunto com as tecnologias descentralizadas e, portanto, é o candidato ideal para o presente estudo.
 
+### Arbitragem no livre mercado
+
+
+
+Ao realizar trocas comercias, há sempre a possibilidade de surgir disputas e desacordos entre as partes envolvidas, mesmo quando as partes envolvidas não desejam iniciar o uso da força uma sobre a outra. Esse conflito pode ocorrer por questões envolvendo o cumprimento de um contrato ou acordo, ou da contestação sobre qualquer fator envolvido na transação, ou mesmo quando há a tentativa de uma parte enganar ou lesar a outra, agindo de má fé. As possibilidades para haver tal conflito entre as duas partes são inúmeras, e independete de quais sejam as razões, a disputa poderia chegar a um ponto em que se tornasse inviável de ser resolvida somente através da negociação direta entre as partes.
+
+Se nenhum mecanismo para resolver esse tipo de problema dentro de uma sociedade existisse, tais disputas poderiam apenas ser resolvidas através do uso da força, havendo assim o abandono do uso da razão -- o único meio satisfatório de comunicação entre as pessoas. Nesse caso, essa sociedade desintegrar-se-ia em conflitos, e colapsaria à medida em que as relações humanas se tornassem perigosas demais para serem toleradas \cite[p. 65]{marketbook}.
+
+Em um ambiente regulado por governos (e por consequência, em um mercado não-livre), essa disputa seria resolvida pela corte designada pelo governo, muitas vezes contrariando o desejo de uma ou de todas as partes envolvidas na disputa, o que embora seja efetivo na resolução da disputa, pode levar ao descontentamento da parte perdedora, e ser considerada injusta. Um juíz estatal é sempre impelido a ser parcial, a favor do próprio estado (e por vezes, do governo), através do qual ele recebe seu poder e seu pagamento. \cite[p. 66]{marketbook}
+
+Em um livre mercado, a disputa pode ser resolvida por um árbitro escolhido por ambas as partes, antes da iniciação da transação ou do fechamento do contrato. Esse árbitro deve ser concordado por ambas as partes, exatamente como a própria transação não pode ocorrer sem o consentimento de ambas as partes, a escolha do árbitro também precisa ser concordada por ambas as partes, levando a uma negociação que pode chegar a conclusão de que não existe um árbitro que ambas as partes confiem (o que culminaria no não prosseguimento na negociação), ou na conclusão de que existe ao menos um árbitro que ambas as partes confiem e achem justo, concordando os dois a confiarem qualquer disputa posterior que venha a ocorrer a ser decidida pelo árbitro.
+
+Um árbitro em um livre mercado, sabe que ele deve ser tão escrúpuloso, honesto, justo e imparcial quanto possível, caso contrário, ele mesmo terá sua reputação manchada e consequentemente não terá mais nenhum caso a julgar, sendo ostracizado pelo mercado. Um árbitro, portanto, teria todo o interesse em prover o melhor serviço possível, já que depende disso para sua própria sobrevivência, enquanto que o árbitro estatal depende de força política \cite[p. 67]{marketbook}.
+
+
 ## Definição da aplicação a ser desenvolvida
 
 O projeto a ser desenvolvido, com o nome inicial de *Free the Market* (Liberte o Mercado) é uma aplicação *web* de comércio eletrônico construído utilizando tecnologias descentralizadas com o objetivo de verificar a viabilidade de utilização de tecnologias descentralizadas que consigam substituir de forma satisfatória tecnologias convencionais, removendo o problema de ponto único de falha, aumentando a privacidade dos usuários e a segurança dos dados manipulados pela aplicação.
