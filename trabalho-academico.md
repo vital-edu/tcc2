@@ -734,7 +734,25 @@ Uma característica importante das contas de propriedade externa é que elas pod
 
 Desta forma, um contrato só pode ser inicializado por uma conta de propriedade externa, porém, após o ínicio de execução do contrato, a conta de execução do contrato pode começar a enviar comandos de transação interna, tendo vida própria de acordo com as regras do contrato a qual obedece.
 
-Um outro importante conceito dentro da rede *Ethereum* é a utilização de *gas*, que é o termo utilizado para as taxas de operação da rede. Toda computação realizada na rede *Ethereum* exige o pagamento dessa taxa de *gas* para ser executada. A taxa de gas é Cada unidade de *gas* representa
+Um outro importante conceito dentro da rede *Ethereum* é a utilização de *gas*, que é o termo utilizado para as taxas de operação da rede. Toda computação realizada na rede *Ethereum* exige o pagamento dessa taxa de *gas* para ser executada, sendo ela normalmente expressa em *gwei*. Em cada transação, o emissor estipula um *limite de gas* (a quantidade máxima de *gas* que se está disposto a pagar) e um *preço de gas* (o preço em *ether* de cada unidade de *gas* que se está disposto a pagar). Ao se multiplicar o *limite de gas* com o preço de *gas*, obtém-se o *taxa máxima da transação* que se está disposto a pagar (fig. \ref{fig:gas}).
+
+\begin{figure}[!ht]
+    \caption{\label{fig:gas}Cálculo da taxa máxima da transação.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/gas.png}
+    \end{center}
+    \legend{Fonte: \citeonline{ethwork}.}
+\end{figure}
+
+Sendo assim, é necessário antes de enviar uma transação para a rede *Ethereum*, que o usuário possua valor equivalente em sua carteira para pagar a *taxa máxima de transação*. Esse valor então é enviado para a *conta do contrato* e a cada operação do contrato, a taxa de gás é subtraída até que o contrato seja finalizado ou até que a *taxa máxima da transação* seja alcançada (o que causa o término da execução do contrato). Caso haja saldo remanescente na *conta do contrato* após o término da execução do contrato, o valor é devolvido ao emissor da transação, como exemplifica a figura \ref{fig:gasspent}.
+
+\begin{figure}[!ht]
+    \caption{\label{fig:gasspent}Processo de gasto de \emph{gas} em uma transação.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/gasspent.png}
+    \end{center}
+    \legend{Fonte: \citeonline{ethwork}.}
+\end{figure}
 
 ### Blockstack
 
