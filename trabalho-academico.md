@@ -91,6 +91,7 @@ Além dessas três características principais, \citeonline{blockstack} cita out
 Além das caracterísiticas acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
 
 ### Contratos Inteligentes
+\label{subsec:smartcontract}
 
 Algumas das tecnologias descentralizadas, por serem utilizadas na contrução de diferentes escopos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse sistema de regras de negócio, imutáveis, e distríbuidas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
@@ -1161,8 +1162,6 @@ O livre mercado é quase impraticável, pelo menos em proporções significativa
 
 ### Arbitragem no livre mercado
 
-
-
 Ao realizar trocas comercias, há sempre a possibilidade de surgir disputas e desacordos entre as partes envolvidas, mesmo quando as partes envolvidas não desejam iniciar o uso da força uma sobre a outra. Esse conflito pode ocorrer por questões envolvendo o cumprimento de um contrato ou acordo, ou da contestação sobre qualquer fator envolvido na transação, ou mesmo quando há a tentativa de uma parte enganar ou lesar a outra, agindo de má fé. As possibilidades para haver tal conflito entre as duas partes são inúmeras, e independete de quais sejam as razões, a disputa poderia chegar a um ponto em que se tornasse inviável de ser resolvida somente através da negociação direta entre as partes.
 
 Se nenhum mecanismo para resolver esse tipo de problema dentro de uma sociedade existisse, tais disputas poderiam apenas ser resolvidas através do uso da força, havendo assim o abandono do uso da razão -- o único meio satisfatório de comunicação entre as pessoas. Nesse caso, essa sociedade desintegrar-se-ia em conflitos, e colapsaria à medida em que as relações humanas se tornassem perigosas demais para serem toleradas \cite[p. 65]{marketbook}.
@@ -1173,6 +1172,21 @@ Em um livre mercado, a disputa pode ser resolvida por um árbitro escolhido por 
 
 Um árbitro em um livre mercado, sabe que ele deve ser tão escrúpuloso, honesto, justo e imparcial quanto possível, caso contrário, ele mesmo terá sua reputação manchada e consequentemente não terá mais nenhum caso a julgar, sendo ostracizado pelo mercado. Um árbitro, portanto, teria todo o interesse em prover o melhor serviço possível, já que depende disso para sua própria sobrevivência, enquanto que o árbitro estatal depende de força política \cite[p. 67]{marketbook}.
 
+Embora existam muitas particularidas sobre a utilização de arbitragem em um livre mercado, no meio digital, utilizando o conceito de contratos inteligentes (ver \ref{subsec:smartcontract}). Além de contratos inteligentes, também pode-se criar mecanismos que proporcionem que usuários antes de realizarem uma transação, possam escolher outro usuário da plataforma para ser o árbitro. O ideal é que os árbitros sejam pagos, para gerar incentivos financeiros para a execução de um bom trabalho de arbitragem, e também que haja uma forma de avaliar tais árbitros para gerar incentivos sociais que premiem os melhores árbitros e ostracizem mals árbitros.
+
+A arbitragem também pode ser implementada de forma mais simplória em sistemas criptográficos através do uso de sistemas de assinatura eletrônica que utilizem-se de *threshold cryptography* (criptografia de limiar em tradução livre), como por exemplo, carteiras multi-assinadas.
+
+*Threshold cryptography* é o ramo da criptografia que estuda a utilização de sistemas criptográficos em mensagens compartilhadas e distribuídas para *n* participantes, em que um número *t* $\leq$ *n*\footnote{\emph{threshold} (\emph{t}) é portanto o valor limite de chaves criptográficas necessárias para que a mensagem possa ser decifrada, sendo necessário \emph{t} + 1 chaves para decifrar a mensagem.} de participantes não conseguem decifrar a mensagem, mas que um número *t* + 1 de participantes conseguem decifrar a mensagem \cite{threshold}.
+
+Utilizando esse conceito, pode-se criar uma carteira multi-assinada 2-de-3\footnote{uma carteira \emph{m}-de-\emph{n} é uma carteira multi-assinada que utiliza dos conceitos da \emph{threshold cryptography} (criptografia de limiar) para criar uma carteira que necessita de \emph{m} assinaturas de um total de \emph{n} assinaturas para ser movimentada. Sem preencher essa condição, nenhum valor da carteira pode ser movido.} que utiliza a chave pública dos três envolvidos (comprador, vendedor e árbitro), e que após a carteira ser criada, o comprador deve realizar o depósito do valor do produto ou serviço nessa carteira. A partir do momento que o depósito é feito na carteira, o processo de compra começa e o dinheiro só pode ser retirado da carteira multi-assinada quando pelo menos 2 dos envolvidos assinem a transação de transferência de dinheiro da carteira, ou seja, qualquer dinheiro depositado nessa carteira, só pode ser transferido para outro lugar se:
+
+1. \label{multisig:1}o comprador e o vendedor concordarem em realizar a transferência de valores;
+2. \label{multisig:2}o comprador e o mediador concordarem em realizar a transferência de valores;
+3. \label{multisig:3}o vendedor e o mediador concordarem em realizar a transferência de valores.
+
+No caso \ref{multisig:1}, a compra ocorreria de acordo com o combinado, e o dinheiro da carteira multi-assinada iria da carteira multi-assinada para uma carteira de propriedade exclusiva do vendedor. No caso \ref{multisig:2}, a compra precisaria de um árbitro para mediar a disputa, e o árbitro chegaria a conclusão de que o comprador tem razão na disputa e que portanto o dinheiro da carteira multi-assinada deve ser retornado para a carteira de posse exclusiva do comprador; no caso \ref{multisig:3}, o árbitro chegaria a conclusão de que o vendedor tem razão na disputa e que portanto o dinheiro deve ser transferido para uma carteira de posse exclusiva do vendedor.
+
+Essa é a forma mais simples de arbitragem, sendo que os agentes poderiam concordar em medidas diferentes, como por exemplo, o vendedor e comprador concordarem que o dinheiro deve ser transferido para uma carteira em posse somente do comprador. O importante é que ninguém consegue mover o dinheiro sozinho, tendo que haver consenso entre pelo menos dois dos três atores.
 
 ## Definição da aplicação a ser desenvolvida
 
