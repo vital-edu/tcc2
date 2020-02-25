@@ -1159,40 +1159,6 @@ Soluções como o \emph{Bitcoin} surgiram para prover alternativas que não pass
 
 O livre mercado é quase impraticável, pelo menos em proporções significativas, no ambiente virtual, mas com o advento de tecnologias descentralizadas, tornou-se possível conceber tais ambientes e independente das motivações e do juízo de valor sobre o emprego da tecnologia, o uso da criptogragia aliado a descentralização é uma resposta contra qualquer controle central. As ferramentas estão sendo criadas, principalmente por existir demanda e justificativas éticas, e o livre mercado, sendo uma atividade tão importante na sociedade, é um excelente caso a ser estudado e aplicado em conjunto com as tecnologias descentralizadas e, portanto, é o candidato ideal para o presente estudo.
 
-## O OpenBazaar
-
-Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
-
-O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
-
-Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como mediador, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
-
-Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
-
-A última versão do *OpenBazar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
-
-O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
-
-- Busca: o *OpenBazaar* funciona por um sistema de servidores que funcionam através da rede *TOR* e pode ser configurado para se conectar a qualquer servidor privado, porém existem um servidor padrão que já vem configurado. Dentro de cada servidor é possível realizar buscas de produtos e serviços;
-- Transações via criptomoedas: suporte a várias criptomoedas, sendo a principal o *Bitcoin*. Cada vendedor escolhe as criptomoedas que deseja realizar a transação;
-- Sistema de disputa e moderação: suporte a eleição de um mediador em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma mediação entre comprador e vendedor. Uma taxa é dada para o mediador para recompensar o serviço prestado;
-- Suporte a diferentes versões de um mesmo produto: é possível adicionar em um mesmo produto propriedades diversas, como cores diferentes, tamanhos diferentes, variações de modelo de um mesmo produto, conseguindo colocar em uma página só a opção de compra de diferentes variações do mesmo produto;
-- Gerenciador de inventário: essa funcionalidade permite especificar a quantidade de estoque que cada produto e suas variações possuem, garantindo que seja vendido apenas o que está disponível em estoque e sendo possível acompanhar as alterações nos estoques do produto pelo vendedor;
-- Opção de entrega: o vendedor consegue adicionar informações sobre a entrega do produto, especificando preços, prazos e transportadoras diferentes para cada produto ofertado;
-- Bate-papo em tempo real: o vendedor e comprador conseguem se comunicar em tempo real através do sistema de bate-papo da aplicação;
-- Gerencimento de ordem: o vendedor e comprador conseguem acompanhar todo o processo da transação, desde a venda, passando pelo transporte até a confirmação da entrega do produto.
-
-Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
-
-O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
-
-- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*,
-- Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
-- Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
-- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
-
-O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
-
 ## Definição da aplicação a ser desenvolvida
 
 O projeto a ser desenvolvido, com o nome inicial de *Free the Market* (Liberte o Mercado) é uma aplicação *web* de comércio eletrônico construído utilizando tecnologias descentralizadas com o objetivo de verificar a viabilidade de utilização de tecnologias descentralizadas que consigam substituir de forma satisfatória tecnologias convencionais, removendo o problema de ponto único de falha, aumentando a privacidade dos usuários e a segurança dos dados manipulados pela aplicação.
@@ -1331,6 +1297,44 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
     \includegraphics[width=0.75\textwidth]{imagens/payment.png}
     \end{center}
 \end{figure}
+
+\clearpage
+
+## Aplicações Concorrentes
+
+Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
+
+### O OpenBazaar
+
+O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
+
+Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como mediador, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
+
+Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
+
+A última versão do *OpenBazar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
+
+O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
+
+- Busca: o *OpenBazaar* funciona por um sistema de servidores que funcionam através da rede *TOR* e pode ser configurado para se conectar a qualquer servidor privado, porém existem um servidor padrão que já vem configurado. Dentro de cada servidor é possível realizar buscas de produtos e serviços;
+- Transações via criptomoedas: suporte a várias criptomoedas, sendo a principal o *Bitcoin*. Cada vendedor escolhe as criptomoedas que deseja realizar a transação;
+- Sistema de disputa e moderação: suporte a eleição de um mediador em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma mediação entre comprador e vendedor. Uma taxa é dada para o mediador para recompensar o serviço prestado;
+- Suporte a diferentes versões de um mesmo produto: é possível adicionar em um mesmo produto propriedades diversas, como cores diferentes, tamanhos diferentes, variações de modelo de um mesmo produto, conseguindo colocar em uma página só a opção de compra de diferentes variações do mesmo produto;
+- Gerenciador de inventário: essa funcionalidade permite especificar a quantidade de estoque que cada produto e suas variações possuem, garantindo que seja vendido apenas o que está disponível em estoque e sendo possível acompanhar as alterações nos estoques do produto pelo vendedor;
+- Opção de entrega: o vendedor consegue adicionar informações sobre a entrega do produto, especificando preços, prazos e transportadoras diferentes para cada produto ofertado;
+- Bate-papo em tempo real: o vendedor e comprador conseguem se comunicar em tempo real através do sistema de bate-papo da aplicação;
+- Gerencimento de ordem: o vendedor e comprador conseguem acompanhar todo o processo da transação, desde a venda, passando pelo transporte até a confirmação da entrega do produto.
+
+Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
+
+O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
+
+- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*,
+- Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
+- Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
+- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
+
+O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
 
 # Discussões finais
 
