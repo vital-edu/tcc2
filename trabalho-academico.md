@@ -744,7 +744,7 @@ Um outro importante conceito dentro da rede *Ethereum* é a utilização de *gas
     \legend{Fonte: \citeonline{ethwork}.}
 \end{figure}
 
-Sendo assim, é necessário antes de enviar uma transação para a rede *Ethereum*, que o usuário possua valor equivalente em sua carteira para pagar a *taxa máxima de transação*. Esse valor então é enviado para a *conta do contrato* e a cada operação do contrato, a taxa de gás é subtraída até que o contrato seja finalizado ou até que a *taxa máxima da transação* seja alcançada (o que causa o término da execução do contrato). Caso haja saldo remanescente na *conta do contrato* após o término da execução do contrato, o valor é devolvido ao emissor da transação, como exemplifica a figura \ref{fig:gasspent}.
+Sendo assim, é necessário antes de enviar uma transação para a rede *Ethereum*, que o usuário possua valor equivalente em sua carteira para pagar a *taxa máxima de transação*. Esse valor então é enviado para a *conta do contrato* e a cada operação do contrato, a taxa de gás é subtraída até que o contrato seja finalizado ou até que a *taxa máxima da transação* seja alcançada. Caso haja saldo remanescente na *conta do contrato* após o término da execução do contrato, o valor é devolvido ao emissor da transação, como exemplifica a figura \ref{fig:gasspent}.
 
 \begin{figure}[!ht]
     \caption{\label{fig:gasspent}Processo de gasto de \emph{gas} em uma transação.}
@@ -753,6 +753,18 @@ Sendo assim, é necessário antes de enviar uma transação para a rede *Ethereu
     \end{center}
     \legend{Fonte: \citeonline{ethwork}.}
 \end{figure}
+
+Quando a *taxa máxima da transação* é alcançada antes da finalização do contrato, ou seja, quando o contrato fica sem *gas* para ser gasto das operações, todas as operações são revertidas, voltando ao estado inicial antes do ínicio do contrato (fig. \ref{fig:outofgas}). O contrato é marcado como inválido, porém todo o *gas* gasto no contrato não é devolvido, permanacendo com o executor do contrato, que no caso é o minerador responsável pelo bloco de transações no qual o contrato estava inserido.
+
+\begin{figure}[!ht]
+    \caption{\label{fig:outofgas}Processo quando o contrato fica sem \emph{gas} para continuar sua execução.}
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{imagens/outofgas.png}
+    \end{center}
+    \legend{Fonte: \citeonline{ethwork}.}
+\end{figure}
+
+Esse processo garante que todo poder computacional gasto é recompensado, o que garante a o bom funcionamento da rede e previne o uso indiscriminado da mesma.
 
 ### Blockstack
 
