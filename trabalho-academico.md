@@ -844,7 +844,7 @@ Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo 
     \legend{Fonte: \citeonline{blockstackreview}.}
 \end{figure}
 
-As aplicações *Blockstack* precisam seguir um fluxo de autenticação semelhante ao ilustrado na figura \ref{fig:dontevil}, em que o usuário clica em um botão de *sign in* que o redireciona para o *Blockstack Browser*\footnote{O \emph{Blockstack Browser} é um cliente \emph{web} que serve para usuários conseguirem utilizar os serviços providos pela infraestrutura da \emph{Blockstack} sem precisar executar um nó da rede. Ele é \emph{open source} e é usado principalmente para que usuários realizem o registro e \emph{sign in} na rede \emph{blockchain} da \emph{Blockstack}.} (fig. \ref{fig:blockstacksignin} - passos 1 e 2).
+As aplicações *Blockstack* precisam seguir um fluxo de autenticação semelhante ao ilustrado na figura \ref{fig:blockstacksignin}, em que o usuário clica em um botão de *sign in* que o redireciona para o *Blockstack Browser*\footnote{O \emph{Blockstack Browser} é um cliente \emph{web} que serve para usuários conseguirem utilizar os serviços providos pela infraestrutura da \emph{Blockstack} sem precisar executar um nó da rede. Ele é \emph{open source} e é usado principalmente para que usuários realizem o registro e \emph{sign in} na rede \emph{blockchain} da \emph{Blockstack}.} (fig. \ref{fig:blockstacksignin} - passos 1 e 2).
 
 \begin{figure}[htbp]
     \caption{\label{fig:blockstacksignin}Processo de \emph{sign in} utilizando o SDK da \emph{Blockstack}.}
@@ -922,6 +922,8 @@ A tabela \ref{tab:holo} traz uma breve comparação sobre algumas característic
 \end{tabular}
 \legend{Fonte: \citeonline{holo3}}
 \end{table}
+
+\clearpage
 
 #### Arquitetura da Holochain
 
