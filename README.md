@@ -1,19 +1,42 @@
-# trabalho-academico-modelo
+# Trabalho de Conclusão de Curso 2 - Engenharia de Software - UnB/FGA
 
-O repositório [abntex/trabalho-academico-limarka](https://github.com/abntex/trabalho-academico-limarka) contém os arquivos do esqueleto (modelo) oficial para iniciar a escrita de um trabalho acadêmico com o [limarka](https://github.com/abntex/limarka). Consulte [sua documentação](https://github.com/abntex/limarka/wiki) para aprender utilizá-lo.
 
-<!-- Caso você esteja realizando uma personalização desse modelo, favor manter a linha acima inalterada para padronizar divulgação. -->
+## Dependências
 
-Este modelo necessita a versão do limarka >= `v0.7.1`.
+Para gerar o PDF é necessário ter o [Docker Engine](https://docs.docker.com/install/) instalado.
 
-- Veja o PDF resultante da compilação desse trabalho em [releases](https://github.com/abntex/trabalho-academico-limarka/releases/latest)
+## Instruções para gerar o PDF
 
-Para compilar o projeto digite:
+Com o docker instalado e configurado, adicione no `~/.bash_aliases` ou no `~/.bashrc`:
 
-    limarka exec
 
-# Modelos personalizados para instituições
+```bash
+alias limarka_build='docker build -t limarka:customizada $@ - < Dockerfile'
+alias limarka='docker run --mount src=`pwd`,target=/trabalho,type=bind limarka:customizada $@'
+alias limarka_guard='docker run -it --entrypoint guard --mount src=`pwd`,target=/trabalho,type=bind limarka:customizada --no-bundler-warning $@'
+```
 
-Os modelos personalizados devem ser disponibilizados [no github](https://github.com/limarka). Crie o projeto adiconando um préfixo com a sigla/nome da instituição, por exemplo: `ufpb-trabalho-academico-limarka`.
+Recarregue o seu terminal bash:
 
-- Consulte [as personalizações existentes](https://github.com/limarka).
+```bash
+source ~/.bash_aliases
+source ~/.bashrc # caso tenha usado o ~/.bashrc ao invés do ~/.bash_aliases
+```
+
+Execute dentro da pasta do projeto uma única vez o comando abaixo para gerar a imagem customizada:
+
+```bash
+limarka_build
+```
+
+Finalmente, para gerar o PDF, basta executar o comando:
+
+```bash
+limarka exec
+```
+
+Será gerado um arquivo PDF com o nome `xxx-Monografia.pdf`
+
+## Mais informações sobre o Limarka
+
+Para ter mais informações sobre o Limarka e como ele funciona, visite: https://github.com/abntex/limarka
