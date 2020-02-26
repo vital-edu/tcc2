@@ -35,7 +35,9 @@ Finalmente, para gerar o PDF, basta executar o comando:
 limarka exec
 ```
 
-Será gerado um arquivo PDF com o nome `xxx-Monografia.pdf`
+O arquivo PDF que será gerado tem o nome `xxx-Monografia.pdf`
+
+Caso deseje editar o documento e gerar o PDF automaticamente a cada salvamento do documento, basta rodar o comando `limarka_guard` e deixá-lo executando enquando edita os arquivos Markdown.
 
 ## Mais informações sobre o Limarka
 
