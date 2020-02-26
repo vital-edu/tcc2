@@ -999,7 +999,7 @@ Neste capítulo é exposto um problema real que pode ser resolvido utilizando-se
 
 O problema escolhido foi o problema da construção de um sistema digital de compra e venda de produtos e serviços (conhecido como \emph{e-commerce} - Comércio Eletrônico) que viabilize um livre mercado.
 
-Na primeira seção é abordado o que é um livre mercado e como aplicações centralizadas não conseguem atualmente implementarem um livre mercado. Na segunda seção é abordada uma solução já existente que também utiliza-se de tecnologias descentralizadas e na terceira seção é apresentado as características da aplicação desenvolvida para verificar a viabilidade de se utilizar tecnologias descentralizadas.
+Na primeira seção é abordado o que é um livre mercado e como aplicações centralizadas não conseguem atualmente implementarem um livre mercado. Na segunda seção é descrito as características da aplicação proposta que será implementada utilizando as tecnologias descentralizadas escolhidas, e na terceira seção é abordado uma solução concorrente que também utiliza-se de tecnologias descentralizadas.
 
 ## Livre Mercado
 
@@ -1183,8 +1183,8 @@ A arbitragem também pode ser implementada de forma mais simplória em sistemas 
 Utilizando esse conceito, pode-se criar uma carteira multi-assinada 2-de-3\footnote{uma carteira \emph{m}-de-\emph{n} é uma carteira multi-assinada que utiliza dos conceitos da \emph{threshold cryptography} (criptografia de limiar) para criar uma carteira que necessita de \emph{m} assinaturas de um total de \emph{n} assinaturas para ser movimentada. Sem preencher essa condição, nenhum valor da carteira pode ser movido.} que utiliza a chave pública dos três envolvidos (comprador, vendedor e árbitro), e que após a carteira ser criada, o comprador deve realizar o depósito do valor do produto ou serviço nessa carteira. A partir do momento que o depósito é feito na carteira, o processo de compra começa e o dinheiro só pode ser retirado da carteira multi-assinada quando pelo menos 2 dos envolvidos assinem a transação de transferência de dinheiro da carteira, ou seja, qualquer dinheiro depositado nessa carteira, só pode ser transferido para outro lugar se:
 
 1. \label{multisig:1}o comprador e o vendedor concordarem em realizar a transferência de valores;
-2. \label{multisig:2}o comprador e o mediador concordarem em realizar a transferência de valores;
-3. \label{multisig:3}o vendedor e o mediador concordarem em realizar a transferência de valores.
+2. \label{multisig:2}o comprador e o árbitro concordarem em realizar a transferência de valores;
+3. \label{multisig:3}o vendedor e o árbitro concordarem em realizar a transferência de valores.
 
 No caso \ref{multisig:1}, a compra ocorreria de acordo com o combinado, e o dinheiro da carteira multi-assinada iria da carteira multi-assinada para uma carteira de propriedade exclusiva do vendedor. No caso \ref{multisig:2}, a compra precisaria de um árbitro para mediar a disputa, e o árbitro chegaria a conclusão de que o comprador tem razão na disputa e que portanto o dinheiro da carteira multi-assinada deve ser retornado para a carteira de posse exclusiva do comprador; no caso \ref{multisig:3}, o árbitro chegaria a conclusão de que o vendedor tem razão na disputa e que portanto o dinheiro deve ser transferido para uma carteira de posse exclusiva do vendedor.
 
@@ -1200,7 +1200,7 @@ Portanto, os requísitos de alto nível do projeto *Free the Market* são:
 
 - ser uma aplicação que possa ser acessada por qualquer navegador moderno, não sendo necessária a instalação de nenhum *software* adicional pelo usuário
 - ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
-- ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de mediação de uma terceira pessoa, denominado intermediador
+- ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de arbitragem de uma terceira pessoa, denominado árbitro.
 
 Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados riscos técnicos na realização do projeto expressos na tabela \ref{tab:riscos}.
 
@@ -1218,6 +1218,71 @@ RN3 & tecnologias escolhidas possuem comunidade pequena ou pouco ativa & Alta & 
 RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação & Baixa & Muito Alto & buscar tecnologias alternativas. \\ \hline
 \end{tabular}
 \end{table}
+
+Como o escopo de uma plataforma de comércio eletrônico é demasiadamente grande para ser coberto neste trabalho, foi estabelecido um escopo menor que deverá ser implementado nas tecnologias descentralizadas que serão comparadas neste trabalho. Este escopo inclui a parte do comércio eletrônico que é considerado pelo autor a mais importante de ser implementada de forma descentralizada, a parte de transação comercial.
+
+Foram definidos 3 casos de uso a serem implementados.
+
+**Caso de Uso 1**: compra efetuada com sucesso sem interferência do árbitro.
+
+1. Comprador inicia a transação selecionando o árbitro da transação;
+2. Carteira de pagamento multi-assinada é gerada com a chave pública do comprador, do vendedor e do árbitro;
+3. Comprador transfere o valor do produto que está comprando para a carteira multi-assinada;
+4. Após confirmação da transferência do valor para a carteira multi-assinada, o vendedor informa o envio do produto;
+5. Ao receber o produto, o comprador informa o recebimento do mesmo;
+6. O vendedor informa o endereço da carteira na qual deseja receber o pagamento pelo produto;
+7. Dinheiro é depositado na carteira de pagamento informada pelo vendedor.
+
+**Caso de Uso 2**: comprador não recebe produto.
+
+1. Comprador inicia a transação selecionando o árbitro da transação;
+2. Carteira de pagamento multi-assinada é gerada com a chave pública do comprador, do vendedor e do árbitro;
+3. Comprador transfere o valor do produto que está comprando para a carteira multi-assinada;
+4. Após confirmação da transferência do valor para a carteira multi-assinada, o vendedor informa o envio do produto;
+5. Comprador não recebe o produto e entra requisita arbitragem a seu favor;
+6. Árbitro confirma ganho de causa para o comprador;
+7. Dinheiro é depositado na carteira de pagamento informada pelo comprador.
+
+**Caso de Uso 3**: vendedor envia produto para comprador mas comprador não confirma o recebimento do produto.
+
+1. Comprador inicia a transação selecionando o árbitro da transação;
+2. Carteira de pagamento multi-assinada é gerada com a chave pública do comprador, do vendedor e do árbitro;
+3. Comprador transfere o valor do produto que está comprando para a carteira multi-assinada;
+4. Após confirmação da transferência do valor para a carteira multi-assinada, o vendedor informa o envio do produto;
+5. Vendedor requisita arbitragem pois comprador não confirmou o recebimento do produto;
+   1. Vendedor informa o endereço da carteira na qual deseja receber o pagamento pelo produto;
+6. Árbitro confirma ganho de causa para o vendedor;
+7. Dinheiro é depositado na carteira de pagamento informada pelo vendedor.
+
+Se os casos de uso 1, 2 e 3 puderem ser implementados, deverá ser implementado também o seguinte caso de uso:
+
+**Caso de Uso 4**: Cadastro e listagem de produto
+
+1. Comprador inicia registro de produto informando os dados do mesmo
+   1. Nome
+   2. Descrição
+   3. Preço
+   4. Estado de origem
+   5. Categoria:
+      1. Serviços;
+      2. Veículos;
+      3. Tecnologia;
+      4. Casa e Eletrodomésticos;
+      5. Acessórios para Veículos;
+      6.  Esporte e Lazer;
+      7.  Joias e Relógios;
+      8.  Brinquedos e Bebês;
+      9.  Ferramntas e Indústria;
+      10. Beleza e Cuidado Pessoal;
+      11. Moda;
+      12. Imóveis;
+      13. Supermecado;
+      14. Livros, Revistas e Comics;
+      15. Outros.
+  1. Preço;
+  2. Fotos do produto.
+2. Comprador confirma informações do produto;
+3. Produto é listado na plataforma de vendas.
 
 ### Arquitetura do projeto
 
@@ -1339,7 +1404,7 @@ Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclus
 
 O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
 
-Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como mediador, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
+Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como árbitro, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
 
 Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
 
@@ -1349,7 +1414,7 @@ O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
 
 - Busca: o *OpenBazaar* funciona por um sistema de servidores que funcionam através da rede *TOR* e pode ser configurado para se conectar a qualquer servidor privado, porém existem um servidor padrão que já vem configurado. Dentro de cada servidor é possível realizar buscas de produtos e serviços;
 - Transações via criptomoedas: suporte a várias criptomoedas, sendo a principal o *Bitcoin*. Cada vendedor escolhe as criptomoedas que deseja realizar a transação;
-- Sistema de disputa e moderação: suporte a eleição de um mediador em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma mediação entre comprador e vendedor. Uma taxa é dada para o mediador para recompensar o serviço prestado;
+- Sistema de disputa e moderação: suporte a eleição de um árbitro em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma arbitragem entre comprador e vendedor. Uma taxa é dada para o árbitro para recompensar o serviço prestado;
 - Suporte a diferentes versões de um mesmo produto: é possível adicionar em um mesmo produto propriedades diversas, como cores diferentes, tamanhos diferentes, variações de modelo de um mesmo produto, conseguindo colocar em uma página só a opção de compra de diferentes variações do mesmo produto;
 - Gerenciador de inventário: essa funcionalidade permite especificar a quantidade de estoque que cada produto e suas variações possuem, garantindo que seja vendido apenas o que está disponível em estoque e sendo possível acompanhar as alterações nos estoques do produto pelo vendedor;
 - Opção de entrega: o vendedor consegue adicionar informações sobre a entrega do produto, especificando preços, prazos e transportadoras diferentes para cada produto ofertado;
