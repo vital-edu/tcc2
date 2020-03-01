@@ -46,11 +46,11 @@ O segundo capítulo em sua primeira parte descreve o problema escolhido para a p
 
 Por fim, há um capítulo com as discussões finais em que está condensado as aprendizagens empíricas descobertas durante o desenvolvimento do trabalho, a conclusão chegada sobre o objetivo do trabalho e quais problemas e desafios permanecem abertos para serem abordados em trabalhos futuros.
 
-# Aplicações Descentralizadas
+# Aplicações descentralizadas
 
 Este capítulo aborda os conceitos fundamentais das aplicações descentralizadas, suas características, tipos, os fundamentos teóricos por traz dessas tecnologias, suas limitações e por fim um breve estudo sobre as principais opções tecnológicas atuais no desenvolvimento de aplicações descentralizadas.
 
-## Características das Aplicações Descentralizadas
+## Características das aplicações descentralizadas
 
 \citeauthoronline{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas replicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
 
@@ -136,7 +136,7 @@ Devido ao aumento do número de transações, e do tamanho total da *blockchain*
 
 Embora novas tecnologias e abordagens tenham sido implementadas no protocolo *Bitcoin*, assim como de outras criptomoedas, como a *Ethereum*, e o potencial de escalabilidade esteja aumentando ano a ano, é inegável que esse volume de transações por segundo é irrisório comparado com aplicações centralizadas e distribuídas, que conseguem lidar com milhares de transações por segundo, e que possuem capacidade de escalonamento de acordo com a demanda pelo serviço. -->
 
-## A Necessidade de Existência das Aplicações Descentralizadas
+## A Necessidade de existência das aplicações descentralizadas
 
 A *internet* surgiu como uma rede descentralizada, em que cada computador se conecta a outro computador, dando origem ao termo *World Wide Web* (Rede Mundial de Computadores), e por isso, desde o princípio até hoje, mantém-se como uma estrutura praticamente impossível de ser derrubada, e mesmo páginas *web* consideradas ilegais ou atividades que constantemente são vigiadas ou proibidas por governos, continuam a funcionarem e a estarem disponíveis, no que se denominou *deep web*\footnote{\emph{deep web} (\emph{internet} profunda) é o termo usado para designar a parte da \emph{internet} que não está acessível por meios tradicionais, tais como ferramentas de pesquisa. Segundo \citeauthor{deep}, estima-se que a \emph{deep web} seja 500 vezes maior do que a \emph{internet} de superfície, nome dado a \emph{internet} prontamente acessível por buscadores.}.
 
@@ -562,7 +562,7 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 \clearpage
 
-## As Tecnologias Descentralizadas da Atualidade
+## As tecnologias descentralizadas da atualidade
 
 O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralized applications* - aplicações descentralizadas).
 
@@ -993,7 +993,7 @@ Caso o registro seja privado, ele realiza a assinatura eletrônica do registro, 
     \legend{Fonte: \citeonline{holodht}.}
 \end{figure}
 
-# Aplicação a um Problema Real
+# Aplicação a um problema real
 
 Neste capítulo é exposto um problema real que pode ser resolvido utilizando-se das tecnologias descentralizadas.
 
@@ -1001,7 +1001,7 @@ O problema escolhido foi o problema da construção de um sistema digital de com
 
 Na primeira seção é abordado o que é um livre mercado e como aplicações centralizadas não conseguem atualmente implementarem um livre mercado. Na segunda seção é descrito as características da aplicação proposta que será implementada utilizando as tecnologias descentralizadas escolhidas, e na terceira seção é abordado uma solução concorrente que também utiliza-se de tecnologias descentralizadas.
 
-## Livre Mercado
+## Livre mercado
 
 Para entender o que é o livre mercado é preciso entender a natureza humana e um pouco sobre o estudo da economia. Ludwig von Mises usa da praxeologia, o estudo das ações humanas, para construir os princípios que regem a economia \cite[pp. 11--12]{mises}. Mises define a ação humana como o uso dos meios para se realizar um fim \cite[p 13]{mises}. Porém, é importante ressaltar que os motivos das ações humanas não pertencem ao campo da praxeologia e sim ao campo da psicologia e psicanálise sendo do interesse da praxeologia apenas as consequências práticos das ações.
 
@@ -1396,7 +1396,7 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
 
 \clearpage
 
-## Aplicações Concorrentes
+## Soluções concorrentes
 
 Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
 
@@ -1425,12 +1425,58 @@ Todas essas funcionalidades são providas através de tecnologias descentralizad
 
 O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
 
-- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*,
+- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
 - Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
 - Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
 - Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
 
 O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
+
+# Critérios de avaliação
+
+Para que seja possível comparar as tecnologias descentralizadas escolhidas, é nencessário definir critérios de comparação. No entanto, como as tecnologias descentralizadas ganharam notoriedade recentemente, não foi encontrado na literatura, métodos de comparação entre diferentes tecnologias descentralizadas.
+
+Por conta disso, este trabalho, utiliza-se de uma análise empírica e exploratória, que não pode ser generalizada para outros contextos ou servir como conclusão de que tecnologia X é melhor ou superior a tecnologia Y.
+
+Esclarecido as limitações da metodologia de comparação, fica definido que as três tecnologias comparadas serão analisadas segundo os critérios descritos neste capítulo.
+
+1. Facilidade de instalação e configuração
+
+A facilidade de instação e configuração de tecnologias descentralizadas é a primeira barreira para que desenvolvedores consigam desenvolver aplicações descentralizadas. Embora uma dificuldade maior em instalar uma tecnologia não seja preponderante no longo prazo, pode ser um fator que prejudique a penetração da tecnologia em um mercado tão competitivo e novo como o de desenvolvimento de aplicações descentralizads.
+
+2. Utilização de tecnologias populares
+
+Aplicações descentralizadas são um fenômeno recente e que por esse motivo possui uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
+
+3. Documentação abrangente
+
+Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação que proporcione aos desenvolvedores uma maneira fácil e compreensiva de entender todas as capacidades, limitações, e características da tecnologia, permitindo que desenvolvedores experientes mas que nunca tiveram contato com a tecnologia possam aprender e utilizar a tecnologia sem precisar desbravar o código fonte ou ter que entrar em contato direto com os mantenedores oficiais. Portanto, a documentação deve ser atualizada e abrangente.
+
+4. Tamanho da comunidade
+
+Quando a documentação não é suficiente, quando novas funcionalidades precisam ser implementas, quando *bugs* precisam ser consertados ou quando dúvidas precisam ser respondidas, é fundamental que haja uma comunidade receptiva e engajada, caso contrário, por melhor que seja a tecnologia, ela tenderá a ser abandonada ou substituída.
+
+5. Produtividade
+
+Embora a produtividade seja um aspecto difícil de ser mensurado por ser relativo ao desenvolvedor, ao ambiente e a outros fatores de díficil mensuração, é importante ter ao menos uma escala de comparação, mesmo que objetivamente imprecisa, entre diferentes tecnologias, para que se tenha uma noção aproximada da facilida de se implementar nobas funcionalidades à aplicação.
+
+6. Facilidade em implementar testes automatizados
+
+Testes automatizados são importantes para garantir que as funcionalidades implementadas funcionam como deveriam e principalmente para que não surjam novos defeitos em componentes já implementados quando novas funcionalidades são inseridas na aplicação. Uma tecnologia que não suporte testes automatizados se torna difícil de manter a médio e longo prazo e dificilmente poderá ser utilizada em contextos complexos ou em aplicações grandes.
+
+7. Facilidade de utilização para usuários
+
+Para que uma tecnologia descentralizada possa ser amplamente utilizada é necessário que ela seja fácil de usar pelos usuários finais e que exija o mínimo possível de conhecimento técnico, sendo o mais indistinguível possível de uma aplicação tradicional a qual o usuário já esteja acostumado.
+
+8. Desenvolvimento multiplataforma
+
+Uma aplicação deve ter o maior suporte possível a diferentes plataformas para conseguir se adaptar a diferentes contextos. Porém, com o aumento no desenvolvimento de aplicações móveis e online, será analisado especificamente se as tecnologias descentralizadas estudadas possuem suporte as plataformas:
+
+- iOS
+- Android
+- Web
+
+## Comparação dos Critérios
 
 # Discussões finais
 
