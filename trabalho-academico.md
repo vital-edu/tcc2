@@ -1223,6 +1223,8 @@ Como o escopo de uma plataforma de comércio eletrônico é demasiadamente grand
 
 Foram definidos 3 casos de uso a serem implementados.
 
+\phantomsection
+\label{usecase}
 **Caso de Uso 1**: compra efetuada com sucesso sem interferência do árbitro.
 
 1. Comprador inicia a transação selecionando o árbitro da transação;
@@ -1256,7 +1258,7 @@ Foram definidos 3 casos de uso a serem implementados.
 
 Se os casos de uso 1, 2 e 3 puderem ser implementados, deverá ser implementado também o seguinte caso de uso:
 
-**Caso de Uso 4**: Cadastro e listagem de produto
+**Caso de Uso 4**: cadastro e listagem de produto
 
 1. Comprador inicia registro de produto informando os dados do mesmo
    1. Nome
@@ -1438,37 +1440,114 @@ Para que seja possível comparar as tecnologias descentralizadas escolhidas, é 
 
 Por conta disso, este trabalho, utiliza-se de uma análise empírica e exploratória, que não pode ser generalizada para outros contextos ou servir como conclusão de que tecnologia X é melhor ou superior a tecnologia Y.
 
-Esclarecido as limitações da metodologia de comparação, fica definido que as três tecnologias comparadas serão analisadas segundo os critérios descritos neste capítulo.
+Esclarecido as limitações da metodologia de comparação, fica definido que as três tecnologias comparadas serão analisadas segundo os critérios descritos neste capítulo, em que cada critério terá especificado uma escala de valor que será utilizado durante a avaliação, sendo somado o valor de cada critério para se chegar a um resultado número final com valor máximo de 20 pontos, em que 20 é o melhor resultado possível e -10 é o pior resultado possível.
 
 1. Facilidade de instalação e configuração
 
-A facilidade de instação e configuração de tecnologias descentralizadas é a primeira barreira para que desenvolvedores consigam desenvolver aplicações descentralizadas. Embora uma dificuldade maior em instalar uma tecnologia não seja preponderante no longo prazo, pode ser um fator que prejudique a penetração da tecnologia em um mercado tão competitivo e novo como o de desenvolvimento de aplicações descentralizads.
+A facilidade de instalação e configuração de tecnologias descentralizadas é a primeira barreira para que desenvolvedores consigam desenvolver aplicações descentralizadas. Embora uma dificuldade maior em instalar uma tecnologia não seja preponderante no longo prazo, pode ser um fator que prejudique a penetração da tecnologia em um mercado tão competitivo e novo como o de desenvolvimento de aplicações descentralizads.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:1}Facilidade de instalação e configuração.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.6\linewidth}c}
+\toprule
+\textbf{Nível} & \centering\textbf{Descrição}                                                                                                        & \textbf{Valor numérico} \\ \midrule
+Fácil          & não houve problemas no processo de intalação, ocorrendo conforme especificado na documentação da tecnologia               & 3                       \\
+Médio          & houve pequenos problemas durante o processo de instalação que foram facilmente resolvidos após serem identificados        & 2                       \\
+Difícil        & houveram problemas no processo de instalação que necessitaram de consultas a fontes externas a documentação de instalação & -1                       \\ \bottomrule
+\end{tabular}
+}
+\end{table}
 
 2. Utilização de tecnologias populares
 
 Aplicações descentralizadas são um fenômeno recente e que por esse motivo possui uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
 
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:2}Utiliza tecnologia popular.}
+\begin{tabular}{ccc}
+\toprule
+\multicolumn{1}{c}{\textbf{Resposta}} & \multicolumn{1}{c}{\textbf{Descrição}}                                                                                    & \textbf{Valor numérico} \\ \midrule
+Sim                              & utiliza tecnologias populares               & 1                       \\
+Não                              & não utiliza tecnologias populares           & -2                       \\
+\end{tabular}
+\end{table}
+
+Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse}.
+
 3. Documentação abrangente
 
 Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação que proporcione aos desenvolvedores uma maneira fácil e compreensiva de entender todas as capacidades, limitações, e características da tecnologia, permitindo que desenvolvedores experientes mas que nunca tiveram contato com a tecnologia possam aprender e utilizar a tecnologia sem precisar desbravar o código fonte ou ter que entrar em contato direto com os mantenedores oficiais. Portanto, a documentação deve ser atualizada e abrangente.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:3}Possui documentação abrangente.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Resposta} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
+Sim                                    & a documentação é abrange e contém exemplos de uso               & 2                       \\
+Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\
+\end{tabular}
+\end{table}
 
 4. Tamanho da comunidade
 
 Quando a documentação não é suficiente, quando novas funcionalidades precisam ser implementas, quando *bugs* precisam ser consertados ou quando dúvidas precisam ser respondidas, é fundamental que haja uma comunidade receptiva e engajada, caso contrário, por melhor que seja a tecnologia, ela tenderá a ser abandonada ou substituída.
 
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:4}Tamanho da comunidade.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
+Grande                              & número de contribuídores no GitHub $\geq$ 3 mil           & 3 \\
+Médio                               & 1 mil $\leq$ número de contribuídores no GitHub $<$ 3 mil & 2 \\
+Pequeno                             & número de contribuídores no GitHub $<$ 1 mil              & 1 \\ \bottomrule
+\end{tabular}
+\end{table}
+
 5. Produtividade
 
 Embora a produtividade seja um aspecto difícil de ser mensurado por ser relativo ao desenvolvedor, ao ambiente e a outros fatores de díficil mensuração, é importante ter ao menos uma escala de comparação, mesmo que objetivamente imprecisa, entre diferentes tecnologias, para que se tenha uma noção aproximada da facilida de se implementar nobas funcionalidades à aplicação.
 
-6. Facilidade em implementar testes automatizados
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:5}Produtividade.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+Suficiente     & implementação dos 3 casos de uso           & 5 \\
+Parcial        & implementação parcial dos casos de uso     & 1 \\
+Insuficiente   & impossibilidade de implementação dos casos de uso  & -5 \\ \bottomrule
+\end{tabular}
+\end{table}
 
-Testes automatizados são importantes para garantir que as funcionalidades implementadas funcionam como deveriam e principalmente para que não surjam novos defeitos em componentes já implementados quando novas funcionalidades são inseridas na aplicação. Uma tecnologia que não suporte testes automatizados se torna difícil de manter a médio e longo prazo e dificilmente poderá ser utilizada em contextos complexos ou em aplicações grandes.
+Para avalização desse critério será utilizado o tempo de 20 horas de desenvolvimento na implementação dos casos de uso 1, 2 e 3 (seção \ref{usecase}).
 
-7. Facilidade de utilização para usuários
+<!-- 6. Facilidade em implementar testes automatizados
+
+Testes automatizados são importantes para garantir que as funcionalidades implementadas funcionam como deveriam e principalmente para que não surjam novos defeitos em componentes já implementados quando novas funcionalidades são inseridas na aplicação. Uma tecnologia que não suporte testes automatizados se torna difícil de manter a médio e longo prazo e dificilmente poderá ser utilizada em contextos complexos ou em aplicações grandes. -->
+
+6. Facilidade de utilização pelos usuários
 
 Para que uma tecnologia descentralizada possa ser amplamente utilizada é necessário que ela seja fácil de usar pelos usuários finais e que exija o mínimo possível de conhecimento técnico, sendo o mais indistinguível possível de uma aplicação tradicional a qual o usuário já esteja acostumado.
 
-8. Desenvolvimento multiplataforma
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:6}Facilidade de utilização pelos usuários.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.6\linewidth}c}
+\toprule
+\textbf{Nível} & \centering \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+Fácil          & \centering usuário não precisa de conhecimento técnico ou treinamento para usar aplicação & 3 \\
+Difícil        & \centering usuário precisa de conhecimento técnico ou treinamento para usar aplicação     & -2 \\
+\end{tabular}
+}
+\end{table}
+
+1. Desenvolvimento multiplataforma
 
 Uma aplicação deve ter o maior suporte possível a diferentes plataformas para conseguir se adaptar a diferentes contextos. Porém, com o aumento no desenvolvimento de aplicações móveis e online, será analisado especificamente se as tecnologias descentralizadas estudadas possuem suporte as plataformas:
 
@@ -1476,7 +1555,22 @@ Uma aplicação deve ter o maior suporte possível a diferentes plataformas para
 - Android
 - Web
 
-## Comparação dos Critérios
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:7}Desenvolvimento multiplataforma.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.5\linewidth}c}
+\toprule
+\textbf{Nível} & \centering\textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+
+Máximol                       & \centering aplicação pode ser utilizada em todas as três plataformas analisadas & 3 \\
+Parcialmente Limitado         & \centering suporta a navegadores web e uma das plataformas móveis               & 2 \\
+Limitado a web                & \centering suporta apenas à navegadores web                                     & 1 \\
+Limitado a \emph{smartphones} & \centering suporta apenas dispositivos móveis                                   & 1 \\ \bottomrule
+
+\end{tabular}
+}
+\end{table}
 
 # Discussões finais
 
