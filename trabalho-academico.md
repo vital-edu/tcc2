@@ -34,15 +34,19 @@ O presente trabalho tem como objetivo verificar a viabilidade da utilização de
 
 Para alcançar o objetivo geral, os seguintes objetivos específicos foram definidos:
 
-1. Estudar a maturidade das tecnologias descentralizadas atuais;
-2. Criar uma prova de conceitos utilizando tecnologias descentralizadas.
-3. Verificar as particularidades do desenvolvimento em tecnologias descentralizadas;
+1. Estudar o estado atual das tecnologias descentralizadas;
+2. Criar uma prova de conceitos utilizando tecnologias descentralizadas;
+3. Avaliar a maturidade das tecnologias descentralizadas a partir da prova de conceito desenvolvida.
 
 ## Estrutura do trabalho
 
-O trabalho está estruturado em dois capítulos principais, o primeiro cumpre com o objetivo específico 1 ao descrever o conceito de aplicações descentralizadas, quais tecnologias descentralizadas estão iminentes atualmente e quais suas vantagens e desvantagens.
+O trabalho está estruturado em quatro capítulos principais, o primeiro cumpre com o objetivo específico 1 ao apresentar o conceito de aplicações descentralizadas, quais tecnologias descentralizadas estão iminentes atualmente, quais tecnologias descentralizadas serão estudas e quais suas características.
 
-O segundo capítulo em sua primeira parte descreve o problema escolhido para a prova de contexto e como as tecnologias descentralizadas são aderentes à ele, cumprindo com o objetivo específico 2. Já a parte final do segundo capítulo conclui o objetivo específico 3 ao mostrar como problemas tradicionalmente resolvidos na engenharia de software podem ser abordados ao utilizar tecnologias descentralizadas e quais são os desafios envolvidos no processo.
+O segundo capítulo descreve o problema escolhido para a prova de contexto, como as tecnologias descentralizadas são aderentes à ele e quais casos de uso serão implementados na prova de conceito.
+
+O terceiro capítulo apresenta os critérios de avaliação que serão utilizados após o desenvolvimento da prova de conceito em cada uma das tecnologias selecionadas para compará-las.
+
+O quarto capítulo mostra os resultados da avaliação para cada tecnologia obtidos após a tentativa de criação da prova de conceito definida no segundo capítulo, concretizando dessa forma, os objetivos 2 e 3.
 
 Por fim, há um capítulo com as discussões finais em que está condensado as aprendizagens empíricas descobertas durante o desenvolvimento do trabalho, a conclusão chegada sobre o objetivo do trabalho e quais problemas e desafios permanecem abertos para serem abordados em trabalhos futuros.
 
@@ -1866,7 +1870,7 @@ Em conjunto com os casos de uso definidos, foram estabelecidos outros seis crit�
 
 Após o desenvolvimento por cerca de vinte horas em cada uma das três tecnologias, cada uma delas foram avaliadas seguindo os critérios estabelecidos, chegando a conclusão de que a *Blockstack* apresenta-se como a única das tecnologias estudadas que teve um desempenho alto nos critérios avaliados.
 
-Mesmo assim, durante o desenvolvimento do projeto, muitos problemas foram encontrados para implementar os casos de uso especificados, demonstrando que não é um processo trivial a criação de aplicações descentralizadas.
+Mesmo assim, durante o desenvolvimento do projeto, muitos problemas foram encontrados para implementar os casos de uso especificados, demonstrando que não é um processo trivial a criação de aplicações descentralizadas e chegando a conclusão de que tais tecnologias não estão maduras o suficiente para serem usadas em grandes produtos ou serviços e muito menos para substituirem tecnologias tradicionais.
 
 Todo o processo de aprendizado e experimentação nessas tecnologias descentralizadas mostrou-se desafiador, havendo pouquíssimo conteúdo disponível e pouco suporte da comunidade, justamente por serem tecnologias inovadoras e que se mostraram ainda em estado inicial de desenvolvimento.
 
