@@ -1411,8 +1411,8 @@ Quando a documentação não é suficiente, quando novas funcionalidades precisa
 \toprule
 \textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
 Grande                              & número de contribuídores no GitHub $\geq$ 500           & 3 \\
-Médio                               & 100 $\leq$ número de contribuídores no GitHub $<$ 500 & 2 \\
-Pequeno                             & número de contribuídores no GitHub $<$ 100              & 1 \\ \bottomrule
+Média                               & 100 $\leq$ número de contribuídores no GitHub $<$ 500 & 2 \\
+Pequena                             & número de contribuídores no GitHub $<$ 100              & 1 \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -1471,10 +1471,10 @@ Uma aplicação deve ter o maior suporte possível a diferentes plataformas para
 \toprule
 \textbf{Nível} & \centering\textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
 
-Máximol                       & \centering aplicação pode ser utilizada em todas as três plataformas analisadas & 3 \\
+Máximo                        & \centering aplicação pode ser utilizada em todas as três plataformas analisadas & 3 \\
 Parcialmente Limitado         & \centering suporta a navegadores web e uma das plataformas móveis               & 2 \\
-Limitado a web                & \centering suporta apenas à navegadores web                                     & 1 \\
-Limitado a \emph{smartphones} & \centering suporta apenas dispositivos móveis                                   & 1 \\ \bottomrule
+Limitado à web                & \centering suporta apenas à navegadores web                                     & 1 \\
+Limitado à \emph{smartphones} & \centering suporta apenas dispositivos móveis                                   & 1 \\ \bottomrule
 
 \end{tabular}
 }
@@ -1535,14 +1535,49 @@ Durante o processo de aprendizagem da tecnologia, houve uma grande dificuldade e
 
 Logo no ínicio da experimentação da tecnologia, foi constatado que o sistema de sincronização dos nós da rede *Holochain* estava com uma falha que impedia a propagação de informação na rede \cite{issueholo}. Com esse problema, um nó da aplicação *Holochain* só poderia ser inicializado em um computador utilizando uma rede local em modo de desenvolvimento e o que impedia que o projeto pudesse ser utilizado para a implementação dos casos de uso previstos.
 
+Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
+
+- [Holochain Experiment](https://github.com/vital-edu/cc_tuts_gui)
+- [Interface Gráfica em JavaScript do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_gui)
+- [Interface Gráfica em Flutter do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_flutter_web)
+
 Resultado: -5/5.
 
-### Produtividade
+6. Facilidade de utilização pelos usuários
 
-### Facilidade de utilização pelos usuários
+As aplicações *Holochain* funcionam através de uma rede de nó interconectado em que cada usuário possui seu próprio nó e armazena todas as suas informações essenciais localmente, se comunicando e validando informações com outros nós conforme a necessidade. Essa característica embora tenha o benefício de aumentar o desempenho e escalabilidade da rede, tem a restrição de obrigar que qualquer utilizador de uma aplicação *Holochain*, precise instalar e configurar a aplicação e todo o ecosistema da *Holochain*. Isso traz uma complexidade ao usuário que não é comum em aplicações tradicionais. Por conta disso, é improvável que usuários comuns consigam utilizar uma aplicação *Holochain* no estado atual em que a tecnologia se encontra.
 
-### Desenvolvimento multiplataforma
+Resultado: -2/2.
 
+7. Desenvolvimento multiplataforma
+
+A *Holochain* embora tenha uma bilbioteca de comunicação feita para *JavaScript* e que portanto pode ser utilizada em *frameworks* de desenvolvimento multiplataforma, tais como o *React Native*, possui a limitação de obrigar que o usuário final tenha que decidir em confiar em um servidor que tenha a aplicação sendo executada e que armazene as informações do usuário, ou que ele execute uma instância própria da aplicação em seu próprio servidor, conectando a sua aplicação ao servidor.
+
+Para que uma aplicação móvel seja implementada, é portanto que o desenvolvedor pense em alternativas para contornar as limitações da tecnologia ou que o usuário tenha um conhecimento muito acima ao de um usuário comum. Por conta disso, pode-se considerar que a *Holochain* apenas tem suporte oficial a aplicações *web*.
+
+Resultado: 1/3.
+
+### Pontuação final
+
+A *Holochain* teve uma pontuação final de -2 utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+
+\begin{table}[htpb]
+\caption{\label{tab:res:holo}Desenvolvimento multiplataforma.}
+\begin{tabular}{lcc}
+\hline
+
+\textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
+Facilidade de instalação e configuração  & Fácil                       & 3                           \\
+Utiliza tecnologia popular               & Não                         & -2                          \\
+Possui documentação abrangente           & Sim                         & 2                           \\
+Tamanho da comunidade                    & Pequena                     & 1                           \\
+Produtividade.                           & Insuficiente                & -5                          \\
+Facilidade de utilização pelos usuários  & Difícil                     & -2                          \\
+Desenvolvimento multiplataforma          & Limitado à web              & 1                           \\ \hline
+\textbf{TOTAL}                           & \multicolumn{2}{r}{-2}                                    \\ \hline
+
+\end{tabular}
+\end{table}
 
 ## Blockstack
 
