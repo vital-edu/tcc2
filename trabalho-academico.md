@@ -1521,7 +1521,7 @@ Resultado: não utiliza tecnologias populares (-2/1).
 
 ### Documentação abrangente
 
-A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Apps*\footnote{\emph{hApps (holo Apps)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação à nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
+A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Applications*\footnote{\emph{hApp (holo Application)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação à nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
 
 Resultado: possui documentação abrangente (2/2).
 
@@ -1843,7 +1843,7 @@ Desenvolvimento multiplataforma          & Máximo                      & 3     
 
 ## Resultado consolidado
 
-Seguindo os critérios de avaliação estabelecidos, a tecnologia \emph{Blockchain} se mostrou como sendo das tecnologias estudadas (tab. \ref{tab:res}), a mais propícia para ser utilizada no desenvolvimento de aplicações descentralizadas que queiram rivalizar com tecnologias tradicionais, levando segurança, privacidade e comodidade ao usuário.
+Seguindo os critérios de avaliação estabelecidos, a tecnologia \emph{Blockchain} se mostrou como sendo das tecnologias estudadas (tab. \ref{tab:res:final}), a mais propícia para ser utilizada no desenvolvimento de aplicações descentralizadas que queiram rivalizar com tecnologias tradicionais, levando segurança, privacidade e comodidade ao usuário.
 
 No outro extremo, a *Holochain* foi a tecnologia que mais decepcionou, talvez justamente por ser a tecnologia que traga o maior diferencial tecnológico, e portanto, um nível de maturidade muito aquém do desejado.
 
