@@ -1286,6 +1286,266 @@ Se os casos de uso 1, 2 e 3 puderem ser implementados, deverá ser implementado 
 2. Comprador confirma informações do produto;
 3. Produto é listado na plataforma de vendas.
 
+## Soluções concorrentes
+
+Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
+
+### O OpenBazaar
+
+O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
+
+Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como árbitro, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
+
+Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
+
+A última versão do *OpenBazar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
+
+O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
+
+- Busca: o *OpenBazaar* funciona por um sistema de servidores que funcionam através da rede *TOR* e pode ser configurado para se conectar a qualquer servidor privado, porém existem um servidor padrão que já vem configurado. Dentro de cada servidor é possível realizar buscas de produtos e serviços;
+- Transações via criptomoedas: suporte a várias criptomoedas, sendo a principal o *Bitcoin*. Cada vendedor escolhe as criptomoedas que deseja realizar a transação;
+- Sistema de disputa e moderação: suporte a eleição de um árbitro em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma arbitragem entre comprador e vendedor. Uma taxa é dada para o árbitro para recompensar o serviço prestado;
+- Suporte a diferentes versões de um mesmo produto: é possível adicionar em um mesmo produto propriedades diversas, como cores diferentes, tamanhos diferentes, variações de modelo de um mesmo produto, conseguindo colocar em uma página só a opção de compra de diferentes variações do mesmo produto;
+- Gerenciador de inventário: essa funcionalidade permite especificar a quantidade de estoque que cada produto e suas variações possuem, garantindo que seja vendido apenas o que está disponível em estoque e sendo possível acompanhar as alterações nos estoques do produto pelo vendedor;
+- Opção de entrega: o vendedor consegue adicionar informações sobre a entrega do produto, especificando preços, prazos e transportadoras diferentes para cada produto ofertado;
+- Bate-papo em tempo real: o vendedor e comprador conseguem se comunicar em tempo real através do sistema de bate-papo da aplicação;
+- Gerencimento de ordem: o vendedor e comprador conseguem acompanhar todo o processo da transação, desde a venda, passando pelo transporte até a confirmação da entrega do produto.
+
+Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
+
+O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
+
+- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
+- Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
+- Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
+- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
+
+O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
+
+# Critérios de avaliação
+
+Para que seja possível comparar as tecnologias descentralizadas escolhidas, é nencessário definir critérios de comparação. No entanto, como as tecnologias descentralizadas ganharam notoriedade recentemente, não foi encontrado na literatura, métodos de comparação entre diferentes tecnologias descentralizadas.
+
+Por conta disso, este trabalho, utiliza-se de uma análise empírica e exploratória, que não pode ser generalizada para outros contextos ou servir como conclusão de que tecnologia X é melhor ou superior a tecnologia Y.
+
+Esclarecido as limitações da metodologia de comparação, fica definido que as três tecnologias comparadas serão analisadas segundo os critérios descritos neste capítulo, em que cada critério terá especificado uma escala de valor que será utilizado durante a avaliação, sendo somado o valor de cada critério para se chegar a um resultado número final com valor máximo de 20 pontos, em que 20 é o melhor resultado possível e -10 é o pior resultado possível.
+
+## Facilidade de instalação e configuração
+
+A facilidade de instalação e configuração de tecnologias descentralizadas é a primeira barreira para que desenvolvedores consigam desenvolver aplicações descentralizadas. Embora uma dificuldade maior em instalar uma tecnologia não seja preponderante no longo prazo, pode ser um fator que prejudique a penetração da tecnologia em um mercado tão competitivo e novo como o de desenvolvimento de aplicações descentralizads.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:1}Facilidade de instalação e configuração.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.6\linewidth}c}
+\toprule
+\textbf{Nível} & \centering\textbf{Descrição}                                                                                                        & \textbf{Valor numérico} \\ \midrule
+Fácil          & não houve problemas no processo de intalação, ocorrendo conforme especificado na documentação da tecnologia               & 3                       \\
+Médio          & houve pequenos problemas durante o processo de instalação que foram facilmente resolvidos após serem identificados        & 2                       \\
+Difícil        & houveram problemas no processo de instalação que necessitaram de consultas a fontes externas a documentação de instalação & -1                       \\ \bottomrule
+\end{tabular}
+}
+\end{table}
+
+## Utilização de tecnologias populares
+
+Aplicações descentralizadas são um fenômeno recente e que por esse motivo possui uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:crit:2}Utiliza tecnologia popular.}
+\begin{tabular}{ccc}
+\toprule
+\multicolumn{1}{c}{\textbf{Resposta}} & \multicolumn{1}{c}{\textbf{Descrição}}                                                                                    & \textbf{Valor numérico} \\ \midrule
+Sim                              & utiliza tecnologias populares               & 1                       \\
+Não                              & não utiliza tecnologias populares           & -2                       \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse} e reproduzido na tabela \ref{tab:toplanguages}.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:toplanguages}Linguagens mais populares.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Posição} & \textbf{Linguagem} \\ \midrule
+1              & JavaScript           \\
+2              & Python               \\
+3              & Java                 \\
+4              & PHP                  \\
+5              & C#                   \\
+6              & C++                  \\
+7              & TypeScript           \\
+8              & Shell                \\
+9              & C                    \\
+10             & Ruby                 \\ \bottomrule
+\end{tabular}
+\legend{Fonte: \citeonline{octoverse}.}
+\end{table}
+
+## Documentação abrangente
+
+Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação que proporcione aos desenvolvedores uma maneira fácil e compreensiva de entender todas as capacidades, limitações, e características da tecnologia, permitindo que desenvolvedores experientes mas que nunca tiveram contato com a tecnologia possam aprender e utilizar a tecnologia sem precisar desbravar o código fonte ou ter que entrar em contato direto com os mantenedores oficiais. Portanto, a documentação deve ser atualizada e abrangente.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:3}Possui documentação abrangente.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Resposta} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
+Sim                                    & a documentação é abrange e contém exemplos de uso               & 2                       \\
+Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\ \bottomrule
+\end{tabular}
+\end{table}
+
+## Tamanho da comunidade
+
+Quando a documentação não é suficiente, quando novas funcionalidades precisam ser implementas, quando *bugs* precisam ser consertados ou quando dúvidas precisam ser respondidas, é fundamental que haja uma comunidade receptiva e engajada, caso contrário, por melhor que seja a tecnologia, ela tenderá a ser abandonada ou substituída.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:4}Tamanho da comunidade.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
+Grande                              & número de contribuídores no GitHub $\geq$ 500           & 3 \\
+Médio                               & 100 $\leq$ número de contribuídores no GitHub $<$ 500 & 2 \\
+Pequeno                             & número de contribuídores no GitHub $<$ 100              & 1 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+## Produtividade
+
+Embora a produtividade seja um aspecto difícil de ser mensurado por ser relativo ao desenvolvedor, ao ambiente e a outros fatores de díficil mensuração, é importante ter ao menos uma escala de comparação, mesmo que objetivamente imprecisa, entre diferentes tecnologias, para que se tenha uma noção aproximada da facilida de se implementar nobas funcionalidades à aplicação.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:5}Produtividade.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+Suficiente     & implementação dos 3 casos de uso           & 5 \\
+Parcial        & implementação parcial dos casos de uso     & 1 \\
+Insuficiente   & impossibilidade de implementação dos casos de uso  & -5 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Para avalização desse critério será utilizado o tempo de 20 horas de desenvolvimento na implementação dos casos de uso 1, 2 e 3 (seção \ref{usecase}).
+
+<!-- 6. Facilidade em implementar testes automatizados
+
+Testes automatizados são importantes para garantir que as funcionalidades implementadas funcionam como deveriam e principalmente para que não surjam novos defeitos em componentes já implementados quando novas funcionalidades são inseridas na aplicação. Uma tecnologia que não suporte testes automatizados se torna difícil de manter a médio e longo prazo e dificilmente poderá ser utilizada em contextos complexos ou em aplicações grandes. -->
+
+## Facilidade de utilização pelos usuários
+
+Para que uma tecnologia descentralizada possa ser amplamente utilizada é necessário que ela seja fácil de usar pelos usuários finais e que exija o mínimo possível de conhecimento técnico, sendo o mais indistinguível possível de uma aplicação tradicional a qual o usuário já esteja acostumado.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:6}Facilidade de utilização pelos usuários.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.6\linewidth}c}
+\toprule
+\textbf{Nível} & \centering \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+Fácil          & \centering usuário não precisa de conhecimento técnico ou treinamento para usar aplicação & 3 \\
+Difícil        & \centering usuário precisa de conhecimento técnico ou treinamento para usar aplicação     & -2 \\ \bottomrule
+\end{tabular}
+}
+\end{table}
+
+## Desenvolvimento multiplataforma
+
+Uma aplicação deve ter o maior suporte possível a diferentes plataformas para conseguir se adaptar a diferentes contextos. Porém, com o aumento no desenvolvimento de aplicações móveis e online, será analisado especificamente se as tecnologias descentralizadas estudadas possuem suporte as plataformas:
+
+- iOS
+- Android
+- Web
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:crit:7}Desenvolvimento multiplataforma.}
+{\rowcolors{2}{gray!25}{white}
+\begin{tabular}{cm{0.5\linewidth}c}
+\toprule
+\textbf{Nível} & \centering\textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
+
+Máximol                       & \centering aplicação pode ser utilizada em todas as três plataformas analisadas & 3 \\
+Parcialmente Limitado         & \centering suporta a navegadores web e uma das plataformas móveis               & 2 \\
+Limitado a web                & \centering suporta apenas à navegadores web                                     & 1 \\
+Limitado a \emph{smartphones} & \centering suporta apenas dispositivos móveis                                   & 1 \\ \bottomrule
+
+\end{tabular}
+}
+\end{table}
+
+# Resultados
+
+## Holochain
+
+1. Facilidade de instalação e configuração
+
+Para instalar o *Holochain* foi necessário instalar e configurar o *NixOS*, um sistema operacional que utiliza o gerenciador de pacotes *Nix*\footnote{\emph{Nix} é um gerenciador de pacotes funcional para Linux e outros sistemas Unix, que é confiável e reproduzível. Ele provê atualizações, reversão de atualizações, instalação lado-a-lado de múltiplas versões de um mesmo pacote, gerenciamento de pacotes com suporte a múltiplos usuários e facilidade de configuração do ambiente. \cite{nix}} utilizando os comandos de terminal:
+
+\begin{lstlisting}[language=Bash]
+curl https://nixos.org/nix/install | sh
+. ~/.nix-profile/etc/profile.d/nix.sh
+\end{lstlisting}
+
+Após a instalçao do NixOS, a *Holochain* é instalada com o seguinte comando:
+
+\begin{lstlisting}[language=Bash]
+nix-shell https://holochain.love
+\end{lstlisting}
+
+Após a *Holochain* estar instalada, basta inicializar um projeto vazio com o comando:
+
+\begin{lstlisting}[language=Bash]
+hc init nome_do_projeto
+\end{lstlisting}
+
+O processo de instalação e configuração foi simples embora tenha demorado para baixar o *NixOS*.
+
+Resultado: 3/3.
+
+2. Utilização de tecnologias populares
+
+A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
+
+Resultado: 1/2.
+
+3. Documentação abrangente
+
+A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Apps*\footnote{\emph{hApps (holo Apps)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação à nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
+
+Resultado: 1/2.
+
+4. Tamanho da comunidade
+
+A *Holochain* possui em seu repositório principal um total de 48 contribuídores \cite{holorepo}.
+
+Resultado: 1/3.
+
+5. Produtividade
+
+A *Holochain* embora aparente ser uma tecnologia promissora, ainda se encontra em um estágio imaturo, apresentando limitações em suas funcionalidades e tendo muitas funcionalidades ainda em processo de implementação e maturação.
+
+Durante o processo de aprendizagem da tecnologia, houve uma grande dificuldade em utilizar o *Rust*, que tem uma sintaxe e lógica particular e que é fortemente baseada no uso de macros\footnote{\emph{macro} tem origem na palavra \emph{macroinstruction} (instrução macro) e é um \emph{pattern} (padrão) de programação que transforma uma sequência de entrada em uma sequência pré-definida de saída. Macros podem ser usados para criar tarefas menos repetitivas através da representação de complicadas sequências de comandos ou dados de entrada \cite{macro}.}, que embora reduzam a quantidade de *boilerplate code*\footnote{\emph{boilerplate code} no contexto de programação se refere a seções de código que devem ser incluídas em muitos lugares com pouca ou nenhuma alteração \cite{boilerplate}.} tornam o processo de aprendizagem e entendimento sobre a tecnologia muito mais complexo e custoso. O anexo \ref{lst:holochain} contém um trecho do código que foi implementado na fase de experimentação da *Holochain*, e serve de exemplo de como a tecnologia não tem uma sintaxe fácil de ser compreendida para quem tem pouca familiaridade com a linguaguem *Rust*.
+
+Logo no ínicio da experimentação da tecnologia, foi constatado que o sistema de sincronização dos nós da rede *Holochain* estava com uma falha que impedia a propagação de informação na rede \cite{issueholo}. Com esse problema, um nó da aplicação *Holochain* só poderia ser inicializado em um computador utilizando uma rede local em modo de desenvolvimento e o que impedia que o projeto pudesse ser utilizado para a implementação dos casos de uso previstos.
+
+Resultado: -5/5.
+
+### Produtividade
+
+### Facilidade de utilização pelos usuários
+
+### Desenvolvimento multiplataforma
+
+
+## Blockstack
+
 ### Arquitetura do projeto
 
 A figura \ref{fig:arch} mostra a arquitetura da aplicação.
@@ -1320,9 +1580,9 @@ Um cliente pode utilizar diversos indexadores diferentes, o que permitira a cria
 
 Durante o processo de desenvolvimento, diversos obstáculos foram encontrados. Inicialmente, a aplicação a ser desenvolvida foi elaborada para utilizar a tecnologia *Holochain*, devido a suas características promissoras de se apresentar como uma alternativa mais eficiente em relação a aplicações descentralizadas que utilizam-se de *Blockchain* para funcionarem.
 
-Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}} (\emph{listing} \ref{lst:holochain}) para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
+<!-- Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}} (\emph{listing} \ref{lst:holochain}) para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
 
-Além desse problema, um nó da aplicação *Holochain* só poderia ser inicializado através de um computador, o que removeria a praticidade de uso e penalizaria o usuário final, se tornando uma solução incoveniente. De acordo com o que foi elaborado para esses riscos, foi decidido que a melhor alternativa seria migrar para uma outra tecnologia.
+Além desse problema, um nó da aplicação *Holochain* só poderia ser inicializado através de um computador, o que removeria a praticidade de uso e penalizaria o usuário final, se tornando uma solução incoveniente. De acordo com o que foi elaborado para esses riscos, foi decidido que a melhor alternativa seria migrar para uma outra tecnologia. -->
 
 Foi nesse processo que o *Blockstack* foi escolhido como sucessor, após uma nova pesquisa sobre uma tecnologia que conseguisse prover um ambiente similar de desenvolvimento a uma aplicação *web* tradicional.
 
@@ -1397,248 +1657,6 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
 \end{figure}
 
 \clearpage
-
-## Soluções concorrentes
-
-Durante o desenvolvimento da deste trabalho, particulamente perto de sua conclusão, foi encontrada uma ideia concorrente que possui os mesmos propósitos e que se utiliza de tecnologias muito similares às propostas neste trabalho, o *OpenBazaar*.
-
-### O OpenBazaar
-
-O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
-
-Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como árbitro, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
-
-Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
-
-A última versão do *OpenBazar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
-
-O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
-
-- Busca: o *OpenBazaar* funciona por um sistema de servidores que funcionam através da rede *TOR* e pode ser configurado para se conectar a qualquer servidor privado, porém existem um servidor padrão que já vem configurado. Dentro de cada servidor é possível realizar buscas de produtos e serviços;
-- Transações via criptomoedas: suporte a várias criptomoedas, sendo a principal o *Bitcoin*. Cada vendedor escolhe as criptomoedas que deseja realizar a transação;
-- Sistema de disputa e moderação: suporte a eleição de um árbitro em cada compra, o que permite que ele seja acionado caso seja necessário realizar uma arbitragem entre comprador e vendedor. Uma taxa é dada para o árbitro para recompensar o serviço prestado;
-- Suporte a diferentes versões de um mesmo produto: é possível adicionar em um mesmo produto propriedades diversas, como cores diferentes, tamanhos diferentes, variações de modelo de um mesmo produto, conseguindo colocar em uma página só a opção de compra de diferentes variações do mesmo produto;
-- Gerenciador de inventário: essa funcionalidade permite especificar a quantidade de estoque que cada produto e suas variações possuem, garantindo que seja vendido apenas o que está disponível em estoque e sendo possível acompanhar as alterações nos estoques do produto pelo vendedor;
-- Opção de entrega: o vendedor consegue adicionar informações sobre a entrega do produto, especificando preços, prazos e transportadoras diferentes para cada produto ofertado;
-- Bate-papo em tempo real: o vendedor e comprador conseguem se comunicar em tempo real através do sistema de bate-papo da aplicação;
-- Gerencimento de ordem: o vendedor e comprador conseguem acompanhar todo o processo da transação, desde a venda, passando pelo transporte até a confirmação da entrega do produto.
-
-Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
-
-O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
-
-- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
-- Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
-- Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
-- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
-
-O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
-
-# Critérios de avaliação
-
-Para que seja possível comparar as tecnologias descentralizadas escolhidas, é nencessário definir critérios de comparação. No entanto, como as tecnologias descentralizadas ganharam notoriedade recentemente, não foi encontrado na literatura, métodos de comparação entre diferentes tecnologias descentralizadas.
-
-Por conta disso, este trabalho, utiliza-se de uma análise empírica e exploratória, que não pode ser generalizada para outros contextos ou servir como conclusão de que tecnologia X é melhor ou superior a tecnologia Y.
-
-Esclarecido as limitações da metodologia de comparação, fica definido que as três tecnologias comparadas serão analisadas segundo os critérios descritos neste capítulo, em que cada critério terá especificado uma escala de valor que será utilizado durante a avaliação, sendo somado o valor de cada critério para se chegar a um resultado número final com valor máximo de 20 pontos, em que 20 é o melhor resultado possível e -10 é o pior resultado possível.
-
-1. Facilidade de instalação e configuração
-
-A facilidade de instalação e configuração de tecnologias descentralizadas é a primeira barreira para que desenvolvedores consigam desenvolver aplicações descentralizadas. Embora uma dificuldade maior em instalar uma tecnologia não seja preponderante no longo prazo, pode ser um fator que prejudique a penetração da tecnologia em um mercado tão competitivo e novo como o de desenvolvimento de aplicações descentralizads.
-
-\begin{table}[htpb]
-\centering
-\caption{\label{tab:crit:1}Facilidade de instalação e configuração.}
-{\rowcolors{2}{gray!25}{white}
-\begin{tabular}{cm{0.6\linewidth}c}
-\toprule
-\textbf{Nível} & \centering\textbf{Descrição}                                                                                                        & \textbf{Valor numérico} \\ \midrule
-Fácil          & não houve problemas no processo de intalação, ocorrendo conforme especificado na documentação da tecnologia               & 3                       \\
-Médio          & houve pequenos problemas durante o processo de instalação que foram facilmente resolvidos após serem identificados        & 2                       \\
-Difícil        & houveram problemas no processo de instalação que necessitaram de consultas a fontes externas a documentação de instalação & -1                       \\ \bottomrule
-\end{tabular}
-}
-\end{table}
-
-2. Utilização de tecnologias populares
-
-Aplicações descentralizadas são um fenômeno recente e que por esse motivo possui uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
-
-\begin{table}[htpb]
-\centering
-\caption{\label{tab:crit:2}Utiliza tecnologia popular.}
-\begin{tabular}{ccc}
-\toprule
-\multicolumn{1}{c}{\textbf{Resposta}} & \multicolumn{1}{c}{\textbf{Descrição}}                                                                                    & \textbf{Valor numérico} \\ \midrule
-Sim                              & utiliza tecnologias populares               & 1                       \\
-Não                              & não utiliza tecnologias populares           & -2                       \\ \bottomrule
-\end{tabular}
-\end{table}
-
-Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse} e reproduzido na tabela \ref{tab:toplanguages}.
-
-\begin{table}[htpb]
-\centering
-\caption{\label{tab:toplanguages}Linguagens mais populares.}
-\begin{tabular}{ccc}
-\toprule
-\textbf{Posição} & \textbf{Linguagem} \\ \midrule
-1              & JavaScript           \\
-2              & Python               \\
-3              & Java                 \\
-4              & PHP                  \\
-5              & C#                   \\
-6              & C++                  \\
-7              & TypeScript           \\
-8              & Shell                \\
-9              & C                    \\
-10             & Ruby                 \\ \bottomrule
-\end{tabular}
-\legend{Fonte: \citeonline{octoverse}.}
-\end{table}
-
-1. Documentação abrangente
-
-Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação que proporcione aos desenvolvedores uma maneira fácil e compreensiva de entender todas as capacidades, limitações, e características da tecnologia, permitindo que desenvolvedores experientes mas que nunca tiveram contato com a tecnologia possam aprender e utilizar a tecnologia sem precisar desbravar o código fonte ou ter que entrar em contato direto com os mantenedores oficiais. Portanto, a documentação deve ser atualizada e abrangente.
-
-\begin{table}[htpb]
-\centering
-\caption{\label{tab:crit:3}Possui documentação abrangente.}
-\begin{tabular}{ccc}
-\toprule
-\textbf{Resposta} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
-Sim                                    & a documentação é abrange e contém exemplos de uso               & 2                       \\
-Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\ \bottomrule
-\end{tabular}
-\end{table}
-
-4. Tamanho da comunidade
-
-Quando a documentação não é suficiente, quando novas funcionalidades precisam ser implementas, quando *bugs* precisam ser consertados ou quando dúvidas precisam ser respondidas, é fundamental que haja uma comunidade receptiva e engajada, caso contrário, por melhor que seja a tecnologia, ela tenderá a ser abandonada ou substituída.
-
-\begin{table}[H]
-\centering
-\caption{\label{tab:crit:4}Tamanho da comunidade.}
-\begin{tabular}{ccc}
-\toprule
-\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
-Grande                              & número de contribuídores no GitHub $\geq$ 3 mil           & 3 \\
-Médio                               & 1 mil $\leq$ número de contribuídores no GitHub $<$ 3 mil & 2 \\
-Pequeno                             & número de contribuídores no GitHub $<$ 1 mil              & 1 \\ \bottomrule
-\end{tabular}
-\end{table}
-
-5. Produtividade
-
-Embora a produtividade seja um aspecto difícil de ser mensurado por ser relativo ao desenvolvedor, ao ambiente e a outros fatores de díficil mensuração, é importante ter ao menos uma escala de comparação, mesmo que objetivamente imprecisa, entre diferentes tecnologias, para que se tenha uma noção aproximada da facilida de se implementar nobas funcionalidades à aplicação.
-
-\begin{table}[H]
-\centering
-\caption{\label{tab:crit:5}Produtividade.}
-\begin{tabular}{ccc}
-\toprule
-\textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
-Suficiente     & implementação dos 3 casos de uso           & 5 \\
-Parcial        & implementação parcial dos casos de uso     & 1 \\
-Insuficiente   & impossibilidade de implementação dos casos de uso  & -5 \\ \bottomrule
-\end{tabular}
-\end{table}
-
-Para avalização desse critério será utilizado o tempo de 20 horas de desenvolvimento na implementação dos casos de uso 1, 2 e 3 (seção \ref{usecase}).
-
-<!-- 6. Facilidade em implementar testes automatizados
-
-Testes automatizados são importantes para garantir que as funcionalidades implementadas funcionam como deveriam e principalmente para que não surjam novos defeitos em componentes já implementados quando novas funcionalidades são inseridas na aplicação. Uma tecnologia que não suporte testes automatizados se torna difícil de manter a médio e longo prazo e dificilmente poderá ser utilizada em contextos complexos ou em aplicações grandes. -->
-
-6. Facilidade de utilização pelos usuários
-
-Para que uma tecnologia descentralizada possa ser amplamente utilizada é necessário que ela seja fácil de usar pelos usuários finais e que exija o mínimo possível de conhecimento técnico, sendo o mais indistinguível possível de uma aplicação tradicional a qual o usuário já esteja acostumado.
-
-\begin{table}[H]
-\centering
-\caption{\label{tab:crit:6}Facilidade de utilização pelos usuários.}
-{\rowcolors{2}{gray!25}{white}
-\begin{tabular}{cm{0.6\linewidth}c}
-\toprule
-\textbf{Nível} & \centering \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
-Fácil          & \centering usuário não precisa de conhecimento técnico ou treinamento para usar aplicação & 3 \\
-Difícil        & \centering usuário precisa de conhecimento técnico ou treinamento para usar aplicação     & -2 \\ \bottomrule
-\end{tabular}
-}
-\end{table}
-
-7. Desenvolvimento multiplataforma
-
-Uma aplicação deve ter o maior suporte possível a diferentes plataformas para conseguir se adaptar a diferentes contextos. Porém, com o aumento no desenvolvimento de aplicações móveis e online, será analisado especificamente se as tecnologias descentralizadas estudadas possuem suporte as plataformas:
-
-- iOS
-- Android
-- Web
-
-\begin{table}[htpb]
-\centering
-\caption{\label{tab:crit:7}Desenvolvimento multiplataforma.}
-{\rowcolors{2}{gray!25}{white}
-\begin{tabular}{cm{0.5\linewidth}c}
-\toprule
-\textbf{Nível} & \centering\textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
-
-Máximol                       & \centering aplicação pode ser utilizada em todas as três plataformas analisadas & 3 \\
-Parcialmente Limitado         & \centering suporta a navegadores web e uma das plataformas móveis               & 2 \\
-Limitado a web                & \centering suporta apenas à navegadores web                                     & 1 \\
-Limitado a \emph{smartphones} & \centering suporta apenas dispositivos móveis                                   & 1 \\ \bottomrule
-
-\end{tabular}
-}
-\end{table}
-
-# Resultados
-
-## Holochain
-
-1. Facilidade de instalação e configuração
-
-Para instalar o *Holochain* foi necessário instalar e configurar o *NixOS*, um sistema operacional que utiliza o gerenciador de pacotes *Nix*\footnote{\emph{Nix} é um gerenciador de pacotes funcional para Linux e outros sistemas Unix, que é confiável e reproduzível. Ele provê atualizações, reversão de atualizações, instalação lado-a-lado de múltiplas versões de um mesmo pacote, gerenciamento de pacotes com suporte a múltiplos usuários e facilidade de configuração do ambiente. \cite{nix}} utilizando os comandos de terminal:
-
-\begin{lstlisting}[language=Bash]
-curl https://nixos.org/nix/install | sh
-. ~/.nix-profile/etc/profile.d/nix.sh
-\end{lstlisting}
-
-Após a instalçao do NixOS, a *Holochain* é instalada com o seguinte comando:
-
-\begin{lstlisting}[language=Bash]
-nix-shell https://holochain.love
-\end{lstlisting}
-
-Após a *Holochain* estar instalada, basta inicializar um projeto vazio com o comando:
-
-\begin{lstlisting}[language=Bash]
-hc init nome_do_projeto
-\end{lstlisting}
-
-O processo de instalação e configuração foi simples embora tenha demorado para baixar o *NixOS*.
-
-Resultado: 3/3.
-
-1. Utilização de tecnologias populares
-
-A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
-
-Resultado: 1/2.
-
-### Documentação abrangente
-
-### Tamanho da comunidade
-
-### Produtividade
-
-### Facilidade de utilização pelos usuários
-
-### Desenvolvimento multiplataforma
-
-
-## Blockstack
 
 ### Facilidade de instalação e configuração
 
