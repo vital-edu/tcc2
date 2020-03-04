@@ -1571,7 +1571,7 @@ Facilidade de instalação e configuração  & Fácil                       & 3 
 Utiliza tecnologia popular               & Não                         & -2                          \\
 Possui documentação abrangente           & Sim                         & 2                           \\
 Tamanho da comunidade                    & Pequena                     & 1                           \\
-Produtividade.                           & Insuficiente                & -5                          \\
+Produtividade                            & Insuficiente                & -5                          \\
 Facilidade de utilização pelos usuários  & Difícil                     & -2                          \\
 Desenvolvimento multiplataforma          & Limitado à web              & 1                           \\ \hline
 \textbf{TOTAL}                           &                             & \textbf{-2}                 \\ \hline
@@ -1700,7 +1700,7 @@ Facilidade de instalação e configuração  & Fácil                       & 3 
 Utiliza tecnologia popular               & Sim                         & 1                           \\
 Possui documentação abrangente           & Sim                         & 2                           \\
 Tamanho da comunidade                    & Pequena                     & 1                           \\
-Produtividade.                           & Alta                        & 5                           \\
+Produtividade                            & Alta                        & 5                           \\
 Facilidade de utilização pelos usuários  & Fácil                       & 3                           \\
 Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
 \textbf{TOTAL}                           &                             & \textbf{18}                 \\ \hline
@@ -1749,59 +1749,75 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
 
 ## Ethereum
 
-1. Facilidade de instalação e configuração
+### Facilidade de instalação e configuração
 
+O processo de instalação e configuração do *Ethereum* pode ter diferentes caminhos, pois o site oficial oferece por padrão apenas uma solução que utiliza um ambiente de programação *online*, não tendo instruções oficiais de fácil acesso de como configurar o ambiente localmente.
 
+Há uma abundância de tutoriais e sites (inclusive sugeridos no site oficial) que ensinam os primeiros passos ao se desenvolver aplicações *Ethereum*, porém, cada um desses sites propõe a utilização de *frameworks* que facilitam o desenvolvimento da aplicação.
 
-Resultado: X/3.
+Após alguma pesquisa, foi descoberto que caso não se utilize nenhum desses *frameworks*, pode-se utilizar a biblioteca padrão do *Solidity*\footnote{\emph{Solidity} é a biblioteca utilizada para implementar os contratos inteligentes que são executados pela \emph{blockchain} da \emph{Ethereum}} feita para *JavaScript*.
 
-1. Utilização de tecnologias populares
+Com isso, é necessário ter instalado o *Node.js*, e inicializar manualmente um projeto JavaScript.
 
+Pelo fato do site oficial não prover nenhuma instrução clara de como realizar o processo de instalação, e tendo que recorrer a fontes externas, será considerado que houve problemas na instalação, principalmente porque houve uma perda de tempo excessivamente grande nesse processo.
 
+Resultado: dificuldade média de instalação (2/3).
 
-Resultado: X/2.
+### Utilização de tecnologias populares
 
-3. Documentação abrangente
+Para desenvolver uma aplicação utilizando a tecnologia *Ethereum* pode-se utilizar a biblioteca *JavaScript* da *Solidity* para realizar a integração entre os contratos inteligentes e código *JavaScript*, porém, os contratos inteligentes utilizam uma linguagem própria de mesmo nome (*Solidity*), que embora seja muito parecida com *JavaScript*, dificulta ligeiramente o desenvolvimento e requer uma constante busca na documentação da linguagem para descobrir recursos especiais e necessários para a criação dos contratos inteligentes.
 
+Como a *Solidity* é a parte principal no desenvolvimento de aplicações descentralizadas *Ethereum*, iremos considerá-la como a linguagem a ser avaliada neste critério, estando ela fora da lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
 
+Resultado: não utiliza tecnologias populares (-2/1).
 
-Resultado: X/2.
+### Documentação abrangente
 
-4. Tamanho da comunidade
+A documentação da *Ethereum* é muito extensa e contém muito material externo criado pela comunidade e que é considerado como uma documentação complementar. A linguagem *Solidity*, principal parte das aplicações *Ethereum*, possui uma documentação bem extensa e com um ótimo sistema de versionamento que permite consultar a documentação de versões antigas.
 
+Resultado: possui documentação abrangente (2/2).
 
+### Tamanho da comunidade
 
-Resultado: X/3.
+A comunidade da *Ethereum* é bem grande para o nicho de aplicações descentralizadas, possuindo 454 colaboradores no repositório principal do projeto \cite(goethrepo) e 337 colaboradores no repositório da *Solidity* \cite{solidityrepo}.
 
-5. Produtividade
+Resultado: comunidade média (2/3).
 
+### Produtividade
 
+Desenvolver uma aplicação para *Ethereum* requer conhecimento sobre contratos inteligentes, que possuem um nível de dificuldade grande comparado a *softwares* tradicionais, principalmente porque qualquer falha na lógica do contrato inteligente pode acarretar em dinheiro em um estado de limbo, sem possibilidade de ser recuperado.
+
+Entender como um contrato funciona e as particularidas da linguagem *Solidity* foram a maior dificuldade encontradas, porém havia um grande número de materiais de estudo e de outros projetos que poderiam ser usados como material de consulta, mas as várias diferentes versões da linguagem *Solidity* e suas mudanças bruscas de *API* tornaram difícil a tarefa de incorporar código de outras aplicações, sendo necessário a recorrer a documentação várias vezes para conseguir visualizar quais funcionalidades foram alteradas ou depreciadas e quais foram os seus substitutos.
+
+O contrato inteligente que possibilite a implementação dos 3 casos de uso propostos neste projeto foram difíceis de serem implementados, e embora tenham sido concluídos, não houve tempo para criar as interfaces gráficas apropriadas nem foi possível testar o contrato em máquinas diferentes devido à falta de tempo.
 
 Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
 
-- [Experimento Holochain](https://github.com/vital-edu/cc_tuts_gui)
-- [Interface Gráfica em JavaScript do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_gui)
-- [Interface Gráfica em Flutter do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_flutter_web)
+- [Ethereum Market](https://github.com/vital-edu/eth-mkt)
 
-Resultado: X/5.
+Resultado: produtividade parcial (1/5).
 
-1. Facilidade de utilização pelos usuários
+### Facilidade de utilização pelos usuários
 
+As aplicações *Ethereum* necessitam de *gas* para funcionarem, ou em outras palavras, toda transação realizada na rede *Ethereum* precisa de gasto de dinheiro por parte do usuário, o que obriga o usuário não só a criar uma carteira *Ethereum* como também a comprar e transferir *Ether* (a moeda da *blockchain Ethereum*) para carteiras da aplicação ou do contrato inteligente da aplicação.
 
+Esse não é um processo fácil nem rápido de ser feito quando não se conhece nada sobre criptomoedas, além de ser um processo que envolve uma preocupação elevada quanto a segurança das carteiras *Ethereum* de posse do usuário.
 
-Resultado: X/2.
+Por conta disso, é improvável que usuários comuns consigam utilizar uma aplicação *Ethereum* no estado atual em que a tecnologia se encontra.
 
-7. Desenvolvimento multiplataforma
+Resultado: difícil de utilizar pelos usuário (-2/3).
 
+### Desenvolvimento multiplataforma
 
+As aplicações *Ethereum* podem funcionar perfeitamente em celulares inteligentes e navegadores *web*, embora requeram alguns passos a mais para funcionarem corretamente. Portanto, não existe nenhuma limitação de funcionalidade entre as três plataformas (*web*, *iOS* e *Android*).
 
-Resultado: X/3.
-
-A *Holochain* teve uma pontuação final de -2 utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+Resultado: desenvolvimento multiplataforma máximo (3/3).
 
 ### Pontuação final
 
+O *Ethereum* teve uma pontuação final de 6 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:ethereum}, o que representa um resultado mediano. Embora o *Ethereum* não tenha ido mal em nenhum critério específico, há algumas dificuldades de utilização da tecnologia, como a escolha da linguagem, e principalmente a dificuldade que um usuário têm em utilizar aplicações *Ethereum* que impossibilitam a tecnologia de se tornar um competidor de peso contra as aplicações tradicionais.
 
+Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* (decentralized applications - aplicações descentralizadas), e contando com uma comunidade muito maior do que qualquer outra tecnologia descentralizada baseada em *blockchain* e com suporte à criação de aplicações descentralizadas, que ainda assim não consegue despontar uma tecnologia descentralizada que substitua aplicações tradicionais. Ainda há um longo caminho a percorrer até lá.
 
 \begin{table}[htpb]
 \caption{\label{tab:res:ethereum}Ethereum: resultado final.}
@@ -1809,14 +1825,14 @@ A *Holochain* teve uma pontuação final de -2 utilizando os critérios estabele
 \hline
 
 \textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
-Facilidade de instalação e configuração  & Fácil                       & 3                           \\
-Utiliza tecnologia popular               & Sim                         & 1                           \\
+Facilidade de instalação e configuração  & Média                       & 2                           \\
+Utiliza tecnologia popular               & Não                         & -2                           \\
 Possui documentação abrangente           & Sim                         & 2                           \\
-Tamanho da comunidade                    & Pequena                     & 1                           \\
-Produtividade.                           & Alta                        & 5                           \\
-Facilidade de utilização pelos usuários  & Fácil                       & 3                           \\
+Tamanho da comunidade                    & Média                       & 2                           \\
+Produtividade                            & Parcial                     & 1                           \\
+Facilidade de utilização pelos usuários  & Fácil                       & -2                           \\
 Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
-\textbf{TOTAL}                           &                             & \textbf{18}                 \\ \hline
+\textbf{TOTAL}                           &                             & \textbf{6}                 \\ \hline
 
 \end{tabular}
 \end{table}
