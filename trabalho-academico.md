@@ -1819,7 +1819,7 @@ O *Ethereum* teve uma pontuação final de 6 pontos utilizando os critérios est
 
 Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* (decentralized applications - aplicações descentralizadas), e contando com uma comunidade muito maior do que qualquer outra tecnologia descentralizada baseada em *blockchain* e com suporte à criação de aplicações descentralizadas, que ainda assim não consegue despontar uma tecnologia descentralizada que substitua aplicações tradicionais. Ainda há um longo caminho a percorrer até lá.
 
-\begin{table}[htpb]
+\begin{table}[H]
 \caption{\label{tab:res:ethereum}Ethereum: resultado final.}
 \begin{tabular}{lcc}
 \hline
@@ -1837,14 +1837,39 @@ Desenvolvimento multiplataforma          & Máximo                      & 3     
 \end{tabular}
 \end{table}
 
+## Resultado consolidado
+
+Seguindo os critérios de avaliação estabelecidos, a tecnologia \emph{Blockchain} se mostrou como sendo das tecnologias estudadas (tab. \ref{tab:res}), a mais propícia para ser utilizada no desenvolvimento de aplicações descentralizadas que queiram rivalizar com tecnologias tradicionais, levando segurança, privacidade e comodidade ao usuário.
+
+No outro extremo, a *Holochain* foi a tecnologia que mais decepcionou, talvez justamente por ser a tecnologia que traga o maior diferencial tecnológico, e portanto, um nível de maturidade muito aquém do desejado.
+
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:res:final}Resultado consolidado.}
+\begin{tabular}{lc}
+\hline
+
+\textbf{Tecnologia} & \textbf{Pontuação final} \\ \hline
+Holochain           & -2   \\
+Blockstack          & 18   \\
+Ethereum            & 6    \\ \hline
+\end{tabular}
+\end{table}
+
 # Discussões finais
 
-O presente trabalho apresentou um estudo teórico sobre algumas tecnologias descentralizadas iminentes em conjunto com a aplicação de uma dessas tecnologias, a *Blockstack*, na resolução de um problema real, a criação de um livre mercado.
+O presente trabalho apresentou um estudo teórico sobre tecnologias descentralizadas, o mercado livre e como que tecnologias descentralizadas poderiam possibilitar a criação de uma plataforma de comércio eletrônico baseada no livre mercado.
 
-Durante o desenvolvimento do projeto, muitos problemas foram encontrados, havendo a necessidade de realizar a troca da tecnologia inicialmente escolhida (*Holochain*) pela tecnologia utilizada no protótipo final.
+Após apresentar a teoria econômica que embasa o livre mercado e realizar um processo de seleção das tecnologias descentralizadas a serem estudadas, foi elaboraado um conjunto pequeno de casos de uso que poderiam ser utilizados para testarem a maturidade de tecnologias descentralizadas na criação de aplicações que possam se equiparar a aplicações tradicionais.
+
+Em conjunto com os casos de uso definidos, foram estabelecidos outros seis critérios de comparação para serem utilizados nas três tecnologias selecionadas.
+
+Após o desenvolvimento por cerca de vinte horas em cada uma das três tecnologias, cada uma delas foram avaliadas seguindo os critérios estabelecidos, chegando a conclusão de que a *Blockstack* apresenta-se como a única das tecnologias estudadas que teve um desempenho alto nos critérios avaliados.
+
+Mesmo assim, durante o desenvolvimento do projeto, muitos problemas foram encontrados para implementar os casos de uso especificados, demonstrando que não é um processo trivial a criação de aplicações descentralizadas.
 
 Todo o processo de aprendizado e experimentação nessas tecnologias descentralizadas mostrou-se desafiador, havendo pouquíssimo conteúdo disponível e pouco suporte da comunidade, justamente por serem tecnologias inovadoras e que se mostraram ainda em estado inicial de desenvolvimento.
 
-Devido ao caráter experimental dessa pesquisa e o risco envolvido, não foi atingido o nível de maturidade de projeto esperado, nem mesmo foi possível realizar um comparativo detalhado sobre as diferentes tecnologias descentralizadas ou a diferença de performance e usabilidade de tais tecnologias em relação a tecnologias convencionais, sendo recomendações de pesquisas futuras neste campo do conhecimento.
+Devido ao caráter experimental dessa pesquisa e o risco envolvido, não foi atingido o nível de maturidade de projeto esperado, nem mesmo foi possível realizar um comparativo detalhado e rigoroso sobre as diferentes tecnologias descentralizadas e a diferença de performance e usabilidade de tais tecnologias em relação a tecnologias convencionais, sendo recomendações de pesquisas futuras neste campo do conhecimento.
 
-Ainda assim, o potencial que tais tecnologias possuem em entregar segurança, privacidade e controle aos usuários é notavel e espera-se que esse novo paradigma da computação descentralizada alcance a grande masse de usuários e provoque mudanças significativas, e, que muitos dos conceitos apresentados neste trabalho, sejam de alguma forma absorvidos pelas aplicações atuais ou aprimorados para a criação de novos produtos e serviços digitais. Afinal, nota-se uma crescente preocupação na sociedade com questões de privacidade e abuso de poder, e tais ameaças a liberdade fazem valer os esforços despendidos no avanço da pesquisa e uso de tais tecnologias.
+Ainda assim, o potencial que tais tecnologias possuem em entregar segurança, privacidade e controle aos usuários é notavel e espera-se que esse novo paradigma da computação descentralizada alcance a grande massa de usuários e provoque mudanças significativas, e, que muitos dos conceitos apresentados neste trabalho, sejam de alguma forma absorvidos pelas aplicações atuais ou aprimorados para a criação de novos produtos e serviços digitais. Afinal, nota-se uma crescente preocupação na sociedade com questões de privacidade e abuso de poder, e tais ameaças a liberdade fazem valer os esforços despendidos no avanço da pesquisa sobre privacidade e no uso de tecnologias descentralizadas.
