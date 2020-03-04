@@ -1471,13 +1471,33 @@ Aplicações descentralizadas são um fenômeno recente e que por esse motivo po
 \toprule
 \multicolumn{1}{c}{\textbf{Resposta}} & \multicolumn{1}{c}{\textbf{Descrição}}                                                                                    & \textbf{Valor numérico} \\ \midrule
 Sim                              & utiliza tecnologias populares               & 1                       \\
-Não                              & não utiliza tecnologias populares           & -2                       \\
+Não                              & não utiliza tecnologias populares           & -2                       \\ \bottomrule
 \end{tabular}
 \end{table}
 
-Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse}.
+Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse} e reproduzido na tabela \ref{tab:toplanguages}.
 
-3. Documentação abrangente
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:toplanguages}Linguagens mais populares.}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Posição} & \textbf{Linguagem} \\ \midrule
+1              & JavaScript           \\
+2              & Python               \\
+3              & Java                 \\
+4              & PHP                  \\
+5              & C#                   \\
+6              & C++                  \\
+7              & TypeScript           \\
+8              & Shell                \\
+9              & C                    \\
+10             & Ruby                 \\ \bottomrule
+\end{tabular}
+\legend{Fonte: \citeonline{octoverse}.}
+\end{table}
+
+1. Documentação abrangente
 
 Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação que proporcione aos desenvolvedores uma maneira fácil e compreensiva de entender todas as capacidades, limitações, e características da tecnologia, permitindo que desenvolvedores experientes mas que nunca tiveram contato com a tecnologia possam aprender e utilizar a tecnologia sem precisar desbravar o código fonte ou ter que entrar em contato direto com os mantenedores oficiais. Portanto, a documentação deve ser atualizada e abrangente.
 
@@ -1488,7 +1508,7 @@ Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação 
 \toprule
 \textbf{Resposta} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
 Sim                                    & a documentação é abrange e contém exemplos de uso               & 2                       \\
-Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\
+Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -1542,12 +1562,12 @@ Para que uma tecnologia descentralizada possa ser amplamente utilizada é necess
 \toprule
 \textbf{Nível} & \centering \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
 Fácil          & \centering usuário não precisa de conhecimento técnico ou treinamento para usar aplicação & 3 \\
-Difícil        & \centering usuário precisa de conhecimento técnico ou treinamento para usar aplicação     & -2 \\
+Difícil        & \centering usuário precisa de conhecimento técnico ou treinamento para usar aplicação     & -2 \\ \bottomrule
 \end{tabular}
 }
 \end{table}
 
-1. Desenvolvimento multiplataforma
+7. Desenvolvimento multiplataforma
 
 Uma aplicação deve ter o maior suporte possível a diferentes plataformas para conseguir se adaptar a diferentes contextos. Porém, com o aumento no desenvolvimento de aplicações móveis e online, será analisado especificamente se as tecnologias descentralizadas estudadas possuem suporte as plataformas:
 
@@ -1571,6 +1591,84 @@ Limitado a \emph{smartphones} & \centering suporta apenas dispositivos móveis  
 \end{tabular}
 }
 \end{table}
+
+# Resultados
+
+## Holochain
+
+1. Facilidade de instalação e configuração
+
+Para instalar o *Holochain* foi necessário instalar e configurar o *NixOS*, um sistema operacional que utiliza o gerenciador de pacotes *Nix*\footnote{\emph{Nix} é um gerenciador de pacotes funcional para Linux e outros sistemas Unix, que é confiável e reproduzível. Ele provê atualizações, reversão de atualizações, instalação lado-a-lado de múltiplas versões de um mesmo pacote, gerenciamento de pacotes com suporte a múltiplos usuários e facilidade de configuração do ambiente. \cite{nix}} utilizando os comandos de terminal:
+
+\begin{lstlisting}[language=Bash]
+curl https://nixos.org/nix/install | sh
+. ~/.nix-profile/etc/profile.d/nix.sh
+\end{lstlisting}
+
+Após a instalçao do NixOS, a *Holochain* é instalada com o seguinte comando:
+
+\begin{lstlisting}[language=Bash]
+nix-shell https://holochain.love
+\end{lstlisting}
+
+Após a *Holochain* estar instalada, basta inicializar um projeto vazio com o comando:
+
+\begin{lstlisting}[language=Bash]
+hc init nome_do_projeto
+\end{lstlisting}
+
+O processo de instalação e configuração foi simples embora tenha demorado para baixar o *NixOS*.
+
+Resultado: 3/3.
+
+1. Utilização de tecnologias populares
+
+A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
+
+Resultado: 1/2.
+
+### Documentação abrangente
+
+### Tamanho da comunidade
+
+### Produtividade
+
+### Facilidade de utilização pelos usuários
+
+### Desenvolvimento multiplataforma
+
+
+## Blockstack
+
+### Facilidade de instalação e configuração
+
+### Utilização de tecnologias populares
+
+### Documentação abrangente
+
+### Tamanho da comunidade
+
+### Produtividade
+
+### Facilidade de utilização pelos usuários
+
+### Desenvolvimento multiplataforma
+
+## Ethereum
+
+### Facilidade de instalação e configuração
+
+### Utilização de tecnologias populares
+
+### Documentação abrangente
+
+### Tamanho da comunidade
+
+### Produtividade
+
+### Facilidade de utilização pelos usuários
+
+### Desenvolvimento multiplataforma
 
 # Discussões finais
 
