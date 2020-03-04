@@ -1484,7 +1484,7 @@ Limitado à \emph{smartphones} & \centering suporta apenas dispositivos móveis 
 
 ## Holochain
 
-1. Facilidade de instalação e configuração
+### Facilidade de instalação e configuração
 
 Para instalar o *Holochain* foi necessário instalar e configurar o *NixOS*, um sistema operacional que utiliza o gerenciador de pacotes *Nix*\footnote{\emph{Nix} é um gerenciador de pacotes funcional para Linux e outros sistemas Unix, que é confiável e reproduzível. Ele provê atualizações, reversão de atualizações, instalação lado-a-lado de múltiplas versões de um mesmo pacote, gerenciamento de pacotes com suporte a múltiplos usuários e facilidade de configuração do ambiente. \cite{nix}} utilizando os comandos de terminal:
 
@@ -1507,27 +1507,27 @@ hc init nome_do_projeto
 
 O processo de instalação e configuração foi simples embora tenha demorado para baixar o *NixOS*.
 
-Resultado: 3/3.
+Resultado: fácil de instalar (3/3).
 
-2. Utilização de tecnologias populares
+### Utilização de tecnologias populares
 
 A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
 
-Resultado: 1/2.
+Resultado: não utiliza tecnologias populares (-2/1).
 
-3. Documentação abrangente
+### Documentação abrangente
 
 A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Apps*\footnote{\emph{hApps (holo Apps)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação à nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
 
-Resultado: 1/2.
+Resultado: possui documentação abrangente (2/2).
 
-4. Tamanho da comunidade
+### Tamanho da comunidade
 
 A *Holochain* possui em seu repositório principal um total de 48 contribuídores \cite{holorepo}.
 
-Resultado: 1/3.
+Resultado: comunidade pequena (1/3).
 
-5. Produtividade
+### Produtividade
 
 A *Holochain* embora aparente ser uma tecnologia promissora, ainda se encontra em um estágio imaturo, apresentando limitações em suas funcionalidades e tendo muitas funcionalidades ainda em processo de implementação e maturação.
 
@@ -1537,32 +1537,32 @@ Logo no ínicio da experimentação da tecnologia, foi constatado que o sistema 
 
 Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
 
-- [Holochain Experiment](https://github.com/vital-edu/cc_tuts_gui)
+- [Experimento Holochain](https://github.com/vital-edu/cc_tuts_gui)
 - [Interface Gráfica em JavaScript do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_gui)
 - [Interface Gráfica em Flutter do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_flutter_web)
 
-Resultado: -5/5.
+Resultado: produtividade insuficiente (-5/5).
 
-6. Facilidade de utilização pelos usuários
+### Facilidade de utilização pelos usuários
 
 As aplicações *Holochain* funcionam através de uma rede de nó interconectado em que cada usuário possui seu próprio nó e armazena todas as suas informações essenciais localmente, se comunicando e validando informações com outros nós conforme a necessidade. Essa característica embora tenha o benefício de aumentar o desempenho e escalabilidade da rede, tem a restrição de obrigar que qualquer utilizador de uma aplicação *Holochain*, precise instalar e configurar a aplicação e todo o ecosistema da *Holochain*. Isso traz uma complexidade ao usuário que não é comum em aplicações tradicionais. Por conta disso, é improvável que usuários comuns consigam utilizar uma aplicação *Holochain* no estado atual em que a tecnologia se encontra.
 
-Resultado: -2/2.
+Resultado: difícil de utilizar pelos usuário (-2/3).
 
-7. Desenvolvimento multiplataforma
+### Desenvolvimento multiplataforma
 
 A *Holochain* embora tenha uma bilbioteca de comunicação feita para *JavaScript* e que portanto pode ser utilizada em *frameworks* de desenvolvimento multiplataforma, tais como o *React Native*, possui a limitação de obrigar que o usuário final tenha que decidir em confiar em um servidor que tenha a aplicação sendo executada e que armazene as informações do usuário, ou que ele execute uma instância própria da aplicação em seu próprio servidor, conectando a sua aplicação ao servidor.
 
 Para que uma aplicação móvel seja implementada, é portanto que o desenvolvedor pense em alternativas para contornar as limitações da tecnologia ou que o usuário tenha um conhecimento muito acima ao de um usuário comum. Por conta disso, pode-se considerar que a *Holochain* apenas tem suporte oficial a aplicações *web*.
 
-Resultado: 1/3.
+Resultado: desenvolvimento multiplataforma limitado à web (1/3).
 
 ### Pontuação final
 
-A *Holochain* teve uma pontuação final de -2 utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+A *Holochain* teve uma pontuação final de -2 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
 
 \begin{table}[htpb]
-\caption{\label{tab:res:holo}Desenvolvimento multiplataforma.}
+\caption{\label{tab:res:holo}Holochain: resultado final.}
 \begin{tabular}{lcc}
 \hline
 
@@ -1574,59 +1574,58 @@ Tamanho da comunidade                    & Pequena                     & 1      
 Produtividade.                           & Insuficiente                & -5                          \\
 Facilidade de utilização pelos usuários  & Difícil                     & -2                          \\
 Desenvolvimento multiplataforma          & Limitado à web              & 1                           \\ \hline
-\textbf{TOTAL}                           & \multicolumn{2}{r}{-2}                                    \\ \hline
+\textbf{TOTAL}                           &                             & \textbf{-2}                 \\ \hline
 
 \end{tabular}
 \end{table}
 
 ## Blockstack
 
-### Arquitetura do projeto
+### Facilidade de instalação e configuração
 
-A figura \ref{fig:arch} mostra a arquitetura da aplicação.
+Para usar o *Blockstack* é necessário ter instalado o *Node.js*, que pode ser facilmente instalado em qualquer computador. Com o *Node.js* instalado, basta utilizar um dos comandos da tabela \ref{tab:blockstackinstall} dentro da pasta aonde se deseja inicializar o projeto, conforme a preferência de *framework* JavaScript que se deseja usar.
 
-\begin{figure}[htbp]
-    \caption{\label{fig:arch}Arquitetura da aplicação.}
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{imagens/arch.png}
-    \end{center}
-\end{figure}
+\begin{table}[htpb]
+\centering
+\caption{\label{tab:blockstackinstall}Comando para iniciar um projeto Blockstack.}
+\begin{tabular}{lc}
+\hline
 
-No passo 1, o cliente, que pode ser acessado por qualquer navegador, se comunica com o *Blockstack Browser* para que o usuário consiga realizar o *sign in* utilizando sua chave privada. Depois de ter fornecido suas credenciais, o *Blockstack Broser* valida as credenciais na *Blockchain* (passo 2), e a *blockchain* recupera os endereços dos ambientes de armazenamento do usuário através do *Gaia* (passo 3). Essas informações são retornadas para o *Blockstack Browser* (que também é apenas um cliente acessível pelo navegador), e é informado que a aplicação deseja ter permissão de leitura/escrita do usuário.
+\textbf{Framework} & \textbf{Comando a ser executado} \\ \hline
+JavaScript puro    & npx generator-blockstack --plain \\
+React              & npx generator-blockstack --react \\
+Vue                & npx generator-blockstack --vue   \\ \hline
 
-Após o usuário conceder as permissões da aplicação, é gerado um *token* único para a aplicação e uma chave privada gerada a partir da chave inicial do usuário. Esse *token* junto com a *chave privada da aplicação* são retornados para o cliente que os armazena no banco de dados local do navegador do usuário\footnote{\emph{local storage} (armazenamento local) é o nome do banco de dados \emph{offline} que vem embutido nos navegadores modernos e que permite que informações sejam armazenas de forma desestruturada no navegador, sendo usado principalmente para armazenar pequenas informações que podem ser acessadas quando não há conexão com a \emph{internet} esse banco de dados é padrão dos navegadores e funciona de forma \emph{offline}}(passo 4).
+\end{tabular}
+\end{table}
 
-Após esse processo o cliente está preparado para realizar operações e armazená-las na *blockchain da blockstack* e no gerenciador de armazenamento *Gaia* em nome do usuário. Isso já seria suficiente para que a aplicação funcionasse, no entanto, para permitir que nós (diferentes clientes) se comuniquem entre si é necessário que os nós se conheçam, o que requer a criação de um meio de indexação dos clientes da aplicação.
+Essa facilidade de instação é devido ao fato de o *Blockstack* funcionar como uma camada de comunicação entre a sua *blockchain* e o *frontend* da aplicação. Após rodar um dos comandos de inicialização de um projeto novo, está tudo pronto para começar o desenvolvimento, já estando a lógica de autenticação com a *blockchain* da *Blockstack* pré-configurada.
 
-Isso é feito através do indexador *Radiks* que apresenta as seguintes características que o define como sendo um servidor de indexação descentralizado: \cite{radiks}
+Resultado: fácil de instalar (3/3).
 
-- Sem bloqueio de dados: o *Radiks* é apenas um indexador dos *hashes* dos documentos guardados através do *Gaia*. Mesmo que o indexador saia do ar, o usuário continua podendo ter o acesso aos seus dados, podendo copiá-lo ou movê-lo quando houver necessidade;
-- Resistente a censura: como todo o dado é armazenado no *Gaia* e tem seus *hashes* registrados na *blockchain*, nenhum agente pode revogar o acesso ao dado de um usuário;
-- Privacidade máxima: como os dados são ciptografados antes de serem enviados e armazenados tanto pelo *Radiks* quanto pelo *Gaia*, todas as informações privadas do usuário estão seguras.
-- Criado utilizando autenticação descentralizada: o *Radiks* é fortemente atreleado ao sistema de autenticação da *Blockstack*, que utiliza *blockchain* e o sistema Gaia de forma a prover ao usuário controle total sobre a propriedade do dado e quem tem acesso a ele.
+### Utilização de tecnologias populares
 
-O sistema *Radiks* apenas armazena o *hashes* e *metadados* importantes das informações que necessitam ser armazenas pelo cliente na *blockchain* e permite que haja o armazenamento de dados que podem ser lidos e escritos em conjunto, o que permite que dois ou mais usuários possam, por exemplo, colaborativamente gerenciar um mesmo dado, uma característica importante em determinados contextos, como quando dois clientes precisam ser capazed de atualizar o *status* de uma compra.
+Para desenvolver uma aplicação utilizando a tecnologia *Blockstack*, é necessário apenas utilizar a biblioteca *JavaScript* da *Blockstack* não sendo necessário configurar um servidor próprio, já que toda a comunicação com a *blockchain* da *Blockstack* ocorre por meio dessa biblioteca. Com essa biblioteca, pode-se implementar uma aplicação utilizando apenas a linguagem *JavaScript*, a linguagem mais popular atualmente (veja tabela \ref{tab:toplanguages}).
 
-Assim, o cliente se comunica com o *Radiks* (passo 5), que repassa os dados para a *blockchain* (passo 6), responsável por armazenar os dados no Gaia. Após a confirmação de que os dados foram armazenados, o *Radiks* indexa os dados e retorna a confirmação de sucesso para o cliente.
+Resultado: utiliza tecnologias populares (1/1).
 
-Um cliente pode utilizar diversos indexadores diferentes, o que permitira a criação de diversos servidores que poderiam servir como redes privadas ou secretas de clientes ou para que, por exemplo, um indexador Radiks fosse usado apenas por uma comunidade pequena no interior de São Paulo.
+### Documentação abrangente
 
-### Experiência de desenvolvimento
+A documentação da *Blockstack* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de aplicações *Blockstack*, documentação para usuários comuns de como funciona as aplicações *Blockstack* e também uma documentação mais detalhada para desenvolvedores.
 
-Durante o processo de desenvolvimento, diversos obstáculos foram encontrados. Inicialmente, a aplicação a ser desenvolvida foi elaborada para utilizar a tecnologia *Holochain*, devido a suas características promissoras de se apresentar como uma alternativa mais eficiente em relação a aplicações descentralizadas que utilizam-se de *Blockchain* para funcionarem.
+Resultado: possui documentação abrangente (2/2).
 
-<!-- Porém, após ser feito uma pequeno código exemplo\footnote{Código fonte do servidor holochain: \url{https://github.com/vital-edu/cc_tuts}.Código fonte do frontend: \url{https://github.com/vital-edu/cc_tuts_gui}} (\emph{listing} \ref{lst:holochain}) para verificar a viabilidade da aplicação, foi constatado que a aplicação possuia problemas de sincronização entre os nós e que também seria necessário a implementação de um indexador para conseguir fazer com que nós distintos se comunicassem sem se conhecerem previamente.
+### Tamanho da comunidade
 
-Além desse problema, um nó da aplicação *Holochain* só poderia ser inicializado através de um computador, o que removeria a praticidade de uso e penalizaria o usuário final, se tornando uma solução incoveniente. De acordo com o que foi elaborado para esses riscos, foi decidido que a melhor alternativa seria migrar para uma outra tecnologia. -->
+A *Blockstack* possui em seu repositório principal um total de 45 contribuídores \cite{blockrepo}.
 
-Foi nesse processo que o *Blockstack* foi escolhido como sucessor, após uma nova pesquisa sobre uma tecnologia que conseguisse prover um ambiente similar de desenvolvimento a uma aplicação *web* tradicional.
+Resultado: comunidade pequena (1/3).
 
-Após a criação de uma aplicação de teste\footnote{Código fonte: \url{https://github.com/blockstack/animal-kingdom.git}}, foi constatado que a solução atendia os requisitos mínimos necessários.
+### Produtividade
 
-A partir de então, foi elaborada a aplicação com o escopo mínimo definido. Houve vários problemas principalmente em relação a utilização dos algorítmos de criptografia necessários para permitir que fosse criado uma carteira de criptomoeda que precisasse da assinatura de dois dos três envolvidos para ser movimentada (\emph{listing}: \ref{lst:multisig}).
+Após a criação de uma aplicação de experimentação que obteve êxito, foi iniciado o desenvolvimento dos casos de uso propostos. Durante o desenvolvimento dos casos de uso foram encontrados alguns problemas, principalmente em relação a utilização dos algorítmos de criptografia necessários para permitir que fosse criado uma carteira de criptomoeda que precisasse da assinatura de dois dos três envolvidos para ser movimentada. Parte da solução para a criação dessa carteira multi-assinada pode ser vista no trecho de código \ref{lst:multisig}:
 
-\begin{lstlisting}[caption={Parte do código responsável por criar carteira \emph{multisig}}\label{lst:multisig},language=Java]
-
+\begin{lstlisting}[caption={Parte do código responsável por criar carteira \emph{multisig}},label={lst:multisig},language=Java]
 // decrypt redeem script
 const encodedPSBT = decryptECIES(
   User.currentUser().encryptionPrivateKey(),
@@ -1656,6 +1655,60 @@ transaction!!.update({
 await transaction!!.save()
 
 \end{lstlisting}
+
+Após resolvido o problema de gestão da carteira multi-assinada, houve um problema de trocar informações entre um usuário e outro e indexar tais informações para deixá-las acessíveis a outros usuários, porém, a comunidade da *Blockstack* implementou uma biblioteca chamada [Radiks](https://github.com/blockstack/radiks/), que facilita esse processo de indexação de informações armazenadas na *blockchain* da *Blockstack*.
+
+Após utilizar a biblioteca *Radiks* houveram mais problemas relacionado ao processo de decifragem das informações encriptadas pelo usuário que estavam sendo indexadas através da biblioteca *Radiks*. Para resolver esse problema foi necessário um amplo estudo do código fonte da biblioteca e a alteração do código fonte da mesma, o que gerou um *fork* (ramificação) da biblioteca *Radiks* criada e mantida pelo autor deste trabalho.
+
+Com isso, foi possível implementar todos os casos de uso propostos no tempo limite estipulado (a arquitetura do projeto implementado pode ser visualizada no apêndice \ref{appendix:blockstack}).
+
+Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
+
+- [Aplicação Blockstack](https://github.com/vital-edu/free-the-market)
+- [Indexador Radiks](https://github.com/vital-edu/serve-the-market)
+- [Fork do Radiks](https://github.com/vital-edu/radiks)
+
+Resultado: produtividade alta (5/5).
+
+### Facilidade de utilização pelos usuários
+
+As aplicações feitas utilizando a tecnologia *Blockstack* são tão simples de serem utilizadas por usuários comuns quanto qualquer outra aplicação tradicional. O único processo que deve ser feito obrigatóriamente antes de se começar a utilizar uma aplicação da *Blockstack* é realizar o cadastro do *Blockstack ID*, um identificador único que cada usuário que utiliza a *blockchain* da *Blockstack* precisa ter, que pode ser feito pelo [Broser Blockstack](https://browser.blockstack.org/), uma aplicação descentralizada feita para facilitar esse processo de cadastro do *Blockstack ID*.
+
+Se formos comparar com o *Bitcoin*, o *Blockstack ID* é como se fosse uma carteira de *Bitcoin*, porém, ao invés de armazenar a moeda *Bitcoin*, ela consegue armazenar qualquer tipo de informação, sendo que essas informações ficam criptografadas pela chave privada do usuário, criada no momento do cadastro do *Blockstack ID* e que deve ser armazenada pelo usuário, pois se for perdida, não é possível recuperar a conta.
+
+Com exceção do processo de autenticação com a *Blockstack* que só precisa ser feito uma vez para cada navegador que o usuário utilize, não há nenhuma outra complexidade inerente a *Blockstack*, permitindo que sejam criadas aplicações muito semlhantes a aplicações tradicionais e tão fáceis de usar quanto elas.
+
+Resultado: fácil de usar pelo usuário (3/3).
+
+### Desenvolvimento multiplataforma
+
+A *Blockstack* possui bibliotecas para serem utilizadas na *web* e também conta com implementações oficiais prontas para serem usadas em dispositivos *iOS* e também *Android*. Não existe nenhuma limitação ou distinção de funcionalidade entre as três plataformas (*web*, *iOS* e *Android*), permitindo entregar uma experiência completa para os usuários.
+
+Resultado: desenvolvimento multiplataforma máximo (3/3).
+
+### Pontuação final
+
+A *Blockstack* teve uma pontuação final de 18 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:blockstack}, o que representa um excelente resultado, não ganhando nota máxima apenas por conta de sua comunidade ainda pequena. A *Blockstack*, portanto, segundo os critérios avaliados e no presente momento, se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+
+\begin{table}[htpb]
+\caption{\label{tab:res:blockstack}Blockstack: resultado final.}
+\begin{tabular}{lcc}
+\hline
+
+\textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
+Facilidade de instalação e configuração  & Fácil                       & 3                           \\
+Utiliza tecnologia popular               & Sim                         & 1                           \\
+Possui documentação abrangente           & Sim                         & 2                           \\
+Tamanho da comunidade                    & Pequena                     & 1                           \\
+Produtividade.                           & Alta                        & 5                           \\
+Facilidade de utilização pelos usuários  & Fácil                       & 3                           \\
+Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
+\textbf{TOTAL}                           &                             & \textbf{18}                 \\ \hline
+
+\end{tabular}
+\end{table}
+
+<!-- ### Experiência de desenvolvimento Blockstack
 
 Houve um outro problema ao se utilizar o indexador \emph{Radiks}, que apresentou problemas relacionados a utilização das chaves públicas e privadas, havendo a perca dessas chaves ou a impossibilidade de descriptografar arquivos. Para contornar esse problema foi necessário um amplo estudo do código fonte da biblioteca, e a alteração da mesma, sendo utilizado na versão final do projeto a versão modificada do Radiks, que pode ser acessada em: \url{https://github.com/vital-edu/radiks}.
 
@@ -1691,37 +1744,82 @@ As figuras \ref{fig:newproduct}, \ref{fig:listproducts} e \ref{fig:payment} most
     \end{center}
 \end{figure}
 
-\clearpage
+\clearpage -->
 
-### Facilidade de instalação e configuração
-
-### Utilização de tecnologias populares
-
-### Documentação abrangente
-
-### Tamanho da comunidade
-
-### Produtividade
-
-### Facilidade de utilização pelos usuários
-
-### Desenvolvimento multiplataforma
 
 ## Ethereum
 
-### Facilidade de instalação e configuração
+1. Facilidade de instalação e configuração
 
-### Utilização de tecnologias populares
 
-### Documentação abrangente
 
-### Tamanho da comunidade
+Resultado: X/3.
 
-### Produtividade
+1. Utilização de tecnologias populares
 
-### Facilidade de utilização pelos usuários
 
-### Desenvolvimento multiplataforma
+
+Resultado: X/2.
+
+3. Documentação abrangente
+
+
+
+Resultado: X/2.
+
+4. Tamanho da comunidade
+
+
+
+Resultado: X/3.
+
+5. Produtividade
+
+
+
+Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
+
+- [Experimento Holochain](https://github.com/vital-edu/cc_tuts_gui)
+- [Interface Gráfica em JavaScript do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_gui)
+- [Interface Gráfica em Flutter do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_flutter_web)
+
+Resultado: X/5.
+
+1. Facilidade de utilização pelos usuários
+
+
+
+Resultado: X/2.
+
+7. Desenvolvimento multiplataforma
+
+
+
+Resultado: X/3.
+
+A *Holochain* teve uma pontuação final de -2 utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+
+### Pontuação final
+
+
+
+\begin{table}[htpb]
+\caption{\label{tab:res:ethereum}Ethereum: resultado final.}
+\begin{tabular}{lcc}
+\hline
+
+\textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
+Facilidade de instalação e configuração  & Fácil                       & 3                           \\
+Utiliza tecnologia popular               & Sim                         & 1                           \\
+Possui documentação abrangente           & Sim                         & 2                           \\
+Tamanho da comunidade                    & Pequena                     & 1                           \\
+Produtividade.                           & Alta                        & 5                           \\
+Facilidade de utilização pelos usuários  & Fácil                       & 3                           \\
+Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
+\textbf{TOTAL}                           &                             & \textbf{18}                 \\ \hline
+
+\end{tabular}
+\end{table}
 
 # Discussões finais
 
