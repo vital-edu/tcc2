@@ -92,14 +92,14 @@ Além dessas três características principais, \citeonline{blockstack} cita out
 
 2. Dependência em *tokens* e/ou ativos infungíveis (que possui valor único, não podendo ser trocado por dinheiro): para incentivar desenvolvedores a utilizarem a aplicação e/ou para desincentivar o uso indiscriminado de recursos por usuários.
 
-Além das caracterísiticas acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
+Além das características acima descritas, as aplicações descentralizadas, sejam elas quais forem, devem ser desenvolvidas utilizando robustas tecnologias criptográficas, pois ao se utilizar de uma rede distribuída, deve-se haver desconfiança total e permanente sobre as intenções de cada nó da rede, que poderá tentar adulterar ou utilizar de forma indevida os dados trafegados por ela. Por isso, os dados dos usuários devem ser sempre criptografados utilizando uma chave criptográfica privada em que apenas o usuário tenha a posse dela.
 
 ### Contratos Inteligentes
 \label{subsec:smartcontract}
 
-Algumas das tecnologias descentralizadas, por serem utilizadas na contrução de diferentes escopos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse sistema de regras de negócio, imutáveis, e distríbuidas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
+Algumas das tecnologias descentralizadas, por serem utilizadas na construção de diferentes escopos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse sistema de regras de negócio, imutáveis e distribuídas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
-Para \citeonline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de madeira a criar contratos:
+Para \citeonline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de maneira a criar contratos:
 
 a. robustos contra vandalismo ingênuo;
 b. robustos contra violações sofisticadas\footnote{É importante salientar, que um contrato inteligente não se propõe a lidar com um terceiro tipo de ataque, o vandalismo sofisticado, caracterizado como sendo o uso extensivo e desproporcional de força ou poder, tais como ataques militares efetuados por terceiros \cite{smartcontract}. Esse tipo de ataque é raramente utilizado nas relações de livre mercado, e quase invariavelmente são oriundos de uma alocação de recursos obtidos de forma coercitiva por governos ou entidades autoritárias.}.
@@ -114,7 +114,7 @@ Nessas classificações, um sistema judicial estatal, bem como a polícia e empr
 <!-- Com o surgimento do *Bitcoin*, criou-se a possibilidade de incorporar contratos inteligentes em *blockchain*, sendo a moeda *Bitcoin*, uma forma de contrato inteligente incorporado em *software*, já que a moeda em si não possui nenhum componente de segurança reativa, confiando completamente no poder da criptografia e do algoritmo de consenso para garantir que as regras, ou cláusulas, que definem o que é uma transação válida não sejam quebradas, e que qualquer tentativa de fraude da *blockchain* seja punida com a perda de tempo e recursos computacionais, e consequentemente recursos energéticos. -->
 
 
-O desenvolvimento de aplicações descentralizadas que utilizam contratos inteligentes permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralized Autonomous Organization* - Organização Autônoma descentralizada), em que todas as regras de funcionamento da empresa, inclusive divisão de lucros e como é feito decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
+O desenvolvimento de aplicações descentralizadas que utilizam contratos inteligentes permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralised Autonomous Organization* - Organização Autônoma descentralizada)\cite{ethereum}, em que todas as regras de funcionamento da empresa, a divisão de lucros e como são feitas as decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
 
 Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeauthor{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
 
@@ -150,11 +150,11 @@ Não só questões de segurança das informações preocupam, mas também quest�
 
 Outro notório problema relacionado com aplicações centralizadas é a facilidade com que governos conseguem obter dados dos seus cidadãos, exigindo secretamente que empresas privadas entreguem informações ou implementem *backdoors*\footnote{\emph{backdoor} (porta dos fundos) é um método inserido de forma intencional no sistema, no algoritmo criptográfico ou no código da aplicação, que permite ignorar a autenticação ou outros controles de segurança de forma a possibilitar o acesso ao sistema ou dados contidos nesse sistema. \cite{backdoor}}(portas dos fundos), como no famoso caso do programa de vigilância do governo americano com codinome PRISM, que coletava dados eletrônicos de usuários de serviços do Google, Facebook, Apple, Microsoft, dentre outros, além de provedores de serviços de telecomunicações como AT&T, Verizon e Sprint \cite{prism1, prism2}.
 
-Além do programa de vigilância PRISM, os governos tendem a realizar constantes violações de liberdades individuais, que são financiadas com dinheiro público, respaldadas por leis criadas pelo próprio governo, e demandadas de forma coercitiva sem possibilidade de serem contestadas. Um dos exemplos mais emblemáticos de violação de liberdades indivíduais, do monopólio do uso da força e do monopólio da justiça, foi o caso de Ross Ulbricht, um jovem pacífico que não cometeu nenhum crime violento e recebeu uma senteça de duas vidas mais quarenta anos de prisão, sem direito a liberdade condicional, por ter criado um site de comércio eletrônico que possibilitava a comercialização de drogas ilícitas e que utilizava criptomoedas como meio de pagamento. Ross Ulbricht foi condenado em um processo penal e investigativo repleto de indícios de violações de direitos individuais e da própria legislação norte-americana \cite{ross}.
+Além do programa de vigilância PRISM, os governos tendem a realizar constantes violações de liberdades individuais, que são financiadas com dinheiro público, respaldadas por leis criadas pelo próprio governo, e demandadas de forma coercitiva sem possibilidade de serem contestadas. Um dos exemplos mais emblemáticos de violação de liberdades individuais, do monopólio do uso da força e do monopólio da justiça, foi o caso de Ross Ulbricht, um jovem pacífico que não cometeu nenhum crime violento e recebeu uma sentença de duas vidas mais quarenta anos de prisão, sem direito a liberdade condicional, por ter criado um site de comércio eletrônico que possibilitava a comercialização de drogas ilícitas e que utilizava criptomoedas como meio de pagamento. Ross Ulbricht foi condenado em um processo penal e investigativo repleto de indícios de violações de direitos individuais e da própria legislação norte-americana \cite{ross}.
 
 Ross Ulbricht, mesmo sem ter cometido nenhum crime violento, recebeu uma pena maior do que o \emph{serial killer} Robert Bendella, que foi senteciado a uma vida de prisão sem liberdade condicional por ter assassinado 6 homens, e maior que a do chefão das drogas e assassino El Chapo, que foi sentenciado a uma vida e 30 anos de prisão sem liberdade condicional.
 
-Embora o poder do estado não possa ser contestado ou combatido, principalmente por índividuos que são fortemente desconstruídos pela mídia e que portanto são ignorados pela grande população, as tecnologias fortemente embasadas em criptografia, tem o poder de impedir ou ao menos dificultar que agentes centrais tenham controle sobre os usuários, e com a evolução dessas tecnologias, talvez possamos alcançar uma *Internet* verdadeiramente livre, segura, e com máxima privacidade, o que, como o caso de Ross Ulbricht exemplifica, não será facilmente aceito pelos governos estatais ou por empresas privadas que exploram os dados privados de seus usuários. As aplicações descentralizadas são mais um passo nessa direção.
+Embora o poder do estado não possa ser contestado ou combatido, principalmente por indivíduos que são fortemente desconstruídos pela mídia e que portanto são ignorados pela grande população, as tecnologias fortemente embasadas em criptografia, tem o poder de impedir ou ao menos dificultar que agentes centrais tenham controle sobre os usuários, e com a evolução dessas tecnologias, talvez possamos alcançar uma *Internet* verdadeiramente livre, segura, e com máxima privacidade, o que, como o caso de Ross Ulbricht exemplifica, não será facilmente aceito pelos governos estatais ou por empresas privadas que exploram os dados privados de seus usuários. As aplicações descentralizadas são mais um passo nessa direção.
 
 ## Bitcoin
 
@@ -276,7 +276,7 @@ Para resolver o possível problema de indisponibilidade de clientes \citeauthoro
 
 Com essa solução, \citeauthoronline{timestamp} elaboraram uma solução que embora tenha sido concebida para o registro de documentos digitais, poderia ser utilizada para criar um sistema de transações financeiras digitais livre de agentes centrais.
 
-#### O ínicio do movimento dos Cypherpunks e das moedas digitais
+#### O início do movimento dos Cypherpunks e das moedas digitais
 
 Em 1992, Timothy May, um físico aposentado, temendo as ameaças e restrições que os governos ao redor do mundo poderiam impor sobre o acesso as informações, convidou um grupo de amigos à sua casa para discutir sobre privacidade e *Internet* \cite{answertocash}.
 
@@ -568,7 +568,7 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 ## As tecnologias descentralizadas da atualidade
 
-O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralized applications* - aplicações descentralizadas).
+O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralised applications* - aplicações descentralizadas).
 
 A plataforma de indexação de aplicações descentralizadas \citeauthoronline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
 
@@ -590,7 +590,7 @@ Volume (USD)             & 10,9B          & 2,37B             & 4,98B        & 2
 \legend{Fonte: \citeonline{dapp}.}
 \end{table}
 
-E ao analisar os dados atuais da plataforma \citeauthoronline{dapp}, foi elaborado a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeauthoronline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
+E ao analisar os dados atuais da plataforma \citeauthoronline{dapp}, foi elaborada a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeauthoronline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
 
 Diante dos números apresentados, podemos notar que tanto o número de criptomoedas existentes quanto o número de *dApps* existentes, possuem divergências consideráveis de acordo com a fonte consultada, o que reduz a confiabilidade dos dados e prejudica uma análise mais metodológica.
 
@@ -676,7 +676,7 @@ Mobius              & 6,0                       \\ \hline
 \legend{Fonte: \citeonline{appco} e \citeonline{dapp}.}
 \end{table}
 
-Seguindo os critérios estabelecidos, foram selecionadas as seguintes tecnolgias *blockchain* proeminentes com suporte a criação de *dApps*:
+Seguindo os critérios estabelecidos, foram selecionadas as seguintes tecnologias *blockchain* proeminentes com suporte a criação de *dApps*:
 
 1. *Ethereum*;
 2. *Blockstack*.
@@ -694,7 +694,7 @@ Com isso, foi definido o estudo e teste das seguintes tecnologias neste trabalho
 A *Ethereum* é uma tecnologia *blockchain* lançada em 2015 que ao ser idealizada teve como objetivo eliminar quatro fraquezas do *Bitcoin* \cite{ethereum}:
 
 1. Não ser *turing*-completo\footnote{\emph{Turing-completo} é a denominação dada a sistemas de regras capazes de simular um computador primitivo, ou seja, permitir teoricamente, sem levar em consideração capacidade de memória e de processamento, a resolução de qualquer problema computacional, o que no contexto de linguagens de programação, significa ter suporte a estruturas condicionais e de repetição \cite{ethereum}.}: a impossibilidade de criação de *loops* é uma considerável limitação para a criação de contratos que envolvem repetições e que precisam ser eficientes;
-2. Valor-cego: não é possível criar uma transação que possa ser gasta de forma esporádica e com valores variados até a totalização do valor disponível ser exaurido. Em outras palabras, ou todo o valor da transação é gasto ou nada é gasto. Isso impede que haja formas sofisticadas de pagamento, como pagamento por prestação, ou envio fracionário do valor da transação para diferentes destinatários.
+2. Valor-cego: não é possível criar uma transação que possa ser gasta de forma esporádica e com valores variados até a totalização do valor disponível ser exaurido. Em outras palavras, ou todo o valor da transação é gasto ou nada é gasto. Isso impede que haja formas sofisticadas de pagamento, como pagamento por prestação, ou envio fracionário do valor da transação para diferentes destinatários.
 3. Falta de estado: uma transação não gasta (*UTXO*) só possui dois estados: gasto e não gasto. Não existe a possibilidade de haver estados internos dentro da transação *UTXO*, o que implica na criação de contratos simples e pontuais, ao invés de contratos com estado (e portanto, mais complexos), que permitiriam organizações descentralizadas, a implementação de metaprotocolos e o suporte a limites de retirada.
 4. *Blockchain*-cego: a *UTXO* não tem visibilidade sobre os dados da *blockchain*, o que limita, por exemplo, a criação de jogos de azar, e perdendo características potencialmente valiosas de aleatoriedade.
 
@@ -737,7 +737,7 @@ Uma característica importante das contas de propriedade externa é que elas pod
     \legend{Fonte: \citeonline{ethwork}.}
 \end{figure}
 
-Desta forma, um contrato só pode ser inicializado por uma conta de propriedade externa, porém, após o ínicio de execução do contrato, a conta de execução do contrato pode começar a enviar comandos de transação interna, tendo vida própria de acordo com as regras do contrato a qual obedece.
+Desta forma, um contrato só pode ser inicializado por uma conta de propriedade externa. Porém, após o início de execução do contrato, a conta de execução do contrato pode começar a enviar comandos de transação interna, tendo vida própria de acordo com as regras do contrato a qual obedece.
 
 Um outro importante conceito dentro da rede *Ethereum* é a utilização de *gas*, que é o termo utilizado para as taxas de operação da rede. Toda computação realizada na rede *Ethereum* exige o pagamento dessa taxa de *gas* para ser executada, sendo ela normalmente expressa em *gwei*. Em cada transação, o emissor estipula um *limite de gas* (a quantidade máxima de *gas* que se está disposto a pagar) e um *preço de gas* (o preço em *ether* de cada unidade de *gas* que se está disposto a pagar). Ao se multiplicar o *limite de gas* com o preço de *gas*, obtém-se o *taxa máxima da transação* que se está disposto a pagar (fig. \ref{fig:gas}).
 
@@ -759,7 +759,7 @@ Sendo assim, é necessário antes de enviar uma transação para a rede *Ethereu
     \legend{Fonte: \citeonline{ethwork}.}
 \end{figure}
 
-Quando a *taxa máxima da transação* é alcançada antes da finalização do contrato, ou seja, quando o contrato fica sem *gas* para ser gasto das operações, todas as operações são revertidas, voltando ao estado inicial antes do ínicio do contrato (fig. \ref{fig:outofgas}). O contrato é marcado como inválido, porém todo o *gas* gasto no contrato não é devolvido, permanacendo com o executor do contrato, que no caso é o minerador responsável pelo bloco de transações no qual o contrato estava inserido.
+Quando a *taxa máxima da transação* é alcançada antes da finalização do contrato, ou seja, quando o contrato fica sem *gas* para ser gasto das operações, todas as operações são revertidas, voltando ao estado inicial antes do início do contrato (fig. \ref{fig:outofgas}). O contrato é marcado como inválido, porém todo o *gas* gasto no contrato não é devolvido, permanacendo com o executor do contrato, que no caso é o minerador responsável pelo bloco de transações no qual o contrato estava inserido.
 
 \begin{figure}[!ht]
     \caption{\label{fig:outofgas}Processo quando o contrato fica sem \emph{gas} para continuar sua execução.}
@@ -817,7 +817,7 @@ A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistema
 
 \centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{\href{https://sia.tech/}{SIA}} & \textbf{\href{https://storj.io/}{STORJ}} & \textbf{\href{https://ipfs.io/}{IPFS}} & \textbf{\href{https://datproject.org/}{DAT}} & \textbf{\href{https://www.scuttlebutt.nz/}{SSB}} \\ \hline
 Usuário controla onde o dado é armazenado & X &  &  &  &  &  \\ \hline
-Dado pode ser visualizado em um navagador tradicional & X &  &  & X &  &  \\ \hline
+Dado pode ser visualizado em um navegador tradicional & X &  &  & X &  &  \\ \hline
 Dado é lido/escrito & X &  &  &  & X & X \\ \hline
 Dado pode ser deletado & X &  &  &  & X & X \\ \hline
 Dado pode ser listado & X & X & X &  & X & X \\ \hline
@@ -1019,7 +1019,7 @@ Embora a palavra ação possa ser entendida como uma atitude ativa é importante
 
 A partir da definição da ação humana entende-se que um indivíduo sempre buscará um estado de melhor satisfação ou menor inquietude, porém, isso não significa que suas ações se concretizarão da forma que foi esperada, já que pode haver informações desconhecidas ao indivíduo, fatores externos a seu controle, ou alterações significativas no ambiente que o faça avaliar as ações realizadas de forma diferente, o que pode lhe provocar arrependimento.
 
-Caso não houvesse o desconhecido, ou a possibilidade de erro nas ações tomadas pelo índividuo, poderia se concluir que não haveria escolhas a serem feitas, já que uma escolha implica uma tomada de risco, em um balanceamento entre vantagens e desvantagens.
+Caso não houvesse o desconhecido, ou a possibilidade de erro nas ações tomadas pelo indivíduo, poderia se concluir que não haveria escolhas a serem feitas, já que uma escolha implica uma tomada de risco, em um balanceamento entre vantagens e desvantagens.
 
 Todas as coisas que estão casualmente conectadas com a satisfação das necessidades humanas são definidas como *coisa útil*, e quando essas coisas são utilizadas para satisfazerem as necessidades humanas as chamamos de *bens* \cite[p 52]{menger}. Segundo \citeauthoronline{menger} para uma coisa adquirir as características de um bem deve-se ser preenchido simultaneamente os seguintes pré-requisitos:
 
@@ -1537,7 +1537,7 @@ A *Holochain* embora aparente ser uma tecnologia promissora, ainda se encontra e
 
 Durante o processo de aprendizagem da tecnologia, houve uma grande dificuldade em utilizar o *Rust*, que tem uma sintaxe e lógica particular e que é fortemente baseada no uso de macros\footnote{\emph{macro} tem origem na palavra \emph{macroinstruction} (instrução macro) e é um \emph{pattern} (padrão) de programação que transforma uma sequência de entrada em uma sequência pré-definida de saída. Macros podem ser usados para criar tarefas menos repetitivas através da representação de complicadas sequências de comandos ou dados de entrada \cite{macro}.}, que embora reduzam a quantidade de *boilerplate code*\footnote{\emph{boilerplate code} no contexto de programação se refere a seções de código que devem ser incluídas em muitos lugares com pouca ou nenhuma alteração \cite{boilerplate}.} tornam o processo de aprendizagem e entendimento sobre a tecnologia muito mais complexo e custoso. O anexo \ref{lst:holochain} contém um trecho do código que foi implementado na fase de experimentação da *Holochain*, e serve de exemplo de como a tecnologia não tem uma sintaxe fácil de ser compreendida para quem tem pouca familiaridade com a linguaguem *Rust*.
 
-Logo no ínicio da experimentação da tecnologia, foi constatado que o sistema de sincronização dos nós da rede *Holochain* estava com uma falha que impedia a propagação de informação na rede \cite{issueholo}. Com esse problema, um nó da aplicação *Holochain* só poderia ser inicializado em um computador utilizando uma rede local em modo de desenvolvimento e o que impedia que o projeto pudesse ser utilizado para a implementação dos casos de uso previstos.
+Logo no início da experimentação da tecnologia, foi constatado que o sistema de sincronização dos nós da rede *Holochain* estava com uma falha que impedia a propagação de informação na rede \cite{issueholo}. Com esse problema, um nó da aplicação *Holochain* só poderia ser inicializado em um computador utilizando uma rede local em modo de desenvolvimento e o que impedia que o projeto pudesse ser utilizado para a implementação dos casos de uso previstos.
 
 Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
 
@@ -1821,7 +1821,7 @@ Resultado: desenvolvimento multiplataforma máximo (3/3).
 
 O *Ethereum* teve uma pontuação final de 6 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:ethereum}, o que representa um resultado mediano. Embora o *Ethereum* não tenha ido mal em nenhum critério específico, há algumas dificuldades de utilização da tecnologia, como a escolha da linguagem, e principalmente a dificuldade que um usuário têm em utilizar aplicações *Ethereum* que impossibilitam a tecnologia de se tornar um competidor de peso contra as aplicações tradicionais.
 
-Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* (decentralized applications - aplicações descentralizadas), e contando com uma comunidade muito maior do que qualquer outra tecnologia descentralizada baseada em *blockchain* e com suporte à criação de aplicações descentralizadas, que ainda assim não consegue despontar uma tecnologia descentralizada que substitua aplicações tradicionais. Ainda há um longo caminho a percorrer até lá.
+Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* (decentralised applications - aplicações descentralizadas), e contando com uma comunidade muito maior do que qualquer outra tecnologia descentralizada baseada em *blockchain* e com suporte à criação de aplicações descentralizadas, que ainda assim não consegue despontar uma tecnologia descentralizada que substitua aplicações tradicionais. Ainda há um longo caminho a percorrer até lá.
 
 \begin{table}[H]
 \caption{\label{tab:res:ethereum}Ethereum: resultado final.}
