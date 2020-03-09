@@ -252,7 +252,7 @@ A mensagem *D\textsubscript{A}(M)* deverá ser guardada para servir como prova d
 
 Utilizando essa técnica se consegue averiguar a qualquer momento se um indivíduo assinou ou não um documento digital.
 
-Além de identificar a autoria do documento também é importante armazenar a data e horário de criação ou modificação do documento, e \citeauthoronline{timestamp} para resolver esse problema sugeriram que o *hash* do arquivo deveria ser concatenado com o horário e data do registro e só então ser assinado com a chave *D* do autor do registro. Com isso, apenas com um *hash* pequeno poderia se registrar um documento com as informações de quando ele foi criado ou modificado e quem é o autor do documento.
+Além de identificar a autoria do documento também é importante armazenar a data e horário de criação ou modificação do documento, e \citeauthoronline{timestamp} para resolver esse problema sugeriram que o *hash* do arquivo deveria ser concatenado com o horário e data do registro e só então ser assinado com a chave *D* do autor do registro. Com isso, apenas com um *hash* pequeno poder-se-ia registrar um documento com as informações de quando ele foi criado ou modificado e quem é o autor do documento.
 
 Ainda assim, é necessário confiar em um agente central (Bob), que poderia facilmente ser corrompido por Carlos sem que Alice conseguisse provar a fraude. \citeauthoronline{timestamp} propuseram uma solução denominada *confiança distribuída*.
 
@@ -815,7 +815,7 @@ A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistema
 \begin{tabular}{m{0.42\linewidth}|c|c|c|c|c|c}
 \hline
 
-\centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{\href{https://sia.tech/}{SIA}} & \textbf{\href{https://storj.io/}{STORJ}} & \textbf{\href{https://ipfs.io/}{IPFS}} & \textbf{\href{https://datproject.org/}{DAT}} & \textbf{\href{https://www.scuttlebutt.nz/}{SSB}} \\ \hline
+\centering \textbf{Funcionalidades} & \textbf{Gaia} & \textbf{\href{https://sia.tech/}{SIA}}\footnotemark & \textbf{\href{https://storj.io/}{STORJ}}\footnotemark & \textbf{\href{https://ipfs.io/}{IPFS}}\footnotemark & \textbf{\href{https://datproject.org/}{DAT}}\footnotemark & \textbf{\href{https://www.scuttlebutt.nz/}{SSB}}\footnotemark \\ \hline
 Usuário controla onde o dado é armazenado & X &  &  &  &  &  \\ \hline
 Dado pode ser visualizado em um navegador tradicional & X &  &  & X &  &  \\ \hline
 Dado é lido/escrito & X &  &  &  & X & X \\ \hline
@@ -834,11 +834,22 @@ Os dados são endereçados ao conteúdo &  & X & X & X & X & X \\ \hline
 \legend{Fonte: \citeonline{blockstackgaia}}
 \end{table}
 
+\addtocounter{footnote}{-4}
+\footnotetext{\emph{SIA}: \url{https://sia.tech/}}
+\addtocounter{footnote}{1}
+\footnotetext{\emph{STORJ}: \url{https://storj.io/}}
+\addtocounter{footnote}{1}
+\footnotetext{\emph{IPFS}: \url{https://ipfs.io}}
+\addtocounter{footnote}{1}
+\footnotetext{\emph{DAT}: \url{https://datproject.org/}}
+\addtocounter{footnote}{1}
+\footnotetext{\emph{SSB}: \url{https://www.scuttlebutt.nz/}}
+
 Por conta das características do sistema de armazenamento do Gaia (tab. \ref{tab:gaia}), ele se apresenta como sendo uma solução muito mais próxima das necessidades que uma aplicação *web* tradicional possui atualmente, sendo mais atrativo e familiar para desenvolvedores *web*.
 
 A *Blockstack* além de prover toda essa infraestrutura também provê SDKs (*Software Development Kit* - Kit de Desenvolvimento de *Software* ) para as plataformas *iOS*, *Android*, *Web* e para *React Native* (aplicações híbridas), que facilitam todo esse processo de comunicação entre as três camadas da *Blockstack* e também faz por padrão procedimentos de criptografia, gerenciamento de *tokens* de acesso e chaves privadas.
 
-Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo lema com os dizers: *Can't be evil* (Não consegue ser mau) (fig: \ref{fig:dontevil}), que serve como crítica a grandes corporações como a Google (que possuia o lema *Dont be evil* - Não seja mau) que embora tenham sido concebidas com filosofias que tinham como propósito criar um mundo melhor, acabaram tomando um rumo duvidoso em que é difícil negar que estão explorando de forma indevida os dados coletados de seus usuários.
+Através dessa infraestrutura e sua filosofia, a *Blockstack* inaugurou um novo lema com os dizeres: *Can't be evil* (Não consegue ser mau) (fig: \ref{fig:dontevil}), que serve como crítica a grandes corporações como a Google (que possuia o lema *Dont be evil* - Não seja mau) que embora tenham sido concebidas com filosofias que tinham como propósito criar um mundo melhor, acabaram tomando um rumo duvidoso em que é difícil negar que estão explorando de forma indevida os dados coletados de seus usuários.
 
 \begin{figure}[htbp]
     \caption{\label{fig:dontevil}Placa publicitária da Blockstack com seu lema.}
@@ -876,7 +887,7 @@ O usuário detém a propriedade das suas informações e pode a qualquer momento
 
 ### Holochain
 
-A *Holochain* é uma alternativa a *blockchain* que ao invés de compartilhar todos os dados de forma idêntica para todos os nós da rede, distribui os dados de uma aplicação de forma aleatória entre os nós criando um número de cópias suficientemente grande de forma a garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
+A *Holochain* é uma alternativa a *blockchain* que, ao invés de compartilhar todos os dados de forma idêntica para todos os nós da rede, distribui os dados de uma aplicação de forma aleatória entre os nós criando um número de cópias suficientemente grande de forma a garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
 Por não ter que replicar os dados para todos os nós da rede, a *Holochain* possui uma maior escalabilidade em comparação a aplicações descentralizadas que se utilizam da *blockchain* \citeauthoronline{holo}.
 
@@ -977,7 +988,7 @@ Para que a comunicação entre os nós seja possível, a *Holochain* utiliza uma
   \legend{Fonte: \citeonline{holobasics}.}
 \end{figure}
 
-Para garantir que o dado pertence ao nó correspondente e também para garantir que o dado não foi adulterado, sempre que uma instância do *hApp* cria um registro, ele assina eletrônicamente o registro público com sua chave privada, ele armazena-o internamente e também o compartilha com a rede, conforme mostrado na figura \ref{fig:regholo}.
+Para garantir que o dado pertence ao nó correspondente e também para garantir que o dado não foi adulterado, sempre que uma instância do *hApp* cria um registro, ele assina eletronicamente o registro público com sua chave privada, ele armazena-o internamente e também o compartilha com a rede, conforme mostrado na figura \ref{fig:regholo}.
 
 \begin{figure}[!ht]
     \caption{\label{fig:regholo}Processo de registro de dados públicos na \emph{Holochain}.}
@@ -1019,7 +1030,7 @@ Embora a palavra ação possa ser entendida como uma atitude ativa é importante
 
 A partir da definição da ação humana entende-se que um indivíduo sempre buscará um estado de melhor satisfação ou menor inquietude, porém, isso não significa que suas ações se concretizarão da forma que foi esperada, já que pode haver informações desconhecidas ao indivíduo, fatores externos a seu controle, ou alterações significativas no ambiente que o faça avaliar as ações realizadas de forma diferente, o que pode lhe provocar arrependimento.
 
-Caso não houvesse o desconhecido, ou a possibilidade de erro nas ações tomadas pelo indivíduo, poderia se concluir que não haveria escolhas a serem feitas, já que uma escolha implica uma tomada de risco, em um balanceamento entre vantagens e desvantagens.
+Caso não houvesse o desconhecido, ou a possibilidade de erro nas ações tomadas pelo indivíduo, poder-se-ia concluir que não haveria escolhas a serem feitas, já que uma escolha implica uma tomada de risco, em um balanceamento entre vantagens e desvantagens.
 
 Todas as coisas que estão casualmente conectadas com a satisfação das necessidades humanas são definidas como *coisa útil*, e quando essas coisas são utilizadas para satisfazerem as necessidades humanas as chamamos de *bens* \cite[p 52]{menger}. Segundo \citeauthoronline{menger} para uma coisa adquirir as características de um bem deve-se ser preenchido simultaneamente os seguintes pré-requisitos:
 
@@ -1078,7 +1089,7 @@ A escala de valores pode ser aplicada a quantos bens forem necessários, sendo o
 
 Assim que as condições, as necessidades, os desejos, ou a percepção do indivíduo forem alterados, a escala também poderá será alterada. E é a partir desse entendimento que passamos a compreender como um indivíduo decide o que trocará em uma transação comercial.
 
-E observando a lei da utilidade marginal chegamos a mesma conclusão que \citeauthoronline{condillac} \cite[p 85]{condillac} que disse que é falsa a afirmação de que em uma transação comercial um ator troca um bem por outro de igual valor, pelo contrário, cada um dos envolvidos na transação comercial troca um bem de menor valor por outro bem de maior valor. Se os bens possuíssem o mesmo valor, não haveria necessidade de realizar a troca, e uma troca de um bem de maior valor por um de menor valor é injustificável quando feita de forma voluntária.
+E observando a lei da utilidade marginal chegamos a mesma conclusão que \citeauthoronline{condillac} \cite[p 85]{condillac} que disse que é falsa a afirmação de que em uma transação comercial um ator troca um bem por outro de igual valor. Pelo contrário, cada um dos envolvidos na transação comercial troca um bem de menor valor por outro bem de maior valor. Se os bens possuíssem o mesmo valor, não haveria necessidade de realizar a troca, e uma troca de um bem de maior valor por um de menor valor é injustificável quando feita de forma voluntária.
 
 Mesmo quando um bem é dado gratuitamente ocorre uma troca de valores em que o individuo que abre mão daquele bem se sente em uma situação de maior satisfação do que se tivesse mantido o bem para si. Isso novamente explicita o caráter subjetivo e individual do valor de cada bem. Os mesmos bens podem ser posicionados em ordens diferentes por dois atores, já que cada um dos atores empregará os bens conforme seus objetivos individuais.
 
@@ -1156,11 +1167,11 @@ E como a teoria do livre mercado parte da premissa da vontade individual e conse
 
 Não obstante, o livre mercado, mesmo impedido de ocorrer em sua plenitude pelos governos, ainda assim prevalece em contextos onde os olhos do leviatã (como assim nomeou Hobbes, a organização social do estado) não conseguem alcançar, sendo denominado pelo governo como comércio informal. Ou seja, as leis naturais operam mesmo em ambientes altamente controláveis, justamente por ser natural aos indivíduos.
 
-Porém, o comércio informal acontece em proporção pequenas, embora ao ser aglomerado atinge proporcões enormes, como apontou a pesquisa do IBOPE encomendada pela CNI (Confederação Nacional da Indústria) em 2015, em que 75% dos participantes respondentes afirmaram que compram de ambulantes ou lojas informais \cite{informal}.
+Porém, o comércio informal acontece em proporção pequenas, embora ao ser aglomerado atinge proporções enormes, como apontou a pesquisa do IBOPE encomendada pela CNI (Confederação Nacional da Indústria) em 2015, em que 75% dos participantes respondentes afirmaram que compram de ambulantes ou lojas informais \cite{informal}.
 
 Em ambientes virtuais ele existe principalmente na chamada \emph{deep web} (Internet profunda), porém está indisponível para cidadãos comuns e é frequentemente combatido pelos governos sempre que cresce em tamanho, como aconteceu com o \emph{e-commerce} mais famoso da \emph{deep web}, o \emph{Silk Road}, que embora usasse diversos sistemas de segurança, como a rede anônima TOR (\emph{The Onion Route}) e criptomoedas como \emph{Bitcoin}, teve sua operação encerrada em 2011 depois que o FBI (\emph{Federal Bureau of Investigation} - Departamento Federal de Investigação) utilizou de meios questionáveis e extensivo poder estatal para encontrar seu criador e condená-lo a uma pena equivalente a duas vidas e 40 anos de prisão por crimes não violentos \cite{silk, ross}.
 
-Porém, cidadãos comuns que desejem apenas realizar trocas comerciais comuns, sem ter de reportá-las ao governo ou sem ter que pagar os impostos relacionados, não possuem alternativas seguras ou convenientes de realizarem o comércio informal eletrônico, com exceção de fóruns específicos e aplicações que se limitam a produtos usados, e que mesmo assim, podem ser rastreados facilmente através de transações bancárias e pagamantos realizados através de operadoras de cartão de crédito.
+Porém, cidadãos comuns que desejem apenas realizar trocas comerciais comuns, sem ter de reportá-las ao governo ou sem ter que pagar os impostos relacionados, não possuem alternativas seguras ou convenientes de realizarem o comércio informal eletrônico, com exceção de fóruns específicos e aplicações que se limitam a produtos usados, e que mesmo assim, podem ser rastreados facilmente através de transações bancárias e pagamentos realizados através de operadoras de cartão de crédito.
 
 Soluções como o \emph{Bitcoin} surgiram para prover alternativas que não passem pelo controle governamental ou qualquer outro controle central. Embora existam argumentos que tentem criminalizar o uso fim dessas tecnologias, todos esses argumentos se baseiam na ideia de que o provável criminoso deve ser condenado antes de cometer um crime, um claro desrespeito ao direito individual e um exercício de futorologia mesclado com ideias utilitarias.
 
@@ -1168,7 +1179,7 @@ O livre mercado é quase impraticável, pelo menos em proporções significativa
 
 ### Arbitragem no livre mercado
 
-Ao realizar trocas comercias, há sempre a possibilidade de surgir disputas e desacordos entre as partes envolvidas, mesmo quando as partes envolvidas não desejam iniciar o uso da força uma sobre a outra. Esse conflito pode ocorrer por questões envolvendo o cumprimento de um contrato ou acordo, ou da contestação sobre qualquer fator envolvido na transação, ou mesmo quando há a tentativa de uma parte enganar ou lesar a outra, agindo de má fé. As possibilidades para haver tal conflito entre as duas partes são inúmeras, e independete de quais sejam as razões, a disputa poderia chegar a um ponto em que se tornasse inviável de ser resolvida somente através da negociação direta entre as partes.
+Ao realizar trocas comerciais, há sempre a possibilidade de surgir disputas e desacordos entre as partes envolvidas, mesmo quando as partes envolvidas não desejam iniciar o uso da força uma sobre a outra. Esse conflito pode ocorrer por questões envolvendo o cumprimento de um contrato ou acordo, ou da contestação sobre qualquer fator envolvido na transação, ou mesmo quando há a tentativa de uma parte enganar ou lesar a outra, agindo de má fé. As possibilidades para haver tal conflito entre as duas partes são inúmeras, e independente de quais sejam as razões, a disputa poderia chegar a um ponto em que se tornasse inviável de ser resolvida somente através da negociação direta entre as partes.
 
 Se nenhum mecanismo para resolver esse tipo de problema dentro de uma sociedade existisse, tais disputas poderiam apenas ser resolvidas através do uso da força, havendo assim o abandono do uso da razão -- o único meio satisfatório de comunicação entre as pessoas. Nesse caso, essa sociedade desintegrar-se-ia em conflitos, e colapsaria à medida em que as relações humanas se tornassem perigosas demais para serem toleradas \cite[p. 65]{marketbook}.
 
@@ -1176,9 +1187,9 @@ Em um ambiente regulado por governos (e por consequência, em um mercado não-li
 
 Em um livre mercado, a disputa pode ser resolvida por um árbitro escolhido por ambas as partes, antes da iniciação da transação ou do fechamento do contrato. Esse árbitro deve ser concordado por ambas as partes, exatamente como a própria transação não pode ocorrer sem o consentimento de ambas as partes, a escolha do árbitro também precisa ser concordada por ambas as partes, levando a uma negociação que pode chegar a conclusão de que não existe um árbitro que ambas as partes confiem (o que culminaria no não prosseguimento na negociação), ou na conclusão de que existe ao menos um árbitro que ambas as partes confiem e achem justo, concordando os dois a confiarem qualquer disputa posterior que venha a ocorrer a ser decidida pelo árbitro.
 
-Um árbitro em um livre mercado, sabe que ele deve ser tão escrúpuloso, honesto, justo e imparcial quanto possível, caso contrário, ele mesmo terá sua reputação manchada e consequentemente não terá mais nenhum caso a julgar, sendo ostracizado pelo mercado. Um árbitro, portanto, teria todo o interesse em prover o melhor serviço possível, já que depende disso para sua própria sobrevivência, enquanto que o árbitro estatal depende de força política \cite[p. 67]{marketbook}.
+Um árbitro em um livre mercado, sabe que ele deve ser tão escrupuloso, honesto, justo e imparcial quanto possível, caso contrário, ele mesmo terá sua reputação manchada e consequentemente não terá mais nenhum caso a julgar, sendo ostracizado pelo mercado. Um árbitro, portanto, teria todo o interesse em prover o melhor serviço possível, já que depende disso para sua própria sobrevivência, enquanto que o árbitro estatal depende de força política \cite[p. 67]{marketbook}.
 
-Embora existam muitas particularidas sobre a utilização de arbitragem em um livre mercado, no meio digital, utilizando o conceito de contratos inteligentes (ver \ref{subsec:smartcontract}). Além de contratos inteligentes, também pode-se criar mecanismos que proporcionem que usuários antes de realizarem uma transação, possam escolher outro usuário da plataforma para ser o árbitro. O ideal é que os árbitros sejam pagos, para gerar incentivos financeiros para a execução de um bom trabalho de arbitragem, e também que haja uma forma de avaliar tais árbitros para gerar incentivos sociais que premiem os melhores árbitros e ostracizem mals árbitros.
+Embora existam muitas particularidades sobre a utilização de arbitragem em um livre mercado, no meio digital, utilizando o conceito de contratos inteligentes (ver \ref{subsec:smartcontract}). Além de contratos inteligentes, também pode-se criar mecanismos que proporcionem que usuários antes de realizarem uma transação, possam escolher outro usuário da plataforma para ser o árbitro. O ideal é que os árbitros sejam pagos, para gerar incentivos financeiros para a execução de um bom trabalho de arbitragem, e também que haja uma forma de avaliar tais árbitros para gerar incentivos sociais que premiem os melhores árbitros e ostracizem mals árbitros.
 
 A arbitragem também pode ser implementada de forma mais simplória em sistemas criptográficos através do uso de sistemas de assinatura eletrônica que utilizem-se de *threshold cryptography* (criptografia de limiar em tradução livre), como por exemplo, carteiras multi-assinadas.
 
@@ -1200,7 +1211,7 @@ O projeto a ser desenvolvido, com o nome inicial de *Free the Market* (Liberte o
 
 É importante lembrar que o projeto é um protótipo e que embora pudesse ter uma extensa lista de funcionalidades, será abordado as funcionalidades básicas que consigam simular as dificuldades e particularidades do desenvolvimento de aplicações descentralizadas.
 
-Portanto, os requísitos de alto nível do projeto *Free the Market* são:
+Portanto, os requisitos de alto nível do projeto *Free the Market* são:
 
 - ser uma aplicação que possa ser acessada por qualquer navegador moderno, não sendo necessária a instalação de nenhum *software* adicional pelo usuário
 - ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
@@ -1296,13 +1307,13 @@ Durante o desenvolvimento deste trabalho, particulamente perto de sua conclusão
 
 ### O OpenBazaar
 
-O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratorna de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americando \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
+O *\href{https://openbazaar.org/}{OpenBazaar}* surgiu a partir de um *hackathon* (maratona de programação) realizado em Toronto no ano de 2013 como um projeto chamado de *DarkMarket* que tinha como objetivo criar uma resposta a remoção do *Silk Road* pelo governo federal americano \cite{darkmarket}. Sendo uma evolução ao *Silk Road* o projeto visava eliminar a grande fraqueza que o *Silk Road* possuía e que permitiu sua derrubada, o ponto único de falha.
 
 Ao criar um livre mercado baseado em tecnologias descentralizadas, o *DarkMarket* se propunha a ser uma rede de nós conectados em que cada usuário criaria sua própria página *html* e a disponiblizaria para os demais nós da rede. Assim, seria possível anunciar produtos e quando houvesse interesse seria enviado uma ordem de compra, ambos vendedor e comprador escolheriam um outro nó da rede como árbitro, e então seria criado uma carteira *Bitcoin* que necessitaria de duas de três assinaturas para o dinheiro na carteira ser movimentado. Uma proposta muito semelhante a que foi concebida para este trabalho.
 
 Após vencer a maratona de programação e receber como prêmio o valor de 20 mil dólares o projeto foi reformulado, passando a ter o nome atual e a ser desenvolvido por uma equipe maior de desenvolvimento \cite{darkmarketrebranded}. O projeto desde o príncipio foi disponiblizado com o código aberto através do *GitHub* e mantém seu desenvolvimento até hoje.
 
-A última versão do *OpenBazar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
+A última versão do *OpenBazaar* conta com uma aplicação móvel chamada *\href{https://openbazaar.org/}{Haven} que embora utilize a mesma rede do *OpenBazaar* e execute o servidor do *OpenBazaar*, possui um cliente diferente, que ao contrário da versão *desktop* do *OpenBazaar*, não é de código aberto.
 
 O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
 
@@ -1315,7 +1326,7 @@ O *OpenBazaar* possui como principais funcionalidades: \cite{openbazaar}
 - Bate-papo em tempo real: o vendedor e comprador conseguem se comunicar em tempo real através do sistema de bate-papo da aplicação;
 - Gerencimento de ordem: o vendedor e comprador conseguem acompanhar todo o processo da transação, desde a venda, passando pelo transporte até a confirmação da entrega do produto.
 
-Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualqeur outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
+Todas essas funcionalidades são providas através de tecnologias descentralizadas que garantem que o usuário está sobre controle de seus dados e que não há um ponto único de falha que faça com que o governo ou qualquer outra organização central derrubem o serviço. O suporte a rede TOR e a configuração de diferentes servidores permite que sejam criados servidores privados, secretos e que operam sem o conhecimento do público geral ou dos próprios criadores do *OpenBazaar*, garantindo anonimato e segurança para que a rede nunca saia do ar enquanto houver utilizadores.
 
 O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
 
@@ -1716,7 +1727,7 @@ Desenvolvimento multiplataforma          & Máximo                      & 3     
 
 Houve um outro problema ao se utilizar o indexador \emph{Radiks}, que apresentou problemas relacionados a utilização das chaves públicas e privadas, havendo a perca dessas chaves ou a impossibilidade de descriptografar arquivos. Para contornar esse problema foi necessário um amplo estudo do código fonte da biblioteca, e a alteração da mesma, sendo utilizado na versão final do projeto a versão modificada do Radiks, que pode ser acessada em: \url{https://github.com/vital-edu/radiks}.
 
-A a estrutura de documentos do projeto pode ser visualizada na figura \ref{fig:structure}.
+A estrutura de documentos do projeto pode ser visualizada na figura \ref{fig:structure}.
 
 \begin{figure}[htbp]
     \caption{\label{fig:structure}Estrutura de código da aplicação.}
