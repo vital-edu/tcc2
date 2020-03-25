@@ -602,7 +602,7 @@ Analisando essas mesmas tecnologias na \citeauthoronline{appco}, temos 421 aplic
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:dapp}\emph{dApps} registradas na plataforma \citeauthoronline{appco} por tecnologia \emph{blockchain}.}
+\caption{\label{tab:dapp}\emph{dApps} registradas na plataforma \citeauthoronline{dapp} por tecnologia \emph{blockchain}.}
 \begin{tabular}{cc}
 \hline
 \textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
@@ -625,7 +625,7 @@ Pegar quantidade de items: document.getElementsByClassName('main-sec')[0].getEle
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:appco}\emph{dApps} registradas na plataforma \citeauthoronline{dapp} por tecnologia \emph{blockchain}.}
+\caption{\label{tab:appco}\emph{dApps} registradas na plataforma \citeauthoronline{appco} por tecnologia \emph{blockchain}.}
 \begin{tabular}{cc}
 \hline
 \textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
@@ -637,7 +637,7 @@ Tron                & 16                       \\
 0x relays           & 15                       \\
 Mobius              & 12                       \\ \hline
 \end{tabular}
-\legend{Fonte: \citeonline{appco}.}
+\legend{Fonte: \citeonline{dapp}.}
 \end{table}
 
 É importante salientar que ambas plataformas indexadoras usam um processo manual de cadastro de *dApps*, que possui os seguintes problemas:
@@ -902,7 +902,7 @@ A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer 
   \begin{center}
   \includegraphics[width=1.0\textwidth]{imagens/holoblock.png}
   \end{center}
-  \legend{Fonte: \citeauthor{holobasics}.}
+  \legend{Fonte: \citeonline{holobasics}.}
 \end{figure}
 
 De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes que mantém uma *blockchain* própria que serve como fonte primária de suas transações, e que são pareadas e verificadas em um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
@@ -1330,7 +1330,7 @@ Todas essas funcionalidades são providas através de tecnologias descentralizad
 
 O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
 
-- Um protocolo de busca chamado OBIP: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
+- Um protocolo de busca: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
 - Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
 - Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
 - Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
@@ -1339,7 +1339,7 @@ O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamen
 
 # Critérios de avaliação
 
-Para que seja possível comparar as tecnologias descentralizadas escolhidas, é nencessário definir critérios de comparação. No entanto, como as tecnologias descentralizadas ganharam notoriedade recentemente, não foi encontrado na literatura, métodos de comparação entre diferentes tecnologias descentralizadas.
+Para que seja possível comparar as tecnologias descentralizadas escolhidas, é necessário definir critérios de comparação. No entanto, como as tecnologias descentralizadas ganharam notoriedade recentemente, não foi encontrado na literatura, métodos de comparação entre diferentes tecnologias descentralizadas.
 
 Por conta disso, este trabalho, utiliza-se de uma análise empírica e exploratória, que não pode ser generalizada para outros contextos ou servir como conclusão de que tecnologia X é melhor ou superior a tecnologia Y.
 
@@ -1552,7 +1552,7 @@ Logo no início da experimentação da tecnologia, foi constatado que o sistema 
 
 Todo o código desenvolvido pelo autor encontra-se nos seguintes repositórios do *GitHub*:
 
-- [Experimento Holochain](https://github.com/vital-edu/cc_tuts_gui)
+- [Experimento Holochain](https://github.com/vital-edu/cc_tuts)
 - [Interface Gráfica em JavaScript do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_gui)
 - [Interface Gráfica em Flutter do Experimento em Holochain](https://github.com/vital-edu/cc_tuts_flutter_web)
 
@@ -1794,7 +1794,7 @@ Resultado: possui documentação abrangente (2/2).
 
 ### Tamanho da comunidade
 
-A comunidade da *Ethereum* é bem grande para o nicho de aplicações descentralizadas, possuindo 454 colaboradores no repositório principal do projeto \cite(goethrepo) e 337 colaboradores no repositório da *Solidity* \cite{solidityrepo}.
+A comunidade da *Ethereum* é bem grande para o nicho de aplicações descentralizadas, possuindo 454 colaboradores no repositório principal do projeto \cite{goethrepo} e 337 colaboradores no repositório da *Solidity* \cite{solidityrepo}.
 
 Resultado: comunidade média (2/3).
 
