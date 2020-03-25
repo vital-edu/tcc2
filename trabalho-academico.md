@@ -116,7 +116,7 @@ Nessas classificações, um sistema judicial estatal, bem como a polícia e empr
 
 O desenvolvimento de aplicações descentralizadas que utilizam contratos inteligentes permitiu o surgimento de um novo modelo organizacional, o DAO (*Decentralised Autonomous Organization* - Organização Autônoma descentralizada)\cite{ethereum}, em que todas as regras de funcionamento da empresa, a divisão de lucros e como são feitas as decisões de negócio da empresa, são codificadas em contratos inteligentes utilizando *blockchain*. Isso garante que se crie empresas com regras claras, imutáveis, e que haja a garantia de como a empresa vai funcionar durante toda sua existência.
 
-Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeauthor{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
+Embora, aplicações descentralizadas sejam interessantes em contextos que envolvem a desconfiança em agentes centrais, é importante salientar que existem problemas intrínsecos relacionados ao uso de *blockchain* na construção de aplicações. Como \citeonline{safesmart} constataram, o desenvolvimento de contratos inteligentes embora se assemelhe ao desenvolvimento tradicional, possui preocupações muito maiores quanto a segurança, além de não ser nem um pouco trivial.
 
 De forma simplista, um código de contrato inteligente é invocado sempre que recebe uma mensagem, podendo haver vários pontos de entrada, sendo cada ponto de entrada uma função do código a ser executada. Ou seja, uma mensagem recebida é como a chamada de uma função, que deve retornar um resultado para quem enviou a mensagem após a mensagem ser processada pela função do contrato.
 
@@ -127,7 +127,7 @@ A figura \ref{fig:ethcode} mostra um exemplo simplório de contrato inteligente 
   \begin{center}
   \includegraphics[width=1.0\textwidth]{imagens/ethcode.png}
   \end{center}
-  \legend{Fonte: \citeauthor{safesmart}}
+  \legend{Fonte: \citeonline{safesmart}}
 \end{figure}
 
 Em última análise, criar um contrato inteligente é um processo meticuloso e que envolve codificar máquinas de estado muitas vezes complexas, em que qualquer omissão de um estado de transição ou negligência em conferir o estado atual, pode causar problemas drásticos \cite{safesmart}, principalmente por serem, a princípio, imutáveis e envolverem contextos atrelados a manipulação de recursos financeiros.
@@ -570,7 +570,7 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralised applications* - aplicações descentralizadas).
 
-A plataforma de indexação de aplicações descentralizadas \citeonline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
+A plataforma de indexação de aplicações descentralizadas \citeonline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a Tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
 
 \begin{table}[htbp]
 \centering
@@ -590,7 +590,7 @@ Volume (USD)             & 10,9B          & 2,37B             & 4,98B        & 2
 \legend{Fonte: \citeonline{dapp}.}
 \end{table}
 
-E ao analisar os dados atuais da plataforma \citeonline{dapp}, foi elaborada a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeonline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
+E ao analisar os dados atuais da plataforma \citeonline{dapp}, foi elaborada a Tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeonline{appco}, foi elaborada a Tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
 
 Diante dos números apresentados, podemos notar que tanto o número de criptomoedas existentes quanto o número de *dApps* existentes, possuem divergências consideráveis de acordo com a fonte consultada, o que reduz a confiabilidade dos dados e prejudica uma análise mais metodológica.
 
@@ -654,7 +654,7 @@ Para selecionar as 2 tecnologias proeminentes foram utilizados os dados extraíd
 1. \label{criterio:1}Obter a média da quantidade de *dApps* registradas;
 2. \label{criterio:2}Selecionar as duas tecnologias com maior valor médio de *dApps* registradas.
 
-Seguindo o critério \ref{criterio:1}, foi obtido os resultados presentes na tabela \ref{tab:resultados-dapps}:
+Seguindo o critério \ref{criterio:1}, foi obtido os resultados presentes na Tabela \ref{tab:resultados-dapps}:
 
 \begin{table}[htbp]
 \centering
@@ -702,7 +702,7 @@ Para eliminar essas fraquezas, a *Ethereum* implementou uma *blockchain* *turing
 
 E foi justamente o surgimento da *Ethereum* que culminou na adoção e propagação de aplicações descentralizadas e inspirou outras *blockchains* a implementarem soluções concorrentes com o mesmo propósito.
 
-Além das propriedades já citadas, a *Ethereum* também possui uma moeda embutida em sua *blockchain* chamada de *ether* e que possui um sistema próprio de denominações que pode ser visto na tabela \ref{tab:ethgentle}.
+Além das propriedades já citadas, a *Ethereum* também possui uma moeda embutida em sua *blockchain* chamada de *ether* e que possui um sistema próprio de denominações que pode ser visto na Tabela \ref{tab:ethgentle}.
 
 \begin{table}[htbp]
 \caption{\label{tab:ethgentle}Denominações da moeda \emph{Ether}.}
@@ -807,7 +807,7 @@ Esse sistema híbrido de armazenamento, que combina a infraestrutura atual da *I
 
 É possível também que o usuário forneça a lista de provedores de armazenamento, podendo criar uma rede mais distribuída dos dados, já que o armazenamento de um arquivo em apenas um lugar não configura um sistema distribuído e portanto não possui os benefícios de tolerância a falha, múltiplas cópias de segurança, etc. Com isso, a responsabilidade de definir o nível de distribuição do arquivo fica a cargo da aplicação construída em cima da *Blockstack* \cite{blockstackgaia}.
 
-A tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistemas de armazenamento descentralizados da atualidade.
+A Tabela \ref{tab:gaia} traz um comparativo entre o Gaia e os principais sistemas de armazenamento descentralizados da atualidade.
 
 \begin{table}[htbp]
 \centering
@@ -905,7 +905,7 @@ A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer 
   \legend{Fonte: \citeonline{holobasics}.}
 \end{figure}
 
-De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes que mantém uma *blockchain* própria que serve como fonte primária de suas transações, e que são pareadas e verificadas em um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
+De forma resumida, uma aplicação *Holochain* consiste de uma rede de agentes que mantém uma *blockchain* própria que serve como fonte primária de suas transações, e que são pareadas e verificadas em um espaço compartilhado que implementa uma *DHT* (*Distributed Hash Table* - Tabela *hash* distribuída) validadora, *sharded*\footnote{Um \emph{shard} (fragmento) de banco de dados é uma partição horizontal de dados que ocorre com a criação de diversas instâncias fisicamente separadas e distribuídas do banco de dados. Um particionamento horizontal é a separação das informações de um banco de dados em linhas, permitindo que cada instância tenha apenas um subconjunto de todos os elementos guardados na base de dados \cite{shard}.}(fragmentada), monotônica\footnote{\emph{dedução monotônica} é a propriedade que vários sistemas lógicos possuem de a partir de uma hipótese, poder ser livremente adicionadas novas suposições, sem que haja uma violação da hipótese original. De forma simplificada, significa dizer que a incorporação de um novo conhecimento não pode reduzir o conjunto do que é conhecido}, em que vários nós garantam que os dados armazenados na *DHT* obedeceram as regras de validação, além de fornecer a informação sobre a origem do dado \cite{holo2}.
 
 Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuidar daquele registro, que ao receber o dado do estado de transição, informa aos seus nós vizinhos. Cada um dos nós vizinhos ao receber essa informação do nó responsável pelo dado, deve validá-lo utilizando a lógica da aplicação. Assim, há diversas cópias, igualmente validadas e como a rede é criada para ter os dados uniformemente distribuídos, há a garantia de que o dado seja rapidamente encontrado\footnote{A \meph{DHT} utilizada pela \emph{Holochain} é baseada na \emph{Kademlia}\cite{kademlia}, e o processo de encontrar um nó vizinho é exemplificado pela figura \ref{fig:kademlia}, em que cada nó armazena um subconjunto limitado de nós, chamados de nós vizinhos, e quando precisam encontrar um nó que não seja seu vizinho, é feito uma busca de vizinhos de vizinhos. A parte superior da figura mostra a quantidade de vizinhos que foram perguntados antes de se encontrar o nó desejado.}, mesmo quando o nó original do dado estiver indisponível \cite{holo2}.
 
@@ -919,7 +919,7 @@ Incluir um novo registro na *DHT* envolve encontrar um nó responsável por cuid
 
 Diferentemente da aplicações descentralizadas construídas utilizando tecnologia *blockchain*, a *Holochain* não sofre de problema de escalabilidade, se tornando cada vez mais eficiente a medida que o número de nós aumenta, já que a rede divide o trabalho entre os nós. Por conta dessas caracterísitcas, a *Holochain* se mostra uma excelente opção para aplicações descentralizadas que são utilizadas em grande escala e que não precisam estar com seus dados o tempo todo sincronizados.
 
-A tabela \ref{tab:holo} traz uma breve comparação sobre algumas características da *Holochain* em relação a tecnologias *blockchain*.
+A Tabela \ref{tab:holo} traz uma breve comparação sobre algumas características da *Holochain* em relação a tecnologias *blockchain*.
 
 \begin{table}[htbp]
 \caption{\label{tab:holo}Comparativo entre \emph{blockchain} e \emph{Holochain}.}
@@ -1217,7 +1217,7 @@ Portanto, os requisitos de alto nível do projeto *Free the Market* são:
 - ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
 - ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de arbitragem de uma terceira pessoa, denominado árbitro.
 
-Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados riscos técnicos na realização do projeto expressos na tabela \ref{tab:riscos}.
+Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados riscos técnicos na realização do projeto expressos na Tabela \ref{tab:riscos}.
 
 \begin{table}[htbp]
 \centering
@@ -1333,7 +1333,7 @@ O *OpenBazaar* tem uma arquitetura com quatro componentes principais:
 - Um protocolo de busca: para garantir que produtos sejam encontrados na rede, é necessário haver a descoberta de nós e para que esse processo seja o mais descentralizado possível, o *OpenBazaar* criou um protocolo que garante que qualquer serviço que o implemente possa ser utilizado como um provedor de busca utilizável dentro da aplicação do *OpenBazaar*;
 - Contrato inteligente utilizando a rede *Ethereum*: os contratos inteligentes são utilizados no *OpenBazaar* sempre que uma compra requer um moderador. Neste caso, é criado um contrato inteligente na rede *Ethereum* que determina a exata execução do que foi acordado, grantindo segurança nas operações;
 - Rede de nós: a rede de nó utiliza o protocolo *Kademila*, que funciona de forma semelhante ao que já foi específicado na rede da *Holochain*.
-- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na tabela \ref{tab:gaia}.
+- Armazenamento de dados: o banco de dados utilizado pelo *OpenBazaar* é o *IFPS*, e um comparativo sobre o mesmo em relação ao protocolo *Gaia* está presente na Tabela \ref{tab:gaia}.
 
 O *OpenBazaar* é uma solução completa, robusta e que já está em funcionamento a mais de 5 anos. Porém, isso não invalida a criação de concorrentes, mesmo que possuam a mesma motivação e utilizem de tecnologias semelhates. A descoberta do *OpenBazaar* foi uma grata surpresa, e comprova que o problema motivador deste trabalho é relevante e tem muito o que avançar. Embora ele tenha sido descoberto tarde demais, foi interessante ver que algumas das soluções encontradas neste trabalho, também foram utilizadas no *OpenBazaar*.
 
@@ -1365,11 +1365,11 @@ Difícil        & houveram problemas no processo de instalação que necessitara
 
 ## Utilização de tecnologias populares
 
-Aplicações descentralizadas são um fenômeno recente e que por esse motivo possui uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
+Aplicações descentralizadas são um fenômeno recente e que por esse motivo possuem uma comunidade de desenvolvedores limitada em número, por isso é relevante que as tecnologias descentralizadas utilizem linguagens de programação e padrões arquiteturais semelhantes ou familiares para desenvolvedores, caso contrário, não se poderá aproveitar os desenvolvedores atuais ou se tornará demasiadamente custoso capacitar novos desenvolvedores para utilizarem tais tecnologias.
 
 \begin{table}[htpb]
 \centering
-\caption{\label{tab:crit:2}Utiliza tecnologia popular.}
+\caption{\label{tab:crit:2}Utilização de tecnologia popular.}
 \begin{tabular}{ccc}
 \toprule
 \multicolumn{1}{c}{\textbf{Resposta}} & \multicolumn{1}{c}{\textbf{Descrição}}                                                                                    & \textbf{Valor numérico} \\ \midrule
@@ -1378,7 +1378,7 @@ Não                              & não utiliza tecnologias populares          
 \end{tabular}
 \end{table}
 
-Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse} e reproduzido na tabela \ref{tab:toplanguages}.
+Para definir se a tecnologia utilizada é popular, será considerado se a tecnologia tem suporte a uma das 10 linguagens de programação mais populares segundo o relatório de 2019 publicado pelo GitHub \cite{octoverse} e reproduzido na Tabela \ref{tab:toplanguages}.
 
 \begin{table}[htpb]
 \centering
@@ -1406,12 +1406,12 @@ Mais importante do que ser uma tecnologia disruptiva, é ter uma documentação 
 
 \begin{table}[H]
 \centering
-\caption{\label{tab:crit:3}Possui documentação abrangente.}
+\caption{\label{tab:crit:3}Documentação abrangente.}
 \begin{tabular}{ccc}
 \toprule
 \textbf{Resposta} & \textbf{Descrição} & \textbf{Valor numérico} \\ \midrule
-Sim                                    & a documentação é abrange e contém exemplos de uso               & 2                       \\
-Não                                    & a documentção não é abrange ou não contém exemplos de uso            & -2                       \\ \bottomrule
+Sim                                    & documentação abrange com exemplos de uso               & 2                       \\
+Não                                    & documentção não abrange ou sem exemplos de uso            & -2                       \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -1431,13 +1431,13 @@ Pequena                             & número de contribuídores no GitHub $<$ 1
 \end{tabular}
 \end{table}
 
-## Produtividade
+## Produtividade no Desenvolvimento dos Casos de Uso
 
 Embora a produtividade seja um aspecto difícil de ser mensurado por ser relativo ao desenvolvedor, ao ambiente e a outros fatores de díficil mensuração, é importante ter ao menos uma escala de comparação, mesmo que objetivamente imprecisa, entre diferentes tecnologias, para que se tenha uma noção aproximada da facilida de se implementar nobas funcionalidades à aplicação.
 
 \begin{table}[H]
 \centering
-\caption{\label{tab:crit:5}Produtividade.}
+\caption{\label{tab:crit:5}Produtividade no Desenvolvimento dos Casos de Uso.}
 \begin{tabular}{ccc}
 \toprule
 \textbf{Nível} & \textbf{Descrição} & \textbf{Valor numérico}   \\ \midrule
@@ -1526,13 +1526,13 @@ Resultado: fácil de instalar (3/3).
 
 ### Utilização de tecnologias populares
 
-A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
+A *Holochain* embora tenha uma biblioteca *JavaScript* que auxilia na comunicação com a parte principal da aplicação, requer que toda a lógica da aplicação seja desenvolvida utilizando a linguagem *Rust* que não está na lista de linguagens mais populares (veja Tabela \ref{tab:toplanguages}).
 
 Resultado: não utiliza tecnologias populares (-2/1).
 
 ### Documentação abrangente
 
-A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Applications*\footnote{\emph{hApp (holo Application)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação à nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
+A documentação da *Holochain* é extensa, explicativa e contém alguns exemplos de utilização. Há uma documentação de alto nível explicando os conceitos da tecnologia, uma documentação que ensina os primeiros passos no desenvolvimento de *hApps* (*holo Applications*\footnote{\emph{hApp (holo Application)} é o nome dado às aplicações desenvolvidas utilizando a tecnologia \emph{Holochain}.}), e também uma documentação a nivel de *API*, que serve para entender cada uma das funções e módulos do *HDK* (*Holochain Developer Kit*\footnote{\emph{HDK (Holochain Development Kit - Kit de Desenvolvimento Holochain)} é o equivalente ao \emph{SDK (\emph{Software Development Kit} - Kit de Desenvolvimento de Software)}. O objetivo de tais kits de desenvolvimento é abstrair camadas de baixo nível de funcionamento de uma aplicação para facilitar o processo de desenvolvimento.}) e como utilizá-los.
 
 Resultado: possui documentação abrangente (2/2).
 
@@ -1542,7 +1542,7 @@ A *Holochain* possui em seu repositório principal um total de 48 contribuídore
 
 Resultado: comunidade pequena (1/3).
 
-### Produtividade
+### Produtividade no Desenvolvimento dos Casos de Uso
 
 A *Holochain* embora aparente ser uma tecnologia promissora, ainda se encontra em um estágio imaturo, apresentando limitações em suas funcionalidades e tendo muitas funcionalidades ainda em processo de implementação e maturação.
 
@@ -1566,7 +1566,7 @@ Resultado: difícil de utilizar pelos usuário (-2/3).
 
 ### Desenvolvimento multiplataforma
 
-A *Holochain* embora tenha uma bilbioteca de comunicação feita para *JavaScript* e que portanto pode ser utilizada em *frameworks* de desenvolvimento multiplataforma, tais como o *React Native*, possui a limitação de obrigar que o usuário final tenha que decidir em confiar em um servidor que tenha a aplicação sendo executada e que armazene as informações do usuário, ou que ele execute uma instância própria da aplicação em seu próprio servidor, conectando a sua aplicação ao servidor.
+A *Holochain* embora tenha uma bilbioteca de comunicação feita para *JavaScript* e que portanto pode ser utilizada em *frameworks* de desenvolvimento multiplataforma, tais como o *React Native*, possui a limitação de obrigar o usuário final a decidir em confiar em um servidor que tenha a aplicação sendo executada e que armazene as informações do usuário, ou que ele execute uma instância própria da aplicação em seu próprio servidor, conectando a sua aplicação ao servidor.
 
 Para que uma aplicação móvel seja implementada, é portanto que o desenvolvedor pense em alternativas para contornar as limitações da tecnologia ou que o usuário tenha um conhecimento muito acima ao de um usuário comum. Por conta disso, pode-se considerar que a *Holochain* apenas tem suporte oficial a aplicações *web*.
 
@@ -1574,7 +1574,7 @@ Resultado: desenvolvimento multiplataforma limitado à web (1/3).
 
 ### Pontuação final
 
-A *Holochain* teve uma pontuação final de -2 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+A *Holochain* teve uma pontuação final de -2 pontos utilizando os critérios estabelecidos, como pode ser visto na Tabela \ref{tab:res:holo}, o que representa um péssimo resultado, principalmente pela incapacidade de implementar os casos de uso planejados. A *Holochain*, portanto, segundo os critérios avaliados e no presente momento, não se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
 
 \begin{table}[htpb]
 \caption{\label{tab:res:holo}Holochain: resultado final.}
@@ -1583,10 +1583,10 @@ A *Holochain* teve uma pontuação final de -2 pontos utilizando os critérios e
 
 \textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
 Facilidade de instalação e configuração  & Fácil                       & 3                           \\
-Utiliza tecnologia popular               & Não                         & -2                          \\
-Possui documentação abrangente           & Sim                         & 2                           \\
+Utilização tecnologia popular               & Não                         & -2                          \\
+Documentação abrangente           & Sim                         & 2                           \\
 Tamanho da comunidade                    & Pequena                     & 1                           \\
-Produtividade                            & Insuficiente                & -5                          \\
+Produtividade no Desenvolvimento                            & Insuficiente                & -5                          \\
 Facilidade de utilização pelos usuários  & Difícil                     & -2                          \\
 Desenvolvimento multiplataforma          & Limitado à web              & 1                           \\ \hline
 \textbf{TOTAL}                           &                             & \textbf{-2}                 \\ \hline
@@ -1598,7 +1598,7 @@ Desenvolvimento multiplataforma          & Limitado à web              & 1     
 
 ### Facilidade de instalação e configuração
 
-Para usar o *Blockstack* é necessário ter instalado o *Node.js*, que pode ser facilmente instalado em qualquer computador. Com o *Node.js* instalado, basta utilizar um dos comandos da tabela \ref{tab:blockstackinstall} dentro da pasta aonde se deseja inicializar o projeto, conforme a preferência de *framework* JavaScript que se deseja usar.
+Para usar o *Blockstack* é necessário ter instalado o *Node.js*, que pode ser facilmente instalado em qualquer computador. Com o *Node.js* instalado, basta utilizar um dos comandos da Tabela \ref{tab:blockstackinstall} dentro da pasta aonde se deseja inicializar o projeto, conforme a preferência de *framework* JavaScript que se deseja usar.
 
 \begin{table}[htpb]
 \centering
@@ -1620,7 +1620,7 @@ Resultado: fácil de instalar (3/3).
 
 ### Utilização de tecnologias populares
 
-Para desenvolver uma aplicação utilizando a tecnologia *Blockstack*, é necessário apenas utilizar a biblioteca *JavaScript* da *Blockstack* não sendo necessário configurar um servidor próprio, já que toda a comunicação com a *blockchain* da *Blockstack* ocorre por meio dessa biblioteca. Com essa biblioteca, pode-se implementar uma aplicação utilizando apenas a linguagem *JavaScript*, a linguagem mais popular atualmente (veja tabela \ref{tab:toplanguages}).
+Para desenvolver uma aplicação utilizando a tecnologia *Blockstack*, é necessário apenas utilizar a biblioteca *JavaScript* da *Blockstack* não sendo necessário configurar um servidor próprio, já que toda a comunicação com a *blockchain* da *Blockstack* ocorre por meio dessa biblioteca. Com essa biblioteca, pode-se implementar uma aplicação utilizando apenas a linguagem *JavaScript*, a linguagem mais popular atualmente (veja Tabela \ref{tab:toplanguages}).
 
 Resultado: utiliza tecnologias populares (1/1).
 
@@ -1632,13 +1632,13 @@ Resultado: possui documentação abrangente (2/2).
 
 ### Tamanho da comunidade
 
-A *Blockstack* possui em seu repositório principal um total de 45 contribuídores \cite{blockrepo}.
+A *Blockstack* possui em seu repositório principal um total de 45 contribuidores \cite{blockrepo}.
 
 Resultado: comunidade pequena (1/3).
 
-### Produtividade
+### Produtividade no Desenvolvimento dos Casos de Uso
 
-Após a criação de uma aplicação de experimentação que obteve êxito, foi iniciado o desenvolvimento dos casos de uso propostos. Durante o desenvolvimento dos casos de uso foram encontrados alguns problemas, principalmente em relação a utilização dos algoritmos de criptografia necessários para permitir que fosse criado uma carteira de criptomoeda que precisasse da assinatura de dois dos três envolvidos para ser movimentada. Parte da solução para a criação dessa carteira multi-assinada pode ser vista no trecho de código \ref{lst:multisig}:
+Durante o desenvolvimento dos casos de uso definidos foram encontrados alguns problemas técnicos, principalmente em relação a utilização dos algoritmos de criptografia necessários para permitir que fosse criado uma carteira de criptomoeda que precisasse da assinatura de dois dos três envolvidos para ser movimentada. Parte da solução para a criação dessa carteira multi-assinada pode ser vista no trecho de código \ref{lst:multisig}:
 
 \begin{lstlisting}[caption={Parte do código responsável por criar carteira \emph{multisig}},label={lst:multisig},language=Java]
 // decrypt redeem script
@@ -1703,7 +1703,7 @@ Resultado: desenvolvimento multiplataforma máximo (3/3).
 
 ### Pontuação final
 
-A *Blockstack* teve uma pontuação final de 18 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:blockstack}, o que representa um excelente resultado, não ganhando nota máxima apenas por conta de sua comunidade ainda pequena. A *Blockstack*, portanto, segundo os critérios avaliados e no presente momento, se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
+A *Blockstack* teve uma pontuação final de 18 pontos utilizando os critérios estabelecidos, como pode ser visto na Tabela \ref{tab:res:blockstack}, o que representa um excelente resultado, não ganhando nota máxima apenas por conta de sua comunidade ainda pequena. A *Blockstack*, portanto, segundo os critérios avaliados e no presente momento, se apresenta como uma tecnologia capaz de servir as necessidades de uma aplicação descentralizada.
 
 \begin{table}[htpb]
 \caption{\label{tab:res:blockstack}Blockstack: resultado final.}
@@ -1712,10 +1712,10 @@ A *Blockstack* teve uma pontuação final de 18 pontos utilizando os critérios 
 
 \textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
 Facilidade de instalação e configuração  & Fácil                       & 3                           \\
-Utiliza tecnologia popular               & Sim                         & 1                           \\
-Possui documentação abrangente           & Sim                         & 2                           \\
+Utilização tecnologia popular               & Sim                         & 1                           \\
+Documentação abrangente           & Sim                         & 2                           \\
 Tamanho da comunidade                    & Pequena                     & 1                           \\
-Produtividade                            & Alta                        & 5                           \\
+Produtividade no Desenvolvimento                            & Alta                        & 5                           \\
 Facilidade de utilização pelos usuários  & Fácil                       & 3                           \\
 Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
 \textbf{TOTAL}                           &                             & \textbf{18}                 \\ \hline
@@ -1782,7 +1782,7 @@ Resultado: dificuldade média de instalação (2/3).
 
 Para desenvolver uma aplicação utilizando a tecnologia *Ethereum* pode-se utilizar a biblioteca *JavaScript* da *Solidity* para realizar a integração entre os contratos inteligentes e código *JavaScript*, porém, os contratos inteligentes utilizam uma linguagem própria de mesmo nome (*Solidity*), que embora seja muito parecida com *JavaScript*, dificulta ligeiramente o desenvolvimento e requer uma constante busca na documentação da linguagem para descobrir recursos especiais e necessários para a criação dos contratos inteligentes.
 
-Como a *Solidity* é a parte principal no desenvolvimento de aplicações descentralizadas *Ethereum*, iremos considerá-la como a linguagem a ser avaliada neste critério, estando ela fora da lista de linguagens mais populares (veja tabela \ref{tab:toplanguages}).
+Como a *Solidity* é a parte principal no desenvolvimento de aplicações descentralizadas *Ethereum*, iremos considerá-la como a linguagem a ser avaliada neste critério, estando ela fora da lista de linguagens mais populares (veja Tabela \ref{tab:toplanguages}).
 
 Resultado: não utiliza tecnologias populares (-2/1).
 
@@ -1798,11 +1798,11 @@ A comunidade da *Ethereum* é bem grande para o nicho de aplicações descentral
 
 Resultado: comunidade média (2/3).
 
-### Produtividade
+### Produtividade no Desenvolvimento dos Casos de Uso
 
-Desenvolver uma aplicação para *Ethereum* requer conhecimento sobre contratos inteligentes, que possuem um nível de dificuldade grande comparado a *softwares* tradicionais, principalmente porque qualquer falha na lógica do contrato inteligente pode acarretar em dinheiro em um estado de limbo, sem possibilidade de ser recuperado.
+Desenvolver uma aplicação utilizando a tecnologia *Ethereum* requer conhecimento sobre contratos inteligentes, que possuem um nível de dificuldade grande comparado a *softwares* tradicionais, principalmente porque qualquer falha na lógica do contrato inteligente pode acarretar na perca definitiva de dinheiro.
 
-Entender como um contrato funciona e as particularidas da linguagem *Solidity* foram a maior dificuldade encontradas, porém havia um grande número de materiais de estudo e de outros projetos que poderiam ser usados como material de consulta, mas as várias diferentes versões da linguagem *Solidity* e suas mudanças bruscas de *API* tornaram difícil a tarefa de incorporar código de outras aplicações, sendo necessário a recorrer a documentação várias vezes para conseguir visualizar quais funcionalidades foram alteradas ou depreciadas e quais foram os seus substitutos.
+Entender como um contrato funciona e as particularidades da linguagem *Solidity* foram a maior dificuldade encontradas, porém havia um grande número de materiais de estudo e de outros projetos que poderiam ser usados como material de consulta, mas as várias diferentes versões da linguagem *Solidity* e suas mudanças bruscas de *API* tornaram difícil a tarefa de incorporar código de outras aplicações, sendo necessário a recorrer a documentação várias vezes para conseguir visualizar quais funcionalidades foram alteradas ou depreciadas e quais foram os seus substitutos.
 
 O contrato inteligente que possibilite a implementação dos 3 casos de uso propostos neste projeto foram difíceis de serem implementados, e embora tenham sido concluídos, não houve tempo para criar as interfaces gráficas apropriadas nem foi possível testar o contrato em máquinas diferentes devido à falta de tempo.
 
@@ -1830,7 +1830,7 @@ Resultado: desenvolvimento multiplataforma máximo (3/3).
 
 ### Pontuação final
 
-O *Ethereum* teve uma pontuação final de 6 pontos utilizando os critérios estabelecidos, como pode ser visto na tabela \ref{tab:res:ethereum}, o que representa um resultado mediano. Embora o *Ethereum* não tenha ido mal em nenhum critério específico, há algumas dificuldades de utilização da tecnologia, como a escolha da linguagem, e principalmente a dificuldade que um usuário têm em utilizar aplicações *Ethereum* que impossibilitam a tecnologia de se tornar um competidor de peso contra as aplicações tradicionais.
+O *Ethereum* teve uma pontuação final de 6 pontos utilizando os critérios estabelecidos, como pode ser visto na Tabela \ref{tab:res:ethereum}, o que representa um resultado mediano. Embora o *Ethereum* não tenha ido mal em nenhum critério específico, há algumas dificuldades de utilização da tecnologia, como a escolha da linguagem, e principalmente a dificuldade que um usuário têm em utilizar aplicações *Ethereum* que impossibilitam a tecnologia de se tornar um competidor de peso contra as aplicações tradicionais.
 
 Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* (decentralised applications - aplicações descentralizadas), e contando com uma comunidade muito maior do que qualquer outra tecnologia descentralizada baseada em *blockchain* e com suporte à criação de aplicações descentralizadas, que ainda assim não consegue despontar uma tecnologia descentralizada que substitua aplicações tradicionais. Ainda há um longo caminho a percorrer até lá.
 
@@ -1841,10 +1841,10 @@ Não é por menos que mesmo sendo o projeto que inaugurou o conceito de *dApps* 
 
 \textbf{Critério}                        & \textbf{Resultado nominal}  & \textbf{Resultado numérico} \\ \hline
 Facilidade de instalação e configuração  & Média                       & 2                           \\
-Utiliza tecnologia popular               & Não                         & -2                           \\
-Possui documentação abrangente           & Sim                         & 2                           \\
+Utilização tecnologia popular               & Não                         & -2                           \\
+Documentação abrangente           & Sim                         & 2                           \\
 Tamanho da comunidade                    & Média                       & 2                           \\
-Produtividade                            & Parcial                     & 1                           \\
+Produtividade no Desenvolvimento                            & Parcial                     & 1                           \\
 Facilidade de utilização pelos usuários  & Fácil                       & -2                           \\
 Desenvolvimento multiplataforma          & Máximo                      & 3                           \\ \hline
 \textbf{TOTAL}                           &                             & \textbf{6}                 \\ \hline
@@ -1873,18 +1873,16 @@ Ethereum            & 6    \\ \hline
 
 # Discussões finais
 
-O presente trabalho apresentou um estudo teórico sobre tecnologias descentralizadas, o mercado livre e como que tecnologias descentralizadas poderiam possibilitar a criação de uma plataforma de comércio eletrônico baseada no livre mercado.
+O presente trabalho apresentou um estudo teórico e empírico sobre tecnologias descentralizadas, o mercado livre e como que tecnologias descentralizadas poderiam possibilitar a criação de uma plataforma de comércio eletrônico baseada no livre mercado.
 
 Após apresentar a teoria econômica que embasa o livre mercado e realizar um processo de seleção das tecnologias descentralizadas a serem estudadas, foi elaboraado um conjunto pequeno de casos de uso que poderiam ser utilizados para testarem a maturidade de tecnologias descentralizadas na criação de aplicações que possam se equiparar a aplicações tradicionais.
 
-Em conjunto com os casos de uso definidos, foram estabelecidos outros seis critérios de comparação para serem utilizados nas três tecnologias selecionadas.
+Em conjunto com os casos de uso definidos, foram estabelecidos outros sete critérios de comparação para serem utilizados nas três tecnologias selecionadas.
 
-Após o desenvolvimento por cerca de vinte horas em cada uma das três tecnologias, cada uma delas foram avaliadas seguindo os critérios estabelecidos, chegando a conclusão de que a *Blockstack* apresenta-se como a única das tecnologias estudadas que teve um desempenho alto nos critérios avaliados.
-
-Mesmo assim, durante o desenvolvimento do projeto, muitos problemas foram encontrados para implementar os casos de uso especificados, demonstrando que não é um processo trivial a criação de aplicações descentralizadas e chegando a conclusão de que tais tecnologias não estão maduras o suficiente para serem usadas em grandes produtos ou serviços e muito menos para substituirem tecnologias tradicionais.
+Após o desenvolvimento por cerca de vinte horas em cada uma das três tecnologias, cada uma delas foram avaliadas seguindo os critérios estabelecidos, chegando a conclusão de que a *Blockstack* se destacou entre as tecnologias estudadas porém não apresentou maturidade suficiente, apresentando muitos problemas durante a implementação dos casos de uso especificados, demonstrando que não é um processo trivial a criação de aplicações descentralizadas e chegando a conclusão de que tais tecnologias não estão maduras o suficiente para serem usadas em grandes produtos ou serviços e muito menos para substituirem tecnologias tradicionais.
 
 Todo o processo de aprendizado e experimentação nessas tecnologias descentralizadas mostrou-se desafiador, havendo pouquíssimo conteúdo disponível e pouco suporte da comunidade, justamente por serem tecnologias inovadoras e que se mostraram ainda em estado inicial de desenvolvimento.
 
 Devido ao caráter experimental dessa pesquisa e o risco envolvido, não foi atingido o nível de maturidade de projeto esperado, nem mesmo foi possível realizar um comparativo detalhado e rigoroso sobre as diferentes tecnologias descentralizadas e a diferença de performance e usabilidade de tais tecnologias em relação a tecnologias convencionais, sendo recomendações de pesquisas futuras neste campo do conhecimento.
 
-Ainda assim, o potencial que tais tecnologias possuem em entregar segurança, privacidade e controle aos usuários é notavel e espera-se que esse novo paradigma da computação descentralizada alcance a grande massa de usuários e provoque mudanças significativas, e, que muitos dos conceitos apresentados neste trabalho, sejam de alguma forma absorvidos pelas aplicações atuais ou aprimorados para a criação de novos produtos e serviços digitais. Afinal, nota-se uma crescente preocupação na sociedade com questões de privacidade e abuso de poder, e tais ameaças a liberdade fazem valer os esforços despendidos no avanço da pesquisa sobre privacidade e no uso de tecnologias descentralizadas.
+Ainda assim, o potencial que tais tecnologias possuem é notavel e espera-se que esse novo paradigma da computação descentralizada alcance a grande massa de usuários e provoque mudanças significativas, e, que muitos dos conceitos apresentados neste trabalho, sejam de alguma forma absorvidos pelas aplicações atuais ou aprimorados para a criação de novos produtos e serviços digitais. Afinal, nota-se uma crescente preocupação na sociedade com questões de privacidade e abuso de poder, e tais ameaças a liberdade fazem valer os esforços despendidos no avanço da pesquisa sobre privacidade e no uso de tecnologias descentralizadas.
