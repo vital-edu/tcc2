@@ -1039,7 +1039,7 @@ Todas as coisas que estão casualmente conectadas com a satisfação das necessi
 3. Haver o conhecimento humano dessa causalidade;
 4. Haver controle suficiente sobre a coisa para usá-la para a satisfação dessa necessidade.
 
-Os bens que podem ser utilizados para satisfazer diretamente as necessidades humanas, como, por exemplo, uma pizza pronta para ser devorada, são classificados de *bem de primeira ordem* ou *bens de consumo*, já os bens que apenas servirão para consumo em algum ponto do futuro são classificados como *bens de ordem superior*, *fatores de produção* ou *bens de produção* \cite[p. 8]{rothbard}.
+Os bens que podem ser utilizados para satisfazer diretamente as necessidades humanas, como, por exemplo, uma pizza pronta para ser consumida, são classificados de *bem de primeira ordem* ou *bens de consumo*, já os bens que apenas servirão para consumo em algum ponto do futuro são classificados como *bens de ordem superior*, *fatores de produção* ou *bens de produção* \cite[p. 8]{rothbard}.
 
 Pelo fato de os bens de consumo serem escassos (se não o fossem, não seriam objetos da ação humana), é necessário que o indivíduo rearranje os elementos disponíveis em seu ambiente para produzir os bens de consumo que deseja. Esse processo de utilização de meios indiretos em cooperação com fatores de produção para gerar um bem de consumo que alcance o fim desejado pelo indivíduo é definido como *produção* \cite[p. 9]{rothbard}.
 
@@ -1163,7 +1163,7 @@ Essa inclusive é a premissa da democracia, que define políticos de acordo com 
 
 Parte-se do príncipio que o governo é condição \emph{sine qua non} (indispensável, essencial) para a existência da sociedade, e que o direito coletivo sobrepõe o individual, sendo todas essas visões incompatíveis com a teoria liberal dos direitos naturias a qual deriva os direitos das premissas factuais da inalienabilidade da vontade e, portanto, exclui desde o princípio a legítima auto-escravização \cite{critique}.
 
-E como a teoria do livre mercado parte da premissa da vontade individual e consensual de seus participantes, não faz sentido analisá-lo sob a perspectiva de uma corrente de pensamento anti-liberal e que desligetima o direito natural do indivíduo.
+E como a teoria do livre mercado parte da premissa da vontade individual e consensual de seus participantes, é conveniente analisá-lo sob a perspectiva de uma corrente de pensamento anti-liberal e que desligetima o direito natural do indivíduo.
 
 Não obstante, o livre mercado, mesmo impedido de ocorrer em sua plenitude pelos governos, ainda assim prevalece em contextos onde os olhos do leviatã (como assim nomeou Hobbes, a organização social do estado) não conseguem alcançar, sendo denominado pelo governo como comércio informal. Ou seja, as leis naturais operam mesmo em ambientes altamente controláveis, justamente por ser natural aos indivíduos.
 
@@ -1175,13 +1175,13 @@ Porém, cidadãos comuns que desejem apenas realizar trocas comerciais comuns, s
 
 Soluções como o \emph{Bitcoin} surgiram para prover alternativas que não passem pelo controle governamental ou qualquer outro controle central. Embora existam argumentos que tentem criminalizar o uso fim dessas tecnologias, todos esses argumentos se baseiam na ideia de que o provável criminoso deve ser condenado antes de cometer um crime, um claro desrespeito ao direito individual e um exercício de futorologia mesclado com ideias utilitarias.
 
-O livre mercado é quase impraticável, pelo menos em proporções significativas, no ambiente virtual, mas com o advento de tecnologias descentralizadas, tornou-se possível conceber tais ambientes e independente das motivações e do juízo de valor sobre o emprego da tecnologia, o uso da criptogragia aliado a descentralização é uma resposta contra qualquer controle central. As ferramentas estão sendo criadas, principalmente por existir demanda e justificativas éticas, e o livre mercado, sendo uma atividade tão importante na sociedade, é um excelente caso a ser estudado e aplicado em conjunto com as tecnologias descentralizadas e, portanto, é o candidato ideal para este estudo.
+O livre mercado é quase impraticável, pelo menos em proporções significativas, no ambiente virtual, mas com o advento de tecnologias descentralizadas, tornou-se possível conceber tais ambientes e independente das motivações e do juízo de valor sobre o emprego da tecnologia, o uso da criptogragia aliado a descentralização é uma boa resposta ao controle central. As ferramentas estão sendo criadas, principalmente por existir demanda e justificativas éticas, e o livre mercado, sendo uma atividade tão importante na sociedade, é um excelente caso a ser estudado e aplicado em conjunto com as tecnologias descentralizadas e, portanto, é o candidato ideal para este estudo.
 
 ### Arbitragem no livre mercado
 
 Ao realizar trocas comerciais, há sempre a possibilidade de surgir disputas e desacordos entre as partes envolvidas, mesmo quando as partes envolvidas não desejam iniciar o uso da força uma sobre a outra. Esse conflito pode ocorrer por questões envolvendo o cumprimento de um contrato ou acordo, ou da contestação sobre qualquer fator envolvido na transação, ou mesmo quando há a tentativa de uma parte enganar ou lesar a outra, agindo de má fé. As possibilidades para haver tal conflito entre as duas partes são inúmeras, e independente de quais sejam as razões, a disputa poderia chegar a um ponto em que se tornasse inviável de ser resolvida somente através da negociação direta entre as partes.
 
-Se nenhum mecanismo para resolver esse tipo de problema dentro de uma sociedade existisse, tais disputas poderiam apenas ser resolvidas através do uso da força, havendo assim o abandono do uso da razão -- o único meio satisfatório de comunicação entre as pessoas. Nesse caso, essa sociedade desintegrar-se-ia em conflitos, e colapsaria à medida em que as relações humanas se tornassem perigosas demais para serem toleradas \cite[p. 65]{marketbook}.
+Se não existisse nenhum mecanismo para resolver esse tipo de problema dentro de uma sociedade, tais disputas poderiam apenas ser resolvidas através do uso da força, havendo assim o abandono do uso da razão -- o único meio satisfatório de comunicação entre as pessoas. Nesse caso, essa sociedade desintegrar-se-ia em conflitos, e colapsaria à medida em que as relações humanas se tornassem perigosas demais para serem toleradas \cite[p. 65]{marketbook}.
 
 Em um ambiente regulado por governos (e por consequência, em um mercado não-livre), essa disputa seria resolvida pela corte designada pelo governo, muitas vezes contrariando o desejo de uma ou de todas as partes envolvidas na disputa, o que embora seja efetivo na resolução da disputa, pode levar ao descontentamento da parte perdedora, e ser considerada injusta. Um juíz estatal é sempre impelido a ser parcial, a favor do próprio estado (e por vezes, do governo), através do qual ele recebe seu poder e seu pagamento. \cite[p. 66]{marketbook}
 
@@ -1189,7 +1189,7 @@ Em um livre mercado, a disputa pode ser resolvida por um árbitro escolhido por 
 
 Um árbitro em um livre mercado, sabe que ele deve ser tão escrupuloso, honesto, justo e imparcial quanto possível, caso contrário, ele mesmo terá sua reputação manchada e consequentemente não terá mais nenhum caso a julgar, sendo ostracizado pelo mercado. Um árbitro, portanto, teria todo o interesse em prover o melhor serviço possível, já que depende disso para sua própria sobrevivência, enquanto que o árbitro estatal depende de força política \cite[p. 67]{marketbook}.
 
-Embora existam muitas particularidades sobre a utilização de arbitragem em um livre mercado, no meio digital, utilizando o conceito de contratos inteligentes (ver \ref{subsec:smartcontract}). Além de contratos inteligentes, também pode-se criar mecanismos que proporcionem que usuários antes de realizarem uma transação, possam escolher outro usuário da plataforma para ser o árbitro. O ideal é que os árbitros sejam pagos, para gerar incentivos financeiros para a execução de um bom trabalho de arbitragem, e também que haja uma forma de avaliar tais árbitros para gerar incentivos sociais que premiem os melhores árbitros e ostracizem mals árbitros.
+Embora existam muitas particularidades sobre a utilização de arbitragem em um livre mercado, no meio digital, utilizando o conceito de contratos inteligentes (ver \ref{subsec:smartcontract}). Além de contratos inteligentes, também pode-se criar mecanismos que proporcionem que usuários antes de realizarem uma transação, possam escolher outro usuário da plataforma para ser o árbitro. O ideal é que os árbitros sejam pagos, para gerar incentivos financeiros para a execução de um bom trabalho de arbitragem, e também que haja uma forma de avaliar tais árbitros para gerar incentivos sociais que premiem os melhores árbitros e ostracizem maus árbitros.
 
 A arbitragem também pode ser implementada de forma mais simplória em sistemas criptográficos através do uso de sistemas de assinatura eletrônica que utilizem-se de *threshold cryptography* (criptografia de limiar em tradução livre), como por exemplo, carteiras multi-assinadas.
 
@@ -1205,38 +1205,9 @@ No caso \ref{multisig:1}, a compra ocorreria de acordo com o combinado, e o dinh
 
 Essa é a forma mais simples de arbitragem, sendo que os agentes poderiam concordar em medidas diferentes, como por exemplo, o vendedor e comprador concordarem que o dinheiro deve ser transferido para uma carteira em posse somente do comprador. O importante é que ninguém consegue mover o dinheiro sozinho, tendo que haver consenso entre pelo menos dois dos três atores.
 
-## Definição da aplicação a ser desenvolvida
+## Definição dos casos de uso a serem desenvolvidos
 
-O projeto a ser desenvolvido, com o nome inicial de *Free the Market* (Liberte o Mercado) é uma aplicação *web* de comércio eletrônico construído utilizando tecnologias descentralizadas com o objetivo de verificar a viabilidade de utilização de tecnologias descentralizadas que consigam substituir de forma satisfatória tecnologias convencionais, removendo o problema de ponto único de falha, aumentando a privacidade dos usuários e a segurança dos dados manipulados pela aplicação.
-
-É importante lembrar que o projeto é um protótipo e que embora pudesse ter uma extensa lista de funcionalidades, será abordado as funcionalidades básicas que consigam simular as dificuldades e particularidades do desenvolvimento de aplicações descentralizadas.
-
-Portanto, os requisitos de alto nível do projeto *Free the Market* são:
-
-- ser uma aplicação que possa ser acessada por qualquer navegador moderno, não sendo necessária a instalação de nenhum *software* adicional pelo usuário
-- ser uma aplicação que utilize tecnologias descentralizadas baseadas em *blockchain* e redes *peer-to-peer*
-- ser uma aplicação capaz de fornecer um ambiente mínimo que possibilite a comercialização de mercadorias por duas pessoas com o auxilio de arbitragem de uma terceira pessoa, denominado árbitro.
-
-Por ser um projeto que envolve tecnologias emergentes, com baixa maturidade, foram identificados riscos técnicos na realização do projeto expressos na Tabela \ref{tab:riscos}.
-
-\begin{table}[htbp]
-\centering
-\caption{\label{tab:riscos}Riscos técnicos do projeto.}
-\begin{tabular}{c|m{0.2\linewidth}|c|c|m{0.3\linewidth}}
-\hline
-\centering
-\textbf{Risco} & \centering\textbf{Descrição} & \textbf{Probabilidade} & \textbf{Impacto} & \begin{center}\textbf{Ação}\end{center} \\ \hline
-
-RN1 & tecnologias escolhidas possuem \emph{bugs} que impeçam a implementação & Alta & Muito alto & buscar suporte dos mantenedores; encontrar alternativas; corrigir ou contornar \emph{bug}. \\ \hline
-RN2 & tecnologias escolhidas possuem pouca documentação  & Média & Médio & procurar aplicações de código aberto que utilizam a mesma tecnologia e estudá-las; buscar auxílio da comunidade; estudar código fonte da tecnologia. \\ \hline
-RN3 & tecnologias escolhidas possuem comunidade pequena ou pouco ativa & Alta & Médio & buscar tecnologias alternativas; estudar código fonte da tecnologia. \\ \hline
-RN4 & tecnologias escolhidas não são aderentes aos requisitos da aplicação & Baixa & Muito Alto & buscar tecnologias alternativas. \\ \hline
-\end{tabular}
-\end{table}
-
-Como o escopo de uma plataforma de comércio eletrônico é demasiadamente grande para ser coberto neste trabalho, foi estabelecido um escopo menor que deverá ser implementado nas tecnologias descentralizadas que serão comparadas neste trabalho. Este escopo inclui a parte do comércio eletrônico que é considerado pelo autor a mais importante de ser implementada de forma descentralizada, a parte de transação comercial.
-
-Foram definidos 3 casos de uso a serem implementados.
+Inicialmente foi idealizado o desenvolvimento de um projeto de comércio eletrônico baseado no livre mercado que utilizasse tecnologias descentralizadas, porém, como o escopo de uma plataforma de comércio eletrônico é demasiadamente grande para ser coberto neste trabalho, foi estabelecido um pequeno número de casos de uso referentes ao processo de transação envolvendo comprador, vendedor e árbitro, que pudessem ser implementados em até oito horas de trabalho:
 
 \phantomsection
 \label{usecase}
