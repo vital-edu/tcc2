@@ -8,7 +8,7 @@ A prensa de tipos móveis tornou a comunicação atemporal, através do registro
 
 Embora a *Internet* tenha tornado o acesso a informações mais fácil, amplo e dinâmico, ainda há um controle muito grande de agentes centrais, principalmente do governo, sobre o que um usuário pode fazer. A *Internet* no seu estágio inicial representava a liberdade de acesso a informação de forma livre e irrestrita, porém a cada ano novas leis e regulações governamentais ameaçam essa característica fundamental da *Internet* como o GDPR (*General Data Protection Regulation* - Regulação de Proteção de Dados Gerais), a ECPA (*Electric Communications Privacy Act* - Lei de Privacidade das Comunicações Elétricas), a Digital Millennium Copyright Act, a CFAA (*Computer Fraud And Abuse Act* - Lei de Abuso e Fraude de Computador), as leis antitruste, e várias outras regulações mais específicas.
 
-O presente trabalho não tem como objetivo esclarecer ou defender uma visão de livre mercado, porém, parte da premissa de que as liberdades individuais são naturais e absolutas, não necessitando de lei positivada para serem consideradas "certas". A discussão sobre o certo e o errado, quanto a criação e aplicação de leis, faz parte tanto do campo filosófico, no estudo sobre a ética (o estudo sobre o comportamento humano, refletindo sobre o que é o certo e o que é o errado), bem como do campo do direito, em que há um antagonismo entre o *jusnaturalismo* (visão jurídica de que a lei precede o homem, é universal, imutável e inviolável, devendo ser descoberta) e o *juspositivismo* (a visão de que a lei emana das autoridades que possuem o poder político de impô-las, modificá-las e re-interpretá-las a bel-prazer).
+O presente trabalho não tem como objetivo esclarecer ou defender uma visão de livre mercado, porém, parte da premissa de que as liberdades individuais são naturais e absolutas, não necessitando de lei positivada para serem consideradas "certas"\footnote{\citeonline[pp. 320-321]{property} define a propriedade privada através da ética argumentativa em que ao negar a propriedade privada, chega-se a uma contradição performática. \citeonline[pp. 325-330]{property} também aborda porque definições positivadas não são válidas.}. A discussão sobre o certo e o errado, quanto a criação e aplicação de leis, faz parte tanto do campo filosófico, no estudo sobre a ética (o estudo sobre o comportamento humano, refletindo sobre o que é o certo e o que é o errado \cite{ethics}), bem como do campo do direito, em que há um antagonismo entre o *jusnaturalismo* (visão jurídica de que a lei precede o homem, é universal, imutável e inviolável, devendo ser descoberta \cite{jusnaturalismo}) e o *juspositivismo* (a visão de que a lei é imposta à sociedade pelo estado, sendo definida pelo poder público por meio de elementos empíricos e mutáveis e que está em constante mutação \cite{jusnaturalismo}).
 
 Se nos atermos ao *juspositivismo*, não poderemos questionar se as leis são certas ou não, e assim, nenhuma discussão será frutífera, porém, se entendermos que existe um ideal de certo, podemos buscá-lo e questionar se a lei escrita (positivada) é de fato correta.
 
@@ -18,7 +18,7 @@ Nesse sentido, assim como a igreja detinha o poder sobre a produção textual e 
 
 Por conta dessa constante preocupação com o poder que agentes centrais detêm, e os dados que estão sob seu controle, tem aumentado o interesse na adoção de criptografias cada vez mais sofisticadas e de código aberto, e da adoção de outras tecnologias que tentem conter ou tornar nulo o poder estatal, ao menos no mundo digital, e tenta-se aumentar a capacidade das plataformas digitais de sobreviver à coerção de agentes centrais, e também criar alternativas para sistemas controlados atualmente pelo governo, como o sistema jurídico e financeiro, no mundo digital.
 
-Assim, a tecnologia tem evoluído para prover uma *Internet* cada vez mais resistente e livre, competindo com governos e empresas que não desejam que o usuário tenha total liberdade e responsabilidade sobre os seus atos digitais. E é neste contexto que está surgindo um novo paradigma na computação, o desenvolvimento de aplicações descentralizadas, que tentam solucionar problemas e preocupações como segurança da informação, garantia de confiabilidade no canal de comunicação, garantia de autenticidade dos dados, ponto único de falha, consenso de informação e, principalmente, tentam proteger uma rede de nós interligados de ataques vindos de agentes mal intencionados que tentem corromper, alterar, deturpar, atrapalhar ou destruir dados de uma rede de informação ou plataforma de serviços.
+Assim, a tecnologia tem evoluído para prover uma *Internet* cada vez mais resistente e livre, competindo com governos e empresas que não desejam que o usuário tenha total liberdade e responsabilidade sobre os seus atos digitais. E é neste contexto que está surgindo um novo paradigma na computação, o desenvolvimento de aplicações descentralizadas (ou simplesmente dApps - *decentralized applications*), que tentam solucionar problemas e preocupações como segurança da informação, garantia de confiabilidade no canal de comunicação, garantia de autenticidade dos dados, ponto único de falha, consenso de informação e, principalmente, tentam proteger uma rede de nós interligados de ataques vindos de agentes mal intencionados que tentem corromper, alterar, deturpar, atrapalhar ou destruir dados de uma rede de informação ou plataforma de serviços.
 
 Este trabalho apresenta um estudo sobre o estado atual das tecnologias descentralizadas no âmbito do desenvolvimento de aplicações focadas no usuário final e que possuam uma experiência de uso similar as aplicações centralizadas existentes atualmente.
 
@@ -52,11 +52,11 @@ Por fim, há um capítulo com as discussões finais em que estão condensadas as
 
 # Aplicações descentralizadas
 
-Este capítulo aborda os conceitos fundamentais das aplicações descentralizadas, suas características, tipos, os fundamentos teóricos por trás dessas tecnologias, suas limitações e por fim um breve estudo sobre as principais opções tecnológicas atuais no desenvolvimento de aplicações descentralizadas.
+Este capítulo aborda os conceitos fundamentais das aplicações descentralizadas (ou dApps - *decentralized applications*), suas características, tipos, os fundamentos teóricos por trás dessas tecnologias, suas limitações e por fim um breve estudo sobre as principais opções tecnológicas atuais no desenvolvimento de aplicações descentralizadas.
 
 ## Características das aplicações descentralizadas
 
-\citeauthoronline{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas réplicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
+\citeonline{raval} classifica as aplicações de *software* com base no seu nível de centralização (fig. \ref{fig:apptypes}): aplicações centralizadas (fig. \ref{fig:apptypes}.a), caracterizadas como aplicações fornecidas ou controladas por apenas um agente ou organização; aplicações distribuídas (fig. \ref{fig:apptypes}.b), definidas como aplicações que possuem diversas réplicas espalhadas geograficamente e que cooperam entre si para garantir consistência e disponibilidade de dados \cite{raval}; aplicações descentralizadas (fig. \ref{fig:apptypes}.c), em que cada nó opera de forma independente, autônoma e autossuficiente, e que portanto, necessita de um algoritmo de consenso para resolver disputas.
 
 \begin{figure}[htbp]
   \caption{\label{fig:apptypes}Tipos de aplicações de \emph{software} utilizando o diagrama de Paul Baran.}
@@ -66,13 +66,13 @@ Este capítulo aborda os conceitos fundamentais das aplicações descentralizada
   \legend{Fonte: \citeonline[p. 2]{baran}.}
 \end{figure}
 
-Essas classificações não são excludentes, sendo possível que uma aplicação seja ao mesmo tempo centralizada e distribuída, o que resolve problemas de disponibilidade, latência de rede, corrupção de dados, porém, não resolve problemas de ordens políticas, sejam eles internos ou externos. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades. Os problemas políticos têm potencial de afetarem o usuário final da aplicação ao alterarem o comportamento da aplicação, sua disponibilidade, ou mesmo o nível de segurança e privacidade dos dados dos usuários.
+Essas classificações não são excludentes, sendo possível que uma aplicação seja ao mesmo tempo centralizada e distribuída, o que resolve problemas de disponibilidade, latência de rede, corrupção de dados, porém, não resolve problemas de ordens políticas, sejam eles internos ou externos. Os problemas políticos internos remetem a decisões administrativas tomadas por sócios, conselho diretor, e funcionários do alto escalão da empresa. Já os problemas políticos externos remetem a interferências do governo ou outras entidades com poder coercitivo de impor suas vontades. Esses problemas políticos têm potencial de afetarem o usuário final da aplicação ao alterarem o comportamento da aplicação, sua disponibilidade, ou mesmo o nível de segurança e privacidade dos dados dos usuários.
 
 \citeonline{raval} propôs que para que uma aplicação seja considerada descentralizada, e portanto, imune à centralização de poder, ela deva possuir as seguintes características:
 
-1. Ter código aberto: para uma plataforma ser descentralizada, o código fonte da aplicação não pode estar à mercê de apenas um índivíduo ou grupo, e portanto deve estar publicamente disponível para qualquer usuário realizar a auditoria do código, impedindo que haja comportamentos maliciosos na aplicação ou que se desviem do seu propósito inicial. A disponibilização do código também permite que haja inúmeras cópias de segurança da aplicação e que qualquer um possa compilar e/ou executar a aplicação diretamente do código fonte, eliminando preocupações quanto a adulteração dos binários, que poderiam ser produzidos a partir de um outro código fonte (pemitindo a inclusão de brechas de segurança ou comportamentos maliciosos);
+1. Ter código aberto: para uma plataforma ser descentralizada, o código fonte da aplicação não pode estar à mercê de apenas um índivíduo ou grupo, e portanto deve estar publicamente disponível para qualquer usuário realizar a auditoria do código, reduzindo a possibilidade de haver comportamentos maliciosos na aplicação ou que se desviem do seu propósito inicial. A disponibilização do código também permite que haja inúmeras cópias de segurança da aplicação e que qualquer um possa compilar e/ou executar a aplicação diretamente do código fonte, eliminando preocupações quanto a adulteração dos binários, que poderiam ser produzidos a partir de um outro código fonte (pemitindo a inclusão de brechas de segurança ou comportamentos maliciosos);
 
-2. Possuir moeda interna: como não existe a propriedade definitiva da plataforma por ninguém, é preciso encontrar uma maneira de incentivar o desenvolvimento da plataforma por desenvolvedores e custear a infraestrutura da aplicação, e, para essa finalidade, normalmente são criados *tokens*\footnote{\emph{tokens}, segundo \citeonline{token}, são meios de trocas não reconhecidos por lei, emitidos por indivíduos privados ou empresas, e que são utilizados como se fossem dinheiro.} específicos para a plataforma que funcionam de forma similar a ações de empresas (títulos emitidos por sociedades anônimas), garantindo tanto poder de decisão sobre o rumo da empresa, bem como uma forma de captar investimento externo e premiar os fundadores quando ocorre a valorização financeira da organização.
+2. Possuir moeda interna: como não existe a propriedade definitiva da plataforma por ninguém, é preciso encontrar uma maneira de incentivar o desenvolvimento da plataforma por desenvolvedores e custear a infraestrutura da aplicação, e, para essa finalidade, normalmente são criados *tokens*\footnote{\emph{tokens}, segundo \citeonline{token}, são meios de trocas não reconhecidos por lei, emitidos por indivíduos privados ou empresas, e que são utilizados como se fossem dinheiro.} específicos para a plataforma que funcionam de forma similar a ações de empresas (títulos patrimoniais emitidos por sociedades anônimas), garantindo tanto poder de decisão sobre o rumo da empresa, bem como uma forma de captar investimento externo e premiar os fundadores quando ocorre a valorização financeira da organização.
 
 3. Usar um algoritmo de consenso descentralizado: é o algoritmo de consenso descentralizado (que resolva o *Problemas dos Generais Bizantinos*\footnote{\emph{problema dos generais bizantinos}, \citeonline{byzantine} formalizaram a história fictícia de um exército bizantino acampado ao redor de uma cidade inimiga em que o exército é composto por diversas divisões, cada uma comandada por um general, e em que a comunicação entre os generais só pode ocorrer por meio de troca de mensagens entre si. Nesse problema os generais leais do exército devem utilizar um algoritmo que garanta que (i) todos os generais leais irão adotar o mesmo plano de ação, e (ii) um grupo pequeno de traidores e conspiradores não pode conseguir que os generais leais adotem um plano de ação ruim.}) que permitirá que nós independentes com resultados conflitantes consigam convergir para um único resultado e assim possa-se garantir que a rede funcione sem chegar nunca a um estado permanente de impasse (*deadlock*).
 
@@ -97,14 +97,14 @@ Além das características acima descritas, as aplicações descentralizadas, se
 ### Contratos Inteligentes
 \label{subsec:smartcontract}
 
-Algumas das tecnologias descentralizadas, por serem utilizadas na construção de diferentes escopos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse sistema de regras de negócio, imutáveis e distribuídas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
+Algumas das tecnologias descentralizadas, por serem utilizadas na construção de diferentes tipos de aplicações, precisam ter um mecanismo de definição de regras de negócio que também sejam descentralizadas e imutáveis, o que possibilita que diferentes *peers* (pontos, pares) tenham um consenso sobre o funcionamento de determinada aplicação executada na rede. Esse mecanismo de regras de negócio, imutáveis e distribuídas, foi nomeado como *smart contract* (contrato inteligente) \cite{smartcontract}, que, pela definição original, é a incorporação de cláusulas contratuais no *hardware* e/ou *software* que utilizamos, que tornem a violação do contrato onerosa, e, no melhor dos casos, proibitiva.
 
 Para \citeonline{smartcontract}, contratos são a base para uma economia livre de mercado, e que por isso, é necessário que os mecanismos do mundo sejam construídos de maneira a criar contratos:
 
 a. robustos contra vandalismo ingênuo;
 b. robustos contra violações sofisticadas\footnote{É importante salientar, que um contrato inteligente não se propõe a lidar com um terceiro tipo de ataque, o vandalismo sofisticado, caracterizado como sendo o uso extensivo e desproporcional de força ou poder, tais como ataques militares efetuados por terceiros \cite{smartcontract}. Esse tipo de ataque é raramente utilizado nas relações de livre mercado, e quase invariavelmente são oriundos de uma alocação de recursos obtidos de forma coercitiva por governos ou entidades autoritárias.}.
 
-\citeauthoronline{smartcontract} classifica a forma de seguração contratual em:
+\citeonline{smartcontract} classifica a forma de seguração contratual em:
 
 - reativa: ação tomada após a quebra de um contrato, como medidas físicas tomadas por agências de segurança, tais quais, prisão e confiscação de propriedade;
 - proativa: ação tomada de forma a coibir a quebra de um contrato, como caixas fortes com mecanismos de autenticação que impeçam o acesso não autorizado a um bem de valor.
@@ -127,7 +127,7 @@ A figura \ref{fig:ethcode} mostra um exemplo simplório de contrato inteligente 
   \begin{center}
   \includegraphics[width=1.0\textwidth]{imagens/ethcode.png}
   \end{center}
-  \legend{Fonte: \citeauthor{safesmart}.}
+  \legend{Fonte: \citeauthor{safesmart}}
 \end{figure}
 
 Em última análise, criar um contrato inteligente é um processo meticuloso e que envolve codificar máquinas de estado muitas vezes complexas, em que qualquer omissão de um estado de transição ou negligência em conferir o estado atual, pode causar problemas drásticos \cite{safesmart}, principalmente por serem, a princípio, imutáveis e envolverem contextos atrelados a manipulação de recursos financeiros.
@@ -217,14 +217,14 @@ Foi apenas em \citeyear{timestamp} que surgiu uma solução com potencial de res
 
 Essa solução, que viria a ser conhecida como *blockchain*, consistia de um algoritmo de encadeamento de dados em que o elemento seguinte da cadeia é criado a partir de informações contidas no documento anteriormente registrado, e que seria armazenada e validado de forma descentralizada por seus utilizadores, garantindo que mesmo que um grupo de utilizadores tentassem corromper os dados, ou outros teriam como identificar a fraude.
 
-A solução de \citeauthoronline{timestamp} foi concebida para funcionar com qualquer documento digital, independente do formato ou tamanho, e para garantir isso ele propôs o uso de uma família de funções criptograficamente segura e livre de colisões, mais conhecidas como funções *hash* (fig. \ref{fig:hash}).
+A solução de \citeonline{timestamp} foi concebida para funcionar com qualquer documento digital, independente do formato ou tamanho, e para garantir isso ele propôs o uso de uma família de funções criptograficamente segura e livre de colisões, mais conhecidas como funções *hash* (fig. \ref{fig:hash}).
 
 \begin{figure}[htbp]
   \caption{\label{fig:hash}Exemplo de \emph{função hash}.}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{imagens/hash.png}
   \end{center}
-  \legend{Fonte: \citeonline{hashimage}.}
+  \legend{Fonte: \citeonline{hashimage}}
 \end{figure}
 
 A *função hash* garante que um arquivo de mesmo conteúdo, sempre gere um mesmo conjunto de caracteres (chamado de *hash do arquivo*, ou simplesmente *hash*) e que a probabilidade de dois ou mais arquivos diferentes produzirem o mesmo *hash* seja baixa o suficiente para ser desprezada. Com isso, arquivos gigantes podem ser reduzidos a poucos caracteres, facilmente armazenáveis e probabilisticamente únicos.
@@ -233,7 +233,7 @@ Qualquer adulteração de um documento gera um *hash* diferente, evidenciando um
 
 Se Carlos, por exemplo, vier a suspeitar de que o arquivo *X* foi adulterado, bastaria ele usar a mesma *função hash f* no arquivo X e verificar se o *hash* produzido é o mesmo armazenado por Bob.
 
-Porém, para garantir que a propriedade do documento X seja realmente de Alice, \citeauthoronline{timestamp} sugeriram o uso de assinaturas digitais.
+Porém, para garantir que a propriedade do documento X seja realmente de Alice, \citeonline{timestamp} sugeriram o uso de assinaturas digitais.
 
 Uma assinatura digital é equivalente a uma assinatura escrita, provendo uma maneira de produzir um documento digital cuja autenticidade pode ser verificada por qualquer um mas que não possa ser produzido por ninguém além do autor original.
 
@@ -252,9 +252,9 @@ A mensagem *D\textsubscript{A}(M)* deverá ser guardada para servir como prova d
 
 Utilizando essa técnica se consegue averiguar a qualquer momento se um indivíduo assinou ou não um documento digital.
 
-Além de identificar a autoria do documento também é importante armazenar a data e horário de criação ou modificação do documento, e \citeauthoronline{timestamp} para resolver esse problema sugeriram que o *hash* do arquivo deveria ser concatenado com o horário e data do registro e só então ser assinado com a chave *D* do autor do registro. Com isso, apenas com um *hash* pequeno poder-se-ia registrar um documento com as informações de quando ele foi criado ou modificado e quem é o autor do documento.
+Além de identificar a autoria do documento também é importante armazenar a data e horário de criação ou modificação do documento, e \citeonline{timestamp} para resolver esse problema sugeriram que o *hash* do arquivo deveria ser concatenado com o horário e data do registro e só então ser assinado com a chave *D* do autor do registro. Com isso, apenas com um *hash* pequeno poder-se-ia registrar um documento com as informações de quando ele foi criado ou modificado e quem é o autor do documento.
 
-Ainda assim, é necessário confiar em um agente central (Bob), que poderia facilmente ser corrompido por Carlos sem que Alice conseguisse provar a fraude. \citeauthoronline{timestamp} propuseram uma solução denominada *confiança distribuída*.
+Ainda assim, é necessário confiar em um agente central (Bob), que poderia facilmente ser corrompido por Carlos sem que Alice conseguisse provar a fraude. \citeonline{timestamp} propuseram uma solução denominada *confiança distribuída*.
 
 Nessa solução, haveria um gerador pseudoaleatório\footnote{\emph{gerador pseudoaleatório} é um algoritmo que usa \emph{bits} verdadeiramente aleatórios para gerar de forma determinística uma longa sequência de \emph{bits} \cite{pseudo}.} *G* disponível para todos os indivíduos que desejassem registrar documentos. Quando Alice desejasse registrar um documento, ela deveria gerar um *hash y* do documento, e usá-lo como *seed*\footnote{\emph{seed} (semente) é o nome que se dá a sequência de bits verdadeiramente aleatória utilizada no gerador pseudoaleatório.} para o gerador *G*, o que produzirá uma sequência de *bits* que podem ser agrupadas de maneira a forma um número *k* de *IDs*, conforme mostrado na equação \ref{eqn:g} \cite{timestamp}.
 
@@ -272,9 +272,9 @@ s_{j} = \sigma_{j}(t, ID, y)
 
 O único requisito para essa arquitetura funcionar é haver uma lista pública de clientes disponíveis de maneira a ser possível interpretar o resultado de *G(y)* como um conjunto de *k* clientes prontos para serem requisitados.
 
-Para resolver o possível problema de indisponibilidade de clientes \citeauthoronline{timestamp} afirmaram que bastaria a função *G* gerar um número suficientemente grande de *k* clientes de forma a garantir que haverá a disponibilidade de $k' < k$ clientes, sendo *k'* um número suficientemente grande de forma a garantir que seja improvável que a maioria dos clientes estejam ávidos por falsificar o *timestamp* do documento.
+Para resolver o possível problema de indisponibilidade de clientes \citeonline{timestamp} afirmaram que bastaria a função *G* gerar um número suficientemente grande de *k* clientes de forma a garantir que haverá a disponibilidade de $k' < k$ clientes, sendo *k'* um número suficientemente grande de forma a garantir que seja improvável que a maioria dos clientes estejam ávidos por falsificar o *timestamp* do documento.
 
-Com essa solução, \citeauthoronline{timestamp} elaboraram uma solução que embora tenha sido concebida para o registro de documentos digitais, poderia ser utilizada para criar um sistema de transações financeiras digitais livre de agentes centrais.
+Com essa solução, \citeonline{timestamp} elaboraram uma solução que embora tenha sido concebida para o registro de documentos digitais, poderia ser utilizada para criar um sistema de transações financeiras digitais livre de agentes centrais.
 
 #### O início do movimento dos Cypherpunks e das moedas digitais
 
@@ -290,23 +290,23 @@ Nós, os \emph{Cypherpunks}, estamos dedicados a construir sistemas anônimos. N
 
 Em \citeyear{junkmail}, \citeauthoronline{junkmail} propuseram uma técnica que poderia ser utilizada por provedores de e-mail em que seria requerida a computação de uma função moderadamente difícil para quem decidisse enviar um e-mail, dificultando o envio de grandes quantidades de e-mails, o que tinha como intenção reduzir o número de *SPAMs* (e-mails indesejados).
 
-\citeauthoronline{junkmail} chamaram essa função de *função de precificação*, e foi apresentada como uma alternativa as soluções que estavam sendo propostas na época, que incluíam a criação de uma lei que caracterizava o envio de e-mails não autorizados como contravenção penal; e a cobrança de impostos para cada e-mail enviado ou a partir de certo número de e-mails enviados por dia.
+\citeonline{junkmail} chamaram essa função de *função de precificação*, e foi apresentada como uma alternativa as soluções que estavam sendo propostas na época, que incluíam a criação de uma lei que caracterizava o envio de e-mails não autorizados como contravenção penal; e a cobrança de impostos para cada e-mail enviado ou a partir de certo número de e-mails enviados por dia.
 
-\citeonline{hashcash} propôs uma solução semelhante, e segundo o autor, sem ter o conhecimento do trabalho de \citeauthoronline{junkmail}. Essa solução foi denominada *Hashcash* e também foi idealizada para reduzir o número de *SPAMs*, além de ser uma forma de prevenir ataques DDoS (*Distributed Denial of Service* - Ataque Distribuído de Negação de Serviço).
+\citeonline{hashcash} propôs uma solução semelhante, e segundo o autor, sem ter o conhecimento do trabalho de \citeonline{junkmail}. Essa solução foi denominada *Hashcash* e também foi idealizada para reduzir o número de *SPAMs*, além de ser uma forma de prevenir ataques DDoS (*Distributed Denial of Service* - Ataque Distribuído de Negação de Serviço).
 
-Para \citeauthoronline{hashcash}, as funções de custo deveriam ser eficientemente verificáveis e não proverem vantagem para o servidor responsável por criar os desafios, já que caso contrário, o servidor teria um conflito de interesses e teria a possibilidade de utilizar essa vantagem para ganhos próprios.
+Para \citeonline{hashcash}, as funções de custo deveriam ser eficientemente verificáveis e não proverem vantagem para o servidor responsável por criar os desafios, já que caso contrário, o servidor teria um conflito de interesses e teria a possibilidade de utilizar essa vantagem para ganhos próprios.
 
 Alguns dos diferenciais da função de custo *Hashcash* eram as alterações dos desafios a cada intervalo de tempo, o que evitaria a pré-computação de respostas; e o ajuste do custo computacional necessário para decifrar o desafio, o que permitiria a adaptação do nível do desafio de acordo com a demanda de requisições que o servidor enfrentava.
 
 O *Hashcash* veio a ser conhecido como sendo um algoritmo *PoW* (*Proof-of-Work* - Prova de Trabalho) e foi aprimorado por \citeauthor{rpow} em \citeyear{rpow}.
 
-O algoritmo de \citeauthoronline{rpow}, o RPOW (*Reusable Proof-of-Work* - Prova de Trabalho Reutilizável), recebia um *hashcash* e o trocava por um *token* *RPOW* que poderia então ser gasto para produzir um novo *token RPOW*. Cada *token RPOW* poderia ser utilizado apenas uma vez e gerava um novo *token*.
+O algoritmo de \citeonline{rpow}, o RPOW (*Reusable Proof-of-Work* - Prova de Trabalho Reutilizável), recebia um *hashcash* e o trocava por um *token* *RPOW* que poderia então ser gasto para produzir um novo *token RPOW*. Cada *token RPOW* poderia ser utilizado apenas uma vez e gerava um novo *token*.
 
 Como o *RPOW* garante o conceito de gasto único, é sempre criado inicialmente a partir de uma prova de trabalho, e dá origem a um novo *token* que pode ser novamente trocado, pode-se considerá-lo como o primeiro bem digital que utiliza algoritmos criptográficos com capacidade de servir como meio de troca, um grande passo para a criação de uma moeda digital.
 
 \phantomsection
 \label{bitgold}
-Em \citeyear{bitgold}, \citeauthoronline{bitgold} expressou sua preocupação com o fato de o valor do dinheiro atualmente utilizado pela sociedade depender exclusivamente na confiança depositada em um agente centralizador e propôs a moeda *Bit Gold* que teria como características: uma dependência mínima em agentes centralizadores, armazenada de forma segura, transferível, e que pudessem ter sua autenticidade verificada \cite{bitgold}. \citeauthoronline{bitgold} se inspirou nas propriedades dos metais preciosos, principalmente o ouro para conceber a ideia do *Bit Gold*.
+Em \citeyear{bitgold}, \citeauthoronline{bitgold} expressou sua preocupação com o fato de o valor do dinheiro atualmente utilizado pela sociedade depender exclusivamente na confiança depositada em um agente centralizador e propôs a moeda *Bit Gold* que teria como características: uma dependência mínima em agentes centralizadores, armazenada de forma segura, transferível, e que pudessem ter sua autenticidade verificada \cite{bitgold}. \citeonline{bitgold} se inspirou nas propriedades dos metais preciosos, principalmente o ouro para conceber a ideia do *Bit Gold*.
 
 O *Bit Gold* funcionaria da seguinte forma:
 
@@ -320,15 +320,15 @@ O *Bit Gold* funcionaria da seguinte forma:
 
 Como cada registro de *Bit Gold* está ligado ao próximo registro de *Bit Gold*, e esses registros estão registrados em diversos serviços distribuídos e independentes, entende-se que essa cadeia de registros, a *blockchain*, é inalterável.
 
-\citeauthoronline{bitgold} destaca que todos os tipos de dinheiro já utilizados tem alguma forma de insegurança, desde falsificação à facilidade de roubo, mas que provavelmente a pior insegurança que um dinheiro possa ter é a inflação. E o *Bit Gold* seria uma solução de moeda que apresentaria em sua arquitetura essa segurança contra a inflação.
+\citeonline{bitgold} destaca que todos os tipos de dinheiro já utilizados tem alguma forma de insegurança, desde falsificação à facilidade de roubo, mas que provavelmente a pior insegurança que um dinheiro possa ter é a inflação. E o *Bit Gold* seria uma solução de moeda que apresentaria em sua arquitetura essa segurança contra a inflação.
 
 E em \citeyear{bitcoin}, \citeauthoronline{bitcoin}, um pseudônimo pertencente a um ou vários indivíduos até hoje desconhecidos, a partir das ideias e tecnologias já apresentadas, concebeu o *Bitcoin*.
 
-Embora tenha sido inspirado na ideia de *blockchain* concebida por \citeauthoronline{timestamp} e nas moedas *b-cash*, *Hascash* e provavelmente na moeda *Bit Gold*, o *Bitcoin* apresentou com mais detalhes como uma *blockchain* poderia ser utilizada para criar um sistema eletrônico de registro de transações que nâo dependesse de nenhum agente central e que conseguisse garantir as características necessárias para tornar-se uma moeda *de facto*.
+Embora tenha sido inspirado na ideia de *blockchain* concebida por \citeonline{timestamp} e nas moedas *b-cash*, *Hascash* e provavelmente na moeda *Bit Gold*, o *Bitcoin* apresentou com mais detalhes como uma *blockchain* poderia ser utilizada para criar um sistema eletrônico de registro de transações que nâo dependesse de nenhum agente central e que conseguisse garantir as características necessárias para tornar-se uma moeda *de facto*.
 
 ### Arquitetura do Bitcoin
 
-\citeauthoronline{bitcoin} definiu o termo *moeda eletrônica* como sendo uma cadeia de assinaturas digitais \cite{bitcoin}, em que Alice transferiria uma quantia de dinheiro para Carlos assinando digitalmente o *hash* da última transação registrada junto com a chave pública de Carlos (fig. \ref{fig:transaction}).
+\citeonline{bitcoin} definiu o termo *moeda eletrônica* como sendo uma cadeia de assinaturas digitais \cite{bitcoin}, em que Alice transferiria uma quantia de dinheiro para Carlos assinando digitalmente o *hash* da última transação registrada junto com a chave pública de Carlos (fig. \ref{fig:transaction}).
 
 \begin{figure}[htbp]
 \caption{\label{fig:transaction}Registro de transação em uma cadeia de assinaturas digitais.}
@@ -355,7 +355,7 @@ ii. Um grupo pequeno de traidores não pode conseguir que os generais leais adot
 
 Nesse problema teórico computacional, todos os generais leais farão o que o algoritmo implementado disser, porém, os traidores utilizarão qualquer outro algoritmo com o objetivo de chegar a uma ação considerada ruim para os interesses do exército.
 
-Como \citeauthoronline{byzantine} explicitam, o algoritmo utilizado pelos generais leais devem garantir a condição (i) independente do que os traidores fizerem, e os generais leais não apenas devem chegar a um acordo sobre o que fazer, como também devem chegar a um acordo sobre um plano de ação razoável, ou em outras palavras, benéfico para o exército bizantino.
+Como \citeonline{byzantine} explicitam, o algoritmo utilizado pelos generais leais devem garantir a condição (i) independente do que os traidores fizerem, e os generais leais não apenas devem chegar a um acordo sobre o que fazer, como também devem chegar a um acordo sobre um plano de ação razoável, ou em outras palavras, benéfico para o exército bizantino.
 
 Para resolver o *Problema dos Generais Bizantinos* no contexto de registro de transações em um livro-razão público, é necessário considerar as seguintes características desse livro-razão:
 
@@ -365,13 +365,13 @@ Para resolver o *Problema dos Generais Bizantinos* no contexto de registro de tr
 
 A terceira característica remete ao *Problema dos Generais Bizantinos*. A primeira característica se opõe a qualquer tipo de regulação centralizada, enquanto que a segunda característica garante que esse livro-razão possa ser utilizado como um sistema de transações financeiras confiável.
 
-Para garantir a terceira característica, a simples votação entre os participantes, solução tradicional proposta por \citeauthoronline{byzantine}, não seria suficiente pois não há como impedir que novos participantes entrem no sistema, o que tornaria fácil a multiplicação artificial de agentes fraudulentos, que invariavelmente conseguiriam se tornar a maioria e consequentemente obteriam sucesso em fraudar o livro-razão.
+Para garantir a terceira característica, a simples votação entre os participantes, solução tradicional proposta por \citeonline{byzantine}, não seria suficiente pois não há como impedir que novos participantes entrem no sistema, o que tornaria fácil a multiplicação artificial de agentes fraudulentos, que invariavelmente conseguiriam se tornar a maioria e consequentemente obteriam sucesso em fraudar o livro-razão.
 
-Por isso \citeauthoronline{bitcoin} propôs a utilização de um algoritmo de prova de trabalho (*PoW - Proof of Work*) para registrar uma transação no livro-razão, inspirado pelo trabalho de \citeauthoronline{hashcash}. De forma simplificada, a prova de trabalho obriga que qualquer agente que queira escrever no livro-razão seja obrigado a calcular uma função *hash*, que é computacionalmente dispendiosa e cujo resultado é probabilisticamente difícil de ser o correto (apenas quem calcula um resultado correto consegue escrever no livro-razão).
+Por isso \citeonline{bitcoin} propôs a utilização de um algoritmo de prova de trabalho (*PoW - Proof of Work*) para registrar uma transação no livro-razão, inspirado pelo trabalho de \citeonline{hashcash}. De forma simplificada, a prova de trabalho obriga que qualquer agente que queira escrever no livro-razão seja obrigado a calcular uma função *hash*, que é computacionalmente dispendiosa e cujo resultado é probabilisticamente difícil de ser o correto (apenas quem calcula um resultado correto consegue escrever no livro-razão).
 
 Além do trabalho despendido para escrever uma transação no livro-razão, seja ela uma transação fraudulenta ou não, os agentes não-fraudulentos apenas confiarão no livro-razão mais extenso, ou seja, a única forma de enganar os participantes não-fraudulentos seria os fraudadores possuírem mais poder de processamento do que todos os participantes não-fraudulentos juntos. Quanto mais participantes não-fraudulentos entram neste processo de escrita concorrente, mais improvável de ocorrer torna-se uma fraude, e mais caro torna-se tentar fraudar o livro-razão.
 
-Para que o livro-razão fosse público, distribuído, descentralizado e digital, \citeauthoronline{bitcoin} descreveu um sistema *peer-to-peer*\footnote{\emph{peer-to-peer} (p2p - ponto-a-ponto) é o nome que se dá a uma arquitetura de rede distribuída em que os participantes compartilham parte de seus recursos de \emph{hardware} (poder de processamento, capacidade de armazenamento, etc) para outros \emph{peers} (pontos) diretamente, sem passar por entidades intermediárias. Esses recursos compartilhados são necessários para prover o serviço e/ou conteúdo oferecido pela rede, e cada participante dessa rede é ao mesmo tempo provedor e consumidor de recursos \apud{kellerer}{p2p}.} em que as transações seriam registradas em blocos, e em que cada novo bloco dependeria do bloco anteriormente registrado (fig. \ref{fig:blockchain}), criando uma *blockchain*. Esse sistema teria as seguintes características:
+Para que o livro-razão fosse público, distribuído, descentralizado e digital, \citeonline{bitcoin} descreveu um sistema *peer-to-peer*\footnote{\emph{peer-to-peer} (p2p - ponto-a-ponto) é o nome que se dá a uma arquitetura de rede distribuída em que os participantes compartilham parte de seus recursos de \emph{hardware} (poder de processamento, capacidade de armazenamento, etc) para outros \emph{peers} (pontos) diretamente, sem passar por entidades intermediárias. Esses recursos compartilhados são necessários para prover o serviço e/ou conteúdo oferecido pela rede, e cada participante dessa rede é ao mesmo tempo provedor e consumidor de recursos \apud{kellerer}{p2p}.} em que as transações seriam registradas em blocos, e em que cada novo bloco dependeria do bloco anteriormente registrado (fig. \ref{fig:blockchain}), criando uma *blockchain*. Esse sistema teria as seguintes características:
 
 \begin{figure}[htbp]
   \caption{\label{fig:blockchain}Arquitetura da \emph{blockchain}}
@@ -410,7 +410,7 @@ Mesmo considerando um cenário probabilístico em que dezenas de ramificações 
 
 Como já discutido no *Problema dos Generais Bizantinos*, mesmo que um grupo de nós decida deliberadamente não obedecer esse algoritmo, eles apenas teriam sucesso em convencer os demais nós de que a sua ramificação fraudulenta da *blockchain* é a verdadeira, caso tivessem um poder de processamento maior do que a maioria dos nós não-fraudulentos.
 
-Para que esse sistema seja viável é necessário que haja diversos nós, sendo que quanto maior for a quantidade de nós na rede, maior será a impossibilidade de fraudar a *blockchain*, por isso, \citeauthoronline{bitcoin} especificou que a primeira transação de cada bloco seria uma transação que cria unidades de *Bitcoin*\footnote{A primeira transação de cada bloco da \emph{blockchain} do \emph{Bitcoin} serve como uma recompensa para quem criou o bloco. Inicialmente a recompensa era de 50 unidades de \emph{Bitcoin} (BTC 50,00), e a cada 210 mil blocos gerados (o que leva aproximadamente 4 anos) a recompensa é reduzida pela metade. Até junho de 2019 essa recompensa era de 12.5 BTC \cite{dev-ref}.}, que passa a ser de propriedade do criador do bloco, sendo a única forma de criar unidades de *Bitcoin*. Isso remove completamente a figura de bancos centrais, que em moedas fiduciárias são responsáveis por emitir novas unidades de dinheiro.
+Para que esse sistema seja viável é necessário que haja diversos nós, sendo que quanto maior for a quantidade de nós na rede, maior será a impossibilidade de fraudar a *blockchain*, por isso, \citeonline{bitcoin} especificou que a primeira transação de cada bloco seria uma transação que cria unidades de *Bitcoin*\footnote{A primeira transação de cada bloco da \emph{blockchain} do \emph{Bitcoin} serve como uma recompensa para quem criou o bloco. Inicialmente a recompensa era de 50 unidades de \emph{Bitcoin} (BTC 50,00), e a cada 210 mil blocos gerados (o que leva aproximadamente 4 anos) a recompensa é reduzida pela metade. Até junho de 2019 essa recompensa era de 12.5 BTC \cite{dev-ref}.}, que passa a ser de propriedade do criador do bloco, sendo a única forma de criar unidades de *Bitcoin*. Isso remove completamente a figura de bancos centrais, que em moedas fiduciárias são responsáveis por emitir novas unidades de dinheiro.
 
 #### Transações no protocolo Bitcoin
 
@@ -550,7 +550,7 @@ Essa característica de alterar o *nBits* para garantir que a quantidade de bloc
 
 ### O bloco gênesis
 
-O primeiro bloco de *Bitcoin*, o Bloco Gênesis, foi minerado em 2009 pelo próprio \citeauthoronline{bitcoin}, sendo incorporado na *transação coinbase*\footnote{\emph{transação coinbase} é o nome dado a primeira transação de cada bloco que, como já discutido no texto, serve como recompensa para quem minerou o bloco. A \emph{transação coinbase} possui um campo de 100 bytes denominado \emph{coinbase script} que pode ser utilizados arbitrariamente pelo minerador sem que o protocolo \emph{Bitcoin} seja violado.} do bloco, o texto **The Times 03/Jan/2009 Chancellor on brink of second bailout for banks** \cite{genesis} em referência a uma manchete do jornal londrino Times sobre a falha do governo britânico de estimular a economia. A figura \ref{fig:times} mostra uma foto da edição do jornal da qual a frase foi retirada.
+O primeiro bloco de *Bitcoin*, o Bloco Gênesis, foi minerado em 2009 pelo próprio \citeonline{bitcoin}, sendo incorporado na *transação coinbase*\footnote{\emph{transação coinbase} é o nome dado a primeira transação de cada bloco que, como já discutido no texto, serve como recompensa para quem minerou o bloco. A \emph{transação coinbase} possui um campo de 100 bytes denominado \emph{coinbase script} que pode ser utilizados arbitrariamente pelo minerador sem que o protocolo \emph{Bitcoin} seja violado.} do bloco, o texto **The Times 03/Jan/2009 Chancellor on brink of second bailout for banks** \cite{genesis} em referência a uma manchete do jornal londrino Times sobre a falha do governo britânico de estimular a economia. A figura \ref{fig:times} mostra uma foto da edição do jornal da qual a frase foi retirada.
 
 \begin{figure}[htbp]
   \caption{\label{fig:times}Foto da Edição de 03 de janeiro de 2009 do Jornal \emph{The Times}.}
@@ -570,11 +570,11 @@ O livre mercado só é plenamente possível em um ambiente livre de coerção, e
 
 O \citeonline{coin360} informa que há 3368 criptomoedas em circulação, enquanto que o \citeonline{coinmarketcap} reporta 857. A grande maioria das criptomoedas não suportam a criação de aplicações descentralizadas, e, justamente pelo gigantesco número de criptomoedas em circulação, se tornou inviável, neste trabalho, analizar todas as tecnologias *blockchains* disponíveis e selecioná-las através de um método científico e objetivo que filtrasse as tecnologias capazes de prover infraestrutura na criação de *dApps* (*decentralised applications* - aplicações descentralizadas).
 
-A plataforma de indexação de aplicações descentralizadas \citeauthoronline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
+A plataforma de indexação de aplicações descentralizadas \citeonline{dapp}, elaborou um relatório que reuniu importantes informações sobre *dApps* referentes ao ano de 2019. Segundo esse relatório, há 2217 *dApps* ativas ao final do ano de 2019, sendo que 1445 foram criadas no ano de 2019. Ao todo, essas aplicações possuem 3,11 milhão de usuários ativos e transacionaram um volume de 10,9 bilhões de dólares, o que mostra a forte demanda por tais aplicações (veja a tabela \ref{tab:dapps-report}). Porém, só em 2019, embora tenha sido criadas 1445 *dApps*, outras 1365 *dApps* foram abandonadas\footnote{as aplicações são consideradas abandonadas quando não ocorre nenhuma transação na aplicação em um período de 30 dias} \cite{dapp}, o que também mostra que o ambiente de aplicações descentralizadas ainda está em um estágio imaturo e instável.
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:dapps-report}Aplicativos Descentralizados por tecnologia \emph{Blockchain} - Resumo de 2019 por \citeauthoronline{dapp}.}
+\caption{\label{tab:dapps-report}Aplicativos Descentralizados por tecnologia \emph{Blockchain} - Resumo de 2019 por \citeonline{dapp}.}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 \textbf{Categoria}       & \textbf{Total} & \textbf{Ethereum} & \textbf{EOS} & \textbf{Steem} & \textbf{Tron} & \textbf{IOST} & \textbf{NEO}   \\ \midrule
@@ -590,19 +590,19 @@ Volume (USD)             & 10,9B          & 2,37B             & 4,98B        & 2
 \legend{Fonte: \citeonline{dapp}.}
 \end{table}
 
-E ao analisar os dados atuais da plataforma \citeauthoronline{dapp}, foi elaborada a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeauthoronline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
+E ao analisar os dados atuais da plataforma \citeonline{dapp}, foi elaborada a tabela \ref{tab:dapp}, que mostra os números totais de *dApps* registradas na plataforma por tecnologia *Blockchain*. E ao analisar uma outra plataforma de indexação de *dApps*, a \citeonline{appco}, foi elaborada a tabela \ref{tab:appco}, seguindo os mesmos critérios\footnote{ao consultar ambas plataformas, foram consideradas apenas tecnologias \emph{blockchain} com mais de 10 aplicações registradas na plataforma}.
 
 Diante dos números apresentados, podemos notar que tanto o número de criptomoedas existentes quanto o número de *dApps* existentes, possuem divergências consideráveis de acordo com a fonte consultada, o que reduz a confiabilidade dos dados e prejudica uma análise mais metodológica.
 
-Segundo a fonte \citeauthoronline{dapp}, a *Ethereum* é a tecnologia mais relevante para *dApps*, a EOS ainda se mantém relevante porém é uma tecnologia em declínio tendo perdido 30% em número de usuários ativos em comparação com o ano de 2019, e a Tron passou a ser a segunda plataforma mais relevante em 2019 \cite{dapp}.
+Segundo \citeonline{dapp}, a *Ethereum* é a tecnologia mais relevante para *dApps*, a EOS ainda se mantém relevante porém é uma tecnologia em declínio tendo perdido 30% em número de usuários ativos em comparação com o ano de 2019, e a Tron passou a ser a segunda plataforma mais relevante em 2019 \cite{dapp}.
 
 Separando apenas essas três tecnologias, temos 1129 aplicações ativas feitas em *Ethereum*, 482 feitas em *Tron*, e 479 em 478 em *EOS*, sendo as únicas que ultrapassam o valor de 100 *dApps* ativas (tab. \ref{tab:dapp}).
 
-Analisando essas mesmas tecnologias na \citeauthoronline{appco}, temos 421 aplicações ativas na *Blockstack*, 360 na *Ethereum*, 42 na *EOS* e 16 na *Tron* (tab. \ref{tab:appco}).
+Analisando essas mesmas tecnologias na \citeonline{appco}, temos 421 aplicações ativas na *Blockstack*, 360 na *Ethereum*, 42 na *EOS* e 16 na *Tron* (tab. \ref{tab:appco}).
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:dapp}\emph{dApps} registradas na plataforma \citeauthoronline{dapp} por tecnologia \emph{blockchain}.}
+\caption{\label{tab:dapp}\emph{dApps} registradas na plataforma \citeonline{dapp} por tecnologia \emph{blockchain}.}
 \begin{tabular}{cc}
 \hline
 \textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
@@ -625,7 +625,7 @@ Pegar quantidade de items: document.getElementsByClassName('main-sec')[0].getEle
 
 \begin{table}[htbp]
 \centering
-\caption{\label{tab:appco}\emph{dApps} registradas na plataforma \citeauthoronline{appco} por tecnologia \emph{blockchain}.}
+\caption{\label{tab:appco}\emph{dApps} registradas na plataforma \citeonline{appco} por tecnologia \emph{blockchain}.}
 \begin{tabular}{cc}
 \hline
 \textbf{Blockchain} & \textbf{Número de dApps} \\ \hline
@@ -889,11 +889,11 @@ O usuário detém a propriedade das suas informações e pode a qualquer momento
 
 A *Holochain* é uma alternativa a *blockchain* que, ao invés de compartilhar todos os dados de forma idêntica para todos os nós da rede, distribui os dados de uma aplicação de forma aleatória entre os nós criando um número de cópias suficientemente grande de forma a garantir que o dado esteja sempre disponível mesmo quando o detentor original do dado está indisponível na rede.
 
-Por não ter que replicar os dados para todos os nós da rede, a *Holochain* possui uma maior escalabilidade em comparação a aplicações descentralizadas que se utilizam da *blockchain* \citeauthoronline{holo}.
+Por não ter que replicar os dados para todos os nós da rede, a *Holochain* possui uma maior escalabilidade em comparação a aplicações descentralizadas que se utilizam da *blockchain* \citeonline{holo}.
 
 A *Holochain* provê a garantia de integridade de dados para aplicações *peer-to-peer* sem utilizar algoritmos de consenso, o que economiza poder de processamento, sem abandonar a característica de imutabilidade, pois valida as transações sempre que um agente se comunica com outro. \citeonline{holo} denomina essa abordagem como *centrada no agente* e destaca que o custo computacional de gerenciamento de consenso requer uma quantidade desnecessária de processamento de dados que carrega limitações de escalabilidade inerentes a abordagem.
 
-A *Holochain* foi pensada para ter um modo de operação similar ao *git*, em que cada nó não precisa estar sincronizado com outros nós, e que cada nó pode ter sua própria *blockchain* interna, independente das demais. Apenas quando os nós se comunicam, deve haver a validação das informações trocadas e a resolução de conflitos entre os nós \cite{holo2}. Nesse sentido, para \citeauthoronline{holo2} a *blockchain* possui uma estrutura *centrada no dado*, em contraste com a abordagem *centrada no agente*, adotada pela *Holochain*.
+A *Holochain* foi pensada para ter um modo de operação similar ao *git*, em que cada nó não precisa estar sincronizado com outros nós, e que cada nó pode ter sua própria *blockchain* interna, independente das demais. Apenas quando os nós se comunicam, deve haver a validação das informações trocadas e a resolução de conflitos entre os nós \cite{holo2}. Nesse sentido, para \citeonline{holo2} a *blockchain* possui uma estrutura *centrada no dado*, em contraste com a abordagem *centrada no agente*, adotada pela *Holochain*.
 
 A abordagem *centrada no agente* abstrai muito mais o mundo real, ao reconhecer que cada nó tem uma perspectiva, interesse e tempo de interação diferente de outro nó da rede, não havendo uma memória única e idêntica compartilhada por todos os nós. Isso permite que haja o paralelismo no tratamento dos dados por cada nó, o que em última instância permite a escalabilidade da rede.
 
@@ -1032,7 +1032,7 @@ A partir da definição da ação humana entende-se que um indivíduo sempre bus
 
 Caso não houvesse o desconhecido, ou a possibilidade de erro nas ações tomadas pelo indivíduo, poder-se-ia concluir que não haveria escolhas a serem feitas, já que uma escolha implica uma tomada de risco, em um balanceamento entre vantagens e desvantagens.
 
-Todas as coisas que estão casualmente conectadas com a satisfação das necessidades humanas são definidas como *coisa útil*, e quando essas coisas são utilizadas para satisfazerem as necessidades humanas as chamamos de *bens* \cite[p 52]{menger}. Segundo \citeauthoronline{menger} para uma coisa adquirir as características de um bem deve-se ser preenchido simultaneamente os seguintes pré-requisitos:
+Todas as coisas que estão casualmente conectadas com a satisfação das necessidades humanas são definidas como *coisa útil*, e quando essas coisas são utilizadas para satisfazerem as necessidades humanas as chamamos de *bens* \cite[p 52]{menger}. Segundo \citeonline{menger} para uma coisa adquirir as características de um bem deve-se ser preenchido simultaneamente os seguintes pré-requisitos:
 
 1. Haver uma necessidade humana;
 2. Haver propriedades que tornem a coisa capaz de ser empenhada em uma conexão causal com a satisfação dessa necessidade;
@@ -1051,7 +1051,7 @@ Todo o processo de produção necessita de tempo (um bem escasso) e fatores de p
 2. *fatores de produção produzidos* ou *capital*.
 
 Ao unir esses fatores de produção é possível produzir bens de maior ordem, ou seja, de maior valor agregado. E como
-\citeauthoronline{bastiat} já havia observado, o homem, ao viver em sociedade, tem suas necessidades superadas pelas capacidades produtivas e suas necessidades elementares gradualmente dão lugar a desejos de ordem superior, levando sempre a um estado mais próximo da condição perfeita. Se isso não fosse verdade, ou seríamos criaturas retrógradas, ou seríamos irremediavelmente estáticos \cite[pp. 61--65]{bastiat}.
+\citeonline{bastiat} já havia observado, o homem, ao viver em sociedade, tem suas necessidades superadas pelas capacidades produtivas e suas necessidades elementares gradualmente dão lugar a desejos de ordem superior, levando sempre a um estado mais próximo da condição perfeita. Se isso não fosse verdade, ou seríamos criaturas retrógradas, ou seríamos irremediavelmente estáticos \cite[pp. 61--65]{bastiat}.
 
 Pelo fato de toda ação humana ser uma tentativa de troca de um estado de menor satisfação para um estado de maior satisfação, fica evidente que as coisas são valorizadas como meios de acordo com a sua capacidade de contribuir para um fim desejado, sendo esse fim desejado, mais ou menos urgente de acordo com a preferência temporal do indivíduo.
 
@@ -1089,7 +1089,7 @@ A escala de valores pode ser aplicada a quantos bens forem necessários, sendo o
 
 Assim que as condições, as necessidades, os desejos, ou a percepção do indivíduo forem alterados, a escala também poderá será alterada. E é a partir desse entendimento que passamos a compreender como um indivíduo decide o que trocará em uma transação comercial.
 
-E observando a lei da utilidade marginal chegamos a mesma conclusão que \citeauthoronline{condillac} \cite[p 85]{condillac} que disse que é falsa a afirmação de que em uma transação comercial um ator troca um bem por outro de igual valor. Pelo contrário, cada um dos envolvidos na transação comercial troca um bem de menor valor por outro bem de maior valor. Se os bens possuíssem o mesmo valor, não haveria necessidade de realizar a troca, e uma troca de um bem de maior valor por um de menor valor é injustificável quando feita de forma voluntária.
+E observando a lei da utilidade marginal chegamos a mesma conclusão que \citeonline{condillac} \cite[p 85]{condillac} que disse que é falsa a afirmação de que em uma transação comercial um ator troca um bem por outro de igual valor. Pelo contrário, cada um dos envolvidos na transação comercial troca um bem de menor valor por outro bem de maior valor. Se os bens possuíssem o mesmo valor, não haveria necessidade de realizar a troca, e uma troca de um bem de maior valor por um de menor valor é injustificável quando feita de forma voluntária.
 
 Mesmo quando um bem é dado gratuitamente ocorre uma troca de valores em que o individuo que abre mão daquele bem se sente em uma situação de maior satisfação do que se tivesse mantido o bem para si. Isso novamente explicita o caráter subjetivo e individual do valor de cada bem. Os mesmos bens podem ser posicionados em ordens diferentes por dois atores, já que cada um dos atores empregará os bens conforme seus objetivos individuais.
 
@@ -1136,7 +1136,7 @@ A dificuldade é saber em que caso é preciso admitir a existência de um consen
 
 \end{displayquote}
 
-E que ao se aceitar um governo, não se pode dele abidicar, como \citeauthoronline{leviathan} escreveu em sua obra \emph{Leviathan} (Leviatã):
+E que ao se aceitar um governo, não se pode dele abidicar, como \citeonline{leviathan} escreveu em sua obra \emph{Leviathan} (Leviatã):
 
 \begin{displayquote}
 
@@ -1148,7 +1148,7 @@ não pode haver violação da aliança por parte do soberano; e, conseqüentemen
 
 \end{displayquote}
 
-Porém, essa noção de que a república ou qualquer outro governo é aceito tacitamente e que não se pode dele abdicar contradiz a lógica, como \citeauthoronline{mythstate} colocou em sua obra \emph{The Myth of the State} (O Mito do Estado):
+Porém, essa noção de que a república ou qualquer outro governo é aceito tacitamente e que não se pode dele abdicar contradiz a lógica, como \citeonline{mythstate} colocou em sua obra \emph{The Myth of the State} (O Mito do Estado):
 
 \begin{displayquote}
 
